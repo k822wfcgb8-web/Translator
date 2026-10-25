@@ -139,6 +139,16 @@ textarea {
   background: var(--surface-2); font-size: 17px; line-height: 1.45;
 }
 textarea:focus { outline: 2px solid var(--brand); outline-offset: 1px; }
+.letters { display: flex; flex-wrap: wrap; gap: 6px; }
+.key {
+  min-width: 46px; min-height: 44px; padding: 0 10px; border-radius: 10px;
+  border: 1px solid var(--line); background: var(--surface); color: var(--ink);
+  font-size: 1.2rem; font-weight: 600; cursor: pointer;
+  touch-action: manipulation; -webkit-tap-highlight-color: transparent; -webkit-user-select: none; user-select: none;
+}
+.key:active { background: var(--surface-2); transform: translateY(1px); }
+.key.shift { color: var(--muted); }
+.key.shift[aria-pressed="true"] { background: var(--brand); border-color: var(--brand); color: var(--brand-ink); }
 
 .tools { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 
@@ -313,7 +323,7 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
 <header class="top">
   <div class="brand">
     <span class="logo" aria-hidden="true"></span>
-    <div><h1>Prevoditelj</h1><p>Croatian ⇄ English · v1.9</p></div>
+    <div><h1>Prevoditelj</h1><p>Croatian ⇄ English · v2.0</p></div>
   </div>
   <button id="settingsBtn" class="icon-btn" aria-label="Settings" title="Settings">⚙︎</button>
 </header>
@@ -348,6 +358,14 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
       </button>
     </div>
     <textarea id="text-in" lang="hr" placeholder="Upišite ili izgovorite… (type or speak Croatian)" autocapitalize="sentences" autocomplete="off" spellcheck="false"></textarea>
+    <div class="letters" id="letters" role="group" aria-label="Croatian letters">
+      <button type="button" class="key shift" id="keyShift" aria-pressed="false" aria-label="Capital letter" title="Capital letter (next letter only)">⇧</button>
+      <button type="button" class="key" data-ch="č">č</button>
+      <button type="button" class="key" data-ch="ć">ć</button>
+      <button type="button" class="key" data-ch="đ">đ</button>
+      <button type="button" class="key" data-ch="š">š</button>
+      <button type="button" class="key" data-ch="ž">ž</button>
+    </div>
     <div class="tools">
       <button class="btn mic" id="micIn" data-label="Speak"><span aria-hidden="true">🎤</span><span class="lbl">Speak</span></button>
       <button class="btn" id="speakIn"><span aria-hidden="true">🔊</span> Listen</button>
@@ -1713,6 +1731,29 @@ $('#micIn').addEventListener('click', () => {
   });
 });
 $('#speakIn').addEventListener('click', () => speak($('#text-in').value, state.source, $('#speakIn')));
+
+/* Croatian letter row: types the letter at the cursor without closing the on-screen keyboard. */
+let capsNext = false;
+function setCaps(on) {
+  capsNext = on;
+  $('#keyShift').setAttribute('aria-pressed', on ? 'true' : 'false');
+  $$('#letters [data-ch]').forEach(b => { b.textContent = on ? b.dataset.ch.toUpperCase() : b.dataset.ch; });
+}
+function typeLetter(ch) {
+  const ta = $('#text-in');
+  if (capsNext) { ch = ch.toUpperCase(); setCaps(false); }
+  const s = ta.selectionStart ?? ta.value.length, e = ta.selectionEnd ?? s;
+  if (ta.setRangeText) ta.setRangeText(ch, s, e, 'end');
+  else { ta.value = ta.value.slice(0, s) + ch + ta.value.slice(e); ta.selectionStart = ta.selectionEnd = s + ch.length; }
+  ta.focus();
+}
+function bindKey(btn, fn) {
+  btn.addEventListener('mousedown', e => e.preventDefault());              // keep the cursor in the box (Mac)
+  btn.addEventListener('touchend', e => { e.preventDefault(); fn(); });   // iPhone/iPad: no blur, no double tap
+  btn.addEventListener('click', fn);
+}
+$$('#letters [data-ch]').forEach(b => bindKey(b, () => typeLetter(b.dataset.ch)));
+bindKey($('#keyShift'), () => setCaps(!capsNext));
 $('#clearIn').addEventListener('click', () => {
   $('#text-in').value = ''; $('#results').innerHTML = ''; state.last = null;
   $('#text-in').focus();
