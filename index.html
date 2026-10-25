@@ -166,11 +166,17 @@ textarea:focus { outline: 2px solid var(--brand); outline-offset: 1px; }
 .btn.playing { border-color: var(--brand); color: var(--brand); }
 .btn.mic:disabled { text-decoration: line-through; }
 
-.direction {
-  display: flex; align-items: center; justify-content: center; gap: 8px;
-  color: var(--muted); font-size: .88rem; font-weight: 600;
+.dir-toggle {
+  display: inline-flex; align-items: center; gap: 10px; min-height: 44px;
+  padding: 6px 14px; border-radius: 999px; border: 1.5px solid var(--brand);
+  background: var(--surface-2); color: var(--ink); cursor: pointer;
+  font-weight: 700; font-size: 1.02rem; -webkit-tap-highlight-color: transparent;
 }
-@media (min-width: 820px) { .direction { flex-direction: column; } .direction #swapBtn { transform: rotate(90deg); } }
+.dir-toggle:active { transform: translateY(1px); }
+.dir-toggle .arrow { color: var(--brand); font-size: 1.25rem; line-height: 1; }
+.dir-toggle .to { color: var(--muted); }
+.dir-toggle .swap { margin-left: 2px; padding-left: 10px; border-left: 1px solid var(--line); color: var(--brand); font-size: .85rem; }
+.out-text { font-size: 1.25rem; font-weight: 600; margin: 4px 0 2px; white-space: pre-wrap; }
 
 .actions {
   display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px;
@@ -302,7 +308,7 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
 <header class="top">
   <div class="brand">
     <span class="logo" aria-hidden="true"></span>
-    <div><h1>Prevoditelj</h1><p>Croatian ⇄ English · v1.3</p></div>
+    <div><h1>Prevoditelj</h1><p>Croatian ⇄ English · v1.5</p></div>
   </div>
   <button id="settingsBtn" class="icon-btn" aria-label="Settings" title="Settings">⚙︎</button>
 </header>
@@ -327,38 +333,22 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
     To start translating, add your Claude API key in <button class="link" id="openSettings2">Settings</button>.
   </div>
 
-  <section class="panels">
-    <article class="panel is-source" id="panel-hr">
-      <div class="panel-head">
-        <h2>Hrvatski <span class="sub">Croatian</span></h2>
-        <span class="src-tag" id="tag-hr">From</span>
-      </div>
-      <textarea id="text-hr" lang="hr" placeholder="Upišite ili izgovorite… (type or speak Croatian)" autocapitalize="sentences" autocomplete="off" spellcheck="false"></textarea>
-      <div class="tools">
-        <button class="btn mic" data-mic="hr" data-label="Speak"><span aria-hidden="true">🎤</span><span class="lbl">Speak</span></button>
-        <button class="btn" data-speak="hr"><span aria-hidden="true">🔊</span> Listen</button>
-        <button class="btn accent" id="practiceBtn"><span aria-hidden="true">🗣</span> Practise saying it</button>
-        <button class="btn ghost" data-clear="hr" aria-label="Clear Croatian text" title="Clear">✕</button>
-      </div>
-    </article>
-
-    <div class="direction">
-      <button id="swapBtn" class="btn small" aria-label="Swap translation direction" title="Swap direction">⇅</button>
-      <span id="dirText">Croatian → English</span>
+  <section class="panel is-source" id="inputPanel">
+    <div class="panel-head">
+      <button id="dirToggle" class="dir-toggle" type="button" title="Tap to swap direction">
+        <span class="lang" id="dirFrom">Hrvatski</span>
+        <span class="arrow" aria-hidden="true">→</span>
+        <span class="lang to" id="dirTo">English</span>
+        <span class="swap" aria-hidden="true">⇄ swap</span>
+      </button>
     </div>
-
-    <article class="panel" id="panel-en">
-      <div class="panel-head">
-        <h2>English <span class="sub">Engleski</span></h2>
-        <span class="src-tag" id="tag-en">To</span>
-      </div>
-      <textarea id="text-en" lang="en" placeholder="Type or speak English…" autocapitalize="sentences" autocomplete="off"></textarea>
-      <div class="tools">
-        <button class="btn mic" data-mic="en" data-label="Speak"><span aria-hidden="true">🎤</span><span class="lbl">Speak</span></button>
-        <button class="btn" data-speak="en"><span aria-hidden="true">🔊</span> Listen</button>
-        <button class="btn ghost" data-clear="en" aria-label="Clear English text" title="Clear">✕</button>
-      </div>
-    </article>
+    <textarea id="text-in" lang="hr" placeholder="Upišite ili izgovorite… (type or speak Croatian)" autocapitalize="sentences" autocomplete="off" spellcheck="false"></textarea>
+    <div class="tools">
+      <button class="btn mic" id="micIn" data-label="Speak"><span aria-hidden="true">🎤</span><span class="lbl">Speak</span></button>
+      <button class="btn" id="speakIn"><span aria-hidden="true">🔊</span> Listen</button>
+      <button class="btn accent" id="practiceBtn"><span aria-hidden="true">🗣</span> Practise saying it</button>
+      <button class="btn ghost" id="clearIn" aria-label="Clear text" title="Clear">✕</button>
+    </div>
   </section>
 
   <section class="actions">
@@ -416,12 +406,16 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
         <button class="btn primary" id="studyDue">Study due cards</button>
         <button class="btn" id="studyAll">Study all</button>
       </div>
+      <p id="cardsEmpty" class="muted small" style="margin:10px 0 0">No cards yet. On the Translate tab, tap ☆ Save as flash card on a translation or example phrase. On a new device, tap Load from iCloud first.</p>
     </section>
 
     <section class="card" id="studyCard" hidden aria-live="polite">
       <div class="card-head">
         <span class="muted small" id="studyProgress"></span>
-        <button class="icon-btn" id="studyEnd" aria-label="End study session">✕</button>
+        <div class="tools">
+          <button class="btn small ghost" id="fcDelete" aria-label="Delete this card" title="Delete this card">🗑</button>
+          <button class="icon-btn" id="studyEnd" aria-label="End study session">✕</button>
+        </div>
       </div>
       <div class="fc">
         <div class="fc-side">
@@ -450,11 +444,6 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
       </div>
     </section>
 
-    <section class="card">
-      <div class="card-head"><h3 id="allCardsTitle">All cards</h3><input type="search" id="cardSearch" placeholder="Search cards" aria-label="Search cards"></div>
-      <p id="cardsEmpty" class="muted small">No cards yet. On the Translate tab, tap ☆ Save as flash card on a translation or example phrase. On a new device, tap Load from iCloud first.</p>
-      <ul id="cardList" class="card-list"></ul>
-    </section>
   </div>
 </main>
 
@@ -799,12 +788,20 @@ function speak(text, code, btn) {
 }
 
 /* ---------- source / direction ---------- */
+// One input box; the direction switch says which language is typed/spoken into it.
+const NATIVE = { hr: 'Hrvatski', en: 'English' };
 function setSource(f) {
   state.source = f;
   const other = f === 'hr' ? 'en' : 'hr';
-  $('#panel-' + f).classList.add('is-source'); $('#panel-' + other).classList.remove('is-source');
-  $('#tag-' + f).textContent = 'From'; $('#tag-' + other).textContent = 'To';
-  $('#dirText').textContent = `${LANG[f].name} → ${LANG[other].name}`;
+  $('#dirFrom').textContent = NATIVE[f];
+  $('#dirTo').textContent = NATIVE[other];
+  $('#dirToggle').setAttribute('aria-label', `Translating from ${LANG[f].name} to ${LANG[other].name}. Tap to swap.`);
+  const ta = $('#text-in');
+  ta.lang = f;
+  ta.spellcheck = f === 'en';
+  ta.placeholder = f === 'hr' ? 'Upišite ili izgovorite… (type or speak Croatian)' : 'Type or speak English…';
+  $('#practiceBtn').hidden = f !== 'hr';   // when the input is English, Practise appears on the Croatian translation
+  store.set('dir', f);
 }
 
 /* ---------- Claude ---------- */
@@ -932,8 +929,8 @@ ${text}
 
 async function translate() {
   if (state.busy) return;
-  const src = state.source, tgt = src === 'hr' ? 'en' : 'hr';
-  const text = $('#text-' + src).value.trim();
+  const src = state.source;
+  const text = $('#text-in').value.trim();
   if (!text) { toast(`Type or speak some ${LANG[src].name} first.`); return; }
   if (!settings.key) { openSettings(); toast('Add your Claude API key first.'); return; }
 
@@ -949,13 +946,10 @@ async function translate() {
     let realSrc = src;
     if (out.detected_language === 'hr' || out.detected_language === 'en') realSrc = out.detected_language;
     if (realSrc !== src) {
-      // The user typed the other language in this box: move it to the right box.
-      $('#text-' + realSrc).value = text;
+      // The text was in the other language: flip the direction switch to match.
       setSource(realSrc);
-      toast(`That looked like ${LANG[realSrc].name}, so I moved it to the ${LANG[realSrc].name} box.`, 5000);
+      toast(`That looked like ${LANG[realSrc].name}, so I switched the direction to ${NATIVE[realSrc]} → ${NATIVE[realSrc === 'hr' ? 'en' : 'hr']}.`, 5000);
     }
-    const realTgt = realSrc === 'hr' ? 'en' : 'hr';
-    $('#text-' + realTgt).value = out.translation || '';
     state.last = { ...out, src: realSrc, input: text };
     renderResults(state.last);
   } catch (e) {
@@ -988,15 +982,21 @@ function renderResults(r) {
   const inputWasHr = r.src === 'hr';
   const norm = s => (s || '').trim().replace(/\s+/g, ' ');
 
-  // Save-as-flash-card bar
-  const cardHr = (r.croatian_text || (inputWasHr ? r.corrected_input : r.translation) || '').trim();
-  const cardEn = (inputWasHr ? r.translation : r.input || '').trim();
-  if (cardHr && cardEn) {
-    const c = el('div', 'card save-bar');
-    const t = el('div', 't');
-    const h = el('div', null, cardHr); h.lang = 'hr'; h.style.fontWeight = '700';
-    t.append(h, el('div', 'muted small', cardEn));
-    c.append(t, saveCardBtn(cardHr, cardEn, grammarNote(r.grammar), true));
+  // The translation itself, with listen / practise / save-as-flash-card
+  const outLang = inputWasHr ? 'en' : 'hr';
+  const outText = (r.translation || '').trim();
+  if (outText) {
+    const c = el('div', 'card');
+    const hd = el('div', 'card-head');
+    hd.appendChild(el('h3', null, outLang === 'hr' ? 'Hrvatski · Croatian' : 'English'));
+    const tools = el('div', 'tools');
+    tools.appendChild(playBtn(outText, outLang, 'Listen to the translation'));
+    if (outLang === 'hr') tools.appendChild(practiseBtn(outText));
+    const cardHr = (r.croatian_text || (inputWasHr ? r.corrected_input : outText) || '').trim();
+    const cardEn = (inputWasHr ? outText : r.input || '').trim();
+    if (cardHr && cardEn) tools.appendChild(saveCardBtn(cardHr, cardEn, grammarNote(r.grammar), true));
+    hd.appendChild(tools); c.appendChild(hd);
+    const p = el('p', 'out-text', outText); p.lang = outLang; c.appendChild(p);
     results.appendChild(c);
   }
 
@@ -1005,8 +1005,8 @@ function renderResults(r) {
     const hd = el('div', 'card-head'); hd.appendChild(el('h3', null, '✏️ Corrected Croatian'));
     const use = el('button', 'btn small', 'Use this'); use.type = 'button';
     use.addEventListener('click', () => {
-      $('#text-hr').value = r.corrected_input; state.last.input = r.corrected_input.trim();
-      toast('Croatian box updated with the corrected text.');
+      $('#text-in').value = r.corrected_input; state.last.input = r.corrected_input.trim();
+      toast('Box updated with the corrected Croatian.');
     });
     const tools = el('div', 'tools'); tools.append(playBtn(r.corrected_input, 'hr', 'Listen to corrected Croatian'), use);
     hd.appendChild(tools); c.appendChild(hd);
@@ -1103,14 +1103,18 @@ function compare(target, heard) {
 function openPractice(text, fromBox = true) {
   let target = (text || '').trim(), corrected = false;
   if (fromBox) {
-    const hr = $('#text-hr').value.trim();
+    const box = $('#text-in').value.trim();
     const L = state.last;
-    target = hr;
-    if (L && L.src === 'hr' && L.input === hr && L.croatian_text && L.croatian_text.trim() !== hr) {
-      target = L.croatian_text.trim(); corrected = true;
+    if (state.source === 'hr') {
+      target = box;
+      if (L && L.src === 'hr' && L.input === box && L.croatian_text && L.croatian_text.trim() !== box) {
+        target = L.croatian_text.trim(); corrected = true;
+      }
+    } else if (L && L.src === 'en') {
+      target = (L.translation || '').trim();
     }
   }
-  if (!target) { toast('Put some Croatian in the Croatian box first (or translate from English).'); return; }
+  if (!target) { toast('Type or speak some Croatian first (or translate from English).'); return; }
   state.practice = { target, attempts: [], max: 3, done: false };
   $('#practiceTarget').textContent = target;
   const note = $('#practiceNote');
@@ -1354,29 +1358,30 @@ function dueText(c) {
   const days = Math.ceil(d / DAY);
   return days <= 1 ? 'due tomorrow' : `due in ${days} days`;
 }
+// The full card list was removed (too long to be useful); only the "no cards yet" hint remains.
 function renderCardList() {
-  const q = normHr($('#cardSearch').value);
-  const all = live().sort((a, b) => b.createdAt - a.createdAt);
-  const shown = q ? all.filter(c => normHr(c.hr).includes(q) || c.en.toLowerCase().includes(q)) : all;
-  $('#allCardsTitle').textContent = `All cards (${all.length})`;
-  $('#cardsEmpty').hidden = all.length > 0;
-  const ul = $('#cardList'); ul.innerHTML = '';
-  shown.forEach(c => {
-    const li = el('li');
-    const t = el('div', 't');
-    const h = el('div', 'hr', c.hr); h.lang = 'hr';
-    t.append(h, el('div', 'en', c.en), el('div', 'lvl', `Level ${c.level} of ${MAX_LEVEL} · ${dueText(c)}`));
-    const del = el('button', 'btn small ghost', '🗑'); del.type = 'button';
-    del.setAttribute('aria-label', 'Delete card'); del.title = 'Delete card';
-    let armed = null;
-    del.addEventListener('click', () => {
-      if (armed) { clearTimeout(armed); deleteCard(c.id); return; }
-      del.textContent = 'Delete?'; del.classList.add('danger');
-      armed = setTimeout(() => { armed = null; del.textContent = '🗑'; del.classList.remove('danger'); }, 3000);
-    });
-    li.append(t, playBtn(c.hr, 'hr', 'Listen'), del);
-    ul.appendChild(li);
-  });
+  $('#cardsEmpty').hidden = live().length > 0;
+}
+
+// Delete the card being studied: first tap asks "Delete?", second tap (within 3 s) deletes.
+let delArmed = null;
+function disarmDelete() {
+  clearTimeout(delArmed); delArmed = null;
+  const b = $('#fcDelete'); b.textContent = '🗑'; b.classList.remove('danger');
+}
+function deleteCurrentCard() {
+  const c = curCard(); if (!c) return;
+  const b = $('#fcDelete');
+  if (!delArmed) {
+    b.textContent = 'Delete?'; b.classList.add('danger');
+    delArmed = setTimeout(disarmDelete, 3000);
+    return;
+  }
+  disarmDelete();
+  deleteCard(c.id);
+  session.queue.shift();
+  toast('Card deleted. Remember to Save to iCloud.');
+  renderStudy();
 }
 
 /* --- study session (simple spaced repetition) --- */
@@ -1411,6 +1416,7 @@ function renderStudy() {
   const c = curCard();
   if (!c) { endSession(true); return; }
   const m = session.mode;
+  disarmDelete();
   $('#studyProgress').textContent = `${session.done} done · ${session.queue.length} to go`;
   const frontIsHr = m !== 'en-hr';
   $('#fcFrontLabel').textContent = frontIsHr ? 'Croatian' : 'English';
@@ -1539,29 +1545,30 @@ $('#settingsBtn').addEventListener('click', openSettings);
 $('#openSettings2').addEventListener('click', openSettings);
 
 /* ---------- wiring ---------- */
-$$('[data-mic]').forEach(btn => btn.addEventListener('click', () => {
-  const f = btn.dataset.mic; const ta = $('#text-' + f); const before = ta.value;
+$('#micIn').addEventListener('click', () => {
+  const btn = $('#micIn'), ta = $('#text-in'), before = ta.value, f = state.source;
   listen({
-    kind: 'dict-' + f, lang: LANG[f].rec, btn, interim: true,
+    kind: 'dict', lang: LANG[f].rec, btn, interim: true,
     onText: t => { ta.value = t; },
     onFinal: ({ text }) => {
       if (!text) { ta.value = before; return; }
-      ta.value = text; setSource(f);
+      ta.value = text;
       if (settings.auto && settings.key) translate();
     }
   });
-}));
-$$('[data-speak]').forEach(btn => btn.addEventListener('click', () => speak($('#text-' + btn.dataset.speak).value, btn.dataset.speak, btn)));
-$$('[data-clear]').forEach(btn => btn.addEventListener('click', () => {
-  const f = btn.dataset.clear; $('#text-' + f).value = '';
-  if (!$('#text-hr').value && !$('#text-en').value) { $('#results').innerHTML = ''; state.last = null; }
-  $('#text-' + f).focus();
-}));
-['hr', 'en'].forEach(f => $('#text-' + f).addEventListener('input', () => setSource(f)));
-['hr', 'en'].forEach(f => $('#text-' + f).addEventListener('keydown', e => {
-  if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) { e.preventDefault(); setSource(f); translate(); }
-}));
-$('#swapBtn').addEventListener('click', () => setSource(state.source === 'hr' ? 'en' : 'hr'));
+});
+$('#speakIn').addEventListener('click', () => speak($('#text-in').value, state.source, $('#speakIn')));
+$('#clearIn').addEventListener('click', () => {
+  $('#text-in').value = ''; $('#results').innerHTML = ''; state.last = null;
+  $('#text-in').focus();
+});
+$('#text-in').addEventListener('keydown', e => {
+  if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) { e.preventDefault(); translate(); }
+});
+$('#dirToggle').addEventListener('click', () => {
+  if (state.recKind === 'dict') { killRec(); showIdleMic(); }
+  setSource(state.source === 'hr' ? 'en' : 'hr');
+});
 $('#translateBtn').addEventListener('click', translate);
 $('#optGrammar').addEventListener('change', e => store.set('optGrammar', e.target.checked));
 $('#optExamples').addEventListener('change', e => store.set('optExamples', e.target.checked));
@@ -1585,7 +1592,7 @@ if (synth) {
 }
 initMic();
 updateKeyNotice();
-setSource('hr');
+setSource(store.get('dir', 'hr') === 'en' ? 'en' : 'hr');
 
 /* flash card wiring */
 $('#tabTranslate').addEventListener('click', () => showTab('translate'));
@@ -1593,7 +1600,7 @@ $('#tabCards').addEventListener('click', () => showTab('cards'));
 $('#cardsSave').addEventListener('click', saveCardsFile);
 $('#cardsLoad').addEventListener('click', () => { const f = $('#cardsFile'); f.value = ''; f.click(); });
 $('#cardsFile').addEventListener('change', e => { const f = e.target.files && e.target.files[0]; if (f) loadCardsFile(f); });
-$('#cardSearch').addEventListener('input', renderCardList);
+$('#fcDelete').addEventListener('click', deleteCurrentCard);
 $('#studyDue').addEventListener('click', () => startSession(false));
 $('#studyAll').addEventListener('click', () => startSession(true));
 $('#studyEnd').addEventListener('click', () => endSession(false));
