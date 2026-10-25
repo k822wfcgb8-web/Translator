@@ -271,6 +271,8 @@ h3 { font-size: 1rem; margin: 0; }
 .fc-text { font-size: 1.45rem; font-weight: 700; margin: 6px 0 8px; }
 .fc-note { white-space: pre-line; text-align: left; font-size: .88rem; color: var(--muted); margin: 10px 0 0; border-top: 1px solid var(--line); padding-top: 8px; }
 .center { justify-content: center; }
+.deck-row { display: grid; gap: 8px; margin: 0 0 12px; }
+.deck-row .field { max-width: 460px; }
 .card-list { list-style: none; padding: 0; margin: 8px 0 0; display: grid; gap: 8px; }
 .card-list li { display: flex; gap: 8px; align-items: center; border: 1px solid var(--line); border-radius: 12px; padding: 8px 10px; }
 .card-list .t { flex: 1; min-width: 0; }
@@ -308,7 +310,7 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
 <header class="top">
   <div class="brand">
     <span class="logo" aria-hidden="true"></span>
-    <div><h1>Prevoditelj</h1><p>Croatian ⇄ English · v1.5</p></div>
+    <div><h1>Prevoditelj</h1><p>Croatian ⇄ English · v1.6</p></div>
   </div>
   <button id="settingsBtn" class="icon-btn" aria-label="Settings" title="Settings">⚙︎</button>
 </header>
@@ -401,6 +403,12 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
         <label><input type="radio" name="fcmode" value="hr-en" checked> Croatian → English</label>
         <label><input type="radio" name="fcmode" value="en-hr"> English → Croatian</label>
         <label><input type="radio" name="fcmode" value="say"> Say it</label>
+      </div>
+      <div class="deck-row">
+        <label class="field" for="fcDeck">Unit or lesson
+          <select id="fcDeck"></select>
+        </label>
+        <label class="check" id="fcPrevWrap" hidden><input type="checkbox" id="fcPrev"> Add all previous lessons</label>
       </div>
       <div class="tools">
         <button class="btn primary" id="studyDue">Study due cards</button>
@@ -1205,6 +1213,54 @@ const live = () => cards.filter(c => !c.deleted);
 const normHr = s => (s || '').trim().toLowerCase().replace(/[.!?,;:…]+$/u, '').replace(/\s+/g, ' ');
 const isDue = (c, now = Date.now()) => (c.due || 0) <= now;
 
+/* --- unit / lesson picker: read "U1 · M1 · Lesson 3: Title" from the card's note --- */
+const LESSON_RE = /U(\d+)\s*·\s*M(\d+)\s*·\s*Lesson\s*(\d+)(?::\s*([^\n]*))?/;
+function lessonOf(c) {
+  const m = LESSON_RE.exec(c.note || '');
+  return m ? { key: `${+m[1]}-${+m[2]}-${+m[3]}`, u: +m[1], m: +m[2], l: +m[3], title: (m[4] || '').trim() } : null;
+}
+const lessonRank = L => L.u * 10000 + L.m * 100 + L.l;
+function shuffle(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+function renderDeckPick() {
+  const sel = $('#fcDeck'); if (!sel) return;
+  const want = sel.value || store.get('fcDeck', 'all');
+  const lessons = new Map(); let own = 0;
+  live().forEach(c => {
+    const L = lessonOf(c);
+    if (!L) { own++; return; }
+    const e = lessons.get(L.key) || Object.assign({ n: 0 }, L);
+    e.n++; if (!e.title && L.title) e.title = L.title;
+    lessons.set(L.key, e);
+  });
+  sel.innerHTML = '';
+  const opt = (parent, v, t) => { const o = el('option', null, t); o.value = v; parent.appendChild(o); };
+  opt(sel, 'all', `All cards (${live().length})`);
+  const list = [...lessons.values()].sort((a, b) => lessonRank(a) - lessonRank(b));
+  let group = null, gu = null;
+  list.forEach(L => {
+    if (L.u !== gu) {
+      gu = L.u; group = el('optgroup'); group.label = `Unit ${L.u}`; sel.appendChild(group);
+      opt(group, 'U:' + L.u, `Unit ${L.u}: every lesson (${list.filter(x => x.u === L.u).reduce((n, x) => n + x.n, 0)})`);
+    }
+    opt(group, 'L:' + L.key, `M${L.m} · Lesson ${L.l}${L.title ? ': ' + L.title : ''} (${L.n})`);
+  });
+  if (own) opt(sel, 'own', `My saved cards (${own})`);
+  sel.value = [...sel.options].some(o => o.value === want) ? want : 'all';
+  $('#fcPrevWrap').hidden = !/^[LU]:/.test(sel.value);
+}
+function deckFilter(pool) {
+  const sel = $('#fcDeck'), v = (sel && sel.value) || 'all';
+  if (v === 'all') return pool;
+  if (v === 'own') return pool.filter(c => !lessonOf(c));
+  const prev = $('#fcPrev').checked;
+  if (v.startsWith('U:')) {
+    const u = +v.slice(2);
+    return pool.filter(c => { const L = lessonOf(c); return L && (prev ? L.u <= u : L.u === u); });
+  }
+  const [u, m, l] = v.slice(2).split('-').map(Number), r = lessonRank({ u, m, l });
+  return pool.filter(c => { const L = lessonOf(c); return L && (prev ? lessonRank(L) <= r : lessonRank(L) === r); });
+}
+
 function persistCards(markDirty = true) {
   store.set('cards', cards);
   if (markDirty) sync.dirty = true;
@@ -1350,7 +1406,8 @@ function renderSync() {
 function updateDue() {
   const now = Date.now(), all = live(), due = all.filter(c => isDue(c, now)).length;
   const b = $('#dueBadge'); b.hidden = !due; b.textContent = due;
-  $('#studyCounts').textContent = `${due} due · ${all.length} total`;
+  const set = deckFilter(all), setDue = set.filter(c => isDue(c, now)).length;
+  $('#studyCounts').textContent = `${setDue} due · ${set.length} in this set`;
 }
 function dueText(c) {
   const d = (c.due || 0) - Date.now();
@@ -1361,6 +1418,7 @@ function dueText(c) {
 // The full card list was removed (too long to be useful); only the "no cards yet" hint remains.
 function renderCardList() {
   $('#cardsEmpty').hidden = live().length > 0;
+  renderDeckPick();
 }
 
 // Delete the card being studied: first tap asks "Delete?", second tap (within 3 s) deletes.
@@ -1388,14 +1446,15 @@ function deleteCurrentCard() {
 function currentMode() { const r = document.querySelector('input[name=fcmode]:checked'); return r ? r.value : 'hr-en'; }
 function startSession(all) {
   const now = Date.now();
-  let pool = live();
-  if (!all) pool = pool.filter(c => isDue(c, now));
+  const set = deckFilter(live());
+  let pool = all ? set : set.filter(c => isDue(c, now));
   if (!pool.length) {
-    toast(live().length ? 'Nothing is due right now. Try "Study all".' : 'No cards yet. Save some from the Translate tab.');
+    toast(!live().length ? 'No cards yet. Save some from the Translate tab.'
+      : !set.length ? 'No cards in that unit or lesson yet.'
+      : 'Nothing is due in this set right now. Try "Study all".');
     return;
   }
-  if (all) { for (let i = pool.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [pool[i], pool[j]] = [pool[j], pool[i]]; } }
-  else pool.sort((a, b) => (a.due || 0) - (b.due || 0));
+  shuffle(pool);   // always random order
   session = { queue: pool.map(c => c.id), mode: currentMode(), done: 0, knew: 0, tries: [], sayDone: false };
   $('#studySetup').hidden = true; $('#studyCard').hidden = false;
   renderStudy();
@@ -1611,9 +1670,12 @@ $('#fcSayBtn').addEventListener('click', cardSay);
 $('#fcFrontPlay').addEventListener('click', () => speak($('#fcFront').textContent, $('#fcFront').lang === 'hr' ? 'hr' : 'en', $('#fcFrontPlay')));
 $('#fcBackPlay').addEventListener('click', () => speak($('#fcBack').textContent, $('#fcBack').lang === 'hr' ? 'hr' : 'en', $('#fcBackPlay')));
 const savedMode = store.get('fcmode', 'hr-en');
+$('#fcDeck').addEventListener('change', e => { store.set('fcDeck', e.target.value); $('#fcPrevWrap').hidden = !/^[LU]:/.test(e.target.value); updateDue(); });
+$('#fcPrev').checked = !!store.get('fcPrev', false);
+$('#fcPrev').addEventListener('change', e => { store.set('fcPrev', e.target.checked); updateDue(); });
 $$('input[name=fcmode]').forEach(r => { r.checked = r.value === savedMode; r.addEventListener('change', () => store.set('fcmode', r.value)); });
 window.addEventListener('beforeunload', e => { if (sync.dirty && live().length) { e.preventDefault(); e.returnValue = ''; } });
-renderSync(); updateDue();
+renderSync(); renderCardList(); updateDue();
 if (store.get('tab', 'translate') === 'cards') showTab('cards');
 
 // Test hook (used only by automated checks).
