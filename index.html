@@ -272,7 +272,10 @@ h3 { font-size: 1rem; margin: 0; }
 .fc-note { white-space: pre-line; text-align: left; font-size: .88rem; color: var(--muted); margin: 10px 0 0; border-top: 1px solid var(--line); padding-top: 8px; }
 .center { justify-content: center; }
 .deck-row { display: grid; gap: 8px; margin: 0 0 12px; }
-.deck-row .field { max-width: 460px; }
+.pick3 { display: grid; gap: 8px; grid-template-columns: 1fr; }
+@media (min-width: 620px) { .pick3 { grid-template-columns: 1.3fr 1fr 1.6fr; } }
+.pick3 select { width: 100%; min-height: 44px; border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; background: var(--surface-2); font-size: 16px; font-weight: 400; }
+.pick3 select:disabled { opacity: .5; }
 .card-list { list-style: none; padding: 0; margin: 8px 0 0; display: grid; gap: 8px; }
 .card-list li { display: flex; gap: 8px; align-items: center; border: 1px solid var(--line); border-radius: 12px; padding: 8px 10px; }
 .card-list .t { flex: 1; min-width: 0; }
@@ -310,7 +313,7 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
 <header class="top">
   <div class="brand">
     <span class="logo" aria-hidden="true"></span>
-    <div><h1>Prevoditelj</h1><p>Croatian ⇄ English · v1.6</p></div>
+    <div><h1>Prevoditelj</h1><p>Croatian ⇄ English · v1.9</p></div>
   </div>
   <button id="settingsBtn" class="icon-btn" aria-label="Settings" title="Settings">⚙︎</button>
 </header>
@@ -405,10 +408,12 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
         <label><input type="radio" name="fcmode" value="say"> Say it</label>
       </div>
       <div class="deck-row">
-        <label class="field" for="fcDeck">Unit or lesson
-          <select id="fcDeck"></select>
-        </label>
-        <label class="check" id="fcPrevWrap" hidden><input type="checkbox" id="fcPrev"> Add all previous lessons</label>
+        <div class="pick3">
+          <label class="field">Unit <select id="fcUnit"></select></label>
+          <label class="field">Module <select id="fcModule"></select></label>
+          <label class="field">Lesson <select id="fcLesson"></select></label>
+        </div>
+        <label class="check" id="fcPrevWrap" hidden><input type="checkbox" id="fcPrev"> <span id="fcPrevText">Add all previous lessons</span></label>
       </div>
       <div class="tools">
         <button class="btn primary" id="studyDue">Study due cards</button>
@@ -1213,52 +1218,130 @@ const live = () => cards.filter(c => !c.deleted);
 const normHr = s => (s || '').trim().toLowerCase().replace(/[.!?,;:…]+$/u, '').replace(/\s+/g, ' ');
 const isDue = (c, now = Date.now()) => (c.due || 0) <= now;
 
-/* --- unit / lesson picker: read "U1 · M1 · Lesson 3: Title" from the card's note --- */
-const LESSON_RE = /U(\d+)\s*·\s*M(\d+)\s*·\s*Lesson\s*(\d+)(?::\s*([^\n]*))?/;
-function lessonOf(c) {
-  const m = LESSON_RE.exec(c.note || '');
-  return m ? { key: `${+m[1]}-${+m[2]}-${+m[3]}`, u: +m[1], m: +m[2], l: +m[3], title: (m[4] || '').trim() } : null;
+/* --- Unit / Module / Lesson pickers ---
+ * Card notes carry tags, one per line:
+ *   "Tako lako U1 · M1 · Lesson 3: Title"   (first lesson)   "Also: U3 · M2 · Lesson 2: Title"   (more lessons)
+ *   "Tako lako U3 · Phrases"                 (Phrase Book, filed by unit)
+ *   "Tako lako topic: Fruit"                 (the book's Vocabulary-index topic lists)
+ * The pickers always list the whole book (BOOK below), not just what is loaded.
+ */
+const BOOK = {"1":{"0":{"1":"Brojevi 1–21","2":"Dani u tjednu","3":"Mjeseci","4":"Jedinice vremena","5":"Boje"},"1":{"1":"Dobar dan!","2":"Kako se zoveš?","3":"Upoznajmo se","4":"Kako ste?","5":"Broj telefona","6":"Roditelji"},"2":{"1":"Ljudi i stvari","2":"Osobine","3":"Naše stvari"},"3":{"1":"Odakle si?","2":"Moji prijatelji"},"4":{"1":"Ponavljanje"}},"2":{"1":{"1":"Odakle si?","2":"Atrakcije","3":"Što posjetiti?"},"2":{"1":"Aktivnosti","2":"Glazba i film"},"3":{"1":"Kamo ići?","2":"Vikend putovanje","4":"Moji interesi","5":"Idemo na kavu"}},"3":{"1":{"2":"Krv nije voda","3":"Braća i sestre","4":"Vjenčanje","5":"Stambeno pitanje","6":"U posjetu","7":"Slika i prilika"},"2":{"1":"Kultura i tradicija","2":"Podrijetlo"}},"4":{"1":{"1":"Moj stan","2":"Smještaj","3":"Kupnja u IKEA-i","4":"Gdje živiš?","5":"Moja cimerica"},"2":{"1":"Kako je bilo?","2":"Više o zemlji","3":"Jesi živ?"}},"5":{"1":{"1":"Sretan rođendan!","2":"Blagdani"},"2":{"1":"Planovi za praznike","2":"Sretan Božić!","3":"Novogodišnji planovi","4":"Advent u Zagrebu","5":"Sretna Nova godina!"}},"6":{"1":{"1":"Planovi i želje","2":"Izlet za vikend"},"2":{"1":"Mislimo na druge","2":"Ti si mi u mislima"},"3":{"1":"Sviđa mi se","2":"Sedma umjetnost"},"4":{"1":"[Ne]Prikladna odjeća","2":"Peglam karticu"}},"7":{"1":{"1":"Moje putovanje","2":"Ljetni odmor","3":"Moja odluka"},"2":{"1":"Prijevozna sredstva","2":"Plan putovanja"},"3":{"1":"Moje avanture","2":"Studentsko putovanje"}},"8":{"1":{"1":"Idemo na kavu","2":"Nešto za pregristi","3":"Večera za prijatelje"},"2":{"1":"Moja košarica","2":"Priprema za put"},"3":{"1":"Ne jedi rukama!","2":"Večera","3":"U restoranu"}},"9":{"1":{"1":"Sport i rekreacija","2":"Dnevni ritam","3":"Briga o zdravlju","4":"Izgled i osobine"},"2":{"1":"Želje za budućnost","2":"Životopis"},"3":{"1":"Strah i bolest","2":"Doktore, pomozite!","3":"Ozdravi brzo!"}},"10":{"1":{"1":"Šetnja gradom","2":"Poklon za rođendan","3":"Planovi za Dubrovnik","4":"Rezervacija smještaja"},"2":{"1":"Po Zagrebu","2":"Po Dubrovniku"},"3":{"1":"Nogometna utakmica","2":"Pogled u budućnost"}}};   // unit -> module -> lesson -> title (from the Tako lako lesson list)
+const UNITS = { 1: 'Dobro došli!', 2: 'Slobodno vrijeme', 3: 'Moja obitelj', 4: 'Stanovanje', 5: 'Blagdani i tradicija',
+  6: 'Pokloni i suveniri', 7: 'Transport i putovanje', 8: 'Tradicionalna hrana', 9: 'U zdravom tijelu zdrav duh', 10: 'Razgledavanje grada' };
+const PB_SLOT = 9999;     // Phrase Book sorts after every lesson of its unit
+const LESSON_TAG = /U(\d+)\s*·\s*M(\d+)\s*·\s*Lesson\s*(\d+)/g;
+const PB_TAG = /U(\d+)\s*·\s*Phrases/g;
+const TOPIC_TAG = /topic:\s*([^\n]+)/g;
+const tagCache = new Map();
+function tagsOf(c) {
+  const note = c.note || '';
+  let t = tagCache.get(note);
+  if (t) return t;
+  t = { ranks: [], topics: [] };
+  for (const m of note.matchAll(LESSON_TAG)) t.ranks.push(+m[1] * 10000 + +m[2] * 100 + +m[3]);
+  for (const m of note.matchAll(PB_TAG)) t.ranks.push(+m[1] * 10000 + PB_SLOT);
+  for (const m of note.matchAll(TOPIC_TAG)) t.topics.push(m[1].trim());
+  if (tagCache.size > 6000) tagCache.clear();
+  tagCache.set(note, t);
+  return t;
+}
+const hasBookTag = c => { const t = tagsOf(c); return t.ranks.length > 0 || t.topics.length > 0; };
+function lessonOf(c) {   // first lesson tag (kept for older code paths)
+  const r = tagsOf(c).ranks.find(x => x % 10000 !== PB_SLOT);
+  if (r === undefined) return null;
+  const u = Math.floor(r / 10000), m = Math.floor(r % 10000 / 100), l = r % 100;
+  return { key: `${u}-${m}-${l}`, u, m, l, title: ((BOOK[u] || {})[m] || {})[l] || '' };
 }
 const lessonRank = L => L.u * 10000 + L.m * 100 + L.l;
 function shuffle(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
-function renderDeckPick() {
-  const sel = $('#fcDeck'); if (!sel) return;
-  const want = sel.value || store.get('fcDeck', 'all');
-  const lessons = new Map(); let own = 0;
-  live().forEach(c => {
-    const L = lessonOf(c);
-    if (!L) { own++; return; }
-    const e = lessons.get(L.key) || Object.assign({ n: 0 }, L);
-    e.n++; if (!e.title && L.title) e.title = L.title;
-    lessons.set(L.key, e);
-  });
-  sel.innerHTML = '';
-  const opt = (parent, v, t) => { const o = el('option', null, t); o.value = v; parent.appendChild(o); };
-  opt(sel, 'all', `All cards (${live().length})`);
-  const list = [...lessons.values()].sort((a, b) => lessonRank(a) - lessonRank(b));
-  let group = null, gu = null;
-  list.forEach(L => {
-    if (L.u !== gu) {
-      gu = L.u; group = el('optgroup'); group.label = `Unit ${L.u}`; sel.appendChild(group);
-      opt(group, 'U:' + L.u, `Unit ${L.u}: every lesson (${list.filter(x => x.u === L.u).reduce((n, x) => n + x.n, 0)})`);
-    }
-    opt(group, 'L:' + L.key, `M${L.m} · Lesson ${L.l}${L.title ? ': ' + L.title : ''} (${L.n})`);
-  });
-  if (own) opt(sel, 'own', `My saved cards (${own})`);
-  sel.value = [...sel.options].some(o => o.value === want) ? want : 'all';
-  $('#fcPrevWrap').hidden = !/^[LU]:/.test(sel.value);
+
+const pick = { u: store.get('fcU', 'all'), m: store.get('fcM', 'all'), l: store.get('fcL', 'all') };
+
+// The rank range a selection covers. null = no range (all / own / topics).
+function rangeOf(sel) {
+  if (!/^\d+$/.test(sel.u)) return null;
+  const base = +sel.u * 10000;
+  if (sel.m === 'all') return [base, base + PB_SLOT];
+  if (sel.m === 'pb') return [base + PB_SLOT, base + PB_SLOT];
+  const mb = base + +sel.m * 100;
+  if (sel.l === 'all') return [mb, mb + 99];
+  return [mb + +sel.l, mb + +sel.l];
 }
-function deckFilter(pool) {
-  const sel = $('#fcDeck'), v = (sel && sel.value) || 'all';
-  if (v === 'all') return pool;
-  if (v === 'own') return pool.filter(c => !lessonOf(c));
-  const prev = $('#fcPrev').checked;
-  if (v.startsWith('U:')) {
-    const u = +v.slice(2);
-    return pool.filter(c => { const L = lessonOf(c); return L && (prev ? L.u <= u : L.u === u); });
+function matcher(sel, prev) {
+  if (sel.u === 'all') return () => true;
+  if (sel.u === 'own') return c => !hasBookTag(c);
+  if (sel.u === 'topics') return c => { const t = tagsOf(c).topics; return sel.m === 'all' ? t.length > 0 : t.includes(sel.m); };
+  const [lo, hi] = rangeOf(sel);
+  return c => tagsOf(c).ranks.some(r => prev ? r <= hi : (r >= lo && r <= hi));
+}
+const countOf = (pool, sel) => { const f = matcher(sel, false); let n = 0; for (const c of pool) if (f(c)) n++; return n; };
+function deckFilter(pool) { return pool.filter(matcher(pick, $('#fcPrev').checked && rangeOf(pick) !== null)); }
+
+function fillSelect(sel, options, want) {
+  sel.innerHTML = '';
+  options.forEach(([v, t, disabled]) => { const o = el('option', null, t); o.value = v; if (disabled) o.disabled = true; sel.appendChild(o); });
+  const ok = options.some(([v, , d]) => v === want && !d);
+  sel.value = ok ? want : options[0][0];
+  return sel.value;
+}
+function renderDeckPick() {
+  const uSel = $('#fcUnit'); if (!uSel) return;
+  const pool = live();
+
+  const unitOpts = [['all', `All cards (${pool.length})`]];
+  Object.keys(BOOK).map(Number).sort((a, b) => a - b).forEach(u => {
+    const n = countOf(pool, { u: String(u), m: 'all', l: 'all' });
+    unitOpts.push([String(u), `Unit ${u}${UNITS[u] ? ': ' + UNITS[u] : ''} (${n || 'not loaded'})`, !n]);
+  });
+  const nTopics = countOf(pool, { u: 'topics', m: 'all' });
+  if (nTopics) unitOpts.push(['topics', `Book topic lists (${nTopics})`]);
+  const nOwn = countOf(pool, { u: 'own' });
+  if (nOwn) unitOpts.push(['own', `My saved cards (${nOwn})`]);
+  pick.u = fillSelect(uSel, unitOpts, pick.u);
+
+  const mSel = $('#fcModule');
+  let modOpts = [['all', 'All modules']];
+  if (/^\d+$/.test(pick.u)) {
+    const u = pick.u;
+    modOpts = [['all', `All modules (${countOf(pool, { u, m: 'all', l: 'all' })})`]];
+    Object.keys(BOOK[u] || {}).map(Number).sort((a, b) => a - b).forEach(m => {
+      const n = countOf(pool, { u, m: String(m), l: 'all' });
+      modOpts.push([String(m), `Module ${m} (${n})`, !n]);
+    });
+    const nPb = countOf(pool, { u, m: 'pb' });
+    if (nPb) modOpts.push(['pb', `Phrase Book (${nPb})`]);
+  } else if (pick.u === 'topics') {
+    const topics = new Map();
+    pool.forEach(c => tagsOf(c).topics.forEach(t => topics.set(t, (topics.get(t) || 0) + 1)));
+    modOpts = [['all', `All topics (${nTopics})`]];
+    [...topics.keys()].sort((a, b) => a.localeCompare(b)).forEach(t => modOpts.push([t, `${t} (${topics.get(t)})`]));
   }
-  const [u, m, l] = v.slice(2).split('-').map(Number), r = lessonRank({ u, m, l });
-  return pool.filter(c => { const L = lessonOf(c); return L && (prev ? lessonRank(L) <= r : lessonRank(L) === r); });
+  pick.m = fillSelect(mSel, modOpts, pick.m);
+  mSel.disabled = modOpts.length < 2;
+
+  const lSel = $('#fcLesson');
+  let lesOpts = [['all', 'All lessons']];
+  if (/^\d+$/.test(pick.u) && /^\d+$/.test(pick.m)) {
+    const u = pick.u, m = pick.m, lessons = (BOOK[u] || {})[m] || {};
+    lesOpts = [['all', `All lessons (${countOf(pool, { u, m, l: 'all' })})`]];
+    Object.keys(lessons).map(Number).sort((a, b) => a - b).forEach(l => {
+      const n = countOf(pool, { u, m, l: String(l) });
+      lesOpts.push([String(l), `Lesson ${l}${lessons[l] ? ': ' + lessons[l] : ''} (${n})`, !n]);
+    });
+  }
+  pick.l = fillSelect(lSel, lesOpts, pick.l);
+  lSel.disabled = lesOpts.length < 2;
+
+  store.set('fcU', pick.u); store.set('fcM', pick.m); store.set('fcL', pick.l);
+  const level = !/^\d+$/.test(pick.u) ? null
+    : pick.m === 'pb' ? 'phrases'
+    : (/^\d+$/.test(pick.m) && pick.l !== 'all') ? 'lesson'
+    : /^\d+$/.test(pick.m) ? 'module' : 'unit';
+  $('#fcPrevWrap').hidden = !level;
+  $('#fcPrevText').textContent = level === 'lesson' ? 'Add everything before this lesson too'
+    : level === 'module' ? 'Add everything before this module too'
+    : level === 'phrases' ? 'Add everything before these phrases too'
+    : 'Add all previous units too';
 }
 
 function persistCards(markDirty = true) {
@@ -1355,16 +1438,29 @@ function mergeCards(incoming) {
     if (!raw || !raw.id || typeof raw.hr !== 'string') return;
     const c = cleanCard(raw);
     const mine = byId.get(c.id);
-    if (!mine) { cards.push(c); byId.set(c.id, c); if (!c.deleted) added++; }
-    else if (c.updatedAt > (mine.updatedAt || 0)) { Object.assign(mine, c); updated++; }
+    if (!mine) { cards.push(c); byId.set(c.id, c); if (!c.deleted) added++; return; }
+    const theirProgress = (c.lastReviewed || 0) > (mine.lastReviewed || 0);
+    if (c.updatedAt > (mine.updatedAt || 0)) {
+      // Newer content (wording, lesson tags, deletion): take it, but keep whichever study progress is more recent.
+      const prog = theirProgress ? null : { level: mine.level, due: mine.due, lastReviewed: mine.lastReviewed };
+      Object.assign(mine, c); if (prog) Object.assign(mine, prog);
+      updated++;
+    } else if (theirProgress) {
+      mine.level = c.level; mine.due = c.due; mine.lastReviewed = c.lastReviewed; updated++;
+    }
   });
-  // Same phrase saved separately on two devices: keep the oldest card, mark the others deleted.
+  // The same Croatian on several cards: keep one (most book tags, then oldest) and carry over the best progress.
   const groups = new Map();
   live().forEach(c => { const k = normHr(c.hr); if (!groups.has(k)) groups.set(k, []); groups.get(k).push(c); });
   groups.forEach(list => {
     if (list.length < 2) return;
-    list.sort((a, b) => (a.createdAt - b.createdAt) || (a.id < b.id ? -1 : 1));
-    list.slice(1).forEach(d => { d.deleted = true; d.updatedAt = Date.now(); });
+    const score = c => tagsOf(c).ranks.length + tagsOf(c).topics.length;
+    list.sort((a, b) => (score(b) - score(a)) || (a.createdAt - b.createdAt) || (a.id < b.id ? -1 : 1));
+    const keep = list[0];
+    list.slice(1).forEach(d => {
+      if ((d.lastReviewed || 0) > (keep.lastReviewed || 0)) { keep.level = d.level; keep.due = d.due; keep.lastReviewed = d.lastReviewed; }
+      d.deleted = true; d.updatedAt = Date.now();
+    });
   });
   return { added, updated };
 }
@@ -1670,7 +1766,9 @@ $('#fcSayBtn').addEventListener('click', cardSay);
 $('#fcFrontPlay').addEventListener('click', () => speak($('#fcFront').textContent, $('#fcFront').lang === 'hr' ? 'hr' : 'en', $('#fcFrontPlay')));
 $('#fcBackPlay').addEventListener('click', () => speak($('#fcBack').textContent, $('#fcBack').lang === 'hr' ? 'hr' : 'en', $('#fcBackPlay')));
 const savedMode = store.get('fcmode', 'hr-en');
-$('#fcDeck').addEventListener('change', e => { store.set('fcDeck', e.target.value); $('#fcPrevWrap').hidden = !/^[LU]:/.test(e.target.value); updateDue(); });
+$('#fcUnit').addEventListener('change', e => { pick.u = e.target.value; pick.m = 'all'; pick.l = 'all'; renderDeckPick(); updateDue(); });
+$('#fcModule').addEventListener('change', e => { pick.m = e.target.value; pick.l = 'all'; renderDeckPick(); updateDue(); });
+$('#fcLesson').addEventListener('change', e => { pick.l = e.target.value; renderDeckPick(); updateDue(); });
 $('#fcPrev').checked = !!store.get('fcPrev', false);
 $('#fcPrev').addEventListener('change', e => { store.set('fcPrev', e.target.checked); updateDue(); });
 $$('input[name=fcmode]').forEach(r => { r.checked = r.value === savedMode; r.addEventListener('change', () => store.set('fcmode', r.value)); });
