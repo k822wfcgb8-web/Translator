@@ -1,0 +1,69 @@
+# Prevoditelj: Croatian ⇄ English translator
+
+A one-page web app for the family. Type or speak Croatian or English and it translates both ways using Claude. It also corrects Croatian mistakes, explains cases, endings and gender, gives example phrases with audio, and offers pronunciation practice with 3 tries.
+
+Files:
+- `index.html`: the whole app
+- `icon-180.png`: home-screen icon
+- `README.md`: this guide
+
+**Your API key is NOT in these files, and must never be added to them.** Each person types the key into the app's Settings on their own device. It is saved only in that browser.
+
+---
+
+## 1. Put it online with GitHub Desktop (one time)
+
+1. Open **GitHub Desktop** → **File → Add Local Repository…** → choose this `Translator` folder.
+   If it says the folder isn't a repository, click **create a repository** and keep the defaults.
+2. Write a summary such as "First version" and click **Commit to main**.
+3. Click **Publish repository**. You can leave **"Keep this code private"** ticked only if your GitHub plan allows Pages on private repositories; otherwise untick it. The code contains no secrets, so a public repository is fine.
+4. On github.com, open the repository → **Settings → Pages**.
+   Under **Build and deployment**, set Source = *Deploy from a branch*, Branch = `main`, folder = `/ (root)`, then **Save**.
+5. After a minute or two the page shows your address, something like
+   `https://YOUR-USERNAME.github.io/Translator/`. That's the link for the family.
+
+**Updating later:** replace the files in this folder, then in GitHub Desktop **Commit** → **Push origin**. The site updates within a few minutes. On devices, a refresh may be needed.
+
+> GitHub's menus change from time to time. If a step above doesn't match what you see, look for "Pages" in the repository's Settings.
+
+---
+
+## 2. First use on each device
+
+1. Open the GitHub Pages link in **Safari** (iPhone, iPad or Mac).
+2. Tap ⚙︎ **Settings** → paste the Claude API key → **Save**.
+3. Tap 🎤 **Speak** once and allow the microphone when Safari asks.
+4. Optional: add it to the home screen. On iPhone or iPad, use Share → **Add to Home Screen**. On a Mac, use Safari's File → **Add to Dock**.
+   *If voice input misbehaves in the home-screen version, use it in regular Safari instead. Apple's speech recognition has been less reliable in home-screen apps on some iOS versions.*
+
+### If voice input doesn't work
+- The **microphone bar** at the top always shows the state: green = ready, red pulsing = listening, amber = starting or a hint, red = problem, grey = unavailable.
+- Tap **↺ Reset voice**. This fully restarts the microphone, the recogniser, playback and the practice counter. Your typed text is kept.
+- The app also resets itself if the microphone hasn't started within 6 seconds, or is still listening after 20 seconds.
+- If permission was denied: on iPhone or iPad, go to Settings → Apps → Safari → Microphone (or the **aA** menu in the address bar → Website Settings). On a Mac, go to Safari → Settings → Websites → Microphone.
+- Apple's speech recognition may need **Dictation** (and/or Siri) turned on in device settings.
+
+### If there's no Croatian voice for playback
+On iPhone or iPad: Settings → Accessibility → Spoken Content → Voices → Croatian → download a voice.
+On a Mac: System Settings → Accessibility → Spoken Content → System voice → Manage Voices → Croatian.
+Then reload the page, and pick the voice in the app's Settings if you like.
+
+---
+
+## 3. About the API key and cost
+
+- The app calls Claude directly from the browser, using the key saved on that device. That's fine for family use. Don't share the link and key outside the family, because anyone with the key can spend on your account.
+- Strongly suggested: in the **Claude Console** (console.anthropic.com), set a **monthly spend limit** for this key. Consider creating a separate key just for this app, so you can revoke it on its own.
+- The default model is **Claude Sonnet 5.5**. Anthropic's docs list it at $2 per million input tokens and $10 per million output tokens, as of October 2026; prices change, so check the pricing page. A single translation with grammar notes is a small request. I haven't measured an exact cost per translation, so watch the Console's usage page for the first few days.
+- You can switch to Opus 5.5 (more careful, costs more) or Haiku 5.5 (cheaper, faster) in Settings.
+- If you host other pages under the same `github.io` address, note that browser storage is shared per site address. Don't host untrusted pages there.
+
+---
+
+## 4. How the features work
+
+- **Translate:** the box you typed or spoke in last is the "From" box. ⇅ swaps direction. ⌘/Ctrl + Enter also translates.
+- **Corrections:** if Croatian input has mistakes (endings, č ć š ž đ, agreement), the answer shows the corrected sentence, what changed and why. **Use this** puts the correction into the Croatian box.
+- **Cases, endings & gender** (tick box): for each word that changes form, it shows the root, the case or verb form, gender, the ending, and why. It also shows what you originally typed if it was wrong, and how the ending would look for masculine, feminine and neuter words.
+- **Example phrases** (tick box): 2 or 3 phrases, each with 🔊 play and 🗣 practise buttons.
+- **Practise saying it:** say the Croatian sentence up to 3 times. Each try is scored word by word: ✓ matched, ≈ nearly (often a č/ć or š/s difference), ✗ not heard. Silent tries aren't counted. The score reflects what the speech recogniser heard, so treat it as a guide.

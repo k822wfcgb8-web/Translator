@@ -1,0 +1,1566 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Prevoditelj</title>
+<meta name="description" content="Croatian–English translator with voice input, pronunciation practice and grammar notes.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Prevoditelj">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" type="image/png" href="icon-180.png">
+<meta name="theme-color" content="#1f3a8a">
+<style>
+:root {
+  --bg: #f4f5f8;
+  --surface: #ffffff;
+  --surface-2: #f0f2f7;
+  --ink: #161a24;
+  --muted: #5b6375;
+  --line: #d9dde7;
+  --brand: #1f3a8a;
+  --brand-ink: #ffffff;
+  --accent: #c8102e;
+  --ok: #157347;
+  --ok-bg: #e3f4ea;
+  --warn: #8a5a00;
+  --warn-bg: #fff2d6;
+  --bad: #b3261e;
+  --bad-bg: #fde7e5;
+  --listen: #c8102e;
+  --radius: 14px;
+  --shadow: 0 1px 2px rgba(20,25,40,.06), 0 4px 16px rgba(20,25,40,.06);
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1218;
+    --surface: #181c25;
+    --surface-2: #212634;
+    --ink: #eceff5;
+    --muted: #a3abbd;
+    --line: #2e3445;
+    --brand: #7f9cf5;
+    --brand-ink: #0f1218;
+    --accent: #ff6b7f;
+    --ok: #5fd39a;
+    --ok-bg: #143224;
+    --warn: #f2c25c;
+    --warn-bg: #3a2d0f;
+    --bad: #ff8a80;
+    --bad-bg: #3d1a18;
+    --listen: #ff5a6e;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 4px 16px rgba(0,0,0,.25);
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.5 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+button, input, select, textarea { font: inherit; color: inherit; }
+[hidden] { display: none !important; }
+
+.top {
+  display: flex; align-items: center; justify-content: space-between;
+  max-width: 1040px; margin: 0 auto; padding: 14px 16px 6px;
+}
+.brand { display: flex; align-items: center; gap: 12px; }
+.logo {
+  width: 38px; height: 38px; border-radius: 10px; flex: none;
+  background:
+    conic-gradient(var(--accent) 25%, #fff 0 50%, var(--accent) 0 75%, #fff 0) 0 0 / 50% 50%;
+  box-shadow: inset 0 0 0 2px var(--accent);
+}
+h1 { font-size: 1.3rem; margin: 0; line-height: 1.1; letter-spacing: -.01em; }
+.brand p { margin: 0; color: var(--muted); font-size: .85rem; }
+
+.micbar {
+  position: sticky; top: 0; z-index: 5;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.micbar-inner {
+  max-width: 1040px; margin: 0 auto; padding: 8px 16px;
+  display: flex; align-items: center; gap: 10px;
+}
+.mic-status {
+  flex: 1; min-width: 0;
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 12px; border-radius: 999px;
+  font-weight: 600; font-size: .92rem;
+  border: 1.5px solid currentColor;
+}
+.mic-status .dot { width: 12px; height: 12px; border-radius: 50%; background: currentColor; flex: none; }
+.mic-status .txt { overflow: hidden; text-overflow: ellipsis; }
+.mic-status[data-state="ready"] { color: var(--ok); background: var(--ok-bg); }
+.mic-status[data-state="busy"] { color: var(--warn); background: var(--warn-bg); }
+.mic-status[data-state="listening"] { color: var(--listen); background: var(--bad-bg); }
+.mic-status[data-state="listening"] .dot { animation: pulse 1s ease-in-out infinite; }
+.mic-status[data-state="error"] { color: var(--bad); background: var(--bad-bg); }
+.mic-status[data-state="off"] { color: var(--muted); background: var(--surface-2); }
+@keyframes pulse { 0%,100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.5); opacity: .55; } }
+
+main { max-width: 1040px; margin: 0 auto; padding: 14px 16px 60px; }
+
+.notice {
+  background: var(--warn-bg); color: var(--warn); border-radius: var(--radius);
+  padding: 12px 14px; margin-bottom: 14px; font-weight: 500;
+}
+
+.panels { display: grid; gap: 10px; grid-template-columns: 1fr; }
+@media (min-width: 820px) { .panels { grid-template-columns: 1fr auto 1fr; align-items: stretch; } }
+
+.panel {
+  background: var(--surface); border: 1.5px solid var(--line); border-radius: var(--radius);
+  box-shadow: var(--shadow); padding: 12px; display: flex; flex-direction: column; gap: 10px;
+  transition: border-color .15s;
+}
+.panel.is-source { border-color: var(--brand); }
+.panel-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+h2 { font-size: 1.05rem; margin: 0; }
+h2 .sub { color: var(--muted); font-weight: 500; font-size: .85rem; margin-left: 4px; }
+.src-tag {
+  font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em;
+  padding: 2px 8px; border-radius: 999px; background: var(--surface-2); color: var(--muted);
+}
+.panel.is-source .src-tag { background: var(--brand); color: var(--brand-ink); }
+
+textarea {
+  width: 100%; min-height: 118px; resize: vertical;
+  border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px;
+  background: var(--surface-2); font-size: 17px; line-height: 1.45;
+}
+textarea:focus { outline: 2px solid var(--brand); outline-offset: 1px; }
+
+.tools { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  min-height: 44px; padding: 8px 14px; border-radius: 12px;
+  border: 1px solid var(--line); background: var(--surface); cursor: pointer;
+  font-weight: 600; font-size: .95rem; -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+.btn:hover { background: var(--surface-2); }
+.btn:active { transform: translateY(1px); }
+.btn:disabled { opacity: .45; cursor: not-allowed; }
+.btn.primary { background: var(--brand); color: var(--brand-ink); border-color: var(--brand); }
+.btn.primary:hover { filter: brightness(1.08); }
+.btn.accent { border-color: var(--accent); color: var(--accent); }
+.btn.ghost { background: transparent; }
+.btn.small { min-height: 36px; padding: 4px 10px; font-size: .88rem; }
+.btn.big { min-height: 52px; padding: 10px 26px; font-size: 1.05rem; }
+.btn.mic.listening {
+  background: var(--listen); border-color: var(--listen); color: #fff;
+  animation: ring 1.2s ease-out infinite;
+}
+@keyframes ring { 0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--listen) 55%, transparent); } 100% { box-shadow: 0 0 0 12px transparent; } }
+.btn.playing { border-color: var(--brand); color: var(--brand); }
+.btn.mic:disabled { text-decoration: line-through; }
+
+.direction {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  color: var(--muted); font-size: .88rem; font-weight: 600;
+}
+@media (min-width: 820px) { .direction { flex-direction: column; } .direction #swapBtn { transform: rotate(90deg); } }
+
+.actions {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px;
+  margin: 14px 0 6px;
+}
+.actions .btn.primary { margin-left: auto; }
+@media (max-width: 520px) { .actions .btn.primary { width: 100%; margin-left: 0; } }
+.check { display: inline-flex; align-items: center; gap: 8px; font-weight: 500; cursor: pointer; min-height: 36px; }
+.check input { width: 20px; height: 20px; accent-color: var(--brand); }
+
+.card {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  box-shadow: var(--shadow); padding: 14px 16px; margin-top: 14px;
+}
+.card-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 6px; }
+h3 { font-size: 1rem; margin: 0; }
+.muted { color: var(--muted); }
+.small { font-size: .85rem; }
+.icon-btn {
+  width: 44px; height: 44px; border-radius: 12px; border: 1px solid var(--line);
+  background: var(--surface); cursor: pointer; font-size: 1.2rem; flex: none;
+}
+
+/* Results */
+.corr-text { font-size: 1.1rem; font-weight: 600; margin: 4px 0 8px; }
+.corr-list { margin: 0; padding-left: 18px; }
+.corr-list li { margin: 4px 0; }
+.was { text-decoration: line-through; color: var(--bad); }
+.now { color: var(--ok); font-weight: 600; }
+.notes { margin: 0; padding-left: 18px; }
+
+.gram-grid { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); margin-top: 8px; }
+.gram {
+  border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; background: var(--surface-2);
+}
+.gram .w { font-size: 1.12rem; font-weight: 700; }
+.gram .root { color: var(--muted); font-size: .9rem; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0; }
+.chip {
+  font-size: .78rem; font-weight: 600; padding: 2px 8px; border-radius: 999px;
+  background: var(--surface); border: 1px solid var(--line);
+}
+.chip.ending { border-color: var(--brand); color: var(--brand); }
+.gram .why { margin: 4px 0 0; font-size: .92rem; }
+.gram .wrote { margin: 6px 0 0; font-size: .88rem; color: var(--warn); background: var(--warn-bg); padding: 4px 8px; border-radius: 8px; }
+.gram .gcmp { margin: 6px 0 0; font-size: .86rem; color: var(--muted); border-left: 3px solid var(--line); padding-left: 8px; }
+
+.ex-list { list-style: none; margin: 6px 0 0; padding: 0; display: grid; gap: 8px; }
+.ex { display: flex; gap: 10px; align-items: center; border: 1px solid var(--line); border-radius: 12px; padding: 8px 10px; }
+.ex .t { flex: 1; min-width: 0; }
+.ex .hr { font-weight: 600; }
+.ex .en { color: var(--muted); font-size: .9rem; }
+
+.loading-card { display: flex; align-items: center; gap: 10px; color: var(--muted); }
+.spinner { width: 18px; height: 18px; border-radius: 50%; border: 2.5px solid var(--line); border-top-color: var(--brand); animation: spin .8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.err { border-color: var(--bad); color: var(--bad); background: var(--bad-bg); }
+
+/* Practice */
+.target { font-size: 1.35rem; font-weight: 700; margin: 2px 0 4px; }
+.dots { display: inline-flex; gap: 5px; margin-left: 4px; }
+.dots span { width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--brand); }
+.dots span.used { background: var(--brand); }
+.attempts-list { list-style: none; padding: 0; margin: 10px 0 0; display: grid; gap: 8px; }
+.attempt { border: 1px solid var(--line); border-radius: 12px; padding: 8px 12px; }
+.attempt .hd { display: flex; justify-content: space-between; gap: 8px; font-weight: 700; }
+.words { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0; }
+.wd { padding: 2px 8px; border-radius: 8px; font-weight: 600; }
+.wd.exact { background: var(--ok-bg); color: var(--ok); }
+.wd.close { background: var(--warn-bg); color: var(--warn); text-decoration: underline dotted; }
+.wd.miss { background: var(--bad-bg); color: var(--bad); text-decoration: line-through; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 12px; font-size: .8rem; color: var(--muted); margin-top: 8px; }
+.verdict { margin: 8px 0 0; font-weight: 600; }
+
+/* Tabs */
+.tabs { display: flex; gap: 6px; background: var(--surface-2); padding: 4px; border-radius: 12px; margin-bottom: 14px; border: 1px solid var(--line); }
+.tab { flex: 1; min-height: 42px; border: none; background: transparent; border-radius: 9px; font-weight: 700; cursor: pointer; color: var(--muted); }
+.tab[aria-selected="true"] { background: var(--surface); color: var(--ink); box-shadow: var(--shadow); }
+.badge { display: inline-block; min-width: 20px; padding: 0 6px; border-radius: 999px; background: var(--accent); color: #fff; font-size: .75rem; line-height: 20px; margin-left: 4px; }
+
+/* Flash cards */
+.sync-row, .save-bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; }
+.sync.dirty { border-color: var(--warn); }
+.sync.dirty #syncText { color: var(--warn); font-weight: 600; }
+.seg { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 12px; }
+.seg label { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; cursor: pointer; font-weight: 600; font-size: .9rem; min-height: 40px; }
+.seg label:has(input:checked) { border-color: var(--brand); color: var(--brand); background: var(--surface-2); }
+.seg input { accent-color: var(--brand); }
+.fc { display: grid; gap: 12px; margin: 6px 0 12px; }
+.fc-side { border: 1px solid var(--line); border-radius: 14px; padding: 16px; background: var(--surface-2); text-align: center; }
+.fc-label { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+.fc-text { font-size: 1.45rem; font-weight: 700; margin: 6px 0 8px; }
+.fc-note { white-space: pre-line; text-align: left; font-size: .88rem; color: var(--muted); margin: 10px 0 0; border-top: 1px solid var(--line); padding-top: 8px; }
+.center { justify-content: center; }
+.card-list { list-style: none; padding: 0; margin: 8px 0 0; display: grid; gap: 8px; }
+.card-list li { display: flex; gap: 8px; align-items: center; border: 1px solid var(--line); border-radius: 12px; padding: 8px 10px; }
+.card-list .t { flex: 1; min-width: 0; }
+.card-list .hr { font-weight: 600; }
+.card-list .en, .card-list .lvl { color: var(--muted); font-size: .85rem; }
+input[type=search] { min-height: 40px; border: 1px solid var(--line); border-radius: 10px; padding: 6px 10px; background: var(--surface-2); font-size: 16px; width: min(220px, 55%); }
+.btn.danger { color: var(--bad); border-color: var(--bad); }
+
+/* Dialog */
+dialog {
+  border: none; border-radius: 18px; padding: 0; width: min(520px, calc(100vw - 32px));
+  background: var(--surface); color: var(--ink); box-shadow: 0 10px 40px rgba(0,0,0,.3);
+}
+dialog::backdrop { background: rgba(10,12,20,.45); }
+.dlg { padding: 18px; display: grid; gap: 14px; }
+.field { display: grid; gap: 6px; font-weight: 600; font-size: .92rem; }
+.field input[type=password], .field input[type=text], .field select {
+  width: 100%; min-height: 44px; border: 1px solid var(--line); border-radius: 10px;
+  padding: 8px 10px; background: var(--surface-2); font-size: 16px; font-weight: 400;
+}
+.row { display: flex; gap: 10px; justify-content: flex-end; }
+.link { background: none; border: none; color: var(--brand); text-decoration: underline; padding: 0; cursor: pointer; font-weight: 600; }
+.link.danger { color: var(--bad); justify-self: start; }
+
+.toast {
+  position: fixed; left: 50%; bottom: calc(18px + env(safe-area-inset-bottom)); transform: translateX(-50%);
+  max-width: calc(100vw - 32px); width: max-content;
+  background: var(--ink); color: var(--bg); padding: 10px 16px; border-radius: 12px;
+  font-weight: 600; font-size: .92rem; z-index: 20; box-shadow: var(--shadow);
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="brand">
+    <span class="logo" aria-hidden="true"></span>
+    <div><h1>Prevoditelj</h1><p>Croatian ⇄ English</p></div>
+  </div>
+  <button id="settingsBtn" class="icon-btn" aria-label="Settings" title="Settings">⚙︎</button>
+</header>
+
+<div class="micbar">
+  <div class="micbar-inner">
+    <div id="micStatus" class="mic-status" data-state="off" role="status" aria-live="polite">
+      <span class="dot" aria-hidden="true"></span><span class="txt" id="micText">Checking microphone…</span>
+    </div>
+    <button id="resetVoiceBtn" class="btn small" title="Fully restart voice input and playback">↺ Reset voice</button>
+  </div>
+</div>
+
+<main>
+  <nav class="tabs" role="tablist" aria-label="Sections">
+    <button class="tab" role="tab" id="tabTranslate" aria-selected="true" aria-controls="view-translate">Translate</button>
+    <button class="tab" role="tab" id="tabCards" aria-selected="false" aria-controls="view-cards">Flash cards <span id="dueBadge" class="badge" hidden></span></button>
+  </nav>
+
+  <div id="view-translate" role="tabpanel" aria-labelledby="tabTranslate">
+  <div id="keyNotice" class="notice" hidden>
+    To start translating, add your Claude API key in <button class="link" id="openSettings2">Settings</button>.
+  </div>
+
+  <section class="panels">
+    <article class="panel is-source" id="panel-hr">
+      <div class="panel-head">
+        <h2>Hrvatski <span class="sub">Croatian</span></h2>
+        <span class="src-tag" id="tag-hr">From</span>
+      </div>
+      <textarea id="text-hr" lang="hr" placeholder="Upišite ili izgovorite… (type or speak Croatian)" autocapitalize="sentences" autocomplete="off" spellcheck="false"></textarea>
+      <div class="tools">
+        <button class="btn mic" data-mic="hr" data-label="Speak"><span aria-hidden="true">🎤</span><span class="lbl">Speak</span></button>
+        <button class="btn" data-speak="hr"><span aria-hidden="true">🔊</span> Listen</button>
+        <button class="btn accent" id="practiceBtn"><span aria-hidden="true">🗣</span> Practise saying it</button>
+        <button class="btn ghost" data-clear="hr" aria-label="Clear Croatian text" title="Clear">✕</button>
+      </div>
+    </article>
+
+    <div class="direction">
+      <button id="swapBtn" class="btn small" aria-label="Swap translation direction" title="Swap direction">⇅</button>
+      <span id="dirText">Croatian → English</span>
+    </div>
+
+    <article class="panel" id="panel-en">
+      <div class="panel-head">
+        <h2>English <span class="sub">Engleski</span></h2>
+        <span class="src-tag" id="tag-en">To</span>
+      </div>
+      <textarea id="text-en" lang="en" placeholder="Type or speak English…" autocapitalize="sentences" autocomplete="off"></textarea>
+      <div class="tools">
+        <button class="btn mic" data-mic="en" data-label="Speak"><span aria-hidden="true">🎤</span><span class="lbl">Speak</span></button>
+        <button class="btn" data-speak="en"><span aria-hidden="true">🔊</span> Listen</button>
+        <button class="btn ghost" data-clear="en" aria-label="Clear English text" title="Clear">✕</button>
+      </div>
+    </article>
+  </section>
+
+  <section class="actions">
+    <label class="check"><input type="checkbox" id="optGrammar" checked> Explain cases &amp; gender</label>
+    <label class="check"><input type="checkbox" id="optExamples"> Example phrases</label>
+    <button id="translateBtn" class="btn primary big">Translate</button>
+  </section>
+
+  <section id="practice" class="card" hidden aria-labelledby="practiceTitle">
+    <div class="card-head">
+      <h3 id="practiceTitle">Pronunciation practice</h3>
+      <button class="icon-btn" id="practiceClose" aria-label="Close practice">✕</button>
+    </div>
+    <div class="muted small">Say this in Croatian:</div>
+    <p id="practiceTarget" class="target" lang="hr"></p>
+    <p id="practiceNote" class="muted small" hidden></p>
+    <div class="tools">
+      <button class="btn" id="practiceListen"><span aria-hidden="true">🔊</span> Listen first</button>
+      <button class="btn mic primary" id="practiceSay" data-label="Say it"><span aria-hidden="true">🎤</span><span class="lbl">Say it</span></button>
+      <span class="muted small" id="attemptText"></span><span class="dots" id="attemptDots" aria-hidden="true"></span>
+      <button class="btn ghost small" id="practiceRestart">Start over</button>
+    </div>
+    <ol id="attemptList" class="attempts-list"></ol>
+    <div class="legend" aria-hidden="true">
+      <span><span class="wd exact">✓ word</span> matched</span>
+      <span><span class="wd close">≈ word</span> nearly (accent / č ć š ž đ)</span>
+      <span><span class="wd miss">✗ word</span> not heard</span>
+    </div>
+    <p class="muted small">Scores are based on what your device's speech recogniser heard. That's a good guide, but not a perfect judge of pronunciation.</p>
+  </section>
+
+  <section id="results" aria-live="polite"></section>
+  </div>
+
+  <div id="view-cards" role="tabpanel" aria-labelledby="tabCards" hidden>
+    <section class="card sync" id="syncCard">
+      <div class="sync-row">
+        <div><strong>iCloud</strong><br><span id="syncText" class="muted small"></span></div>
+        <div class="tools">
+          <button class="btn small" id="cardsLoad"><span aria-hidden="true">⬇︎</span> Load from iCloud</button>
+          <button class="btn small primary" id="cardsSave"><span aria-hidden="true">⬆︎</span> Save to iCloud</button>
+        </div>
+      </div>
+      <input type="file" id="cardsFile" hidden>
+    </section>
+
+    <section class="card" id="studySetup">
+      <div class="card-head"><h3>Study</h3><span class="muted small" id="studyCounts"></span></div>
+      <div class="seg" role="radiogroup" aria-label="Study mode">
+        <label><input type="radio" name="fcmode" value="hr-en" checked> Croatian → English</label>
+        <label><input type="radio" name="fcmode" value="en-hr"> English → Croatian</label>
+        <label><input type="radio" name="fcmode" value="say"> Say it</label>
+      </div>
+      <div class="tools">
+        <button class="btn primary" id="studyDue">Study due cards</button>
+        <button class="btn" id="studyAll">Study all</button>
+      </div>
+    </section>
+
+    <section class="card" id="studyCard" hidden aria-live="polite">
+      <div class="card-head">
+        <span class="muted small" id="studyProgress"></span>
+        <button class="icon-btn" id="studyEnd" aria-label="End study session">✕</button>
+      </div>
+      <div class="fc">
+        <div class="fc-side">
+          <div class="fc-label" id="fcFrontLabel"></div>
+          <p class="fc-text" id="fcFront"></p>
+          <button class="btn small" id="fcFrontPlay" aria-label="Listen"><span aria-hidden="true">🔊</span> Listen</button>
+        </div>
+        <div id="fcSay" hidden>
+          <div class="tools center">
+            <button class="btn mic primary" id="fcSayBtn" data-label="Say it"><span aria-hidden="true">🎤</span><span class="lbl">Say it</span></button>
+            <span class="muted small" id="fcSayText"></span><span class="dots" id="fcSayDots" aria-hidden="true"></span>
+          </div>
+          <ol class="attempts-list" id="fcSayList"></ol>
+        </div>
+        <div class="fc-side" id="fcBackWrap" hidden>
+          <div class="fc-label" id="fcBackLabel"></div>
+          <p class="fc-text" id="fcBack"></p>
+          <button class="btn small" id="fcBackPlay" aria-label="Listen"><span aria-hidden="true">🔊</span> Listen</button>
+          <p class="fc-note" id="fcNote" hidden></p>
+        </div>
+      </div>
+      <div class="tools center">
+        <button class="btn primary big" id="fcShow">Show answer</button>
+        <button class="btn big" id="fcAgain" hidden>Still learning</button>
+        <button class="btn primary big" id="fcKnew" hidden>Knew it ✓</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-head"><h3 id="allCardsTitle">All cards</h3><input type="search" id="cardSearch" placeholder="Search cards" aria-label="Search cards"></div>
+      <p id="cardsEmpty" class="muted small">No cards yet. On the Translate tab, tap ☆ Save as flash card on a translation or example phrase. On a new device, tap Load from iCloud first.</p>
+      <ul id="cardList" class="card-list"></ul>
+    </section>
+  </div>
+</main>
+
+<dialog id="settings" aria-labelledby="settingsTitle">
+  <form method="dialog" class="dlg" id="settingsForm">
+    <div class="card-head"><h3 id="settingsTitle">Settings</h3></div>
+    <label class="field">Claude API key
+      <input type="password" id="setKey" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="sk-ant-…">
+    </label>
+    <label class="check small"><input type="checkbox" id="setShowKey"> Show key</label>
+    <p class="muted small" style="margin:-6px 0 0">Saved only in this browser on this device. It is never part of the app's files on GitHub.</p>
+    <label class="field">Claude model
+      <select id="setModel">
+        <option value="claude-sonnet-5-5">Sonnet 5.5 (recommended): fast and accurate</option>
+        <option value="claude-opus-5-5">Opus 5.5: most careful, slower, about 2× the cost</option>
+        <option value="claude-haiku-5-5">Haiku 5.5: fastest and cheapest, may be less thorough</option>
+      </select>
+    </label>
+    <label class="field">Croatian voice
+      <select id="setVoiceHr"></select>
+    </label>
+    <p id="noHrVoice" class="muted small" style="margin:-6px 0 0" hidden>No Croatian voice found. On iPhone or iPad go to Settings → Accessibility → Spoken Content → Voices → Croatian. On a Mac go to System Settings → Accessibility → Spoken Content → System voice → Manage Voices. Then reload this page.</p>
+    <label class="field">English voice
+      <select id="setVoiceEn"></select>
+    </label>
+    <label class="field">Croatian speaking speed
+      <select id="setRate">
+        <option value="0.65">Slow</option>
+        <option value="0.85">Relaxed</option>
+        <option value="1">Normal</option>
+      </select>
+    </label>
+    <label class="check"><input type="checkbox" id="setAuto"> Translate automatically after speaking</label>
+    <div class="row">
+      <button value="cancel" class="btn ghost" formnovalidate>Cancel</button>
+      <button value="save" id="saveSettings" class="btn primary">Save</button>
+    </div>
+    <button type="button" id="forgetKey" class="link danger">Remove API key from this device</button>
+  </form>
+</dialog>
+
+<div id="toast" class="toast" role="alert" hidden></div>
+
+<script>
+(() => {
+'use strict';
+
+/* ---------- storage (wrapped: private mode / blocked storage must not break the app) ---------- */
+const store = {
+  get(k, d) { try { const v = localStorage.getItem('prev.' + k); return v === null ? d : JSON.parse(v); } catch { return d; } },
+  set(k, v) { try { localStorage.setItem('prev.' + k, JSON.stringify(v)); } catch {} },
+  del(k) { try { localStorage.removeItem('prev.' + k); } catch {} }
+};
+
+const $ = (s) => document.querySelector(s);
+const $$ = (s) => Array.from(document.querySelectorAll(s));
+const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+
+const MODELS = { 'claude-sonnet-5-5': 'Sonnet 5.5', 'claude-opus-5-5': 'Opus 5.5', 'claude-haiku-5-5': 'Haiku 5.5' };
+const settings = {
+  key: store.get('key', ''),
+  model: store.get('model', 'claude-sonnet-5-5'),
+  rate: Number(store.get('rate', 0.85)),
+  voiceHr: store.get('voiceHr', ''),
+  voiceEn: store.get('voiceEn', ''),
+  auto: store.get('auto', true),
+};
+if (!MODELS[settings.model]) settings.model = 'claude-sonnet-5-5';
+$('#optGrammar').checked = store.get('optGrammar', true);
+$('#optExamples').checked = store.get('optExamples', false);
+
+const LANG = {
+  hr: { name: 'Croatian', rec: 'hr-HR', tts: 'hr-HR' },
+  en: { name: 'English', rec: 'en-US', tts: 'en-US' }
+};
+const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+const synth = window.speechSynthesis || null;
+
+const state = {
+  source: 'hr',
+  rec: null, recKind: null, timers: [],
+  speakingBtn: null,
+  practice: { target: '', attempts: [], max: 3, done: false },
+  last: null,
+  busy: false,
+  micBlocked: false,
+  micAvailable: false,
+};
+const resetHooks = [];   // extra things to reset when "Reset voice" is pressed
+
+/* ---------- toast ---------- */
+let toastTimer = null;
+function toast(msg, ms = 3800) {
+  const t = $('#toast'); t.textContent = msg; t.hidden = false;
+  clearTimeout(toastTimer); toastTimer = setTimeout(() => { t.hidden = true; }, ms);
+}
+
+/* ---------- microphone status ---------- */
+let micRevert = null;
+const READY = 'Microphone ready: tap 🎤 to speak';
+function setMic(s, text, revertMs) {
+  clearTimeout(micRevert);
+  const box = $('#micStatus'); box.dataset.state = s; $('#micText').textContent = text;
+  if (revertMs) micRevert = setTimeout(() => { if (!state.rec) showIdleMic(); }, revertMs);
+}
+function showIdleMic() {
+  if (!state.micAvailable) return;
+  if (state.micBlocked) setMic('error', 'Microphone blocked for this site. Allow it in your browser settings, then tap Reset voice.');
+  else setMic('ready', READY);
+}
+function initMic() {
+  if (!SR) {
+    state.micAvailable = false;
+    setMic('off', 'Voice input isn\'t available in this browser. Use Safari, or type instead.');
+    $$('.btn.mic').forEach(b => b.disabled = true);
+    return;
+  }
+  if (!window.isSecureContext) {
+    state.micAvailable = false;
+    setMic('off', 'Voice input needs a secure https:// address. Open the GitHub Pages link.');
+    $$('.btn.mic').forEach(b => b.disabled = true);
+    return;
+  }
+  state.micAvailable = true;
+  $$('.btn.mic').forEach(b => b.disabled = false);
+  showIdleMic();
+  try {
+    if (navigator.permissions && navigator.permissions.query) {
+      navigator.permissions.query({ name: 'microphone' }).then(p => {
+        const upd = () => { state.micBlocked = (p.state === 'denied'); if (!state.rec) showIdleMic(); };
+        upd(); p.onchange = upd;
+      }).catch(() => {});
+    }
+  } catch {}
+}
+
+function setMicBtn(btn, on) {
+  if (!btn) return;
+  btn.classList.toggle('listening', on);
+  const lbl = btn.querySelector('.lbl');
+  if (lbl) lbl.textContent = on ? 'Stop' : (btn.dataset.label || 'Speak');
+  btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+}
+
+function clearTimers() { state.timers.forEach(clearTimeout); state.timers = []; }
+
+/* Kill the recogniser completely (detach handlers so a stuck engine can't call back later). */
+function killRec() {
+  const r = state.rec;
+  state.rec = null; state.recKind = null;
+  clearTimers();
+  if (r) {
+    r.onstart = r.onresult = r.onerror = r.onend = r.onnomatch = null;
+    try { r.abort(); } catch {}
+  }
+  $$('.btn.mic').forEach(b => setMicBtn(b, false));
+}
+
+function errInfo(code, langName) {
+  switch (code) {
+    case 'aborted': return null;
+    case 'no-speech': return { s: 'busy', t: 'Didn\'t catch anything. Tap 🎤 and try again, a little louder.', soft: true };
+    case 'audio-capture': return { s: 'error', t: 'No microphone found. Check your device\'s microphone, then tap Reset voice.' };
+    case 'not-allowed':
+      state.micBlocked = true;
+      return { s: 'error', t: 'Microphone permission denied. Allow it for this site, then tap Reset voice.' };
+    case 'service-not-allowed': return { s: 'error', t: 'Speech recognition is switched off on this device (Dictation/Siri may need to be on). Then tap Reset voice.' };
+    case 'network': return { s: 'error', t: 'The speech service couldn\'t be reached. Check your connection, then tap Reset voice.' };
+    case 'language-not-supported': return { s: 'error', t: `This device can't recognise ${langName} speech.` };
+    default: return { s: 'error', t: `Voice input error (${code}). Tap Reset voice.` };
+  }
+}
+
+/*
+ * Start one recognition session. Fresh recogniser every time (more reliable on Safari).
+ * Watchdogs: if it hasn't started in 6 s, or is still running after 20 s, it is reset automatically.
+ */
+function listen({ kind, lang, btn, interim, alts, onText, onFinal }) {
+  if (!state.micAvailable) { toast('Voice input isn\'t available here. You can type instead.'); return; }
+  if (state.rec) {
+    if (state.recKind === kind) { try { state.rec.stop(); } catch { killRec(); showIdleMic(); } return; }
+    killRec();
+  }
+  stopSpeaking();
+
+  let rec;
+  try { rec = new SR(); } catch { setMic('error', 'Voice input couldn\'t start. Tap Reset voice.'); return; }
+  const langName = lang.startsWith('hr') ? 'Croatian' : 'English';
+  rec.lang = lang;
+  rec.interimResults = !!interim;
+  rec.continuous = false;
+  rec.maxAlternatives = alts || 1;
+
+  state.rec = rec; state.recKind = kind;
+  let started = false, finalText = '', anyText = '', finalAlts = null, problem = null;
+
+  setMicBtn(btn, true);
+  setMic('busy', 'Starting microphone…');
+
+  state.timers.push(setTimeout(() => {
+    if (state.rec === rec && !started) hardReset('The microphone didn\'t start, so voice was reset. Please try again.');
+  }, 6000));
+  state.timers.push(setTimeout(() => {
+    if (state.rec !== rec) return;
+    try { rec.stop(); } catch {}
+    state.timers.push(setTimeout(() => {
+      if (state.rec === rec) hardReset('Voice input got stuck, so it was reset. Please try again.');
+    }, 2500));
+  }, 20000));
+
+  rec.onstart = () => {
+    if (state.rec !== rec) return;
+    started = true;
+    setMic('listening', `Listening: speak ${langName} now (tap Stop when done)`);
+  };
+  rec.onresult = (e) => {
+    if (state.rec !== rec) return;
+    let fin = '', tmp = '';
+    for (let i = 0; i < e.results.length; i++) {
+      const r = e.results[i];
+      if (r.isFinal) { fin += r[0].transcript; finalAlts = Array.from(r, a => a.transcript); }
+      else tmp += r[0].transcript;
+    }
+    finalText = fin; anyText = (fin + tmp);
+    if (onText) onText(anyText.trim());
+  };
+  rec.onerror = (e) => {
+    if (state.rec !== rec) return;
+    problem = errInfo(e.error, langName);
+  };
+  rec.onend = () => {
+    if (state.rec !== rec) return;
+    clearTimers();
+    state.rec = null; state.recKind = null;
+    setMicBtn(btn, false);
+    const text = (finalText || anyText).trim();
+    if (problem && !text) setMic(problem.s, problem.t, problem.soft ? 4500 : 0);
+    else showIdleMic();
+    if (onFinal) onFinal({ text, alts: finalAlts && finalAlts.length ? finalAlts : (text ? [text] : []), problem });
+  };
+
+  try { rec.start(); }
+  catch { hardReset('Voice input was busy, so it was reset. Please try again.'); }
+}
+
+/* Full voice restart: microphone, recogniser, playback, practice counter. Typed text is kept. */
+function hardReset(msg) {
+  killRec();
+  stopSpeaking();
+  try { if (synth) { synth.cancel(); } } catch {}
+  state.micBlocked = false;
+  initMic();
+  loadVoices();
+  if (!$('#practice').hidden) resetPracticeAttempts();
+  resetHooks.forEach(f => { try { f(); } catch {} });
+  if (state.micAvailable) setMic('ready', msg || 'Voice fully reset. Microphone ready.', 4500);
+}
+
+/* ---------- speech playback ---------- */
+let voices = [];
+function loadVoices() {
+  if (!synth) return;
+  try { voices = synth.getVoices() || []; } catch { voices = []; }
+  fillVoiceSelect('#setVoiceHr', 'hr', settings.voiceHr);
+  fillVoiceSelect('#setVoiceEn', 'en', settings.voiceEn);
+  $('#noHrVoice').hidden = voices.length === 0 || voices.some(v => v.lang && v.lang.toLowerCase().startsWith('hr'));
+}
+function voicesFor(code) {
+  const vs = voices.filter(v => (v.lang || '').toLowerCase().replace('_', '-').startsWith(code));
+  const rank = v => (/(premium|enhanced)/i.test(v.name) ? 0 : 1) + (v.localService ? 0 : 0.5);
+  return vs.sort((a, b) => rank(a) - rank(b));
+}
+function fillVoiceSelect(sel, code, saved) {
+  const s = $(sel); s.innerHTML = '';
+  const auto = el('option', null, 'Automatic (best available)'); auto.value = ''; s.appendChild(auto);
+  voicesFor(code).forEach(v => { const o = el('option', null, `${v.name} (${v.lang})`); o.value = v.voiceURI; s.appendChild(o); });
+  s.value = saved && Array.from(s.options).some(o => o.value === saved) ? saved : '';
+}
+function pickVoice(code) {
+  const saved = code === 'hr' ? settings.voiceHr : settings.voiceEn;
+  if (saved) { const v = voices.find(v => v.voiceURI === saved); if (v) return v; }
+  const list = voicesFor(code);
+  if (code === 'en') { const us = list.find(v => /en-us/i.test(v.lang.replace('_', '-'))); if (us) return us; }
+  return list[0] || null;
+}
+function stopSpeaking() {
+  try { if (synth && (synth.speaking || synth.pending)) synth.cancel(); } catch {}
+  if (state.speakingBtn) state.speakingBtn.classList.remove('playing');
+  state.speakingBtn = null;
+}
+function speak(text, code, btn) {
+  if (!synth) { toast('Speech playback isn\'t available in this browser.'); return; }
+  text = (text || '').trim();
+  if (btn && state.speakingBtn === btn) { stopSpeaking(); return; }
+  stopSpeaking();
+  if (state.rec) { killRec(); showIdleMic(); }
+  if (!text) { toast('Nothing to play yet.'); return; }
+  if (!voices.length) loadVoices();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = LANG[code].tts;
+  const v = pickVoice(code);
+  if (v) u.voice = v;
+  else if (code === 'hr') toast('No Croatian voice found on this device. See Settings for how to add one.', 6000);
+  u.rate = code === 'hr' ? settings.rate : 1;
+  const done = () => { if (btn) btn.classList.remove('playing'); if (state.speakingBtn === btn) state.speakingBtn = null; };
+  u.onend = done; u.onerror = done;
+  if (btn) { btn.classList.add('playing'); state.speakingBtn = btn; }
+  try { synth.resume(); } catch {}
+  synth.speak(u);
+}
+
+/* ---------- source / direction ---------- */
+function setSource(f) {
+  state.source = f;
+  const other = f === 'hr' ? 'en' : 'hr';
+  $('#panel-' + f).classList.add('is-source'); $('#panel-' + other).classList.remove('is-source');
+  $('#tag-' + f).textContent = 'From'; $('#tag-' + other).textContent = 'To';
+  $('#dirText').textContent = `${LANG[f].name} → ${LANG[other].name}`;
+}
+
+/* ---------- Claude ---------- */
+const SYSTEM = `You are a Croatian–English translator and a patient Croatian tutor for an English-speaking family who are learning Croatian.
+
+Rules:
+- Use standard Croatian (hrvatski standardni jezik): ijekavian forms and Croatian vocabulary (e.g. tisuća, kruh, vlak, tjedan, točno), not Serbian or Bosnian variants. Always use correct diacritics: č ć đ š ž.
+- You are told which box the user typed in, but trust the text itself: if Croatian was typed in the English box (or the reverse), translate in the correct direction and set detected_language accordingly.
+- If the input is Croatian, check it carefully, whether it is right or wrong. Fix spelling, missing or wrong diacritics, case endings, gender/number agreement, verb forms and word order. List every fix in "corrections" with a short, friendly explanation in English. Translate the corrected meaning. If nothing is wrong, return an empty corrections list and corrected_input identical to the input.
+- Translations must be natural, not word-for-word, and keep the register of the original.
+- When English is ambiguous in Croatian (you = ti / Vi / vi; "I was" = bio sam / bila sam; adjectives that describe the speaker or listener), choose the most likely form for the translation and explain the alternatives, including the male/female forms, in "notes".
+- Grammar (only when requested): analyse the Croatian text (croatian_text) word by word for every word that inflects: nouns, adjectives, pronouns, numerals and verbs. Do not make separate entries for prepositions, conjunctions or particles, but mention them in "why" when they decide the case (e.g. "u + locative for location", "u + accusative for direction"). For each entry give the root / dictionary form (nominative singular for nouns, nominative singular masculine for adjectives, infinitive for verbs), the form (case + number, or tense + person + number), gender, the ending, and why that form is used and how the ending is built from the root. If the user wrote that word wrongly, put exactly what they wrote in "user_wrote" and explain why the correct ending is different. Use gender_compare to show how the same case looks for masculine, feminine and neuter words whenever gender changes the ending.
+- If grammar is not requested, return an empty grammar list.
+- Examples (only when requested): give 2 or 3 short, everyday Croatian phrases that use the main word(s) of the input, each with an English translation. Use different cases where natural. If not requested, return an empty list.
+- If the text is neither Croatian nor English, set detected_language to "other", translate it into English anyway if you can, and say so in notes.
+- Explanations: clear, simple English for a learner. Be concise.`;
+
+const TOOL = {
+  name: 'return_translation',
+  description: 'Return the translation, corrections and learning notes.',
+  input_schema: {
+    type: 'object',
+    properties: {
+      detected_language: { type: 'string', enum: ['hr', 'en', 'other'] },
+      corrected_input: { type: 'string', description: 'If the input is Croatian: the fully corrected Croatian text (identical to the input if nothing was wrong). If the input is English: the English unchanged.' },
+      corrections: {
+        type: 'array',
+        items: { type: 'object', properties: {
+          original: { type: 'string' }, corrected: { type: 'string' }, explanation: { type: 'string' }
+        }, required: ['original', 'corrected', 'explanation'] }
+      },
+      translation: { type: 'string', description: 'The translation into the other language.' },
+      croatian_text: { type: 'string', description: 'The correct Croatian text that the grammar notes analyse: corrected_input when the input was Croatian, the translation when the input was English.' },
+      grammar: {
+        type: 'array',
+        items: { type: 'object', properties: {
+          word: { type: 'string', description: 'The word as it appears in croatian_text.' },
+          root: { type: 'string', description: 'Dictionary form.' },
+          part_of_speech: { type: 'string' },
+          form: { type: 'string', description: 'Nouns/adjectives/pronouns/numerals: case + number, e.g. "Locative singular". Verbs: tense, person, number, e.g. "Present, 1st person singular".' },
+          gender: { type: 'string', description: 'masculine / feminine / neuter, or — for verbs etc. For masculine nouns add animate/inanimate when it matters for the accusative.' },
+          ending: { type: 'string', description: 'The ending, e.g. "-u", or "—" if none.' },
+          why: { type: 'string', description: 'Why this form is used here and how the ending is built from the root.' },
+          user_wrote: { type: 'string', description: 'What the user wrote for this word if it was wrong; empty string otherwise.' },
+          gender_compare: { type: 'string', description: 'Short comparison of the same case across genders, e.g. "u novom stanu (m) · u novoj kući (f) · u novom selu (n)". Empty string if not relevant.' }
+        }, required: ['word', 'root', 'part_of_speech', 'form', 'gender', 'ending', 'why', 'user_wrote', 'gender_compare'] }
+      },
+      examples: {
+        type: 'array',
+        items: { type: 'object', properties: { croatian: { type: 'string' }, english: { type: 'string' } }, required: ['croatian', 'english'] }
+      },
+      notes: { type: 'array', items: { type: 'string' }, description: 'Ambiguity notes (ti/Vi, male/female forms, alternatives). Empty if none.' }
+    },
+    required: ['detected_language', 'corrected_input', 'corrections', 'translation', 'croatian_text', 'grammar', 'examples', 'notes']
+  }
+};
+
+function apiError(status, detail) {
+  const d = (detail || '').toLowerCase();
+  if (status === 401) return 'Your API key wasn\'t accepted. Check it in Settings.';
+  if (status === 403) return 'This API key isn\'t allowed to do that. Check it in the Claude Console.';
+  if (status === 404) return 'The selected model isn\'t available to your key. Choose another in Settings.';
+  if (status === 400 && d.includes('credit')) return 'Your Claude account is out of credit. Top it up in the Claude Console.';
+  if (status === 429) return 'Too many requests, or a spending limit was reached. Wait a moment and try again.';
+  if (status === 529 || status >= 500) return 'Claude is busy right now. Please try again in a moment.';
+  return `Claude returned an error (${status})${detail ? ': ' + detail : ''}`;
+}
+
+async function callClaude(src, text, grammar, examples) {
+  const user =
+`The user typed in the ${LANG[src].name} box.
+Explain grammar: ${grammar ? 'yes' : 'no'}
+Example phrases: ${examples ? 'yes (2 or 3)' : 'no'}
+
+Text:
+"""
+${text}
+"""`;
+  let res;
+  try {
+    res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+        'x-api-key': settings.key,
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true'
+      },
+      body: JSON.stringify({
+        model: settings.model,
+        max_tokens: 4000,
+        system: SYSTEM,
+        tools: [TOOL],
+        tool_choice: { type: 'tool', name: TOOL.name },
+        messages: [{ role: 'user', content: user }]
+      })
+    });
+  } catch {
+    throw new Error('Couldn\'t reach Claude. Check your internet connection.');
+  }
+  if (!res.ok) {
+    let detail = '';
+    try { const j = await res.json(); detail = (j && j.error && j.error.message) || ''; } catch {}
+    throw new Error(apiError(res.status, detail));
+  }
+  const data = await res.json();
+  const block = (data.content || []).find(b => b.type === 'tool_use');
+  if (!block || !block.input) throw new Error('Claude didn\'t return a structured answer. Please try again.');
+  const out = block.input;
+  ['corrections', 'grammar', 'examples', 'notes'].forEach(k => { if (!Array.isArray(out[k])) out[k] = []; });
+  out._truncated = data.stop_reason === 'max_tokens';
+  out._model = data.model || settings.model;
+  return out;
+}
+
+async function translate() {
+  if (state.busy) return;
+  const src = state.source, tgt = src === 'hr' ? 'en' : 'hr';
+  const text = $('#text-' + src).value.trim();
+  if (!text) { toast(`Type or speak some ${LANG[src].name} first.`); return; }
+  if (!settings.key) { openSettings(); toast('Add your Claude API key first.'); return; }
+
+  const grammar = $('#optGrammar').checked, examples = $('#optExamples').checked;
+  state.busy = true;
+  const btn = $('#translateBtn'); btn.disabled = true; btn.textContent = 'Translating…';
+  const results = $('#results'); results.innerHTML = '';
+  const load = el('div', 'card loading-card'); load.append(el('span', 'spinner'), el('span', null, 'Asking Claude…'));
+  results.appendChild(load);
+
+  try {
+    const out = await callClaude(src, text, grammar, examples);
+    let realSrc = src;
+    if (out.detected_language === 'hr' || out.detected_language === 'en') realSrc = out.detected_language;
+    if (realSrc !== src) {
+      // The user typed the other language in this box: move it to the right box.
+      $('#text-' + realSrc).value = text;
+      setSource(realSrc);
+      toast(`That looked like ${LANG[realSrc].name}, so I moved it to the ${LANG[realSrc].name} box.`, 5000);
+    }
+    const realTgt = realSrc === 'hr' ? 'en' : 'hr';
+    $('#text-' + realTgt).value = out.translation || '';
+    state.last = { ...out, src: realSrc, input: text };
+    renderResults(state.last);
+  } catch (e) {
+    results.innerHTML = '';
+    const c = el('div', 'card err'); c.textContent = e.message || String(e);
+    results.appendChild(c);
+  } finally {
+    state.busy = false; btn.disabled = false; btn.textContent = 'Translate';
+  }
+}
+
+/* ---------- rendering results (all text via textContent, never HTML) ---------- */
+function playBtn(text, code, label) {
+  const b = el('button', 'btn small'); b.type = 'button';
+  b.innerHTML = '<span aria-hidden="true">🔊</span>';
+  b.setAttribute('aria-label', label || 'Listen'); b.title = 'Listen';
+  b.addEventListener('click', () => speak(text, code, b));
+  return b;
+}
+function practiseBtn(text) {
+  const b = el('button', 'btn small'); b.type = 'button';
+  b.innerHTML = '<span aria-hidden="true">🗣</span>';
+  b.setAttribute('aria-label', 'Practise saying this'); b.title = 'Practise saying this';
+  b.addEventListener('click', () => openPractice(text, false));
+  return b;
+}
+
+function renderResults(r) {
+  const results = $('#results'); results.innerHTML = '';
+  const inputWasHr = r.src === 'hr';
+  const norm = s => (s || '').trim().replace(/\s+/g, ' ');
+
+  // Save-as-flash-card bar
+  const cardHr = (r.croatian_text || (inputWasHr ? r.corrected_input : r.translation) || '').trim();
+  const cardEn = (inputWasHr ? r.translation : r.input || '').trim();
+  if (cardHr && cardEn) {
+    const c = el('div', 'card save-bar');
+    const t = el('div', 't');
+    const h = el('div', null, cardHr); h.lang = 'hr'; h.style.fontWeight = '700';
+    t.append(h, el('div', 'muted small', cardEn));
+    c.append(t, saveCardBtn(cardHr, cardEn, grammarNote(r.grammar), true));
+    results.appendChild(c);
+  }
+
+  if (inputWasHr && (r.corrections.length || norm(r.corrected_input) !== norm(r.input))) {
+    const c = el('div', 'card');
+    const hd = el('div', 'card-head'); hd.appendChild(el('h3', null, '✏️ Corrected Croatian'));
+    const use = el('button', 'btn small', 'Use this'); use.type = 'button';
+    use.addEventListener('click', () => {
+      $('#text-hr').value = r.corrected_input; state.last.input = r.corrected_input.trim();
+      toast('Croatian box updated with the corrected text.');
+    });
+    const tools = el('div', 'tools'); tools.append(playBtn(r.corrected_input, 'hr', 'Listen to corrected Croatian'), use);
+    hd.appendChild(tools); c.appendChild(hd);
+    const ct = el('p', 'corr-text', r.corrected_input); ct.lang = 'hr'; c.appendChild(ct);
+    if (r.corrections.length) {
+      const ul = el('ul', 'corr-list');
+      r.corrections.forEach(x => {
+        const li = el('li');
+        const was = el('span', 'was', x.original); was.lang = 'hr';
+        const now = el('span', 'now', x.corrected); now.lang = 'hr';
+        li.append(was, document.createTextNode(' → '), now, document.createTextNode(': ' + x.explanation));
+        ul.appendChild(li);
+      });
+      c.appendChild(ul);
+    }
+    results.appendChild(c);
+  }
+
+  if (r.notes.length) {
+    const c = el('div', 'card'); c.appendChild(el('h3', null, 'ℹ️ Worth knowing'));
+    const ul = el('ul', 'notes'); r.notes.forEach(n => ul.appendChild(el('li', null, n)));
+    c.appendChild(ul); results.appendChild(c);
+  }
+
+  if (r.grammar.length) {
+    const c = el('div', 'card');
+    const hd = el('div', 'card-head');
+    hd.appendChild(el('h3', null, 'Cases, endings & gender'));
+    c.appendChild(hd);
+    const sub = el('p', 'muted small', inputWasHr ? 'Based on the correct version of what you typed.' : 'Based on the Croatian translation.');
+    sub.style.margin = '0'; c.appendChild(sub);
+    const grid = el('div', 'gram-grid');
+    r.grammar.forEach(g => {
+      const box = el('div', 'gram');
+      const w = el('div', 'w', g.word); w.lang = 'hr';
+      const root = el('div', 'root'); root.append(document.createTextNode('root: '));
+      const rt = el('b', null, g.root); rt.lang = 'hr'; root.append(rt, document.createTextNode(` · ${g.part_of_speech}`));
+      const chips = el('div', 'chips');
+      if (g.form) chips.appendChild(el('span', 'chip', g.form));
+      if (g.gender && g.gender !== '—') chips.appendChild(el('span', 'chip', g.gender));
+      if (g.ending && g.ending !== '—') chips.appendChild(el('span', 'chip ending', 'ending ' + g.ending));
+      box.append(w, root, chips, el('p', 'why', g.why));
+      if (g.user_wrote) box.appendChild(el('p', 'wrote', `You wrote “${g.user_wrote}”. The correct form is “${g.word}”.`));
+      if (g.gender_compare) { const gc = el('p', 'gcmp', g.gender_compare); gc.lang = 'hr'; box.appendChild(gc); }
+      grid.appendChild(box);
+    });
+    c.appendChild(grid); results.appendChild(c);
+  }
+
+  if (r.examples.length) {
+    const c = el('div', 'card'); c.appendChild(el('h3', null, 'Example phrases'));
+    const ul = el('ul', 'ex-list');
+    r.examples.forEach(x => {
+      const li = el('li', 'ex');
+      const t = el('div', 't'); const h = el('div', 'hr', x.croatian); h.lang = 'hr';
+      t.append(h, el('div', 'en', x.english));
+      li.append(t, playBtn(x.croatian, 'hr', 'Listen to this phrase'), practiseBtn(x.croatian), saveCardBtn(x.croatian, x.english, '', false));
+      ul.appendChild(li);
+    });
+    c.appendChild(ul); results.appendChild(c);
+  }
+
+  const foot = el('p', 'muted small', `Translated by Claude ${MODELS[settings.model] || r._model}.` + (r._truncated ? ' The answer was cut short; try a shorter text.' : ''));
+  foot.style.margin = '10px 2px 0';
+  results.appendChild(foot);
+}
+
+/* ---------- pronunciation practice (up to 3 tries) ---------- */
+const tokens = s => (s || '').toLowerCase().normalize('NFC').replace(/[^\p{L}\p{N}\s]/gu, ' ').split(/\s+/).filter(Boolean);
+const fold = w => w.normalize('NFD').replace(/\p{M}/gu, '').replace(/đ/g, 'd');
+
+function compare(target, heard) {
+  const disp = (target || '').split(/\s+/).filter(Boolean)
+    .map(w => ({ show: w, tok: tokens(w).join('') })).filter(x => x.tok);
+  const h = tokens(heard);
+  const n = disp.length, m = h.length;
+  // Longest common subsequence on accent-folded words, for alignment.
+  const dp = Array.from({ length: n + 1 }, () => new Array(m + 1).fill(0));
+  for (let i = n - 1; i >= 0; i--) for (let j = m - 1; j >= 0; j--)
+    dp[i][j] = fold(disp[i].tok) === fold(h[j]) ? dp[i + 1][j + 1] + 1 : Math.max(dp[i + 1][j], dp[i][j + 1]);
+  const words = disp.map(d => ({ show: d.show, status: 'miss' }));
+  let i = 0, j = 0;
+  while (i < n && j < m) {
+    if (fold(disp[i].tok) === fold(h[j])) { words[i].status = disp[i].tok === h[j] ? 'exact' : 'close'; i++; j++; }
+    else if (dp[i + 1][j] >= dp[i][j + 1]) i++;
+    else j++;
+  }
+  const exact = words.filter(w => w.status === 'exact').length;
+  const close = words.filter(w => w.status === 'close').length;
+  const score = n ? (exact + 0.6 * close) / n : 0;
+  return { heard, words, score };
+}
+
+function openPractice(text, fromBox = true) {
+  let target = (text || '').trim(), corrected = false;
+  if (fromBox) {
+    const hr = $('#text-hr').value.trim();
+    const L = state.last;
+    target = hr;
+    if (L && L.src === 'hr' && L.input === hr && L.croatian_text && L.croatian_text.trim() !== hr) {
+      target = L.croatian_text.trim(); corrected = true;
+    }
+  }
+  if (!target) { toast('Put some Croatian in the Croatian box first (or translate from English).'); return; }
+  state.practice = { target, attempts: [], max: 3, done: false };
+  $('#practiceTarget').textContent = target;
+  const note = $('#practiceNote');
+  note.hidden = !corrected; note.textContent = corrected ? 'Using the corrected version of your text.' : '';
+  $('#practice').hidden = false;
+  renderPractice();
+  $('#practice').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+function resetPracticeAttempts() { state.practice.attempts = []; state.practice.done = false; renderPractice(); }
+
+function sayAttempt() {
+  const P = state.practice;
+  if (state.recKind === 'practice') { try { state.rec.stop(); } catch { killRec(); showIdleMic(); } return; }
+  if (P.done || P.attempts.length >= P.max) { toast('Tap Start over to practise again.'); return; }
+  listen({
+    kind: 'practice', lang: 'hr-HR', btn: $('#practiceSay'), interim: false, alts: 5,
+    onFinal: ({ text, alts, problem }) => {
+      if (!text) { if (!problem) toast('Didn\'t hear anything, so that try wasn\'t counted.'); return; }
+      let best = null;
+      alts.forEach(a => { const r = compare(P.target, a); if (!best || r.score > best.score) best = r; });
+      P.attempts.push(best);
+      if (best.score >= 0.999) P.done = true;
+      renderPractice();
+    }
+  });
+}
+
+function verdict(score) {
+  if (score >= 0.999) return 'Savršeno! Perfect, every word matched.';
+  if (score >= 0.8) return 'Vrlo dobro! Very close. Check the marked words.';
+  if (score >= 0.5) return 'Dobro. Getting there. Listen again and try the marked words slowly.';
+  return 'Pokušaj ponovno. Listen first, then say it slowly and clearly.';
+}
+
+function attemptItem(a, idx) {
+  const li = el('li', 'attempt');
+  const hd = el('div', 'hd');
+  hd.append(el('span', null, `Try ${idx + 1}`), el('span', null, `${Math.round(a.score * 100)}%`));
+  const words = el('div', 'words'); words.lang = 'hr';
+  a.words.forEach(w => {
+    const mark = w.status === 'exact' ? '✓ ' : w.status === 'close' ? '≈ ' : '✗ ';
+    const s = el('span', 'wd ' + w.status, mark + w.show);
+    s.title = w.status === 'exact' ? 'matched' : w.status === 'close' ? 'nearly: check the accent/letters' : 'not heard';
+    words.appendChild(s);
+  });
+  const heard = el('div', 'muted small'); heard.append(document.createTextNode('Heard: '));
+  const q = el('span', null, `“${a.heard}”`); q.lang = 'hr'; heard.appendChild(q);
+  li.append(hd, words, heard, el('p', 'verdict', verdict(a.score)));
+  return li;
+}
+
+function renderPractice() {
+  const P = state.practice;
+  const used = P.attempts.length;
+  const dots = $('#attemptDots'); dots.innerHTML = '';
+  for (let k = 0; k < P.max; k++) { const d = el('span'); if (k < used) d.className = 'used'; dots.appendChild(d); }
+  const left = P.max - used;
+  $('#attemptText').textContent = P.done ? 'Done!' : (left > 0 ? `Try ${used + 1} of ${P.max}` : 'No tries left');
+  const say = $('#practiceSay');
+  say.disabled = !state.micAvailable || P.done || left <= 0;
+
+  const list = $('#attemptList'); list.innerHTML = '';
+  P.attempts.forEach((a, idx) => list.appendChild(attemptItem(a, idx)));
+  if (!P.done && left <= 0 && used) {
+    const best = Math.max(...P.attempts.map(a => a.score));
+    const li = el('li', 'attempt');
+    li.appendChild(el('p', 'verdict', `That's your 3 tries. Best score: ${Math.round(best * 100)}%. Listen again, then tap Start over to keep practising.`));
+    list.appendChild(li);
+  }
+}
+
+/* ---------- flash cards ---------- */
+/*
+ * Cards live in this browser (auto-saved) and are copied to/from one file in iCloud Drive by hand.
+ * Every card has an id and updatedAt; deletions are kept as "deleted" markers so they carry across
+ * devices. Loading a file MERGES (newest version of each card wins), so nothing is lost.
+ */
+const DAY = 864e5;
+const INTERVAL_DAYS = [0, 0, 1, 3, 7, 14, 30];   // by level 1..6
+const MAX_LEVEL = 6;
+const FILE_NAME = 'prevoditelj-cards.json';
+let cards = store.get('cards', []); if (!Array.isArray(cards)) cards = [];
+let sync = Object.assign({ lastSaved: 0, lastLoaded: 0, dirty: false }, store.get('sync', {}));
+let session = null;
+
+const uid = () => (window.crypto && crypto.randomUUID) ? crypto.randomUUID() : Date.now().toString(36) + Math.random().toString(36).slice(2, 10);
+const live = () => cards.filter(c => !c.deleted);
+const normHr = s => (s || '').trim().toLowerCase().replace(/[.!?,;:…]+$/u, '').replace(/\s+/g, ' ');
+const isDue = (c, now = Date.now()) => (c.due || 0) <= now;
+
+function persistCards(markDirty = true) {
+  store.set('cards', cards);
+  if (markDirty) sync.dirty = true;
+  store.set('sync', sync);
+  renderSync(); renderCardList(); updateDue();
+}
+
+function grammarNote(grammar) {
+  return (grammar || []).slice(0, 8).map(g => {
+    const bits = [g.form];
+    if (g.gender && g.gender !== '—') bits.push(g.gender);
+    if (g.ending && g.ending !== '—') bits.push('ending ' + g.ending);
+    return `${g.word} ← ${g.root}: ${bits.filter(Boolean).join(', ')}`;
+  }).join('\n');
+}
+
+function findCard(hr) { const n = normHr(hr); return live().find(c => normHr(c.hr) === n); }
+
+function addCard(hr, en, note) {
+  hr = (hr || '').trim(); en = (en || '').trim();
+  if (!hr || !en) { toast('Nothing to save yet.'); return false; }
+  if (findCard(hr)) { toast('That\'s already in your flash cards.'); return false; }
+  const now = Date.now();
+  cards.push({ id: uid(), hr, en, note: note || '', level: 1, due: now, createdAt: now, updatedAt: now, deleted: false });
+  persistCards();
+  toast('Saved as a flash card ★. Tap Save to iCloud (Flash cards tab) when you\'re done.', 4500);
+  return true;
+}
+
+function saveCardBtn(hr, en, note, labelled) {
+  const b = el('button', 'btn small'); b.type = 'button';
+  const set = (saved) => {
+    b.textContent = labelled ? (saved ? '★ Saved' : '☆ Save as flash card') : (saved ? '★' : '☆');
+    b.disabled = saved;
+    b.setAttribute('aria-label', saved ? 'Saved as flash card' : 'Save as flash card');
+    b.title = saved ? 'Saved as flash card' : 'Save as flash card';
+  };
+  set(!!findCard(hr));
+  b.addEventListener('click', () => { if (addCard(hr, en, note)) set(true); });
+  return b;
+}
+
+function deleteCard(id) {
+  const c = cards.find(x => x.id === id); if (!c) return;
+  c.deleted = true; c.updatedAt = Date.now();
+  persistCards();
+}
+
+/* --- iCloud file: save --- */
+async function saveCardsFile() {
+  const payload = { app: 'prevoditelj', kind: 'flashcards', version: 1, savedAt: Date.now(), cards };
+  const json = JSON.stringify(payload);
+  const isTouchDevice = navigator.maxTouchPoints > 1;   // iPhone / iPad (iPad reports itself as a Mac)
+  if (isTouchDevice && navigator.canShare) {
+    let file;
+    try { file = new File([json], FILE_NAME, { type: 'application/json' }); } catch { file = null; }
+    if (file && navigator.canShare({ files: [file] })) {
+      try {
+        await navigator.share({ files: [file] });
+        markSaved('Saved. If you chose "Save to Files", it\'s now in your iCloud folder.');
+        return;
+      } catch (e) {
+        if (e && e.name === 'AbortError') { toast('Not saved.'); return; }
+        // fall through to a normal download
+      }
+    }
+  }
+  const url = URL.createObjectURL(new Blob([json], { type: 'application/json' }));
+  const a = el('a'); a.href = url; a.download = FILE_NAME; a.style.display = 'none';
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 15000);
+  markSaved('Cards file downloaded. If Safari\'s download folder is your iCloud folder, you\'re done.');
+}
+function markSaved(msg) {
+  sync.lastSaved = Date.now(); sync.dirty = false; store.set('sync', sync);
+  renderSync(); toast(msg, 5500);
+}
+
+/* --- iCloud file: load + merge --- */
+function cleanCard(c) {
+  return {
+    id: String(c.id), hr: String(c.hr || ''), en: String(c.en || ''), note: String(c.note || ''),
+    level: Math.min(MAX_LEVEL, Math.max(1, Number(c.level) || 1)),
+    due: Number(c.due) || 0, createdAt: Number(c.createdAt) || 0, updatedAt: Number(c.updatedAt) || 0,
+    lastReviewed: Number(c.lastReviewed) || 0, deleted: !!c.deleted
+  };
+}
+function mergeCards(incoming) {
+  let added = 0, updated = 0;
+  const byId = new Map(cards.map(c => [c.id, c]));
+  incoming.forEach(raw => {
+    if (!raw || !raw.id || typeof raw.hr !== 'string') return;
+    const c = cleanCard(raw);
+    const mine = byId.get(c.id);
+    if (!mine) { cards.push(c); byId.set(c.id, c); if (!c.deleted) added++; }
+    else if (c.updatedAt > (mine.updatedAt || 0)) { Object.assign(mine, c); updated++; }
+  });
+  // Same phrase saved separately on two devices: keep the oldest card, mark the others deleted.
+  const groups = new Map();
+  live().forEach(c => { const k = normHr(c.hr); if (!groups.has(k)) groups.set(k, []); groups.get(k).push(c); });
+  groups.forEach(list => {
+    if (list.length < 2) return;
+    list.sort((a, b) => (a.createdAt - b.createdAt) || (a.id < b.id ? -1 : 1));
+    list.slice(1).forEach(d => { d.deleted = true; d.updatedAt = Date.now(); });
+  });
+  return { added, updated };
+}
+function loadCardsFile(file) {
+  const reader = new FileReader();
+  reader.onload = () => {
+    let data;
+    try { data = JSON.parse(reader.result); } catch { toast('That file isn\'t a Prevoditelj cards file.'); return; }
+    if (!data || data.app !== 'prevoditelj' || !Array.isArray(data.cards)) { toast('That file isn\'t a Prevoditelj cards file.'); return; }
+    const { added, updated } = mergeCards(data.cards);
+    // Still "unsaved" if this device has anything the file doesn't.
+    const fileVer = new Map(data.cards.filter(c => c && c.id).map(c => [String(c.id), Number(c.updatedAt) || 0]));
+    const differs = cards.some(c => fileVer.get(c.id) !== c.updatedAt);
+    sync.lastLoaded = Date.now(); sync.dirty = differs;
+    persistCards(false);
+    const msg = `Loaded from iCloud: ${added} new, ${updated} updated.`;
+    toast(differs ? msg + ' This device has extra changes, so tap Save to iCloud.' : msg, 6000);
+  };
+  reader.onerror = () => toast('Couldn\'t read that file.');
+  reader.readAsText(file);
+}
+
+function ago(t) {
+  if (!t) return 'never';
+  const m = Math.round((Date.now() - t) / 60000);
+  if (m < 1) return 'just now';
+  if (m < 60) return `${m} min ago`;
+  const h = Math.round(m / 60); if (h < 24) return `${h} h ago`;
+  return new Date(t).toLocaleDateString();
+}
+function renderSync() {
+  const n = live().length;
+  const txt = `${n} card${n === 1 ? '' : 's'} on this device · ` +
+    (sync.dirty ? 'changes not yet saved to iCloud' : `last saved to iCloud ${ago(sync.lastSaved)}`) +
+    (sync.lastLoaded ? ` · last loaded ${ago(sync.lastLoaded)}` : '');
+  $('#syncText').textContent = txt;
+  $('#syncCard').classList.toggle('dirty', !!sync.dirty);
+}
+function updateDue() {
+  const now = Date.now(), all = live(), due = all.filter(c => isDue(c, now)).length;
+  const b = $('#dueBadge'); b.hidden = !due; b.textContent = due;
+  $('#studyCounts').textContent = `${due} due · ${all.length} total`;
+}
+function dueText(c) {
+  const d = (c.due || 0) - Date.now();
+  if (d <= 0) return 'due now';
+  const days = Math.ceil(d / DAY);
+  return days <= 1 ? 'due tomorrow' : `due in ${days} days`;
+}
+function renderCardList() {
+  const q = normHr($('#cardSearch').value);
+  const all = live().sort((a, b) => b.createdAt - a.createdAt);
+  const shown = q ? all.filter(c => normHr(c.hr).includes(q) || c.en.toLowerCase().includes(q)) : all;
+  $('#allCardsTitle').textContent = `All cards (${all.length})`;
+  $('#cardsEmpty').hidden = all.length > 0;
+  const ul = $('#cardList'); ul.innerHTML = '';
+  shown.forEach(c => {
+    const li = el('li');
+    const t = el('div', 't');
+    const h = el('div', 'hr', c.hr); h.lang = 'hr';
+    t.append(h, el('div', 'en', c.en), el('div', 'lvl', `Level ${c.level} of ${MAX_LEVEL} · ${dueText(c)}`));
+    const del = el('button', 'btn small ghost', '🗑'); del.type = 'button';
+    del.setAttribute('aria-label', 'Delete card'); del.title = 'Delete card';
+    let armed = null;
+    del.addEventListener('click', () => {
+      if (armed) { clearTimeout(armed); deleteCard(c.id); return; }
+      del.textContent = 'Delete?'; del.classList.add('danger');
+      armed = setTimeout(() => { armed = null; del.textContent = '🗑'; del.classList.remove('danger'); }, 3000);
+    });
+    li.append(t, playBtn(c.hr, 'hr', 'Listen'), del);
+    ul.appendChild(li);
+  });
+}
+
+/* --- study session (simple spaced repetition) --- */
+function currentMode() { const r = document.querySelector('input[name=fcmode]:checked'); return r ? r.value : 'hr-en'; }
+function startSession(all) {
+  const now = Date.now();
+  let pool = live();
+  if (!all) pool = pool.filter(c => isDue(c, now));
+  if (!pool.length) {
+    toast(live().length ? 'Nothing is due right now. Try "Study all".' : 'No cards yet. Save some from the Translate tab.');
+    return;
+  }
+  if (all) { for (let i = pool.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [pool[i], pool[j]] = [pool[j], pool[i]]; } }
+  else pool.sort((a, b) => (a.due || 0) - (b.due || 0));
+  session = { queue: pool.map(c => c.id), mode: currentMode(), done: 0, knew: 0, tries: [], sayDone: false };
+  $('#studySetup').hidden = true; $('#studyCard').hidden = false;
+  renderStudy();
+  $('#studyCard').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+function endSession(finished) {
+  if (state.recKind === 'card-say') { killRec(); showIdleMic(); }
+  stopSpeaking();
+  if (finished && session) toast(`Session done: ${session.done} card${session.done === 1 ? '' : 's'} reviewed, ${session.knew} known first time. Remember to Save to iCloud.`, 6000);
+  session = null;
+  $('#studyCard').hidden = true; $('#studySetup').hidden = false;
+  updateDue();
+}
+const curCard = () => session && cards.find(c => c.id === session.queue[0] && !c.deleted);
+
+function renderStudy() {
+  while (session && session.queue.length && !curCard()) session.queue.shift();
+  const c = curCard();
+  if (!c) { endSession(true); return; }
+  const m = session.mode;
+  $('#studyProgress').textContent = `${session.done} done · ${session.queue.length} to go`;
+  const frontIsHr = m !== 'en-hr';
+  $('#fcFrontLabel').textContent = frontIsHr ? 'Croatian' : 'English';
+  $('#fcFront').textContent = frontIsHr ? c.hr : c.en;
+  $('#fcFront').lang = frontIsHr ? 'hr' : 'en';
+  $('#fcBackLabel').textContent = frontIsHr ? 'English' : 'Croatian';
+  $('#fcBack').textContent = frontIsHr ? c.en : c.hr;
+  $('#fcBack').lang = frontIsHr ? 'en' : 'hr';
+  const note = $('#fcNote'); note.textContent = c.note || ''; note.hidden = !c.note;
+  $('#fcBackWrap').hidden = true;
+  $('#fcShow').hidden = false; $('#fcAgain').hidden = true; $('#fcKnew').hidden = true;
+  session.tries = []; session.sayDone = false;
+  $('#fcSay').hidden = m !== 'say';
+  renderSay();
+}
+function reveal() {
+  if (!session) return;
+  $('#fcBackWrap').hidden = false;
+  $('#fcShow').hidden = true; $('#fcAgain').hidden = false; $('#fcKnew').hidden = false;
+}
+function grade(knew) {
+  const c = curCard(); if (!c) return;
+  const now = Date.now();
+  if (knew) {
+    c.level = Math.min(MAX_LEVEL, (c.level || 1) + 1);
+    c.due = now + INTERVAL_DAYS[c.level] * DAY;
+    session.queue.shift(); session.done++;
+    if (!c._missed) session.knew++;
+    delete c._missed;
+  } else {
+    c.level = 1; c.due = now; c._missed = true;
+    const id = session.queue.shift();
+    session.queue.splice(Math.min(3, session.queue.length), 0, id);   // see it again soon
+  }
+  c.updatedAt = now; c.lastReviewed = now;
+  const saved = cards.map(x => { const { _missed, ...rest } = x; return rest; });
+  store.set('cards', saved); sync.dirty = true; store.set('sync', sync);
+  renderSync(); renderCardList(); updateDue();
+  renderStudy();
+}
+
+function renderSay() {
+  if (!session || session.mode !== 'say') return;
+  const used = session.tries.length, max = 3;
+  const dots = $('#fcSayDots'); dots.innerHTML = '';
+  for (let k = 0; k < max; k++) { const d = el('span'); if (k < used) d.className = 'used'; dots.appendChild(d); }
+  $('#fcSayText').textContent = session.sayDone ? 'Done!' : (used < max ? `Try ${used + 1} of ${max}` : 'No tries left');
+  $('#fcSayBtn').disabled = !state.micAvailable || session.sayDone || used >= max;
+  const list = $('#fcSayList'); list.innerHTML = '';
+  session.tries.forEach((a, i) => list.appendChild(attemptItem(a, i)));
+}
+function cardSay() {
+  const c = curCard(); if (!c) return;
+  if (state.recKind === 'card-say') { try { state.rec.stop(); } catch { killRec(); showIdleMic(); } return; }
+  if (session.sayDone || session.tries.length >= 3) return;
+  listen({
+    kind: 'card-say', lang: 'hr-HR', btn: $('#fcSayBtn'), interim: false, alts: 5,
+    onFinal: ({ text, alts, problem }) => {
+      if (!session || curCard() !== c) return;
+      if (!text) { if (!problem) toast('Didn\'t hear anything, so that try wasn\'t counted.'); return; }
+      let best = null;
+      alts.forEach(a => { const r = compare(c.hr, a); if (!best || r.score > best.score) best = r; });
+      session.tries.push(best);
+      if (best.score >= 0.999) session.sayDone = true;
+      renderSay();
+      if (session.sayDone || session.tries.length >= 3) reveal();
+    }
+  });
+}
+resetHooks.push(() => { if (session && session.mode === 'say') { session.tries = []; session.sayDone = false; renderSay(); } });
+
+function showTab(which) {
+  const cardsTab = which === 'cards';
+  if (state.rec) { killRec(); showIdleMic(); }
+  stopSpeaking();
+  $('#view-translate').hidden = cardsTab; $('#view-cards').hidden = !cardsTab;
+  $('#tabTranslate').setAttribute('aria-selected', String(!cardsTab));
+  $('#tabCards').setAttribute('aria-selected', String(cardsTab));
+  if (cardsTab) { renderSync(); renderCardList(); updateDue(); }
+  store.set('tab', which);
+}
+
+/* ---------- settings ---------- */
+function openSettings() {
+  $('#setKey').value = settings.key;
+  $('#setKey').type = 'password'; $('#setShowKey').checked = false;
+  $('#setModel').value = settings.model;
+  $('#setRate').value = String(settings.rate);
+  if (!$('#setRate').value) $('#setRate').value = '0.85';
+  $('#setAuto').checked = !!settings.auto;
+  loadVoices();
+  const d = $('#settings');
+  if (typeof d.showModal === 'function') d.showModal(); else d.setAttribute('open', '');
+}
+function updateKeyNotice() { $('#keyNotice').hidden = !!settings.key; }
+
+$('#settings').addEventListener('close', () => {
+  if ($('#settings').returnValue !== 'save') return;
+  settings.key = $('#setKey').value.trim();
+  settings.model = $('#setModel').value;
+  settings.rate = Number($('#setRate').value) || 0.85;
+  settings.voiceHr = $('#setVoiceHr').value;
+  settings.voiceEn = $('#setVoiceEn').value;
+  settings.auto = $('#setAuto').checked;
+  if (settings.key) store.set('key', settings.key); else store.del('key');
+  store.set('model', settings.model); store.set('rate', settings.rate);
+  store.set('voiceHr', settings.voiceHr); store.set('voiceEn', settings.voiceEn); store.set('auto', settings.auto);
+  updateKeyNotice();
+  toast('Settings saved.');
+});
+$('#setShowKey').addEventListener('change', e => { $('#setKey').type = e.target.checked ? 'text' : 'password'; });
+$('#forgetKey').addEventListener('click', () => {
+  settings.key = ''; store.del('key'); $('#setKey').value = ''; updateKeyNotice();
+  toast('API key removed from this device.');
+});
+$('#settingsBtn').addEventListener('click', openSettings);
+$('#openSettings2').addEventListener('click', openSettings);
+
+/* ---------- wiring ---------- */
+$$('[data-mic]').forEach(btn => btn.addEventListener('click', () => {
+  const f = btn.dataset.mic; const ta = $('#text-' + f); const before = ta.value;
+  listen({
+    kind: 'dict-' + f, lang: LANG[f].rec, btn, interim: true,
+    onText: t => { ta.value = t; },
+    onFinal: ({ text }) => {
+      if (!text) { ta.value = before; return; }
+      ta.value = text; setSource(f);
+      if (settings.auto && settings.key) translate();
+    }
+  });
+}));
+$$('[data-speak]').forEach(btn => btn.addEventListener('click', () => speak($('#text-' + btn.dataset.speak).value, btn.dataset.speak, btn)));
+$$('[data-clear]').forEach(btn => btn.addEventListener('click', () => {
+  const f = btn.dataset.clear; $('#text-' + f).value = '';
+  if (!$('#text-hr').value && !$('#text-en').value) { $('#results').innerHTML = ''; state.last = null; }
+  $('#text-' + f).focus();
+}));
+['hr', 'en'].forEach(f => $('#text-' + f).addEventListener('input', () => setSource(f)));
+['hr', 'en'].forEach(f => $('#text-' + f).addEventListener('keydown', e => {
+  if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) { e.preventDefault(); setSource(f); translate(); }
+}));
+$('#swapBtn').addEventListener('click', () => setSource(state.source === 'hr' ? 'en' : 'hr'));
+$('#translateBtn').addEventListener('click', translate);
+$('#optGrammar').addEventListener('change', e => store.set('optGrammar', e.target.checked));
+$('#optExamples').addEventListener('change', e => store.set('optExamples', e.target.checked));
+
+$('#practiceBtn').addEventListener('click', () => openPractice(null, true));
+$('#practiceSay').addEventListener('click', sayAttempt);
+$('#practiceListen').addEventListener('click', () => speak(state.practice.target, 'hr', $('#practiceListen')));
+$('#practiceRestart').addEventListener('click', () => { if (state.recKind === 'practice') { killRec(); showIdleMic(); } resetPracticeAttempts(); });
+$('#practiceClose').addEventListener('click', () => { if (state.recKind === 'practice') { killRec(); showIdleMic(); } $('#practice').hidden = true; });
+
+$('#resetVoiceBtn').addEventListener('click', () => hardReset('Voice fully reset. Microphone ready.'));
+
+// Leaving the app (switching apps / locking the phone) can leave Safari's recogniser stuck, so stop it.
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) { if (state.rec) { killRec(); showIdleMic(); } stopSpeaking(); }
+});
+
+if (synth) {
+  loadVoices();
+  try { synth.addEventListener('voiceschanged', loadVoices); } catch { synth.onvoiceschanged = loadVoices; }
+}
+initMic();
+updateKeyNotice();
+setSource('hr');
+
+/* flash card wiring */
+$('#tabTranslate').addEventListener('click', () => showTab('translate'));
+$('#tabCards').addEventListener('click', () => showTab('cards'));
+$('#cardsSave').addEventListener('click', saveCardsFile);
+$('#cardsLoad').addEventListener('click', () => { const f = $('#cardsFile'); f.value = ''; f.click(); });
+$('#cardsFile').addEventListener('change', e => { const f = e.target.files && e.target.files[0]; if (f) loadCardsFile(f); });
+$('#cardSearch').addEventListener('input', renderCardList);
+$('#studyDue').addEventListener('click', () => startSession(false));
+$('#studyAll').addEventListener('click', () => startSession(true));
+$('#studyEnd').addEventListener('click', () => endSession(false));
+$('#fcShow').addEventListener('click', reveal);
+$('#fcAgain').addEventListener('click', () => grade(false));
+$('#fcKnew').addEventListener('click', () => grade(true));
+$('#fcSayBtn').addEventListener('click', cardSay);
+$('#fcFrontPlay').addEventListener('click', () => speak($('#fcFront').textContent, $('#fcFront').lang === 'hr' ? 'hr' : 'en', $('#fcFrontPlay')));
+$('#fcBackPlay').addEventListener('click', () => speak($('#fcBack').textContent, $('#fcBack').lang === 'hr' ? 'hr' : 'en', $('#fcBackPlay')));
+const savedMode = store.get('fcmode', 'hr-en');
+$$('input[name=fcmode]').forEach(r => { r.checked = r.value === savedMode; r.addEventListener('change', () => store.set('fcmode', r.value)); });
+window.addEventListener('beforeunload', e => { if (sync.dirty && live().length) { e.preventDefault(); e.returnValue = ''; } });
+renderSync(); updateDue();
+if (store.get('tab', 'translate') === 'cards') showTab('cards');
+
+// Test hook (used only by automated checks).
+window.__prev = { compare, state, getCards: () => cards, mergeCards, loadCardsFile };
+})();
+</script>
+</body>
+</html>
