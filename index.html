@@ -480,6 +480,11 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
     <label class="field">English voice
       <select id="setVoiceEn"></select>
     </label>
+    <div class="tools">
+      <button type="button" class="btn small" id="testHr"><span aria-hidden="true">🔊</span> Test Croatian</button>
+      <button type="button" class="btn small" id="testEn"><span aria-hidden="true">🔊</span> Test English</button>
+    </div>
+    <p id="voiceInfo" class="muted small" style="margin:-6px 0 0"></p>
     <label class="field">Croatian speaking speed
       <select id="setRate">
         <option value="0.65">Slow</option>
@@ -721,6 +726,9 @@ function loadVoices() {
   fillVoiceSelect('#setVoiceHr', 'hr', settings.voiceHr);
   fillVoiceSelect('#setVoiceEn', 'en', settings.voiceEn);
   $('#noHrVoice').hidden = voices.length === 0 || voices.some(v => v.lang && v.lang.toLowerCase().startsWith('hr'));
+  const nHr = voicesFor('hr').length, nEn = voicesFor('en').length;
+  $('#voiceInfo').textContent = `This device reports ${voices.length} voice${voices.length === 1 ? '' : 's'}: ${nHr} Croatian, ${nEn} English.` +
+    (voices.length === 0 ? ' (If this stays at 0, close and reopen Safari.)' : '');
 }
 function voicesFor(code) {
   const vs = voices.filter(v => (v.lang || '').toLowerCase().replace('_', '-').startsWith(code));
@@ -741,29 +749,53 @@ function pickVoice(code) {
   return list[0] || null;
 }
 function stopSpeaking() {
+  clearTimeout(speakWatch); currentUtterance = null;
   try { if (synth && (synth.speaking || synth.pending)) synth.cancel(); } catch {}
   if (state.speakingBtn) state.speakingBtn.classList.remove('playing');
   state.speakingBtn = null;
 }
+let currentUtterance = null;   // keep a reference: Safari can drop an utterance that is garbage-collected
+let speakWatch = null;
 function speak(text, code, btn) {
   if (!synth) { toast('Speech playback isn\'t available in this browser.'); return; }
   text = (text || '').trim();
   if (btn && state.speakingBtn === btn) { stopSpeaking(); return; }
+  const wasBusy = synth.speaking || synth.pending;
   stopSpeaking();
   if (state.rec) { killRec(); showIdleMic(); }
   if (!text) { toast('Nothing to play yet.'); return; }
   if (!voices.length) loadVoices();
   const u = new SpeechSynthesisUtterance(text);
   u.lang = LANG[code].tts;
+  u.volume = 1;
   const v = pickVoice(code);
   if (v) u.voice = v;
   else if (code === 'hr') toast('No Croatian voice found on this device. See Settings for how to add one.', 6000);
   u.rate = code === 'hr' ? settings.rate : 1;
-  const done = () => { if (btn) btn.classList.remove('playing'); if (state.speakingBtn === btn) state.speakingBtn = null; };
-  u.onend = done; u.onerror = done;
+  let started = false;
+  const done = () => { clearTimeout(speakWatch); if (btn) btn.classList.remove('playing'); if (state.speakingBtn === btn) state.speakingBtn = null; };
+  u.onstart = () => { started = true; };
+  u.onend = done;
+  u.onerror = (e) => {
+    done();
+    const err = e && e.error;
+    if (err && err !== 'interrupted' && err !== 'canceled') toast(`Playback problem (${err}). Try Reset voice, or the sound test in Settings.`, 6000);
+  };
   if (btn) { btn.classList.add('playing'); state.speakingBtn = btn; }
-  try { synth.resume(); } catch {}
-  synth.speak(u);
+  currentUtterance = u;
+  const go = () => {
+    try { synth.resume(); } catch {}
+    synth.speak(u);
+    clearTimeout(speakWatch);
+    speakWatch = setTimeout(() => {
+      if (!started && currentUtterance === u) {
+        done();
+        toast('No sound started. Check the volume and the silent switch, and that a ' + (code === 'hr' ? 'Croatian' : 'English') + ' voice is downloaded. Settings has a sound test.', 8000);
+      }
+    }, 3000);
+  };
+  // Speaking straight after cancel() can be silently dropped, so give the engine a moment.
+  if (wasBusy) setTimeout(go, 120); else go();
 }
 
 /* ---------- source / direction ---------- */
@@ -788,7 +820,8 @@ Rules:
 - If grammar is not requested, return an empty grammar list.
 - Examples (only when requested): give 2 or 3 short, everyday Croatian phrases that use the main word(s) of the input, each with an English translation. Use different cases where natural. If not requested, return an empty list.
 - If the text is neither Croatian nor English, set detected_language to "other", translate it into English anyway if you can, and say so in notes.
-- Explanations: clear, simple English for a learner. Be concise.`;
+- Explanations: clear, simple English for a learner. Be concise.
+- ALWAYS reply by calling the return_translation tool exactly once, filling every field. Never reply with plain text.`;
 
 const TOOL = {
   name: 'return_translation',
@@ -866,7 +899,6 @@ ${text}
         max_tokens: 4000,
         system: SYSTEM,
         tools: [TOOL],
-        tool_choice: { type: 'tool', name: TOOL.name },
         messages: [{ role: 'user', content: user }]
       })
     });
@@ -879,9 +911,19 @@ ${text}
     throw new Error(apiError(res.status, detail));
   }
   const data = await res.json();
-  const block = (data.content || []).find(b => b.type === 'tool_use');
-  if (!block || !block.input) throw new Error('Claude didn\'t return a structured answer. Please try again.');
-  const out = block.input;
+  // Claude is asked (not forced, since forcing isn't supported on every model) to use the tool.
+  const block = (data.content || []).find(b => b.type === 'tool_use' && b.input);
+  let out = block ? block.input : null;
+  if (!out) {
+    // Fallback: Claude answered in plain text. Use any JSON in it, otherwise show the text as the translation.
+    const reply = (data.content || []).filter(b => b.type === 'text').map(b => b.text).join('\n').trim();
+    const s = reply.indexOf('{'), e = reply.lastIndexOf('}');
+    if (s >= 0 && e > s) { try { out = JSON.parse(reply.slice(s, e + 1)); } catch { out = null; } }
+    if (!out && reply) out = { detected_language: src, corrected_input: text, translation: reply, croatian_text: src === 'hr' ? text : '' };
+  }
+  if (!out || typeof out.translation !== 'string') throw new Error('Claude didn\'t return a usable answer. Please try again.');
+  if (typeof out.corrected_input !== 'string' || !out.corrected_input.trim()) out.corrected_input = text;
+  if (typeof out.croatian_text !== 'string') out.croatian_text = src === 'hr' ? out.corrected_input : out.translation;
   ['corrections', 'grammar', 'examples', 'notes'].forEach(k => { if (!Array.isArray(out[k])) out[k] = []; });
   out._truncated = data.stop_reason === 'max_tokens';
   out._model = data.model || settings.model;
@@ -1479,7 +1521,16 @@ $('#settings').addEventListener('close', () => {
   updateKeyNotice();
   toast('Settings saved.');
 });
-$('#setShowKey').addEventListener('change', e => { $('#setKey').type = e.target.checked ? 'text' : 'password'; });
+function testVoice(code, btn) {
+  // Use the voice currently chosen in the dropdown, even before Save.
+  const prev = code === 'hr' ? settings.voiceHr : settings.voiceEn;
+  if (code === 'hr') settings.voiceHr = $('#setVoiceHr').value; else settings.voiceEn = $('#setVoiceEn').value;
+  speak(code === 'hr' ? 'Dobar dan! Kako ste? Ja sam vaš prevoditelj.' : 'Hello! This is the English voice.', code, btn);
+  if (code === 'hr') settings.voiceHr = prev; else settings.voiceEn = prev;
+}
+$('#testHr').addEventListener('click', () => testVoice('hr', $('#testHr')));
+$('#testEn').addEventListener('click', () => testVoice('en', $('#testEn')));
+$('#setShowKey').addEventListener('change',e => { $('#setKey').type = e.target.checked ? 'text' : 'password'; });
 $('#forgetKey').addEventListener('click', () => {
   settings.key = ''; store.del('key'); $('#setKey').value = ''; updateKeyNotice();
   toast('API key removed from this device.');
