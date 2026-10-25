@@ -370,7 +370,7 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
       <button class="btn mic" id="micIn" data-label="Speak"><span aria-hidden="true">🎤</span><span class="lbl">Speak</span></button>
       <button class="btn" id="speakIn"><span aria-hidden="true">🔊</span> Listen</button>
       <button class="btn accent" id="practiceBtn"><span aria-hidden="true">🗣</span> Practise saying it</button>
-      <button class="btn ghost" id="clearIn" aria-label="Clear text" title="Clear">✕</button>
+      <button class="btn ghost" id="clearIn" aria-label="Clear text and results" title="Clear text and results"><span aria-hidden="true">✕</span> Clear</button>
     </div>
   </section>
 
@@ -436,6 +436,7 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
       <div class="tools">
         <button class="btn primary" id="studyDue">Study due cards</button>
         <button class="btn" id="studyAll">Study all</button>
+        <button class="btn accent" id="studyOwn" hidden>Study my cards</button>
       </div>
       <p id="cardsEmpty" class="muted small" style="margin:10px 0 0">No cards yet. On the Translate tab, tap ☆ Save as flash card on a translation or example phrase. On a new device, tap Load from iCloud first.</p>
     </section>
@@ -1293,7 +1294,8 @@ function matcher(sel, prev) {
   if (sel.u === 'own') return c => !hasBookTag(c);
   if (sel.u === 'topics') return c => { const t = tagsOf(c).topics; return sel.m === 'all' ? t.length > 0 : t.includes(sel.m); };
   const [lo, hi] = rangeOf(sel);
-  return c => tagsOf(c).ranks.some(r => prev ? r <= hi : (r >= lo && r <= hi));
+  if (prev) return c => !hasBookTag(c) || tagsOf(c).ranks.some(r => r <= hi);   // + my saved cards
+  return c => tagsOf(c).ranks.some(r => r >= lo && r <= hi);
 }
 const countOf = (pool, sel) => { const f = matcher(sel, false); let n = 0; for (const c of pool) if (f(c)) n++; return n; };
 function deckFilter(pool) { return pool.filter(matcher(pick, $('#fcPrev').checked && rangeOf(pick) !== null)); }
@@ -1363,6 +1365,10 @@ function renderDeckPick() {
     : level === 'module' ? 'Add everything before this module too'
     : level === 'phrases' ? 'Add everything before these phrases too'
     : 'Add all previous units too';
+  if (countOf(pool, { u: 'own' })) $('#fcPrevText').textContent += ' (+ my saved cards)';
+  const nMine = countOf(pool, { u: 'own' });
+  $('#studyOwn').hidden = !nMine;
+  $('#studyOwn').textContent = `Study my cards (${nMine})`;
 }
 
 function persistCards(markDirty = true) {
@@ -1561,9 +1567,9 @@ function deleteCurrentCard() {
 
 /* --- study session (simple spaced repetition) --- */
 function currentMode() { const r = document.querySelector('input[name=fcmode]:checked'); return r ? r.value : 'hr-en'; }
-function startSession(all) {
+function startSession(all, ownOnly) {
   const now = Date.now();
-  const set = deckFilter(live());
+  const set = ownOnly ? live().filter(c => !hasBookTag(c)) : deckFilter(live());
   let pool = all ? set : set.filter(c => isDue(c, now));
   if (!pool.length) {
     toast(!live().length ? 'No cards yet. Save some from the Translate tab.'
@@ -1851,6 +1857,7 @@ $('#cardsFile').addEventListener('change', e => { const f = e.target.files && e.
 $('#fcDelete').addEventListener('click', deleteCurrentCard);
 $('#studyDue').addEventListener('click', () => startSession(false));
 $('#studyAll').addEventListener('click', () => startSession(true));
+$('#studyOwn').addEventListener('click', () => startSession(true, true));   // all my saved cards, whatever the picker says
 $('#studyEnd').addEventListener('click', () => endSession(false));
 $('#fcShow').addEventListener('click', reveal);
 $('#fcAgain').addEventListener('click', () => grade(false));
