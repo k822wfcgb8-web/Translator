@@ -357,7 +357,6 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
         <span class="swap" aria-hidden="true">⇄ swap</span>
       </button>
     </div>
-    <textarea id="text-in" lang="hr" placeholder="Upišite ili izgovorite… (type or speak Croatian)" autocapitalize="sentences" autocomplete="off" spellcheck="false"></textarea>
     <div class="letters" id="letters" role="group" aria-label="Croatian letters">
       <button type="button" class="key shift" id="keyShift" aria-pressed="false" aria-label="Capital letter" title="Capital letter (next letter only)">⇧</button>
       <button type="button" class="key" data-ch="č">č</button>
@@ -366,6 +365,7 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
       <button type="button" class="key" data-ch="š">š</button>
       <button type="button" class="key" data-ch="ž">ž</button>
     </div>
+    <textarea id="text-in" lang="hr" placeholder="Upišite ili izgovorite… (type or speak Croatian)" autocapitalize="sentences" autocomplete="off" spellcheck="false"></textarea>
     <div class="tools">
       <button class="btn mic" id="micIn" data-label="Speak"><span aria-hidden="true">🎤</span><span class="lbl">Speak</span></button>
       <button class="btn" id="speakIn"><span aria-hidden="true">🔊</span> Listen</button>
@@ -831,6 +831,9 @@ function setSource(f) {
   ta.lang = f;
   ta.spellcheck = f === 'en';
   ta.placeholder = f === 'hr' ? 'Upišite ili izgovorite… (type or speak Croatian)' : 'Type or speak English…';
+  // English box: voice input stays, but no 🔊 Listen (no need to hear English)
+  if (f === 'en' && state.speakingBtn === $('#speakIn')) stopSpeaking();
+  $('#speakIn').hidden = f !== 'hr';
   $('#practiceBtn').hidden = f !== 'hr';   // when the input is English, Practise appears on the Croatian translation
   store.set('dir', f);
 }
@@ -1569,7 +1572,8 @@ function startSession(all) {
     return;
   }
   shuffle(pool);   // always random order
-  session = { queue: pool.map(c => c.id), mode: currentMode(), done: 0, knew: 0, tries: [], sayDone: false };
+  session = { queue: pool.map(c => c.id), mode: currentMode(), done: 0, knew: 0, tries: [], sayDone: false,
+              pool: pool.map(c => c.id), need: {}, filler: [] };
   $('#studySetup').hidden = true; $('#studyCard').hidden = false;
   renderStudy();
   $('#studyCard').scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -1590,7 +1594,9 @@ function renderStudy() {
   if (!c) { endSession(true); return; }
   const m = session.mode;
   disarmDelete();
-  $('#studyProgress').textContent = `${session.done} done · ${session.queue.length} to go`;
+  const need = session.need[c.id];
+  $('#studyProgress').textContent = `${session.done} done · ${session.queue.length} to go` +
+    (need ? ` · this one: ${REPEAT_GOAL - need} of ${REPEAT_GOAL} right` : '');
   const frontIsHr = m !== 'en-hr';
   $('#fcFrontLabel').textContent = frontIsHr ? 'Croatian' : 'English';
   $('#fcFront').textContent = frontIsHr ? c.hr : c.en;
@@ -1610,19 +1616,45 @@ function reveal() {
   $('#fcBackWrap').hidden = false;
   $('#fcShow').hidden = true; $('#fcAgain').hidden = false; $('#fcKnew').hidden = false;
 }
+/* A missed card stays in the session until it has been answered right REPEAT_GOAL times
+   in total. Before each repeat, at least REPEAT_GAP other cards are shown; when the queue
+   is too short, random other cards from this session are added as fillers. */
+const REPEAT_GOAL = 3, REPEAT_GAP = 3;
+function requeue(id) {
+  const q = session.queue;
+  const others = session.pool.filter(x => x !== id && cards.some(c => c.id === x && !c.deleted));
+  if (q.length < REPEAT_GAP && others.length) {
+    const fresh = shuffle(others.filter(x => !q.includes(x)));
+    const extra = fresh.length ? fresh : shuffle(others.slice());
+    while (q.length < REPEAT_GAP && extra.length) {
+      const f = extra.shift(); q.push(f); session.filler.push(f);
+    }
+  }
+  q.splice(Math.min(REPEAT_GAP, q.length), 0, id);
+}
 function grade(knew) {
   const c = curCard(); if (!c) return;
   const now = Date.now();
+  const id = session.queue.shift();
+  const fi = session.filler.indexOf(id);
+  const isFiller = fi >= 0 && !session.need[id];
+  if (fi >= 0) session.filler.splice(fi, 1);
   if (knew) {
+    if (session.need[id]) {
+      session.need[id]--;
+      if (session.need[id] > 0) { requeue(id); renderStudy(); return; }   // not yet 3 right
+      delete session.need[id];
+    }
+    if (isFiller) { renderStudy(); return; }   // extra review only: no schedule change
     c.level = Math.min(MAX_LEVEL, (c.level || 1) + 1);
     c.due = now + INTERVAL_DAYS[c.level] * DAY;
-    session.queue.shift(); session.done++;
+    session.done++;
     if (!c._missed) session.knew++;
     delete c._missed;
   } else {
     c.level = 1; c.due = now; c._missed = true;
-    const id = session.queue.shift();
-    session.queue.splice(Math.min(3, session.queue.length), 0, id);   // see it again soon
+    if (!session.need[id]) session.need[id] = REPEAT_GOAL;   // needs 3 right in total; a repeat miss keeps the count
+    requeue(id);
   }
   c.updatedAt = now; c.lastReviewed = now;
   const saved = cards.map(x => { const { _missed, ...rest } = x; return rest; });
@@ -1748,8 +1780,28 @@ function typeLetter(ch) {
   ta.focus();
 }
 function bindKey(btn, fn) {
+  // iPhone/iPad: only a real tap types a letter. A touch that moves (a swipe or scroll,
+  // e.g. to dismiss the keyboard), lasts long, or is cancelled is ignored.
+  let t0 = null;
   btn.addEventListener('mousedown', e => e.preventDefault());              // keep the cursor in the box (Mac)
-  btn.addEventListener('touchend', e => { e.preventDefault(); fn(); });   // iPhone/iPad: no blur, no double tap
+  btn.addEventListener('touchstart', e => {
+    const t = e.touches[0];
+    t0 = (e.touches.length === 1 && t) ? { x: t.clientX, y: t.clientY, at: Date.now(), sy: window.scrollY } : null;
+  }, { passive: true });
+  btn.addEventListener('touchmove', e => {
+    const t = e.touches[0];
+    if (t0 && t && (Math.abs(t.clientX - t0.x) > 8 || Math.abs(t.clientY - t0.y) > 8)) t0 = null;
+  }, { passive: true });
+  btn.addEventListener('touchcancel', () => { t0 = null; });
+  btn.addEventListener('touchend', e => {
+    e.preventDefault();                                                      // no blur, no ghost click
+    const t = e.changedTouches[0], s0 = t0; t0 = null;
+    if (!s0 || !t) return;
+    const r = btn.getBoundingClientRect();
+    const inside = t.clientX >= r.left && t.clientX <= r.right && t.clientY >= r.top && t.clientY <= r.bottom;
+    if (!inside || Date.now() - s0.at > 600 || Math.abs(window.scrollY - s0.sy) > 4) return;
+    fn();
+  });
   btn.addEventListener('click', fn);
 }
 $$('#letters [data-ch]').forEach(b => bindKey(b, () => typeLetter(b.dataset.ch)));
