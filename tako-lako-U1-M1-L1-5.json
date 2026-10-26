@@ -15,7 +15,14 @@
    "createdAt": 1792937925893,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "animate": true,
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l1-02",
@@ -27,7 +34,13 @@
    "createdAt": 1792937925894,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l1-03",
@@ -39,7 +52,12 @@
    "createdAt": 1792937925895,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l1-04",
@@ -51,7 +69,13 @@
    "createdAt": 1792937925896,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l1-05",
@@ -63,7 +87,12 @@
    "createdAt": 1792937925897,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l1-06",
@@ -75,7 +104,12 @@
    "createdAt": 1792937925898,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l1-07",
@@ -87,7 +121,12 @@
    "createdAt": 1792937925899,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l1-08",
@@ -99,7 +138,12 @@
    "createdAt": 1792937925900,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l1-09",
@@ -111,7 +155,12 @@
    "createdAt": 1792937925901,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l1-10",
@@ -123,7 +172,13 @@
    "createdAt": 1792937925902,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l1-11",
@@ -135,7 +190,13 @@
    "createdAt": 1792937925903,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l1-12",
@@ -147,7 +208,12 @@
    "createdAt": 1792937925904,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l1-13",
@@ -159,7 +225,12 @@
    "createdAt": 1792937925905,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l1-14",
@@ -171,7 +242,14 @@
    "createdAt": 1792937925906,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "animate": true,
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l1-15",
@@ -183,7 +261,13 @@
    "createdAt": 1792937925907,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l1-16",
@@ -195,7 +279,12 @@
    "createdAt": 1792937925908,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l1-17",
@@ -207,7 +296,12 @@
    "createdAt": 1792937925909,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l1-18",
@@ -219,7 +313,14 @@
    "createdAt": 1792937925910,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "note": "Feminine in standard Croatian (dobra večer); some speakers use it as masculine.",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l2-01",
@@ -231,7 +332,12 @@
    "createdAt": 1792937925911,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l2-02",
@@ -243,7 +349,12 @@
    "createdAt": 1792937925912,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l2-03",
@@ -255,7 +366,14 @@
    "createdAt": 1792937925913,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "animate": true,
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l2-04",
@@ -267,7 +385,13 @@
    "createdAt": 1792937925914,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l2-05",
@@ -279,7 +403,12 @@
    "createdAt": 1792937925915,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l2-06",
@@ -291,7 +420,12 @@
    "createdAt": 1792937925916,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l2-07",
@@ -303,7 +437,12 @@
    "createdAt": 1792937925917,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l2-08",
@@ -315,7 +454,12 @@
    "createdAt": 1792937925918,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l2-09",
@@ -327,7 +471,12 @@
    "createdAt": 1792937925919,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l2-10",
@@ -339,7 +488,14 @@
    "createdAt": 1792937925920,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "note": "Feminine even though it ends in a consonant.",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l2-11",
@@ -351,7 +507,12 @@
    "createdAt": 1792937925921,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l2-12",
@@ -363,7 +524,12 @@
    "createdAt": 1792937925922,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l2-13",
@@ -375,7 +541,14 @@
    "createdAt": 1792937925923,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "animate": true,
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l2-14",
@@ -387,7 +560,12 @@
    "createdAt": 1792937925924,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l2-15",
@@ -399,7 +577,12 @@
    "createdAt": 1792937925925,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l2-16",
@@ -411,7 +594,12 @@
    "createdAt": 1792937925926,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l2-17",
@@ -423,7 +611,12 @@
    "createdAt": 1792937925927,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l2-18",
@@ -435,7 +628,12 @@
    "createdAt": 1792937925928,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l3-01",
@@ -447,7 +645,12 @@
    "createdAt": 1792937925929,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l3-02",
@@ -459,7 +662,12 @@
    "createdAt": 1792937925930,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l3-03",
@@ -471,7 +679,12 @@
    "createdAt": 1792937925931,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l3-04",
@@ -483,7 +696,12 @@
    "createdAt": 1792937925932,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l3-05",
@@ -495,7 +713,14 @@
    "createdAt": 1792937925933,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "note": "Adds -en- in other forms: imena, imenu.",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l3-06",
@@ -507,7 +732,13 @@
    "createdAt": 1792937925934,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l3-07",
@@ -519,7 +750,14 @@
    "createdAt": 1792937925935,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "animate": true,
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l3-08",
@@ -531,7 +769,14 @@
    "createdAt": 1792937925936,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "animate": true,
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l3-09",
@@ -543,7 +788,13 @@
    "createdAt": 1792937925937,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l3-10",
@@ -555,7 +806,12 @@
    "createdAt": 1792937925938,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l3-11",
@@ -567,7 +823,14 @@
    "createdAt": 1792937925939,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "animate": true,
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l3-12",
@@ -579,7 +842,12 @@
    "createdAt": 1792937925940,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l3-13",
@@ -591,7 +859,12 @@
    "createdAt": 1792937925941,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l3-14",
@@ -603,7 +876,12 @@
    "createdAt": 1792937925942,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l3-15",
@@ -615,7 +893,12 @@
    "createdAt": 1792937925943,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l4-01",
@@ -627,7 +910,12 @@
    "createdAt": 1792937925944,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l4-02",
@@ -639,7 +927,12 @@
    "createdAt": 1792937925945,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l4-03",
@@ -651,7 +944,12 @@
    "createdAt": 1792937925946,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l4-04",
@@ -663,7 +961,12 @@
    "createdAt": 1792937925947,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l4-05",
@@ -675,7 +978,12 @@
    "createdAt": 1792937925948,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l4-06",
@@ -687,7 +995,12 @@
    "createdAt": 1792937925949,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l4-07",
@@ -699,7 +1012,12 @@
    "createdAt": 1792937925950,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l4-08",
@@ -711,7 +1029,12 @@
    "createdAt": 1792937925951,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l5-01",
@@ -723,7 +1046,13 @@
    "createdAt": 1792937925952,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l5-02",
@@ -735,7 +1064,13 @@
    "createdAt": 1792937925953,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l5-03",
@@ -747,7 +1082,14 @@
    "createdAt": 1792937925954,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "head": "broj",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l5-04",
@@ -759,7 +1101,12 @@
    "createdAt": 1792937925955,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l5-05",
@@ -771,7 +1118,13 @@
    "createdAt": 1792937925956,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l5-06",
@@ -783,7 +1136,14 @@
    "createdAt": 1792937925957,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "head": "ime",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l5-07",
@@ -795,7 +1155,14 @@
    "createdAt": 1792937925958,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "head": "restoran",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l5-08",
@@ -807,7 +1174,13 @@
    "createdAt": 1792937925959,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l5-09",
@@ -819,7 +1192,12 @@
    "createdAt": 1792937925960,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l5-10",
@@ -831,7 +1209,12 @@
    "createdAt": 1792937925961,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l5-11",
@@ -843,7 +1226,12 @@
    "createdAt": 1792937925962,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l5-12",
@@ -855,7 +1243,12 @@
    "createdAt": 1792937925963,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l5-13",
@@ -867,7 +1260,13 @@
    "createdAt": 1792937925964,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l5-14",
@@ -879,7 +1278,12 @@
    "createdAt": 1792937925965,
    "updatedAt": 1792937925893,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l1-p01",
@@ -891,7 +1295,12 @@
    "createdAt": 1792944125291,
    "updatedAt": 1792944125291,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l1-p02",
@@ -903,7 +1312,12 @@
    "createdAt": 1792944125292,
    "updatedAt": 1792944125291,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l1-p03",
@@ -915,7 +1329,12 @@
    "createdAt": 1792944125293,
    "updatedAt": 1792944125291,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l1-p04",
@@ -927,7 +1346,12 @@
    "createdAt": 1792944125294,
    "updatedAt": 1792944125291,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l2-p01",
@@ -939,7 +1363,12 @@
    "createdAt": 1792944125295,
    "updatedAt": 1792944125291,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l2-p02",
@@ -951,7 +1380,12 @@
    "createdAt": 1792944125296,
    "updatedAt": 1792944125291,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l2-p03",
@@ -963,7 +1397,12 @@
    "createdAt": 1792944125297,
    "updatedAt": 1792944125291,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l2-p04",
@@ -975,7 +1414,12 @@
    "createdAt": 1792944125298,
    "updatedAt": 1792944125291,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l2-p05",
@@ -987,7 +1431,12 @@
    "createdAt": 1792944125299,
    "updatedAt": 1792944125291,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l2-p06",
@@ -999,7 +1448,12 @@
    "createdAt": 1792944125300,
    "updatedAt": 1792944125291,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l2-p07",
@@ -1011,7 +1465,12 @@
    "createdAt": 1792944125301,
    "updatedAt": 1792944125291,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l3-p01",
@@ -1023,7 +1482,12 @@
    "createdAt": 1792944125302,
    "updatedAt": 1792944125291,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l3-p02",
@@ -1035,7 +1499,12 @@
    "createdAt": 1792944125303,
    "updatedAt": 1792944125291,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l3-p03",
@@ -1047,7 +1516,12 @@
    "createdAt": 1792944125304,
    "updatedAt": 1792944125291,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l3-p04",
@@ -1059,7 +1533,12 @@
    "createdAt": 1792944125305,
    "updatedAt": 1792944125291,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l3-p05",
@@ -1071,7 +1550,12 @@
    "createdAt": 1792944125306,
    "updatedAt": 1792944125291,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l3-p06",
@@ -1083,7 +1567,12 @@
    "createdAt": 1792944125307,
    "updatedAt": 1792944125291,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l3-p07",
@@ -1095,7 +1584,12 @@
    "createdAt": 1792944125308,
    "updatedAt": 1792944125291,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l3-p08",
@@ -1107,7 +1601,12 @@
    "createdAt": 1792944125309,
    "updatedAt": 1792944125291,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l3-p09",
@@ -1119,7 +1618,12 @@
    "createdAt": 1792944125310,
    "updatedAt": 1792944125291,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l4-p01",
@@ -1131,7 +1635,12 @@
    "createdAt": 1792944125311,
    "updatedAt": 1792944125291,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l4-p02",
@@ -1143,7 +1652,12 @@
    "createdAt": 1792944125312,
    "updatedAt": 1792944125291,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l4-p03",
@@ -1155,7 +1669,12 @@
    "createdAt": 1792944125313,
    "updatedAt": 1792944125291,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l4-p04",
@@ -1167,7 +1686,12 @@
    "createdAt": 1792944125314,
    "updatedAt": 1792944125291,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l4-p05",
@@ -1179,7 +1703,12 @@
    "createdAt": 1792944125315,
    "updatedAt": 1792944125291,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l4-p06",
@@ -1191,7 +1720,12 @@
    "createdAt": 1792944125316,
    "updatedAt": 1792944125291,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l4-p07",
@@ -1203,7 +1737,12 @@
    "createdAt": 1792944125317,
    "updatedAt": 1792944125291,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l5-p01",
@@ -1215,7 +1754,12 @@
    "createdAt": 1792944125318,
    "updatedAt": 1792944125291,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l5-p02",
@@ -1227,7 +1771,12 @@
    "createdAt": 1792944125319,
    "updatedAt": 1792944125291,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l5-p03",
@@ -1239,7 +1788,12 @@
    "createdAt": 1792944125320,
    "updatedAt": 1792944125291,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l5-p04",
@@ -1251,7 +1805,12 @@
    "createdAt": 1792944125321,
    "updatedAt": 1792944125291,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l5-p05",
@@ -1263,7 +1822,12 @@
    "createdAt": 1792944125322,
    "updatedAt": 1792944125291,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l5-p06",
@@ -1275,7 +1839,12 @@
    "createdAt": 1792944125323,
    "updatedAt": 1792944125291,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l5-p07",
@@ -1287,7 +1856,12 @@
    "createdAt": 1792944125324,
    "updatedAt": 1792944125291,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l5-p08",
@@ -1299,7 +1873,12 @@
    "createdAt": 1792944125325,
    "updatedAt": 1792944125291,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l5-p09",
@@ -1311,7 +1890,12 @@
    "createdAt": 1792944125326,
    "updatedAt": 1792944125291,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   },
   {
    "id": "tl-u1m1l5-p10",
@@ -1323,7 +1907,12 @@
    "createdAt": 1792944125327,
    "updatedAt": 1792944125291,
    "lastReviewed": 0,
-   "deleted": false
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793016757231
+   }
   }
  ]
 }

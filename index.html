@@ -280,6 +280,16 @@ h3 { font-size: 1rem; margin: 0; }
 .fc-label { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
 .fc-text { font-size: 1.45rem; font-weight: 700; margin: 6px 0 8px; }
 .fc-note { white-space: pre-line; text-align: left; font-size: .88rem; color: var(--muted); margin: 10px 0 0; border-top: 1px solid var(--line); padding-top: 8px; }
+.fc-gender { margin: 0 0 8px; display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; justify-content: center; font-size: .9rem; }
+.g-chip { display: inline-block; border: 1.5px solid currentColor; border-radius: 999px; padding: 2px 10px; font-weight: 700; font-size: .8rem; }
+.g-chip.g-m { color: var(--brand); }
+.g-chip.g-f { color: var(--accent); }
+.g-chip.g-n { color: var(--ok); }
+.g-ex { color: var(--ink); font-weight: 600; }
+.g-note { flex-basis: 100%; color: var(--muted); font-size: .85rem; margin: 0; }
+.g-edit { display: flex; gap: 8px; align-items: center; justify-content: flex-start; margin: 10px 0 0; font-size: .85rem; color: var(--muted); }
+.g-edit select { min-height: 36px; border: 1px solid var(--line); border-radius: 8px; padding: 4px 8px; background: var(--surface); color: var(--ink); font-size: 16px; }
+.gender-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: space-between; margin: 12px 0 0; padding-top: 10px; border-top: 1px solid var(--line); }
 .center { justify-content: center; }
 .deck-row { display: grid; gap: 8px; margin: 0 0 12px; }
 .pick3 { display: grid; gap: 8px; grid-template-columns: 1fr; }
@@ -323,7 +333,7 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
 <header class="top">
   <div class="brand">
     <span class="logo" aria-hidden="true"></span>
-    <div><h1>Prevoditelj</h1><p>Croatian ⇄ English · v2.1</p></div>
+    <div><h1>Prevoditelj</h1><p>Croatian ⇄ English · v2.2</p></div>
   </div>
   <button id="settingsBtn" class="icon-btn" aria-label="Settings" title="Settings">⚙︎</button>
 </header>
@@ -438,6 +448,10 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
         <button class="btn" id="studyAll">Study all</button>
         <button class="btn accent" id="studyOwn" hidden>Study my cards</button>
       </div>
+      <div class="gender-row" id="genderRow" hidden>
+        <span class="muted small" id="genderStatus"></span>
+        <button class="btn small" id="genderBtn" hidden>Classify now</button>
+      </div>
       <p id="cardsEmpty" class="muted small" style="margin:10px 0 0">No cards yet. On the Translate tab, tap ☆ Save as flash card on a translation or example phrase. On a new device, tap Load from iCloud first.</p>
     </section>
 
@@ -453,6 +467,7 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
         <div class="fc-side">
           <div class="fc-label" id="fcFrontLabel"></div>
           <p class="fc-text" id="fcFront"></p>
+          <div class="fc-gender" id="fcFrontGender" hidden></div>
           <button class="btn small" id="fcFrontPlay" aria-label="Listen"><span aria-hidden="true">🔊</span> Listen</button>
         </div>
         <div id="fcSay" hidden>
@@ -465,8 +480,19 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
         <div class="fc-side" id="fcBackWrap" hidden>
           <div class="fc-label" id="fcBackLabel"></div>
           <p class="fc-text" id="fcBack"></p>
+          <div class="fc-gender" id="fcBackGender" hidden></div>
           <button class="btn small" id="fcBackPlay" aria-label="Listen"><span aria-hidden="true">🔊</span> Listen</button>
           <p class="fc-note" id="fcNote" hidden></p>
+          <label class="g-edit">Gender
+            <select id="fcGenderSel" aria-label="Noun gender for this card">
+              <option value="">not checked yet</option>
+              <option value="m">masculine</option>
+              <option value="ma">masculine, animate (person/animal)</option>
+              <option value="f">feminine</option>
+              <option value="n">neuter</option>
+              <option value="other">not a noun</option>
+            </select>
+          </label>
         </div>
       </div>
       <div class="tools center">
@@ -962,6 +988,228 @@ ${text}
   return out;
 }
 
+/* ---------- noun gender (stored on each flash card as `gram`) ----------
+ * gram = { pos: 'noun', gender: 'm'|'f'|'n', animate?, plural?, head?, note?, by, at }
+ *      | { pos: 'other', by, at }       (checked: not a noun)
+ * A card with no `gram` hasn't been checked yet. `by` = book | claude | user; `at` = when it was set,
+ * so merging two devices keeps the most recent classification. */
+const G_LABEL = { m: 'masculine', f: 'feminine', n: 'neuter' };
+const MOJ = { m: ['moj', 'moji'], f: ['moja', 'moje'], n: ['moje', 'moja'] };     // [singular, plural]
+const OVAJ = { m: ['ovaj', 'ovi'], f: ['ova', 'ove'], n: ['ovo', 'ova'] };
+const GENDER_BATCH = 60;
+
+function cleanGram(g) {
+  if (!g || typeof g !== 'object') return undefined;
+  const at = Number(g.at) || 0;
+  const by = ['book', 'claude', 'user'].includes(g.by) ? g.by : 'claude';
+  if (g.pos !== 'noun' || !G_LABEL[g.gender]) return { pos: 'other', by, at };
+  const o = { pos: 'noun', gender: g.gender };
+  if (g.gender === 'm' && g.animate) o.animate = true;
+  if (g.plural) o.plural = true;
+  if (g.head && String(g.head).trim()) o.head = String(g.head).trim().slice(0, 40);
+  if (g.note && String(g.note).trim()) o.note = String(g.note).trim().slice(0, 240);
+  o.by = by; o.at = at;
+  return o;
+}
+const newerGram = (a, b) => !!a && (!b || (a.at || 0) > (b.at || 0));
+
+// Obvious sentences / long phrases are not nouns: no need to ask Claude.
+function looksLikeSentence(hr) {
+  const t = (hr || '').trim();
+  return /[.!?…]$/.test(t) || t.split(/\s+/).length > 4;
+}
+
+const NOUN_SYSTEM = `You classify Croatian flash-card entries for English-speaking learners. For each entry decide whether it is a noun or a noun phrase and, if so, give its grammatical gender in standard Croatian.
+
+Rules:
+- is_noun = true for a single noun (in whatever case or number it is written) or a noun phrase whose head is a noun: adjective / possessive / demonstrative + noun ("moja knjiga", "glavni grad"), or noun + genitive or prepositional phrase ("broj telefona", "kava s vrhnjem"). For a phrase, give the head noun's gender and put the head noun, as written, in "head". For a single noun, head is "".
+- is_noun = false for verbs, adjectives (also adjectives written in one gender form, e.g. "dobra", "umorna"), adverbs, pronouns, numerals, prepositions, greetings, interjections and full sentences or clauses. Then gender is "".
+- gender is the grammatical gender: "m", "f" or "n". Masculine nouns in -a that name men (tata, kolega, mladoženja) are "m"; say in note that they take -a endings. Feminine nouns ending in a consonant (ljubav, stvar, noć, obitelj, -ost nouns) are "f". The collectives djeca and braća are "f" (feminine singular endings, plural verb).
+- animate = true only for masculine nouns that name people or animals (their accusative singular looks like the genitive). Otherwise false.
+- plural = true if the entry is written in the plural, or the noun is used only in the plural (hlače, naočale, vrata, leđa). Give the gender whose plural endings it takes (oči → "f").
+- note: one short sentence, only for an irregularity a learner needs (consonant-final feminine, masculine in -a, -en- stem like ime/imena, adjectival declension like studeni or mlada, gender that varies). Otherwise "".
+- Use standard Croatian, not Serbian or Bosnian. Use the English meaning to decide ambiguous entries.
+- ALWAYS answer by calling classify_nouns exactly once, with one item per entry and the same "i" numbers. Never reply with plain text.`;
+
+const NOUN_TOOL = {
+  name: 'classify_nouns',
+  description: 'Return the noun / gender classification for every entry.',
+  input_schema: {
+    type: 'object',
+    properties: {
+      items: { type: 'array', items: { type: 'object', properties: {
+        i: { type: 'integer', description: 'The entry number you were given.' },
+        is_noun: { type: 'boolean' },
+        head: { type: 'string', description: 'Head noun of a noun phrase, as written; "" otherwise.' },
+        gender: { type: 'string', enum: ['m', 'f', 'n', ''] },
+        animate: { type: 'boolean' },
+        plural: { type: 'boolean' },
+        note: { type: 'string' }
+      }, required: ['i', 'is_noun', 'head', 'gender', 'animate', 'plural', 'note'] } }
+    },
+    required: ['items']
+  }
+};
+
+async function classifyBatch(list) {
+  const entries = list.map((c, i) => ({ i, hr: c.hr, en: c.en }));
+  let res;
+  try {
+    res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+        'x-api-key': settings.key,
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true'
+      },
+      body: JSON.stringify({
+        model: settings.model,
+        max_tokens: 8000,
+        system: NOUN_SYSTEM,
+        tools: [NOUN_TOOL],
+        messages: [{ role: 'user', content: 'Classify these entries:\n' + JSON.stringify(entries) }]
+      })
+    });
+  } catch {
+    throw new Error('Couldn\'t reach Claude. Check your internet connection.');
+  }
+  if (!res.ok) {
+    let detail = '';
+    try { const j = await res.json(); detail = (j && j.error && j.error.message) || ''; } catch {}
+    throw new Error(apiError(res.status, detail));
+  }
+  const data = await res.json();
+  const block = (data.content || []).find(b => b.type === 'tool_use' && b.input);
+  let items = block && Array.isArray(block.input.items) ? block.input.items : null;
+  if (!items) {   // plain-text fallback: use any JSON in the reply
+    const reply = (data.content || []).filter(b => b.type === 'text').map(b => b.text).join('\n');
+    const s = reply.indexOf('{'), e = reply.lastIndexOf('}');
+    try { const j = JSON.parse(reply.slice(s, e + 1)); if (Array.isArray(j.items)) items = j.items; } catch {}
+  }
+  if (!items) throw new Error('Claude didn\'t return a usable gender list. Please try again.');
+  const now = Date.now();
+  let n = 0;
+  items.forEach(it => {
+    const c = it && list[it.i];
+    if (!c || c.deleted) return;
+    if (c.gram && c.gram.by === 'user') return;   // never overwrite the user's own choice
+    c.gram = cleanGram({
+      pos: it.is_noun && G_LABEL[it.gender] ? 'noun' : 'other',
+      gender: it.gender, animate: it.animate, plural: it.plural, head: it.head, note: it.note,
+      by: 'claude', at: now
+    });
+    n++;
+  });
+  return n;
+}
+
+let classifying = false;
+async function classifyCards(list, { quiet = false } = {}) {
+  // Sentences are marked "not a noun" locally; only the rest go to Claude.
+  const now = Date.now();
+  let local = 0;
+  list = list.filter(c => {
+    if (looksLikeSentence(c.hr)) { c.gram = { pos: 'other', by: 'claude', at: now }; local++; return false; }
+    return true;
+  });
+  if (local) persistCards();
+  if (!list.length) return local;
+  if (!settings.key) { if (!quiet) toast('Add your Claude API key in Settings first.'); return local; }
+  if (classifying) { if (!quiet) toast('Already classifying. Please wait a moment.'); return local; }
+  classifying = true;
+  let done = local;
+  try {
+    for (let k = 0; k < list.length; k += GENDER_BATCH) {
+      renderGenderStatus(`Classifying genders… ${Math.min(k + GENDER_BATCH, list.length)} of ${list.length}`);
+      done += await classifyBatch(list.slice(k, k + GENDER_BATCH));
+      persistCards();
+    }
+  } catch (e) {
+    if (!quiet) toast(e.message, 6000);
+  } finally {
+    classifying = false;
+    renderGenderStatus();
+  }
+  return done;
+}
+
+async function classifyUnchecked() {
+  const todo = live().filter(c => !c.gram);
+  if (!todo.length) { toast('Every card has been checked.'); return; }
+  const n = await classifyCards(todo);
+  const nouns = todo.filter(c => c.gram && c.gram.pos === 'noun').length;
+  if (n) toast(`Checked ${n} card${n === 1 ? '' : 's'}: ${nouns} noun${nouns === 1 ? '' : 's'}. Remember to Save to iCloud.`, 5500);
+}
+
+function renderGenderStatus(busyMsg) {
+  const row = $('#genderRow'); if (!row) return;
+  const all = live();
+  row.hidden = !all.length;
+  const nouns = all.filter(c => c.gram && c.gram.pos === 'noun').length;
+  const todo = all.filter(c => !c.gram).length;
+  $('#genderStatus').textContent = busyMsg ||
+    `Noun genders: ${nouns} noun${nouns === 1 ? '' : 's'} classified` +
+    (todo ? ` · ${todo} card${todo === 1 ? '' : 's'} not checked yet` : ' · all cards checked');
+  const b = $('#genderBtn');
+  b.hidden = !todo && !busyMsg;
+  b.disabled = !!busyMsg || classifying;
+  b.textContent = busyMsg ? 'Working…' : `Classify ${todo} now`;
+}
+
+// The gender line under the Croatian word: chip + "moj stan · ovaj stan" + any note.
+function fillGender(box, c) {
+  box.innerHTML = '';
+  const g = c && c.gram;
+  if (!g || g.pos !== 'noun' || !G_LABEL[g.gender]) { box.hidden = true; return; }
+  const k = g.plural ? 1 : 0;
+  const chip = el('span', 'g-chip g-' + g.gender,
+    G_LABEL[g.gender] + (g.animate ? ' · animate' : '') + (g.plural ? ' · plural' : ''));
+  box.appendChild(chip);
+  const word = (c.hr || '').replace(/\s*\([^)]*\)\s*/g, ' ').trim();
+  if (word && !/\s/.test(word)) {
+    const ex = el('span', 'g-ex', `${MOJ[g.gender][k]} ${word} · ${OVAJ[g.gender][k]} ${word}`);
+    ex.lang = 'hr'; box.appendChild(ex);
+  } else if (g.head) {
+    const ex = el('span', 'muted small', `from ${g.head}`); ex.lang = 'hr'; box.appendChild(ex);
+  }
+  const notes = [];
+  if (g.animate && !g.plural && !g.note) notes.push('Animate: the accusative looks like the genitive (vidim brata).');
+  if (g.note) notes.push(g.note);
+  if (notes.length) box.appendChild(el('p', 'g-note', notes.join(' ')));
+  box.hidden = false;
+}
+
+// Show the gender on whichever side of the card holds the Croatian.
+function fillGenderFor(c) {
+  const hrFront = !session || session.mode !== 'en-hr';
+  fillGender($('#fcFrontGender'), hrFront ? c : null);
+  fillGender($('#fcBackGender'), hrFront ? null : c);
+  $('#fcGenderSel').value = gramCode(c);
+}
+function gramCode(c) {
+  const g = c && c.gram;
+  if (!g) return '';
+  if (g.pos !== 'noun') return 'other';
+  return g.gender === 'm' && g.animate ? 'ma' : g.gender;
+}
+function setGenderFromUser(code) {
+  const c = curCard(); if (!c) return;
+  const old = c.gram || {};
+  const now = Date.now();
+  if (!code) return;
+  if (code === 'other') c.gram = { pos: 'other', by: 'user', at: now };
+  else {
+    const gender = code[0];
+    const keepNote = old.pos === 'noun' && old.gender === gender;
+    c.gram = cleanGram({ pos: 'noun', gender, animate: code === 'ma', plural: old.plural, head: old.head,
+      note: keepNote ? old.note : '', by: 'user', at: now });
+  }
+  persistCards();
+  fillGenderFor(c);
+  toast('Gender saved. Remember to Save to iCloud.');
+}
+
 async function translate() {
   if (state.busy) return;
   const src = state.source;
@@ -1394,9 +1642,15 @@ function addCard(hr, en, note) {
   if (!hr || !en) { toast('Nothing to save yet.'); return false; }
   if (findCard(hr)) { toast('That\'s already in your flash cards.'); return false; }
   const now = Date.now();
-  cards.push({ id: uid(), hr, en, note: note || '', level: 1, due: now, createdAt: now, updatedAt: now, deleted: false });
+  const card = { id: uid(), hr, en, note: note || '', level: 1, due: now, createdAt: now, updatedAt: now, deleted: false };
+  cards.push(card);
   persistCards();
   toast('Saved as a flash card ★. Tap Save to iCloud (Flash cards tab) when you\'re done.', 4500);
+  // Classify the new card's gender in the background (needs the API key; otherwise "Classify now" does it later).
+  classifyCards([card], { quiet: true }).then(() => {
+    const g = card.gram;
+    if (g && g.pos === 'noun') toast(`★ Saved · ${card.hr}: ${G_LABEL[g.gender]}${g.animate ? ', animate' : ''}${g.plural ? ', plural' : ''} noun`, 4500);
+  });
   return true;
 }
 
@@ -1451,12 +1705,15 @@ function markSaved(msg) {
 
 /* --- iCloud file: load + merge --- */
 function cleanCard(c) {
-  return {
+  const out = {
     id: String(c.id), hr: String(c.hr || ''), en: String(c.en || ''), note: String(c.note || ''),
     level: Math.min(MAX_LEVEL, Math.max(1, Number(c.level) || 1)),
     due: Number(c.due) || 0, createdAt: Number(c.createdAt) || 0, updatedAt: Number(c.updatedAt) || 0,
     lastReviewed: Number(c.lastReviewed) || 0, deleted: !!c.deleted
   };
+  const gram = cleanGram(c.gram);
+  if (gram) out.gram = gram;
+  return out;
 }
 function mergeCards(incoming) {
   let added = 0, updated = 0;
@@ -1467,14 +1724,20 @@ function mergeCards(incoming) {
     const mine = byId.get(c.id);
     if (!mine) { cards.push(c); byId.set(c.id, c); if (!c.deleted) added++; return; }
     const theirProgress = (c.lastReviewed || 0) > (mine.lastReviewed || 0);
+    // Gender is merged on its own timestamp, so a classification never resurrects or overwrites anything else.
+    const bestGram = newerGram(c.gram, mine.gram) ? c.gram : mine.gram;
+    const gramChanged = bestGram !== mine.gram;
+    let changed = false;
     if (c.updatedAt > (mine.updatedAt || 0)) {
       // Newer content (wording, lesson tags, deletion): take it, but keep whichever study progress is more recent.
       const prog = theirProgress ? null : { level: mine.level, due: mine.due, lastReviewed: mine.lastReviewed };
       Object.assign(mine, c); if (prog) Object.assign(mine, prog);
-      updated++;
+      changed = true;
     } else if (theirProgress) {
-      mine.level = c.level; mine.due = c.due; mine.lastReviewed = c.lastReviewed; updated++;
+      mine.level = c.level; mine.due = c.due; mine.lastReviewed = c.lastReviewed; changed = true;
     }
+    if (bestGram) mine.gram = bestGram; else delete mine.gram;
+    if (changed || gramChanged) updated++;
   });
   // The same Croatian on several cards: keep one (most book tags, then oldest) and carry over the best progress.
   const groups = new Map();
@@ -1486,6 +1749,7 @@ function mergeCards(incoming) {
     const keep = list[0];
     list.slice(1).forEach(d => {
       if ((d.lastReviewed || 0) > (keep.lastReviewed || 0)) { keep.level = d.level; keep.due = d.due; keep.lastReviewed = d.lastReviewed; }
+      if (newerGram(d.gram, keep.gram)) keep.gram = d.gram;
       d.deleted = true; d.updatedAt = Date.now();
     });
   });
@@ -1542,6 +1806,7 @@ function dueText(c) {
 function renderCardList() {
   $('#cardsEmpty').hidden = live().length > 0;
   renderDeckPick();
+  if (!classifying) renderGenderStatus();
 }
 
 // Delete the card being studied: first tap asks "Delete?", second tap (within 3 s) deletes.
@@ -1611,6 +1876,7 @@ function renderStudy() {
   $('#fcBack').textContent = frontIsHr ? c.en : c.hr;
   $('#fcBack').lang = frontIsHr ? 'en' : 'hr';
   const note = $('#fcNote'); note.textContent = c.note || ''; note.hidden = !c.note;
+  fillGenderFor(c);
   $('#fcBackWrap').hidden = true;
   $('#fcShow').hidden = false; $('#fcAgain').hidden = true; $('#fcKnew').hidden = true;
   session.tries = []; session.sayDone = false;
@@ -1855,6 +2121,8 @@ $('#cardsSave').addEventListener('click', saveCardsFile);
 $('#cardsLoad').addEventListener('click', () => { const f = $('#cardsFile'); f.value = ''; f.click(); });
 $('#cardsFile').addEventListener('change', e => { const f = e.target.files && e.target.files[0]; if (f) loadCardsFile(f); });
 $('#fcDelete').addEventListener('click', deleteCurrentCard);
+$('#genderBtn').addEventListener('click', classifyUnchecked);
+$('#fcGenderSel').addEventListener('change', e => setGenderFromUser(e.target.value));
 $('#studyDue').addEventListener('click', () => startSession(false));
 $('#studyAll').addEventListener('click', () => startSession(true));
 $('#studyOwn').addEventListener('click', () => startSession(true, true));   // all my saved cards, whatever the picker says
@@ -1877,7 +2145,7 @@ renderSync(); renderCardList(); updateDue();
 if (store.get('tab', 'translate') === 'cards') showTab('cards');
 
 // Test hook (used only by automated checks).
-window.__prev = { compare, state, getCards: () => cards, mergeCards, loadCardsFile };
+window.__prev = { compare, state, getCards: () => cards, mergeCards, loadCardsFile, classifyCards, cleanGram, fillGender };
 })();
 </script>
 </body>
