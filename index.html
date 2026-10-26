@@ -247,6 +247,8 @@ h3 { font-size: 1rem; margin: 0; }
 
 /* Practice */
 .target { font-size: 1.35rem; font-weight: 700; margin: 2px 0 4px; }
+.fc-say { margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--line, rgba(127,127,127,.35)); }
+.fc-say-head { text-align: center; margin: 0 0 6px; }
 .dots { display: inline-flex; gap: 5px; margin-left: 4px; }
 .dots span { width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--brand); }
 .dots span.used { background: var(--brand); }
@@ -366,7 +368,7 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
 <header class="top">
   <div class="brand">
     <span class="logo" aria-hidden="true"></span>
-    <div><h1>Prevoditelj</h1><p>Croatian ⇄ English · v2.5</p></div>
+    <div><h1>Prevoditelj</h1><p>Croatian ⇄ English · v2.6</p></div>
   </div>
   <button id="settingsBtn" class="icon-btn" aria-label="Settings" title="Settings">⚙︎</button>
 </header>
@@ -467,7 +469,6 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
       <div class="seg" role="radiogroup" aria-label="Study mode">
         <label><input type="radio" name="fcmode" value="hr-en" checked> Croatian → English</label>
         <label><input type="radio" name="fcmode" value="en-hr"> English → Croatian</label>
-        <label><input type="radio" name="fcmode" value="say"> Say it</label>
       </div>
       <div class="seg" role="radiogroup" aria-label="How to answer" id="fcAnsRow">
         <span class="seg-title muted small">Answer by:</span>
@@ -525,13 +526,6 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
           </div>
           <div id="fcResult" class="ans-result" hidden aria-live="polite"></div>
         </div>
-        <div id="fcSay" hidden>
-          <div class="tools center">
-            <button class="btn mic primary" id="fcSayBtn" data-label="Say it"><span aria-hidden="true">🎤</span><span class="lbl">Say it</span></button>
-            <span class="muted small" id="fcSayText"></span><span class="dots" id="fcSayDots" aria-hidden="true"></span>
-          </div>
-          <ol class="attempts-list" id="fcSayList"></ol>
-        </div>
         <div class="fc-side" id="fcBackWrap" hidden>
           <div class="fc-label" id="fcBackLabel"></div>
           <p class="fc-text" id="fcBack"></p>
@@ -548,6 +542,14 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
               <option value="other">not a noun</option>
             </select>
           </label>
+        </div>
+        <div id="fcSay" class="fc-say" hidden>
+          <p class="muted small fc-say-head">Optional: practise saying the Croatian (tap 🔊 Listen above first if you like).</p>
+          <div class="tools center">
+            <button class="btn mic" id="fcSayBtn" data-label="Say it"><span aria-hidden="true">🎤</span><span class="lbl">Say it</span></button>
+            <span class="muted small" id="fcSayText"></span><span class="dots" id="fcSayDots" aria-hidden="true"></span>
+          </div>
+          <ol class="attempts-list" id="fcSayList"></ol>
         </div>
       </div>
       <div class="tools center">
@@ -2010,7 +2012,7 @@ function deleteCurrentCard() {
 }
 
 /* --- study session (simple spaced repetition) --- */
-function currentMode() { const r = document.querySelector('input[name=fcmode]:checked'); return r ? r.value : 'hr-en'; }
+function currentMode() { const r = document.querySelector('input[name=fcmode]:checked'); return r && r.value !== 'say' ? r.value : 'hr-en'; }
 function startSession(all, ownOnly) {
   const now = Date.now();
   const set = ownOnly ? live().filter(c => !hasBookTag(c)) : deckFilter(live());
@@ -2022,8 +2024,8 @@ function startSession(all, ownOnly) {
     return;
   }
   shuffle(pool);   // always random order
-  session = { queue: pool.map(c => c.id), mode: currentMode(), done: 0, knew: 0, tries: [], sayDone: false,
-              answer: currentMode() !== 'say' && currentAnswer() === 'type', ans: null,
+  session = { queue: pool.map(c => c.id), mode: currentMode(), done: 0, knew: 0, tries: [], sayDone: false, sayOn: false,
+              answer: currentAnswer() === 'type', ans: null,
               pool: pool.map(c => c.id), need: {}, filler: [] };
   $('#studySetup').hidden = true; $('#studyCard').hidden = false;
   renderStudy();
@@ -2059,9 +2061,9 @@ function renderStudy() {
   fillGenderFor(c);
   $('#fcBackWrap').hidden = true;
   $('#fcShow').hidden = false; $('#fcAgain').hidden = true; $('#fcKnew').hidden = true;
-  session.tries = []; session.sayDone = false;
-  $('#fcSay').hidden = m !== 'say';
-  renderSay();
+  if (state.recKind === 'card-say') { killRec(); showIdleMic(); }
+  session.tries = []; session.sayDone = false; session.sayOn = false;
+  $('#fcSay').hidden = true;
   renderAnswerBox(c);
 }
 /* suggest: true = "Knew it", false = "Still learning", null/undefined = no suggestion (the user decides). */
@@ -2124,7 +2126,7 @@ function grade(knew) {
 }
 
 function renderSay() {
-  if (!session || session.mode !== 'say') return;
+  if (!session || !session.sayOn) return;
   const used = session.tries.length, max = 3;
   const dots = $('#fcSayDots'); dots.innerHTML = '';
   for (let k = 0; k < max; k++) { const d = el('span'); if (k < used) d.className = 'used'; dots.appendChild(d); }
@@ -2136,7 +2138,7 @@ function renderSay() {
 function cardSay() {
   const c = curCard(); if (!c) return;
   if (state.recKind === 'card-say') { try { state.rec.stop(); } catch { killRec(); showIdleMic(); } return; }
-  if (session.sayDone || session.tries.length >= 3) return;
+  if (!session.sayOn || session.sayDone || session.tries.length >= 3) return;
   listen({
     kind: 'card-say', lang: 'hr-HR', btn: $('#fcSayBtn'), interim: false, alts: 5,
     onFinal: ({ text, alts, problem }) => {
@@ -2147,11 +2149,10 @@ function cardSay() {
       session.tries.push(best);
       if (best.score >= 0.999) session.sayDone = true;
       renderSay();
-      if (session.sayDone || session.tries.length >= 3) reveal();
     }
   });
 }
-resetHooks.push(() => { if (session && session.mode === 'say') { session.tries = []; session.sayDone = false; renderSay(); } });
+resetHooks.push(() => { if (session && session.sayOn) { session.tries = []; session.sayDone = false; renderSay(); } });
 
 /* --- answer by typing or speaking ---
  * The answer is checked on this device first (free, instant). Only when it isn't an exact match
@@ -2159,7 +2160,7 @@ resetHooks.push(() => { if (session && session.mode === 'say') { session.tries =
  * "Knew it" or "Still learning"; the learner can always tap the other button instead. */
 const CHECK_MODEL = 'claude-haiku-5-5';   // small, fast and cheap: enough for judging one answer
 function currentAnswer() { const r = document.querySelector('input[name=fcans]:checked'); return r ? r.value : 'flip'; }
-function syncAnsRow() { $('#fcAnsRow').hidden = currentMode() === 'say'; }
+function syncAnsRow() { $('#fcAnsRow').hidden = false; }
 
 // Leading words that don't change an English answer ("to be" = "be", "the table" = "table").
 const EN_SKIP = new Set(['a', 'an', 'the', 'to']);
@@ -2396,6 +2397,11 @@ function showAnswerResult(r, o) {
     ? 'Choose Knew it or Still learning.'
     : `Suggested: ${suggest ? 'Knew it' : 'Still learning'}. Tap the other button if you disagree.`)));
   reveal(suggest);
+  // Only after a correct answer: offer optional pronunciation practice of the Croatian (doesn't affect grading).
+  if (kind === 'ok' && state.micAvailable) {
+    session.sayOn = true; session.tries = []; session.sayDone = false;
+    $('#fcSay').hidden = false; renderSay();
+  }
   try { box.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); } catch {}
 }
 
@@ -2590,7 +2596,8 @@ document.addEventListener('keydown', e => {
 });
 $('#fcFrontPlay').addEventListener('click', () => speak($('#fcFront').textContent, $('#fcFront').lang === 'hr' ? 'hr' : 'en', $('#fcFrontPlay')));
 $('#fcBackPlay').addEventListener('click', () => speak($('#fcBack').textContent, $('#fcBack').lang === 'hr' ? 'hr' : 'en', $('#fcBackPlay')));
-const savedMode = store.get('fcmode', 'hr-en');
+let savedMode = store.get('fcmode', 'hr-en');
+if (savedMode === 'say') { savedMode = 'hr-en'; store.set('fcmode', savedMode); }   // "Say it" is no longer a study mode
 $('#fcUnit').addEventListener('change', e => { pick.u = e.target.value; pick.m = 'all'; pick.l = 'all'; renderDeckPick(); updateDue(); });
 $('#fcModule').addEventListener('change', e => { pick.m = e.target.value; pick.l = 'all'; renderDeckPick(); updateDue(); });
 $('#fcLesson').addEventListener('change', e => { pick.l = e.target.value; renderDeckPick(); updateDue(); });
