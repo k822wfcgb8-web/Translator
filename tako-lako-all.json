@@ -2,7 +2,7 @@
 "app": "prevoditelj",
 "kind": "flashcards",
 "version": 1,
-"savedAt": 1792947599139,
+"savedAt": 1793043183004,
 "source": "Tako lako (Frane Karabatić, UT Austin, CC BY-SA 4.0) https://utexas.pressbooks.pub/takolako/ - lesson vocabulary pages, Vocabulary index topic lists and Unit 1 phrases (via the Izgovor glossary), plus the takolako.org Phrase Book. Claude-written study notes excluded.",
 "cards": [
 {
@@ -3766,11 +3766,11 @@
 "id": "tl-6c7cd3c10d40",
 "hr": "dućan",
 "en": "shop",
-"note": "Tako lako U2 · M1 · Lesson 3: Što posjetiti?",
+"note": "Tako lako U2 · M1 · Lesson 3: Što posjetiti?\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947599327,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -5103,11 +5103,11 @@
 "id": "tl-a55326bb671c",
 "hr": "trgovina",
 "en": "store",
-"note": "Tako lako U2 · M3 · Lesson 1: Kamo ići?\nAlso: U5 · M2 · Lesson 2: Sretan Božić!\nAlso: U6 · M4 · Lesson 1: [Ne]Prikladna odjeća",
+"note": "Tako lako U2 · M3 · Lesson 1: Kamo ići?\nAlso: U5 · M2 · Lesson 2: Sretan Božić!\nAlso: U6 · M4 · Lesson 1: [Ne]Prikladna odjeća\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947599399,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -5193,11 +5193,11 @@
 "id": "tl-e7f980e22bc5",
 "hr": "pivo",
 "en": "beer",
-"note": "Tako lako U2 · M3 · Lesson 1: Kamo ići?\nAlso: U3 · M2 · Lesson 1: Kultura i tradicija",
+"note": "Tako lako U2 · M3 · Lesson 1: Kamo ići?\nAlso: U3 · M2 · Lesson 1: Kultura i tradicija\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947599404,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -5211,11 +5211,11 @@
 "id": "tl-f0e4876639b7",
 "hr": "vino",
 "en": "wine",
-"note": "Tako lako U2 · M3 · Lesson 1: Kamo ići?\nAlso: U3 · M2 · Lesson 1: Kultura i tradicija",
+"note": "Tako lako U2 · M3 · Lesson 1: Kamo ići?\nAlso: U3 · M2 · Lesson 1: Kultura i tradicija\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947599405,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -5229,11 +5229,11 @@
 "id": "tl-f00b78600728",
 "hr": "kava",
 "en": "coffee",
-"note": "Tako lako U2 · M3 · Lesson 1: Kamo ići?\nAlso: U3 · M2 · Lesson 1: Kultura i tradicija",
+"note": "Tako lako U2 · M3 · Lesson 1: Kamo ići?\nAlso: U3 · M2 · Lesson 1: Kultura i tradicija\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947599406,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -5614,11 +5614,11 @@
 "id": "tl-f2d74ca83c33",
 "hr": "čaj",
 "en": "tea",
-"note": "Tako lako U2 · M3 · Lesson 5: Idemo na kavu",
+"note": "Tako lako U2 · M3 · Lesson 5: Idemo na kavu\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947599427,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -7237,11 +7237,11 @@
 "id": "tl-f2b8740f03cb",
 "hr": "kruh",
 "en": "bread",
-"note": "Tako lako U3 · M2 · Lesson 1: Kultura i tradicija",
+"note": "Tako lako U3 · M2 · Lesson 1: Kultura i tradicija\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947599508,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -7275,11 +7275,11 @@
 "id": "tl-0a12e91d2d14",
 "hr": "meso",
 "en": "meat",
-"note": "Tako lako U3 · M2 · Lesson 1: Kultura i tradicija",
+"note": "Tako lako U3 · M2 · Lesson 1: Kultura i tradicija\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947599510,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -7311,11 +7311,11 @@
 "id": "tl-e17b62ea5a39",
 "hr": "pecivo",
 "en": "baked good / pastry",
-"note": "Tako lako U3 · M2 · Lesson 1: Kultura i tradicija",
+"note": "Tako lako U3 · M2 · Lesson 1: Kultura i tradicija\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947599512,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -7347,11 +7347,11 @@
 "id": "tl-1107a5573b7d",
 "hr": "povrće",
 "en": "vegetables",
-"note": "Tako lako U3 · M2 · Lesson 1: Kultura i tradicija",
+"note": "Tako lako U3 · M2 · Lesson 1: Kultura i tradicija\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947599514,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -7366,11 +7366,11 @@
 "id": "tl-be5828fca31f",
 "hr": "riba",
 "en": "fish / Pisces",
-"note": "Tako lako U3 · M2 · Lesson 1: Kultura i tradicija\nTako lako topic: Zodiac Signs",
+"note": "Tako lako U3 · M2 · Lesson 1: Kultura i tradicija\nTako lako topic: Zodiac Signs\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947599515,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -7384,11 +7384,11 @@
 "id": "tl-c96fd73d5fef",
 "hr": "salata",
 "en": "salad",
-"note": "Tako lako U3 · M2 · Lesson 1: Kultura i tradicija",
+"note": "Tako lako U3 · M2 · Lesson 1: Kultura i tradicija\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947599516,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -7402,11 +7402,11 @@
 "id": "tl-e5f37c1b03f9",
 "hr": "sir",
 "en": "cheese",
-"note": "Tako lako U3 · M2 · Lesson 1: Kultura i tradicija",
+"note": "Tako lako U3 · M2 · Lesson 1: Kultura i tradicija\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947599517,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -7420,11 +7420,11 @@
 "id": "tl-fb9fdc2ad3f0",
 "hr": "sok",
 "en": "juice",
-"note": "Tako lako U3 · M2 · Lesson 1: Kultura i tradicija\nAlso: U8 · M1 · Lesson 1: Idemo na kavu",
+"note": "Tako lako U3 · M2 · Lesson 1: Kultura i tradicija\nAlso: U8 · M1 · Lesson 1: Idemo na kavu\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947599518,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -7438,11 +7438,11 @@
 "id": "tl-931f5059d3c8",
 "hr": "voda",
 "en": "water",
-"note": "Tako lako U3 · M2 · Lesson 1: Kultura i tradicija",
+"note": "Tako lako U3 · M2 · Lesson 1: Kultura i tradicija\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947599519,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -7456,11 +7456,11 @@
 "id": "tl-f7caf065c1ae",
 "hr": "voće",
 "en": "fruit",
-"note": "Tako lako U3 · M2 · Lesson 1: Kultura i tradicija",
+"note": "Tako lako U3 · M2 · Lesson 1: Kultura i tradicija\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947599520,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -11210,11 +11210,11 @@
 "id": "tl-45609312ca07",
 "hr": "maslinovo ulje",
 "en": "olive oil",
-"note": "Tako lako U6 · M2 · Lesson 1: Mislimo na druge",
+"note": "Tako lako U6 · M2 · Lesson 1: Mislimo na druge\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947599712,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -15814,11 +15814,11 @@
 "id": "tl-defc32553a10",
 "hr": "izvolite",
 "en": "here you go / go ahead",
-"note": "Tako lako U8 · M1 · Lesson 1: Idemo na kavu",
+"note": "Tako lako U8 · M1 · Lesson 1: Idemo na kavu\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947599919,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -16088,11 +16088,11 @@
 "id": "tl-32b633151a35",
 "hr": "mineralna voda",
 "en": "mineral water",
-"note": "Tako lako U8 · M1 · Lesson 1: Idemo na kavu",
+"note": "Tako lako U8 · M1 · Lesson 1: Idemo na kavu\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947599929,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -16117,11 +16117,11 @@
 "id": "tl-e1e5f7bb708c",
 "hr": "mlijeko",
 "en": "milk",
-"note": "Tako lako U8 · M1 · Lesson 1: Idemo na kavu",
+"note": "Tako lako U8 · M1 · Lesson 1: Idemo na kavu\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947599930,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -20772,11 +20772,11 @@
 "id": "tl-631d799e8ea5",
 "hr": "cijena",
 "en": "price",
-"note": "Tako lako U10 · M1 · Lesson 3: Planovi za Dubrovnik",
+"note": "Tako lako U10 · M1 · Lesson 3: Planovi za Dubrovnik\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947600156,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -25186,11 +25186,11 @@
 "id": "tl-755bd810d2be",
 "hr": "ananas",
 "en": "pineapple",
-"note": "Tako lako topic: Fruit",
+"note": "Tako lako topic: Fruit\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947600362,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -25204,11 +25204,11 @@
 "id": "tl-250e77f12a5a",
 "hr": "banana",
 "en": "banana",
-"note": "Tako lako topic: Fruit",
+"note": "Tako lako topic: Fruit\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947600363,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -25222,11 +25222,11 @@
 "id": "tl-83c2a1c2b04f",
 "hr": "borovnica",
 "en": "blueberry",
-"note": "Tako lako topic: Fruit",
+"note": "Tako lako topic: Fruit\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947600364,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -25240,11 +25240,11 @@
 "id": "tl-f884ef030482",
 "hr": "breskva",
 "en": "peach",
-"note": "Tako lako topic: Fruit",
+"note": "Tako lako topic: Fruit\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947600365,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -25276,11 +25276,11 @@
 "id": "tl-bd600e67c2e0",
 "hr": "grožđe",
 "en": "grapes",
-"note": "Tako lako topic: Fruit",
+"note": "Tako lako topic: Fruit\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947600367,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -25295,11 +25295,11 @@
 "id": "tl-4cef21cd97c9",
 "hr": "jagoda",
 "en": "strawberry",
-"note": "Tako lako topic: Fruit",
+"note": "Tako lako topic: Fruit\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947600368,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -25313,11 +25313,11 @@
 "id": "tl-6fd1989cdf4c",
 "hr": "kivi",
 "en": "kiwi",
-"note": "Tako lako topic: Fruit",
+"note": "Tako lako topic: Fruit\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947600369,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -25350,11 +25350,11 @@
 "id": "tl-8b225415cdeb",
 "hr": "kruška",
 "en": "pear",
-"note": "Tako lako topic: Fruit",
+"note": "Tako lako topic: Fruit\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947600371,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -25368,11 +25368,11 @@
 "id": "tl-2416b17be2d5",
 "hr": "limeta",
 "en": "lime",
-"note": "Tako lako topic: Fruit",
+"note": "Tako lako topic: Fruit\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947600372,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -25386,11 +25386,11 @@
 "id": "tl-0b4b63cae891",
 "hr": "limun",
 "en": "lemon",
-"note": "Tako lako topic: Fruit",
+"note": "Tako lako topic: Fruit\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947600373,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -25404,11 +25404,11 @@
 "id": "tl-6ad8099311bd",
 "hr": "malina",
 "en": "raspberry",
-"note": "Tako lako topic: Fruit",
+"note": "Tako lako topic: Fruit\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947600374,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -25422,11 +25422,11 @@
 "id": "tl-542bfc968f14",
 "hr": "naranča",
 "en": "orange",
-"note": "Tako lako topic: Fruit",
+"note": "Tako lako topic: Fruit\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947600375,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -25458,11 +25458,11 @@
 "id": "tl-11e4cb8488bb",
 "hr": "šljiva",
 "en": "plum",
-"note": "Tako lako topic: Fruit",
+"note": "Tako lako topic: Fruit\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947600377,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -25476,11 +25476,11 @@
 "id": "tl-4f36e3dbc59c",
 "hr": "smokva",
 "en": "fig",
-"note": "Tako lako topic: Fruit",
+"note": "Tako lako topic: Fruit\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947600378,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -25494,11 +25494,11 @@
 "id": "tl-6ed33c2105df",
 "hr": "trešnja",
 "en": "cherry",
-"note": "Tako lako topic: Fruit",
+"note": "Tako lako topic: Fruit\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947600379,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -25512,11 +25512,11 @@
 "id": "tl-554b45f05499",
 "hr": "brokula",
 "en": "broccoli",
-"note": "Tako lako topic: Vegetables",
+"note": "Tako lako topic: Vegetables\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947600380,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -25530,11 +25530,11 @@
 "id": "tl-e26ea7c9ab7d",
 "hr": "cikla",
 "en": "beetroot",
-"note": "Tako lako topic: Vegetables",
+"note": "Tako lako topic: Vegetables\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947600381,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -25548,11 +25548,11 @@
 "id": "tl-67915bc562ab",
 "hr": "cvjetača",
 "en": "cauliflower",
-"note": "Tako lako topic: Vegetables",
+"note": "Tako lako topic: Vegetables\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947600382,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -25566,11 +25566,11 @@
 "id": "tl-71d0be664e2e",
 "hr": "češnjak",
 "en": "garlic",
-"note": "Tako lako topic: Vegetables",
+"note": "Tako lako topic: Vegetables\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947600383,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -25584,11 +25584,11 @@
 "id": "tl-325f0ee3fa77",
 "hr": "grašak",
 "en": "peas",
-"note": "Tako lako topic: Vegetables",
+"note": "Tako lako topic: Vegetables\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947600384,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -25602,11 +25602,11 @@
 "id": "tl-d5351b8e8cf4",
 "hr": "krastavac",
 "en": "cucumber",
-"note": "Tako lako topic: Vegetables",
+"note": "Tako lako topic: Vegetables\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947600385,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -25620,11 +25620,11 @@
 "id": "tl-770f5618d016",
 "hr": "krumpir",
 "en": "potato",
-"note": "Tako lako topic: Vegetables",
+"note": "Tako lako topic: Vegetables\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947600386,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -25638,11 +25638,11 @@
 "id": "tl-a728ff30b899",
 "hr": "kukuruz",
 "en": "corn",
-"note": "Tako lako topic: Vegetables",
+"note": "Tako lako topic: Vegetables\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947600387,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -25656,11 +25656,11 @@
 "id": "tl-041c5db4909d",
 "hr": "luk",
 "en": "onion",
-"note": "Tako lako topic: Vegetables",
+"note": "Tako lako topic: Vegetables\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947600388,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -25674,11 +25674,11 @@
 "id": "tl-9193bca5cbeb",
 "hr": "mrkva",
 "en": "carrot",
-"note": "Tako lako topic: Vegetables",
+"note": "Tako lako topic: Vegetables\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947600389,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -25692,11 +25692,11 @@
 "id": "tl-60163696bf9f",
 "hr": "paprika",
 "en": "pepper",
-"note": "Tako lako topic: Vegetables",
+"note": "Tako lako topic: Vegetables\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947600390,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -25710,11 +25710,11 @@
 "id": "tl-9af841d538ff",
 "hr": "patlidžan",
 "en": "eggplant",
-"note": "Tako lako topic: Vegetables",
+"note": "Tako lako topic: Vegetables\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947600391,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -25728,11 +25728,11 @@
 "id": "tl-423fdf8fd13c",
 "hr": "rajčica",
 "en": "tomato",
-"note": "Tako lako topic: Vegetables",
+"note": "Tako lako topic: Vegetables\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947600392,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -25764,11 +25764,11 @@
 "id": "tl-7075196497a8",
 "hr": "špinat",
 "en": "spinach",
-"note": "Tako lako topic: Vegetables",
+"note": "Tako lako topic: Vegetables\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947600394,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -25802,11 +25802,11 @@
 "id": "tl-68799042bc6e",
 "hr": "tikvica",
 "en": "zucchini",
-"note": "Tako lako topic: Vegetables",
+"note": "Tako lako topic: Vegetables\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947600396,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -25820,11 +25820,11 @@
 "id": "tl-0577ade3842f",
 "hr": "čokolada",
 "en": "chocolate",
-"note": "Tako lako topic: Something Sweet",
+"note": "Tako lako topic: Something Sweet\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947600397,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -25978,11 +25978,11 @@
 "id": "tl-c3ae97e82aff",
 "hr": "sladoled",
 "en": "ice cream",
-"note": "Tako lako topic: Something Sweet",
+"note": "Tako lako topic: Something Sweet\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947600404,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -26014,11 +26014,11 @@
 "id": "tl-6e8493073115",
 "hr": "pekarnica",
 "en": "bakery",
-"note": "Tako lako topic: Places to Shop",
+"note": "Tako lako topic: Places to Shop\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947600406,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -26032,11 +26032,11 @@
 "id": "tl-80404ff6a78d",
 "hr": "ribarnica",
 "en": "fish market",
-"note": "Tako lako topic: Places to Shop",
+"note": "Tako lako topic: Places to Shop\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947600407,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -26068,11 +26068,11 @@
 "id": "tl-2f3f8964eb7e",
 "hr": "supermarket",
 "en": "supermarket",
-"note": "Tako lako topic: Places to Shop",
+"note": "Tako lako topic: Places to Shop\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947600409,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -26086,11 +26086,11 @@
 "id": "tl-849a91f25afd",
 "hr": "tržnica",
 "en": "farmers market",
-"note": "Tako lako topic: Places to Shop",
+"note": "Tako lako topic: Places to Shop\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947600410,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -48172,11 +48172,11 @@
 "id": "tl-30550fb1f533",
 "hr": "orah",
 "en": "walnut",
-"note": "Tako lako U8 · M1 · Lesson 3: Večera za prijatelje",
+"note": "Tako lako U8 · M1 · Lesson 3: Večera za prijatelje\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947601331,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -48208,11 +48208,11 @@
 "id": "tl-a248f74588a4",
 "hr": "litra",
 "en": "litre",
-"note": "Tako lako U8 · M2 · Lesson 2: Priprema za put",
+"note": "Tako lako U8 · M2 · Lesson 2: Priprema za put\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947601333,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -48226,11 +48226,11 @@
 "id": "tl-5b09ab94698c",
 "hr": "kilogram",
 "en": "kilogram",
-"note": "Tako lako U8 · M2 · Lesson 2: Priprema za put",
+"note": "Tako lako U8 · M2 · Lesson 2: Priprema za put\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947601334,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -48244,11 +48244,11 @@
 "id": "tl-a08e0422aeed",
 "hr": "komad",
 "en": "piece",
-"note": "Tako lako U8 · M2 · Lesson 2: Priprema za put",
+"note": "Tako lako U8 · M2 · Lesson 2: Priprema za put\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947601335,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -48262,11 +48262,11 @@
 "id": "tl-dc4071f4d337",
 "hr": "pola",
 "en": "half",
-"note": "Tako lako U8 · M2 · Lesson 2: Priprema za put",
+"note": "Tako lako U8 · M2 · Lesson 2: Priprema za put\nAlso: U1 · M1 · Lesson 5: Broj telefona",
 "level": 1,
 "due": 1792947599139,
 "createdAt": 1792947601336,
-"updatedAt": 1792947599139,
+"updatedAt": 1793043183004,
 "lastReviewed": 0,
 "deleted": false,
 "gram": {
@@ -53157,6 +53157,2097 @@
 "by": "book",
 "at": 1793018316821
 }
+},
+{
+"id": "tl-u1m1l5-t001",
+"hr": "jabuka",
+"en": "apple",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine · pl. jabuke\nNa tržnici (added vocabulary): Voće",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183005,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t002",
+"hr": "mandarina",
+"en": "mandarin / tangerine",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine · pl. mandarine\nNa tržnici (added vocabulary): Voće",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183006,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t003",
+"hr": "grejp",
+"en": "grapefruit",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, masculine · pl. grejpovi\nNa tržnici (added vocabulary): Voće",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183007,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "m",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t004",
+"hr": "kupina",
+"en": "blackberry",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine · pl. kupine\nNa tržnici (added vocabulary): Voće",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183008,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t005",
+"hr": "višnja",
+"en": "sour cherry",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine · pl. višnje\nNa tržnici (added vocabulary): Voće",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183009,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t006",
+"hr": "marelica",
+"en": "apricot",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine · pl. marelice\nNa tržnici (added vocabulary): Voće",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183010,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t007",
+"hr": "lubenica",
+"en": "watermelon",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine · pl. lubenice\nNa tržnici (added vocabulary): Voće",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183011,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t008",
+"hr": "dinja",
+"en": "melon / cantaloupe",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine · pl. dinje\nNa tržnici (added vocabulary): Voće",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183012,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t009",
+"hr": "mango",
+"en": "mango",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, masculine · gen. manga\nNa tržnici (added vocabulary): Voće",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183013,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "m",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t010",
+"hr": "avokado",
+"en": "avocado",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, masculine · pl. avokadi\nNa tržnici (added vocabulary): Voće",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183014,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "m",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t011",
+"hr": "crveni luk",
+"en": "red onion",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun phrase, masculine · crveni (m) · crvena (f) · crveno (n)\nNa tržnici (added vocabulary): Povrće",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183015,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "m",
+"head": "luk",
+"nouns": [
+{
+"w": "luk",
+"g": "m",
+"case": "N",
+"agree": [
+"crveni"
+]
+}
+],
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t012",
+"hr": "mladi luk",
+"en": "spring onion / scallion",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun phrase, masculine\nNa tržnici (added vocabulary): Povrće",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183016,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "m",
+"head": "luk",
+"nouns": [
+{
+"w": "luk",
+"g": "m",
+"case": "N",
+"agree": [
+"mladi"
+]
+}
+],
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t013",
+"hr": "zelena salata",
+"en": "lettuce (green salad)",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun phrase, feminine\nNa tržnici (added vocabulary): Povrće",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183017,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"head": "salata",
+"nouns": [
+{
+"w": "salata",
+"g": "f",
+"case": "N",
+"agree": [
+"zelena"
+]
+}
+],
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t014",
+"hr": "kupus",
+"en": "cabbage",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, masculine · glavica kupusa = a head of cabbage\nNa tržnici (added vocabulary): Povrće",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183018,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "m",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t015",
+"hr": "blitva",
+"en": "Swiss chard",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine · a Dalmatian staple\nNa tržnici (added vocabulary): Povrće",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183019,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t016",
+"hr": "grah",
+"en": "beans",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, masculine · mass noun\nNa tržnici (added vocabulary): Povrće",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183020,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "m",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t017",
+"hr": "mahune",
+"en": "green beans",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine, plural · plural (sg. mahuna)\nNa tržnici (added vocabulary): Povrće",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183021,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004,
+"plural": true
+}
+},
+{
+"id": "tl-u1m1l5-t018",
+"hr": "gljiva",
+"en": "mushroom",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine · pl. gljive\nNa tržnici (added vocabulary): Povrće",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183022,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t019",
+"hr": "celer",
+"en": "celery",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, masculine\nNa tržnici (added vocabulary): Povrće",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183023,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "m",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t020",
+"hr": "poriluk",
+"en": "leek",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, masculine\nNa tržnici (added vocabulary): Povrće",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183024,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "m",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t021",
+"hr": "rotkvica",
+"en": "radish",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine · pl. rotkvice\nNa tržnici (added vocabulary): Povrće",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183025,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t022",
+"hr": "bundeva",
+"en": "pumpkin",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine · pl. bundeve\nNa tržnici (added vocabulary): Povrće",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183026,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t023",
+"hr": "batat",
+"en": "sweet potato",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, masculine\nNa tržnici (added vocabulary): Povrće",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183027,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "m",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t024",
+"hr": "piletina",
+"en": "chicken (meat)",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine · -ina means \"meat of\": piletina, govedina, svinjetina\nNa tržnici (added vocabulary): Meso i riba",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183028,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t025",
+"hr": "pileća prsa",
+"en": "chicken breast",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun phrase, neuter plural · prsa is plural-only (neuter)\nNa tržnici (added vocabulary): Meso i riba",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183029,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "n",
+"head": "prsa",
+"nouns": [
+{
+"w": "prsa",
+"g": "n",
+"case": "N",
+"agree": [
+"pileća"
+],
+"pl": true
+}
+],
+"by": "claude",
+"at": 1793043183004,
+"plural": true
+}
+},
+{
+"id": "tl-u1m1l5-t026",
+"hr": "puretina",
+"en": "turkey (meat)",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine\nNa tržnici (added vocabulary): Meso i riba",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183030,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t027",
+"hr": "govedina",
+"en": "beef",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine\nNa tržnici (added vocabulary): Meso i riba",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183031,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t028",
+"hr": "svinjetina",
+"en": "pork",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine\nNa tržnici (added vocabulary): Meso i riba",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183032,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t029",
+"hr": "janjetina",
+"en": "lamb (meat)",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine\nNa tržnici (added vocabulary): Meso i riba",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183033,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t030",
+"hr": "teletina",
+"en": "veal",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine\nNa tržnici (added vocabulary): Meso i riba",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183034,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t031",
+"hr": "mljeveno meso",
+"en": "ground meat / mince",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun phrase, neuter\nNa tržnici (added vocabulary): Meso i riba",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183035,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "n",
+"head": "meso",
+"nouns": [
+{
+"w": "meso",
+"g": "n",
+"case": "N",
+"agree": [
+"mljeveno"
+]
+}
+],
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t032",
+"hr": "odrezak",
+"en": "steak / cutlet",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, masculine · pl. odresci\nNa tržnici (added vocabulary): Meso i riba",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183036,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "m",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t033",
+"hr": "kobasica",
+"en": "sausage",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine · pl. kobasice\nNa tržnici (added vocabulary): Meso i riba",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183037,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t034",
+"hr": "hrenovka",
+"en": "hot dog / frankfurter",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine · pl. hrenovke\nNa tržnici (added vocabulary): Meso i riba",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183038,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t035",
+"hr": "šunka",
+"en": "ham",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine\nNa tržnici (added vocabulary): Meso i riba",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183039,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t036",
+"hr": "slanina",
+"en": "bacon",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine\nNa tržnici (added vocabulary): Meso i riba",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183040,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t037",
+"hr": "pršut",
+"en": "prosciutto (dry-cured ham)",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, masculine\nNa tržnici (added vocabulary): Meso i riba",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183041,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "m",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t038",
+"hr": "salama",
+"en": "salami / cold cuts",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine\nNa tržnici (added vocabulary): Meso i riba",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183042,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t039",
+"hr": "tuna",
+"en": "tuna",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine\nNa tržnici (added vocabulary): Meso i riba",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183043,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t040",
+"hr": "losos",
+"en": "salmon",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, masculine\nNa tržnici (added vocabulary): Meso i riba",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183044,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "m",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t041",
+"hr": "škampi",
+"en": "shrimp / prawns",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, masculine, plural · plural (sg. škamp)\nNa tržnici (added vocabulary): Meso i riba",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183045,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "m",
+"by": "claude",
+"at": 1793043183004,
+"plural": true
+}
+},
+{
+"id": "tl-u1m1l5-t042",
+"hr": "lignje",
+"en": "squid / calamari",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine, plural · plural (sg. lignja)\nNa tržnici (added vocabulary): Meso i riba",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183046,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004,
+"plural": true
+}
+},
+{
+"id": "tl-u1m1l5-t043",
+"hr": "jogurt",
+"en": "yogurt",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, masculine\nNa tržnici (added vocabulary): Mliječni proizvodi i jaja",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183047,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "m",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t044",
+"hr": "maslac",
+"en": "butter",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, masculine\nNa tržnici (added vocabulary): Mliječni proizvodi i jaja",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183048,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "m",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t045",
+"hr": "vrhnje",
+"en": "cream",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, neuter\nNa tržnici (added vocabulary): Mliječni proizvodi i jaja",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183049,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "n",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t046",
+"hr": "kiselo vrhnje",
+"en": "sour cream",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun phrase, neuter\nNa tržnici (added vocabulary): Mliječni proizvodi i jaja",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183050,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "n",
+"head": "vrhnje",
+"nouns": [
+{
+"w": "vrhnje",
+"g": "n",
+"case": "N",
+"agree": [
+"kiselo"
+]
+}
+],
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t047",
+"hr": "jaje",
+"en": "egg",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, neuter · pl. jaja: deset jaja\nNa tržnici (added vocabulary): Mliječni proizvodi i jaja",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183051,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "n",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t048",
+"hr": "sol",
+"en": "salt",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine · feminine despite no -a: soli, sa soli\nNa tržnici (added vocabulary): Začini i dodaci",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183052,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t049",
+"hr": "papar",
+"en": "pepper (spice)",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, masculine · gen. papra\nNa tržnici (added vocabulary): Začini i dodaci",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183053,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "m",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t050",
+"hr": "šećer",
+"en": "sugar",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, masculine\nNa tržnici (added vocabulary): Začini i dodaci",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183054,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "m",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t051",
+"hr": "ulje",
+"en": "oil",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, neuter\nNa tržnici (added vocabulary): Začini i dodaci",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183055,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "n",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t052",
+"hr": "ocat",
+"en": "vinegar",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, masculine · gen. octa\nNa tržnici (added vocabulary): Začini i dodaci",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183056,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "m",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t053",
+"hr": "senf",
+"en": "mustard",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, masculine · also gorušica (f)\nNa tržnici (added vocabulary): Začini i dodaci",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183057,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "m",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t054",
+"hr": "kečap",
+"en": "ketchup",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, masculine\nNa tržnici (added vocabulary): Začini i dodaci",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183058,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "m",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t055",
+"hr": "majoneza",
+"en": "mayonnaise",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine\nNa tržnici (added vocabulary): Začini i dodaci",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183059,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t056",
+"hr": "umak",
+"en": "sauce",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, masculine · pl. umaci\nNa tržnici (added vocabulary): Začini i dodaci",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183060,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "m",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t057",
+"hr": "umak od rajčice",
+"en": "tomato sauce",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun phrase, masculine · od + genitive: rajčice\nNa tržnici (added vocabulary): Začini i dodaci",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183061,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "m",
+"head": "umak",
+"nouns": [
+{
+"w": "umak",
+"g": "m",
+"case": "N"
+}
+],
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t058",
+"hr": "med",
+"en": "honey",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, masculine\nNa tržnici (added vocabulary): Začini i dodaci",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183062,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "m",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t059",
+"hr": "džem",
+"en": "jam",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, masculine · also pekmez (m)\nNa tržnici (added vocabulary): Začini i dodaci",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183063,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "m",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t060",
+"hr": "ajvar",
+"en": "ajvar (red pepper relish)",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, masculine\nNa tržnici (added vocabulary): Začini i dodaci",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183064,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "m",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t061",
+"hr": "začin",
+"en": "spice / seasoning",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, masculine · pl. začini\nNa tržnici (added vocabulary): Začini i dodaci",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183065,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "m",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t062",
+"hr": "peršin",
+"en": "parsley",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, masculine · vezica peršina = a bunch of parsley\nNa tržnici (added vocabulary): Začini i dodaci",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183066,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "m",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t063",
+"hr": "bosiljak",
+"en": "basil",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, masculine · gen. bosiljka\nNa tržnici (added vocabulary): Začini i dodaci",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183067,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "m",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t064",
+"hr": "origano",
+"en": "oregano",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, masculine\nNa tržnici (added vocabulary): Začini i dodaci",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183068,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "m",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t065",
+"hr": "cimet",
+"en": "cinnamon",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, masculine\nNa tržnici (added vocabulary): Začini i dodaci",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183069,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "m",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t066",
+"hr": "namirnice",
+"en": "groceries",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine, plural · plural (sg. namirnica)\nNa tržnici (added vocabulary): Namirnice",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183070,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004,
+"plural": true
+}
+},
+{
+"id": "tl-u1m1l5-t067",
+"hr": "riža",
+"en": "rice",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine\nNa tržnici (added vocabulary): Namirnice",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183071,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t068",
+"hr": "tjestenina",
+"en": "pasta",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine\nNa tržnici (added vocabulary): Namirnice",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183072,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t069",
+"hr": "brašno",
+"en": "flour",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, neuter\nNa tržnici (added vocabulary): Namirnice",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183073,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "n",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t070",
+"hr": "žitarice",
+"en": "cereal",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine, plural · plural: breakfast cereal / grains\nNa tržnici (added vocabulary): Namirnice",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183074,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004,
+"plural": true
+}
+},
+{
+"id": "tl-u1m1l5-t071",
+"hr": "zobene pahuljice",
+"en": "oatmeal / rolled oats",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun phrase, feminine plural · plural\nNa tržnici (added vocabulary): Namirnice",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183075,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"head": "pahuljice",
+"nouns": [
+{
+"w": "pahuljice",
+"g": "f",
+"case": "N",
+"agree": [
+"zobene"
+],
+"pl": true
+}
+],
+"by": "claude",
+"at": 1793043183004,
+"plural": true
+}
+},
+{
+"id": "tl-u1m1l5-t072",
+"hr": "juha",
+"en": "soup",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine\nNa tržnici (added vocabulary): Namirnice",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183076,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t073",
+"hr": "konzerva",
+"en": "tin / can (of food)",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine · pl. konzerve\nNa tržnici (added vocabulary): Namirnice",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183077,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t074",
+"hr": "keks",
+"en": "cookie / biscuit",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, masculine · pl. keksi\nNa tržnici (added vocabulary): Namirnice",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183078,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "m",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t075",
+"hr": "čips",
+"en": "chips / crisps",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, masculine\nNa tržnici (added vocabulary): Namirnice",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183079,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "m",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t076",
+"hr": "mesnica",
+"en": "butcher shop",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine\nNa tržnici (added vocabulary): Trgovina",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183080,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t077",
+"hr": "prodavač",
+"en": "vendor / salesman",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, masculine, animate · pl. prodavači\nNa tržnici (added vocabulary): Trgovina",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183081,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "m",
+"by": "claude",
+"at": 1793043183004,
+"animate": true
+}
+},
+{
+"id": "tl-u1m1l5-t078",
+"hr": "prodavačica",
+"en": "vendor / saleswoman",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine\nNa tržnici (added vocabulary): Trgovina",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183082,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t079",
+"hr": "kupac",
+"en": "customer / buyer",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, masculine, animate · pl. kupci\nNa tržnici (added vocabulary): Trgovina",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183083,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "m",
+"by": "claude",
+"at": 1793043183004,
+"animate": true
+}
+},
+{
+"id": "tl-u1m1l5-t080",
+"hr": "kupovina",
+"en": "shopping",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine · ići u kupovinu = to go shopping\nNa tržnici (added vocabulary): Trgovina",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183084,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t081",
+"hr": "popis za kupovinu",
+"en": "shopping list",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun phrase, masculine · za + accusative: kupovinu\nNa tržnici (added vocabulary): Trgovina",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183085,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "m",
+"head": "popis",
+"nouns": [
+{
+"w": "popis",
+"g": "m",
+"case": "N"
+}
+],
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t082",
+"hr": "košarica",
+"en": "shopping basket",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine\nNa tržnici (added vocabulary): Trgovina",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183086,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t083",
+"hr": "kolica",
+"en": "shopping cart",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, neuter, plural · plural-only (neuter)\nNa tržnici (added vocabulary): Trgovina",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183087,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "n",
+"by": "claude",
+"at": 1793043183004,
+"plural": true
+}
+},
+{
+"id": "tl-u1m1l5-t084",
+"hr": "vrećica",
+"en": "bag",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine · pl. vrećice\nNa tržnici (added vocabulary): Trgovina",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183088,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t085",
+"hr": "polica",
+"en": "shelf",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine · pl. police\nNa tržnici (added vocabulary): Trgovina",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183089,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t086",
+"hr": "odjel",
+"en": "department / section",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, masculine\nNa tržnici (added vocabulary): Trgovina",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183090,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "m",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t087",
+"hr": "blagajna",
+"en": "checkout / cash register",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine\nNa tržnici (added vocabulary): Trgovina",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183091,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t088",
+"hr": "blagajnica",
+"en": "cashier (woman)",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine · blagajnik (m)\nNa tržnici (added vocabulary): Trgovina",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183092,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t089",
+"hr": "popust",
+"en": "discount",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, masculine\nNa tržnici (added vocabulary): Trgovina",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183093,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "m",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t090",
+"hr": "akcija",
+"en": "sale / special offer",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine · na akciji = on sale\nNa tržnici (added vocabulary): Trgovina",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183094,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t091",
+"hr": "račun",
+"en": "receipt / bill",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, masculine\nNa tržnici (added vocabulary): Trgovina",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183095,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "m",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t092",
+"hr": "gotovina",
+"en": "cash",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine\nNa tržnici (added vocabulary): Trgovina",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183096,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t093",
+"hr": "kartica",
+"en": "card (bank card)",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine · platiti karticom = to pay by card\nNa tržnici (added vocabulary): Trgovina",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183097,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t094",
+"hr": "euro",
+"en": "euro",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, masculine · dva eura, šest eura\nNa tržnici (added vocabulary): Trgovina",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183098,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "m",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t095",
+"hr": "kilo",
+"en": "kilo",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, neuter · dva kila; colloquially also kila (f): pola kile\nNa tržnici (added vocabulary): Mjere i pakiranja",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183099,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "n",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t096",
+"hr": "dekagram",
+"en": "decagram (10 g)",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, masculine · at the counter usually deka: 20 deka šunke\nNa tržnici (added vocabulary): Mjere i pakiranja",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183100,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "m",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t097",
+"hr": "boca",
+"en": "bottle",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine · boca vode\nNa tržnici (added vocabulary): Mjere i pakiranja",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183101,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t098",
+"hr": "limenka",
+"en": "can (of drink)",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine · limenka piva\nNa tržnici (added vocabulary): Mjere i pakiranja",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183102,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t099",
+"hr": "kutija",
+"en": "box",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine · kutija keksa\nNa tržnici (added vocabulary): Mjere i pakiranja",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183103,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t100",
+"hr": "staklenka",
+"en": "jar",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine · staklenka meda\nNa tržnici (added vocabulary): Mjere i pakiranja",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183104,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t101",
+"hr": "paket",
+"en": "pack / package",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, masculine\nNa tržnici (added vocabulary): Mjere i pakiranja",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183105,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "m",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t102",
+"hr": "glavica",
+"en": "head (of lettuce, cabbage, garlic)",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine · glavica salate\nNa tržnici (added vocabulary): Mjere i pakiranja",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183106,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t103",
+"hr": "vezica",
+"en": "bunch",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nnoun, feminine · vezica peršina\nNa tržnici (added vocabulary): Mjere i pakiranja",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183107,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false,
+"gram": {
+"pos": "noun",
+"gender": "f",
+"by": "claude",
+"at": 1793043183004
+}
+},
+{
+"id": "tl-u1m1l5-t104",
+"hr": "Što želite danas?",
+"en": "What would you like today?",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nphrase\nNa tržnici (added vocabulary): Fraze na tržnici",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183108,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false
+},
+{
+"id": "tl-u1m1l5-t105",
+"hr": "Trebam dva kilograma jabuka.",
+"en": "I need two kilos of apples.",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nphrase · dva + gen. sg. (kilograma); kilogram + gen. pl. (jabuka)\nNa tržnici (added vocabulary): Fraze na tržnici",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183109,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false
+},
+{
+"id": "tl-u1m1l5-t106",
+"hr": "Dajte mi kilo rajčica, molim.",
+"en": "Give me a kilo of tomatoes, please.",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nphrase\nNa tržnici (added vocabulary): Fraze na tržnici",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183110,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false
+},
+{
+"id": "tl-u1m1l5-t107",
+"hr": "Imate li svježe jagode?",
+"en": "Do you have fresh strawberries?",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nphrase\nNa tržnici (added vocabulary): Fraze na tržnici",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183111,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false
+},
+{
+"id": "tl-u1m1l5-t108",
+"hr": "Koliko košta kilo krumpira?",
+"en": "How much is a kilo of potatoes?",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nphrase\nNa tržnici (added vocabulary): Fraze na tržnici",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183112,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false
+},
+{
+"id": "tl-u1m1l5-t109",
+"hr": "Koliko to košta?",
+"en": "How much does that cost?",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nphrase\nNa tržnici (added vocabulary): Fraze na tržnici",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183113,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false
+},
+{
+"id": "tl-u1m1l5-t110",
+"hr": "Još nešto?",
+"en": "Anything else?",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nphrase\nNa tržnici (added vocabulary): Fraze na tržnici",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183114,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false
+},
+{
+"id": "tl-u1m1l5-t111",
+"hr": "To je sve, hvala!",
+"en": "That's all, thanks!",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nphrase\nNa tržnici (added vocabulary): Fraze na tržnici",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183115,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false
+},
+{
+"id": "tl-u1m1l5-t112",
+"hr": "Sve zajedno je šest eura.",
+"en": "All together it's six euros.",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nphrase\nNa tržnici (added vocabulary): Fraze na tržnici",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183116,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false
+},
+{
+"id": "tl-u1m1l5-t113",
+"hr": "Mogu li platiti karticom?",
+"en": "Can I pay by card?",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nphrase\nNa tržnici (added vocabulary): Fraze na tržnici",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183117,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false
+},
+{
+"id": "tl-u1m1l5-t114",
+"hr": "Trebate li vrećicu?",
+"en": "Do you need a bag?",
+"note": "Tako lako U1 · M1 · Lesson 5: Broj telefona\nphrase\nNa tržnici (added vocabulary): Fraze na tržnici",
+"level": 1,
+"due": 1793043183004,
+"createdAt": 1793043183118,
+"updatedAt": 1793043183004,
+"lastReviewed": 0,
+"deleted": false
 }
 ]
 }
