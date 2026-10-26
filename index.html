@@ -299,6 +299,29 @@ h3 { font-size: 1rem; margin: 0; }
 .g-edit select { min-height: 36px; border: 1px solid var(--line); border-radius: 8px; padding: 4px 8px; background: var(--surface); color: var(--ink); font-size: 16px; }
 .gender-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: space-between; margin: 12px 0 0; padding-top: 10px; border-top: 1px solid var(--line); }
 .center { justify-content: center; }
+/* Answer by typing or speaking */
+.seg-title { align-self: center; font-weight: 700; }
+#fcAns { display: grid; gap: 8px; }
+#fcAnsIn {
+  width: 100%; min-height: 50px; border: 1.5px solid var(--line); border-radius: 12px;
+  padding: 10px 12px; background: var(--surface); color: var(--ink); font-size: 1.2rem; text-align: center;
+}
+#fcAnsIn:focus { outline: none; border-color: var(--brand); }
+#fcAnsIn:disabled { opacity: .75; }
+.ans-result { border-radius: 14px; padding: 12px 14px; border: 1.5px solid var(--line); text-align: left; }
+.ans-result.ok { background: var(--ok-bg); border-color: var(--ok); }
+.ans-result.near { background: var(--warn-bg); border-color: var(--warn); }
+.ans-result.bad { background: var(--bad-bg); border-color: var(--bad); }
+.ans-result p { margin: 4px 0; }
+.ans-head { font-weight: 800; font-size: 1.1rem; }
+.ans-result.ok .ans-head { color: var(--ok); }
+.ans-result.near .ans-head { color: var(--warn); }
+.ans-result.bad .ans-head { color: var(--bad); }
+.ans-you { font-weight: 700; }
+.ans-result .words { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0; }
+.ans-result .wd.miss { text-decoration: none; }
+.ans-checking { display: flex; align-items: center; gap: 10px; color: var(--muted); }
+.btn.suggest { outline: 3px solid var(--brand); outline-offset: 3px; }
 .deck-row { display: grid; gap: 8px; margin: 0 0 12px; }
 .pick3 { display: grid; gap: 8px; grid-template-columns: 1fr; }
 @media (min-width: 620px) { .pick3 { grid-template-columns: 1.3fr 1fr 1.6fr; } }
@@ -341,7 +364,7 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
 <header class="top">
   <div class="brand">
     <span class="logo" aria-hidden="true"></span>
-    <div><h1>Prevoditelj</h1><p>Croatian ⇄ English · v2.3</p></div>
+    <div><h1>Prevoditelj</h1><p>Croatian ⇄ English · v2.4</p></div>
   </div>
   <button id="settingsBtn" class="icon-btn" aria-label="Settings" title="Settings">⚙︎</button>
 </header>
@@ -443,6 +466,11 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
         <label><input type="radio" name="fcmode" value="en-hr"> English → Croatian</label>
         <label><input type="radio" name="fcmode" value="say"> Say it</label>
       </div>
+      <div class="seg" role="radiogroup" aria-label="How to answer" id="fcAnsRow">
+        <span class="seg-title muted small">Answer by:</span>
+        <label><input type="radio" name="fcans" value="flip" checked> Flip &amp; self-grade</label>
+        <label><input type="radio" name="fcans" value="type"> Type or speak</label>
+      </div>
       <div class="deck-row">
         <div class="pick3">
           <label class="field">Unit <select id="fcUnit"></select></label>
@@ -477,6 +505,22 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
           <p class="fc-text" id="fcFront"></p>
           <div class="fc-gender" id="fcFrontGender" hidden></div>
           <button class="btn small" id="fcFrontPlay" aria-label="Listen"><span aria-hidden="true">🔊</span> Listen</button>
+        </div>
+        <div id="fcAns" hidden>
+          <div class="letters" id="fcAnsLetters" role="group" aria-label="Croatian letters">
+            <button type="button" class="key shift" id="fcKeyShift" aria-pressed="false" aria-label="Capital letter" title="Capital letter (next letter only)">⇧</button>
+            <button type="button" class="key" data-ch="č">č</button>
+            <button type="button" class="key" data-ch="ć">ć</button>
+            <button type="button" class="key" data-ch="đ">đ</button>
+            <button type="button" class="key" data-ch="š">š</button>
+            <button type="button" class="key" data-ch="ž">ž</button>
+          </div>
+          <input type="text" id="fcAnsIn" aria-label="Your answer" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="done">
+          <div class="tools center">
+            <button class="btn mic" id="fcAnsMic" data-label="Speak"><span aria-hidden="true">🎤</span><span class="lbl">Speak</span></button>
+            <button class="btn primary" id="fcAnsCheck">Check</button>
+          </div>
+          <div id="fcResult" class="ans-result" hidden aria-live="polite"></div>
         </div>
         <div id="fcSay" hidden>
           <div class="tools center">
@@ -1975,13 +2019,14 @@ function startSession(all, ownOnly) {
   }
   shuffle(pool);   // always random order
   session = { queue: pool.map(c => c.id), mode: currentMode(), done: 0, knew: 0, tries: [], sayDone: false,
+              answer: currentMode() !== 'say' && currentAnswer() === 'type', ans: null,
               pool: pool.map(c => c.id), need: {}, filler: [] };
   $('#studySetup').hidden = true; $('#studyCard').hidden = false;
   renderStudy();
   $('#studyCard').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 function endSession(finished) {
-  if (state.recKind === 'card-say') { killRec(); showIdleMic(); }
+  if (state.recKind === 'card-say' || state.recKind === 'card-ans') { killRec(); showIdleMic(); }
   stopSpeaking();
   if (finished && session) toast(`Session done: ${session.done} card${session.done === 1 ? '' : 's'} reviewed, ${session.knew} known first time. Remember to Save to iCloud.`, 6000);
   session = null;
@@ -2013,11 +2058,19 @@ function renderStudy() {
   session.tries = []; session.sayDone = false;
   $('#fcSay').hidden = m !== 'say';
   renderSay();
+  renderAnswerBox(c);
 }
-function reveal() {
+/* suggest: true = "Knew it", false = "Still learning", null/undefined = no suggestion (the user decides). */
+function reveal(suggest) {
   if (!session) return;
+  if (session.answer && session.ans && !session.ans.done) {   // "Don't know" before answering
+    if (state.recKind === 'card-ans') { killRec(); showIdleMic(); }
+    lockAnswerBox();
+    suggest = false;
+  }
   $('#fcBackWrap').hidden = false;
   $('#fcShow').hidden = true; $('#fcAgain').hidden = false; $('#fcKnew').hidden = false;
+  setSuggest(typeof suggest === 'boolean' ? suggest : null);
 }
 /* A missed card stays in the session until it has been answered right REPEAT_GOAL times
    in total. Before each repeat, at least REPEAT_GAP other cards are shown; when the queue
@@ -2095,6 +2148,252 @@ function cardSay() {
   });
 }
 resetHooks.push(() => { if (session && session.mode === 'say') { session.tries = []; session.sayDone = false; renderSay(); } });
+
+/* --- answer by typing or speaking ---
+ * The answer is checked on this device first (free, instant). Only when it isn't an exact match
+ * (another wording, a wrong ending, a typo) is Claude asked to judge it. The app then suggests
+ * "Knew it" or "Still learning"; the learner can always tap the other button instead. */
+const CHECK_MODEL = 'claude-haiku-5-5';   // small, fast and cheap: enough for judging one answer
+function currentAnswer() { const r = document.querySelector('input[name=fcans]:checked'); return r ? r.value : 'flip'; }
+function syncAnsRow() { $('#fcAnsRow').hidden = currentMode() === 'say'; }
+
+// Leading words that don't change an English answer ("to be" = "be", "the table" = "table").
+const EN_SKIP = new Set(['a', 'an', 'the', 'to']);
+function ansNorm(s, lang) {
+  let t = tokens(s);
+  if (lang === 'en') while (t.length > 1 && EN_SKIP.has(t[0])) t = t.slice(1);
+  return t.join(' ');
+}
+// Every wording on the card that counts as right: "table / desk" → table, desk;
+// "American (woman)" → American, American woman; "odmarati (se)" → odmarati, odmarati se.
+function ansVariants(expected) {
+  const raw = String(expected || ''), out = new Set([raw]);
+  raw.replace(/\([^)]*\)/g, ' ').split(/\s*[\/;]\s*/).forEach(p => { if (p.trim()) out.add(p.trim()); });
+  out.add(raw.replace(/[()]/g, ' '));
+  return [...out];
+}
+function localCheck(expected, answers, lang, spoken) {
+  const vars = ansVariants(expected).map(v => ({ v, n: ansNorm(v, lang) })).filter(x => x.n);
+  let near = null;
+  for (const a of answers) {
+    const na = ansNorm(a, lang); if (!na) continue;
+    for (const x of vars) {
+      if (na === x.n) return { verdict: 'correct', match: x.v, heard: a };
+      if (!near && fold(na) === fold(x.n)) near = { match: x.v, heard: a };
+    }
+  }
+  if (!near) return null;
+  // Only the letters č ć đ š ž differ. Speech recognition often mixes these up, so a spoken
+  // answer counts; a typed Croatian answer is "nearly" (the letters matter in writing).
+  return { verdict: spoken ? 'correct' : 'nearly', accents: true, ...near };
+}
+function bestVariant(expected, answer) {
+  let best = null;
+  ansVariants(expected).forEach(v => { const r = compare(v, answer); if (!best || r.score > best.score) best = { v, score: r.score }; });
+  return best ? best.v : expected;
+}
+
+const CHECK_SYSTEM = `You check a learner's answer to one Croatian/English flash card. The learner is an English speaker learning standard Croatian (not Serbian or Bosnian). Decide whether the answer shows they know the card.
+- "correct": the meaning matches and, for a Croatian answer, the form is right. Accept synonyms and other natural translations, formal or informal "you" unless the card says which, missing or extra articles, "to" before English verbs, small English spelling slips, and any one of the alternatives listed on the card (separated by "/"). Ignore capitalisation and punctuation.
+- "nearly": the right word or idea with a real mistake: a wrong ending, case, gender, number, or verb person; a wrong or missing č ć đ š ž in a typed Croatian answer; a bigger spelling mistake; or only part of a multi-part answer.
+- "wrong": a different meaning or word, the wrong language, or no real attempt.
+- A spoken answer is a speech-recognition transcript: don't penalise č/ć, š/s, ž/z, đ/dž or similar-sounding differences that recognition commonly confuses, and consider the other transcripts given.
+- feedback: one or two short, friendly English sentences. If not correct, say what was wrong and give the right form. If correct but worded differently from the card, say it's fine and give the card's wording. No filler praise.
+Report with the report_check tool.`;
+const CHECK_TOOL = {
+  name: 'report_check',
+  description: 'Report whether the learner\'s flash-card answer is right.',
+  input_schema: { type: 'object', properties: {
+    verdict: { type: 'string', enum: ['correct', 'nearly', 'wrong'] },
+    feedback: { type: 'string', description: 'One or two short English sentences for the learner.' }
+  }, required: ['verdict', 'feedback'] }
+};
+async function askClaudeCheck({ front, frontLang, expected, ansLang, note, answer, alts, spoken }) {
+  const user =
+`Card shown (${LANG[frontLang].name}): "${front}"
+Expected answer (${LANG[ansLang].name}): "${expected}"
+Card note: ${note ? note.replace(/\s*\n\s*/g, ' · ') : 'none'}
+The learner ${spoken ? 'said (speech-recognition transcript)' : 'typed'}: "${answer}"` +
+    (spoken && alts && alts.length > 1 ? `\nOther possible transcripts: ${alts.slice(1, 5).map(a => `"${a}"`).join(', ')}` : '');
+  const post = (model, signal) => fetch('https://api.anthropic.com/v1/messages', {
+    method: 'POST', signal,
+    headers: {
+      'content-type': 'application/json',
+      'x-api-key': settings.key,
+      'anthropic-version': '2023-06-01',
+      'anthropic-dangerous-direct-browser-access': 'true'
+    },
+    body: JSON.stringify({ model, max_tokens: 400, system: CHECK_SYSTEM, tools: [CHECK_TOOL],
+                           messages: [{ role: 'user', content: user }] })
+  });
+  const ctl = new AbortController(), timer = setTimeout(() => ctl.abort(), 15000);
+  try {
+    let res = await post(CHECK_MODEL, ctl.signal);
+    if (res.status === 404 && settings.model !== CHECK_MODEL) res = await post(settings.model, ctl.signal);
+    if (!res.ok) {
+      let detail = '';
+      try { const j = await res.json(); detail = (j && j.error && j.error.message) || ''; } catch {}
+      throw new Error(apiError(res.status, detail));
+    }
+    const data = await res.json();
+    const block = (data.content || []).find(b => b.type === 'tool_use' && b.input);
+    let out = block ? block.input : null;
+    if (!out) {
+      const reply = (data.content || []).filter(b => b.type === 'text').map(b => b.text).join('\n');
+      const s = reply.indexOf('{'), e = reply.lastIndexOf('}');
+      if (s >= 0 && e > s) { try { out = JSON.parse(reply.slice(s, e + 1)); } catch {} }
+    }
+    if (!out || !['correct', 'nearly', 'wrong'].includes(out.verdict)) throw new Error('Claude didn\'t return a usable check.');
+    return { verdict: out.verdict, feedback: String(out.feedback || '').trim() };
+  } catch (e) {
+    if (e && e.name === 'AbortError') throw new Error('Claude took too long to answer.');
+    if (e instanceof TypeError) throw new Error('Couldn\'t reach Claude. Check your internet connection.');
+    throw e;
+  } finally { clearTimeout(timer); }
+}
+
+function setSuggest(s) {
+  const knew = $('#fcKnew'), again = $('#fcAgain');
+  knew.classList.toggle('primary', s !== false);
+  again.classList.toggle('primary', s === false);
+  knew.classList.toggle('suggest', s === true);
+  again.classList.toggle('suggest', s === false);
+  if (session && session.ans) session.ans.suggest = (typeof s === 'boolean') ? s : null;
+}
+function lockAnswerBox() {
+  if (session && session.ans) session.ans.done = true;
+  $('#fcAnsIn').disabled = true; $('#fcAnsCheck').disabled = true; $('#fcAnsMic').disabled = true;
+  $('#fcAnsLetters').querySelectorAll('button').forEach(b => b.disabled = true);
+}
+function renderAnswerBox(c) {
+  session.ans = { spoken: false, alts: null, checking: false, done: false, suggest: null };
+  const on = !!session.answer;
+  $('#fcAns').hidden = !on;
+  const box = $('#fcResult'); box.hidden = true; box.innerHTML = ''; box.className = 'ans-result';
+  const show = $('#fcShow');
+  show.textContent = on ? 'Don\'t know: show answer' : 'Show answer';
+  show.classList.toggle('primary', !on);
+  setSuggest(null);
+  if (!on) return;
+  const ansHr = session.mode === 'en-hr';
+  const inp = $('#fcAnsIn');
+  inp.value = ''; inp.disabled = false; inp.lang = ansHr ? 'hr' : 'en';
+  inp.placeholder = ansHr ? 'Type or say the Croatian' : 'Type or say the English';
+  $('#fcAnsLetters').hidden = !ansHr;
+  $('#fcAnsLetters').querySelectorAll('button').forEach(b => b.disabled = false);
+  setAnsCaps(false);
+  $('#fcAnsCheck').disabled = false;
+  $('#fcAnsMic').disabled = !state.micAvailable;
+  $('#fcAnsMic').setAttribute('aria-label', ansHr ? 'Speak your answer in Croatian' : 'Speak your answer in English');
+  // On a computer, put the cursor in the box. On a phone, wait for a tap so the keyboard doesn't cover the card.
+  try { if (!matchMedia('(pointer: coarse)').matches) inp.focus({ preventScroll: true }); } catch {}
+}
+
+let ansCaps = false;
+function setAnsCaps(on) {
+  ansCaps = on;
+  $('#fcKeyShift').setAttribute('aria-pressed', on ? 'true' : 'false');
+  $$('#fcAnsLetters [data-ch]').forEach(b => { b.textContent = on ? b.dataset.ch.toUpperCase() : b.dataset.ch; });
+}
+function typeAnsLetter(ch) {
+  const ta = $('#fcAnsIn'); if (ta.disabled) return;
+  if (ansCaps) { ch = ch.toUpperCase(); setAnsCaps(false); }
+  const s = ta.selectionStart ?? ta.value.length, e = ta.selectionEnd ?? s;
+  if (ta.setRangeText) ta.setRangeText(ch, s, e, 'end');
+  else { ta.value = ta.value.slice(0, s) + ch + ta.value.slice(e); ta.selectionStart = ta.selectionEnd = s + ch.length; }
+  if (session && session.ans) { session.ans.spoken = false; session.ans.alts = null; }
+  ta.focus();
+}
+
+function cardAnsMic() {
+  const c = curCard();
+  if (!c || !session || !session.answer || !session.ans || session.ans.done || session.ans.checking) return;
+  const lang = session.mode === 'en-hr' ? 'hr' : 'en';
+  const inp = $('#fcAnsIn'), before = inp.value;
+  listen({
+    kind: 'card-ans', lang: LANG[lang].rec, btn: $('#fcAnsMic'), interim: true, alts: 5,
+    onText: t => { if (session && curCard() === c && !session.ans.done) inp.value = t; },
+    onFinal: ({ text, alts, problem }) => {
+      if (!session || curCard() !== c || !session.ans || session.ans.done) return;
+      if (!text) { inp.value = before; if (!problem) toast('Didn\'t hear anything. Tap 🎤 and try again, or type your answer.'); return; }
+      inp.value = text; session.ans.spoken = true; session.ans.alts = alts;
+      checkAnswer();
+    }
+  });
+}
+
+async function checkAnswer() {
+  const c = curCard();
+  if (!c || !session || !session.answer || !session.ans) return;
+  const A = session.ans;
+  if (A.checking || A.done) return;
+  if (state.recKind === 'card-ans') { killRec(); showIdleMic(); }
+  const inp = $('#fcAnsIn'), typed = inp.value.trim();
+  if (!typed) { toast('Type or say your answer first, or tap Don\'t know.'); inp.focus(); return; }
+  const frontIsHr = session.mode !== 'en-hr';
+  const ansLang = frontIsHr ? 'en' : 'hr';
+  const expected = frontIsHr ? c.en : c.hr;
+  const spoken = !!(A.spoken && A.alts && A.alts.length);
+  const answers = spoken ? [typed, ...A.alts.map(a => a.trim()).filter(a => a && a !== typed)] : [typed];
+  A.checking = true;
+  lockAnswerBox(); A.done = false;          // locked while checking; "done" once there's a result
+  $('#fcShow').hidden = true;
+  inp.blur();                               // drop the phone keyboard so the result is visible
+
+  let r = localCheck(expected, answers, ansLang, spoken), by = 'device';
+  if (!r) {
+    if (!settings.key) {
+      r = { verdict: null, error: 'That isn\'t word-for-word what the card says. Add the Claude API key in Settings to have answers like this checked; for now, compare them yourself.' };
+    } else {
+      const box = $('#fcResult'); box.innerHTML = ''; box.className = 'ans-result'; box.hidden = false;
+      const w = el('div', 'ans-checking'); w.append(el('span', 'spinner'), el('span', null, 'Checking your answer…'));
+      box.appendChild(w);
+      try {
+        const x = await askClaudeCheck({ front: frontIsHr ? c.hr : c.en, frontLang: frontIsHr ? 'hr' : 'en',
+          expected, ansLang, note: c.note, answer: typed, alts: spoken ? answers : null, spoken });
+        r = { ...x, heard: typed }; by = 'claude';
+      } catch (e) {
+        r = { verdict: null, error: `${e.message || 'The check didn\'t work.'} Compare the answers yourself.` };
+      }
+      if (!session || curCard() !== c || session.ans !== A) return;   // moved on while waiting
+    }
+  }
+  A.checking = false; A.done = true;
+  showAnswerResult(r, { typed, spoken, ansLang, expected, by });
+}
+
+function showAnswerResult(r, o) {
+  const kind = r.verdict === 'correct' ? 'ok' : r.verdict === 'nearly' ? 'near' : r.verdict === 'wrong' ? 'bad' : 'unk';
+  const box = $('#fcResult'); box.innerHTML = ''; box.className = 'ans-result ' + kind; box.hidden = false;
+  box.appendChild(el('p', 'ans-head', { ok: '✓ Correct', near: '≈ Nearly', bad: '✗ Not quite', unk: 'Compare your answer' }[kind]));
+  const you = el('p', 'small');
+  you.append(document.createTextNode(o.spoken ? 'You said: ' : 'You typed: '));
+  const q = el('span', 'ans-you', `“${r.heard || o.typed}”`); q.lang = o.ansLang; you.appendChild(q);
+  box.appendChild(you);
+  // Croatian answers that weren't exactly right: mark each word against the card.
+  const target = o.ansLang === 'hr' && kind !== 'ok' ? (r.match || bestVariant(o.expected, o.typed)) : '';
+  if (tokens(target).length > 1) {
+    const cmp = compare(target, r.heard || o.typed);
+    const words = el('div', 'words'); words.lang = 'hr';
+    cmp.words.forEach(w => {
+      const s = el('span', 'wd ' + w.status, (w.status === 'exact' ? '✓ ' : w.status === 'close' ? '≈ ' : '✗ ') + w.show);
+      s.title = w.status === 'exact' ? 'right' : w.status === 'close' ? 'nearly: check the letters' : 'missing or different';
+      words.appendChild(s);
+    });
+    box.appendChild(words);
+  }
+  let fb = r.error || r.feedback || '';
+  if (!fb && r.accents && kind === 'near') fb = 'Right word, but check the letters č ć đ š ž. The letter keys above the box can help.';
+  if (!fb && r.accents && kind === 'ok' && o.spoken) fb = 'Speech recognition can\'t always tell č from ć or š from s, so this counts. Check the spelling on the card.';
+  if (fb) box.appendChild(el('p', 'ans-fb', fb));
+  const suggest = kind === 'ok' ? true : kind === 'unk' ? null : false;
+  const how = o.by === 'claude' ? 'Checked by Claude. ' : kind !== 'unk' ? 'Checked on this device. ' : '';
+  box.appendChild(el('p', 'muted small', how + (suggest === null
+    ? 'Choose Knew it or Still learning.'
+    : `Suggested: ${suggest ? 'Knew it' : 'Still learning'}. Tap the other button if you disagree.`)));
+  reveal(suggest);
+  try { box.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); } catch {}
+}
 
 function showTab(which) {
   const cardsTab = which === 'cards';
@@ -2262,6 +2561,21 @@ $('#fcShow').addEventListener('click', reveal);
 $('#fcAgain').addEventListener('click', () => grade(false));
 $('#fcKnew').addEventListener('click', () => grade(true));
 $('#fcSayBtn').addEventListener('click', cardSay);
+$('#fcAnsMic').addEventListener('click', cardAnsMic);
+$('#fcAnsCheck').addEventListener('click', checkAnswer);
+$('#fcAnsIn').addEventListener('keydown', e => {
+  if (e.key === 'Enter') { e.preventDefault(); e.stopPropagation(); if (!e.repeat) checkAnswer(); }
+});
+$('#fcAnsIn').addEventListener('input', () => { if (session && session.ans) { session.ans.spoken = false; session.ans.alts = null; } });
+$$('#fcAnsLetters [data-ch]').forEach(b => bindKey(b, () => typeAnsLetter(b.dataset.ch)));
+bindKey($('#fcKeyShift'), () => setAnsCaps(!ansCaps));
+// After a checked answer, Enter (or the keyboard's Done key) accepts the suggested grade.
+document.addEventListener('keydown', e => {
+  if (e.key !== 'Enter' || e.repeat || !session || !session.ans || !session.ans.done || session.ans.suggest == null) return;
+  if ($('#studyCard').hidden || $('#fcKnew').hidden) return;
+  if (e.target && e.target.closest && e.target.closest('button, select, input, textarea, a, dialog')) return;
+  e.preventDefault(); grade(session.ans.suggest);
+});
 $('#fcFrontPlay').addEventListener('click', () => speak($('#fcFront').textContent, $('#fcFront').lang === 'hr' ? 'hr' : 'en', $('#fcFrontPlay')));
 $('#fcBackPlay').addEventListener('click', () => speak($('#fcBack').textContent, $('#fcBack').lang === 'hr' ? 'hr' : 'en', $('#fcBackPlay')));
 const savedMode = store.get('fcmode', 'hr-en');
@@ -2270,14 +2584,17 @@ $('#fcModule').addEventListener('change', e => { pick.m = e.target.value; pick.l
 $('#fcLesson').addEventListener('change', e => { pick.l = e.target.value; renderDeckPick(); updateDue(); });
 $('#fcPrev').checked = !!store.get('fcPrev', false);
 $('#fcPrev').addEventListener('change', e => { store.set('fcPrev', e.target.checked); updateDue(); });
-$$('input[name=fcmode]').forEach(r => { r.checked = r.value === savedMode; r.addEventListener('change', () => store.set('fcmode', r.value)); });
+$$('input[name=fcmode]').forEach(r => { r.checked = r.value === savedMode; r.addEventListener('change', () => { store.set('fcmode', r.value); syncAnsRow(); }); });
+const savedAns = store.get('fcans', 'flip');
+$$('input[name=fcans]').forEach(r => { r.checked = r.value === savedAns; r.addEventListener('change', () => store.set('fcans', r.value)); });
+syncAnsRow();
 window.addEventListener('beforeunload', e => { if (sync.dirty && live().length) { e.preventDefault(); e.returnValue = ''; } });
 migrateGram();
 renderSync(); renderCardList(); updateDue();
 if (store.get('tab', 'translate') === 'cards') showTab('cards');
 
 // Test hook (used only by automated checks).
-window.__prev = { compare, state, getCards: () => cards, mergeCards, loadCardsFile, classifyCards, cleanGram, fillGender };
+window.__prev = { compare, localCheck, ansVariants, state, getCards: () => cards, mergeCards, loadCardsFile, classifyCards, cleanGram, fillGender };
 })();
 </script>
 </body>
