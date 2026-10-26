@@ -36,6 +36,15 @@ Files:
 4. Optional: add it to the home screen. On iPhone or iPad, use Share → **Add to Home Screen**. On a Mac, use Safari's File → **Add to Dock**.
    *If voice input misbehaves in the home-screen version, use it in regular Safari instead. Apple's speech recognition has been less reliable in home-screen apps on some iOS versions.*
 
+### Keeping the API key safe from cleared data
+The key is saved in the browser on each device. Closing Safari or restarting doesn't remove it, but these do: **Clear History and Website Data**, deleting *github.io* under Safari's Website Data, and Safari's automatic clean-up of sites not opened for about 7 days (the home-screen version is exempt from that). Your flash-card progress on that device goes with it, so use **Save to iCloud** regularly.
+
+To have a backup of the key:
+- When you tap **Save** in Settings, Safari may ask whether to save the password. Tap **Save Password**. It goes into your Passwords app (iCloud Keychain) and syncs to your other Apple devices.
+- If the key is ever lost, open ⚙︎ Settings, tap the key box, and pick **Prevoditelj Claude API key** from the suggestions above the keyboard.
+- If Safari doesn't offer to save it, add it yourself in the **Passwords** app: tap **+**, set Website to your github.io address, User to `Prevoditelj Claude API key`, and Password to the key.
+- Don't put the key in the iCloud cards file or anywhere in this folder. The folder is published on GitHub.
+
 ### If voice input doesn't work
 - The **microphone bar** at the top always shows the state: green = ready, red pulsing = listening, amber = starting or a hint, red = problem, grey = unavailable.
 - Tap **↺ Reset voice**. This fully restarts the microphone, the recogniser, playback and the practice counter. Your typed text is kept.
