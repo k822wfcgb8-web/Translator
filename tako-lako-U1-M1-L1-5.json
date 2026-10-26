@@ -21,7 +21,7 @@
     "gender": "m",
     "animate": true,
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -39,7 +39,7 @@
     "pos": "noun",
     "gender": "f",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -56,7 +56,7 @@
    "gram": {
     "pos": "other",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -74,7 +74,7 @@
     "pos": "noun",
     "gender": "m",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -89,9 +89,16 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "adj",
+    "forms": [
+     "dobar",
+     "dobra",
+     "dobro"
+    ],
+    "def": "dobri",
+    "form": "m",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -106,9 +113,19 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [
+     {
+      "w": "dan",
+      "g": "m",
+      "case": "N",
+      "agree": [
+       "dobar"
+      ]
+     }
+    ],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -123,9 +140,19 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [
+     {
+      "w": "večer",
+      "g": "f",
+      "case": "N",
+      "agree": [
+       "dobra"
+      ]
+     }
+    ],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -140,9 +167,19 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [
+     {
+      "w": "jutro",
+      "g": "n",
+      "case": "N",
+      "agree": [
+       "dobro"
+      ]
+     }
+    ],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -159,7 +196,7 @@
    "gram": {
     "pos": "other",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -177,7 +214,7 @@
     "pos": "noun",
     "gender": "n",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -195,7 +232,7 @@
     "pos": "noun",
     "gender": "f",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -212,7 +249,7 @@
    "gram": {
     "pos": "other",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -229,7 +266,7 @@
    "gram": {
     "pos": "other",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -248,7 +285,7 @@
     "gender": "m",
     "animate": true,
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -266,7 +303,7 @@
     "pos": "noun",
     "gender": "f",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -283,7 +320,7 @@
    "gram": {
     "pos": "other",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -300,7 +337,7 @@
    "gram": {
     "pos": "other",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -319,7 +356,7 @@
     "gender": "f",
     "note": "Feminine in standard Croatian (dobra večer); some speakers use it as masculine.",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -336,7 +373,7 @@
    "gram": {
     "pos": "other",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -351,9 +388,10 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -372,7 +410,7 @@
     "gender": "m",
     "animate": true,
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -390,7 +428,7 @@
     "pos": "noun",
     "gender": "f",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -407,7 +445,7 @@
    "gram": {
     "pos": "other",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -424,7 +462,7 @@
    "gram": {
     "pos": "other",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -439,9 +477,10 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -456,9 +495,10 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -475,7 +515,7 @@
    "gram": {
     "pos": "other",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -494,7 +534,7 @@
     "gender": "f",
     "note": "Feminine even though it ends in a consonant.",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -511,7 +551,7 @@
    "gram": {
     "pos": "other",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -528,7 +568,7 @@
    "gram": {
     "pos": "other",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -547,7 +587,7 @@
     "gender": "m",
     "animate": true,
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -562,9 +602,16 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "adj",
+    "forms": [
+     "umoran",
+     "umorna",
+     "umorno"
+    ],
+    "def": "umorni",
+    "form": "m",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -579,9 +626,16 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "adj",
+    "forms": [
+     "umoran",
+     "umorna",
+     "umorno"
+    ],
+    "def": "umorni",
+    "form": "f",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -596,9 +650,10 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -613,9 +668,16 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "adj",
+    "forms": [
+     "žut",
+     "žuta",
+     "žuto"
+    ],
+    "def": "žuti",
+    "form": "m",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -630,9 +692,10 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -649,7 +712,7 @@
    "gram": {
     "pos": "other",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -666,7 +729,7 @@
    "gram": {
     "pos": "other",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -681,9 +744,10 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -700,7 +764,7 @@
    "gram": {
     "pos": "other",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -719,7 +783,7 @@
     "gender": "n",
     "note": "Adds -en- in other forms: imena, imenu.",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -737,7 +801,7 @@
     "pos": "noun",
     "gender": "m",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -756,7 +820,7 @@
     "gender": "m",
     "animate": true,
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -775,7 +839,7 @@
     "gender": "m",
     "animate": true,
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -793,7 +857,7 @@
     "pos": "noun",
     "gender": "f",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -810,7 +874,7 @@
    "gram": {
     "pos": "other",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -829,7 +893,7 @@
     "gender": "m",
     "animate": true,
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -846,7 +910,7 @@
    "gram": {
     "pos": "other",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -861,9 +925,10 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -880,7 +945,7 @@
    "gram": {
     "pos": "other",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -895,9 +960,10 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -914,7 +980,7 @@
    "gram": {
     "pos": "other",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -931,7 +997,7 @@
    "gram": {
     "pos": "other",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -946,9 +1012,18 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [
+     {
+      "w": "pitanju",
+      "lemma": "pitanje",
+      "g": "n",
+      "case": "L",
+      "prep": "na"
+     }
+    ],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -963,9 +1038,10 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -980,9 +1056,10 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -997,9 +1074,19 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [
+     {
+      "w": "dan",
+      "g": "m",
+      "case": "N",
+      "agree": [
+       "ugodan"
+      ]
+     }
+    ],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1014,9 +1101,10 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1031,9 +1119,10 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1051,7 +1140,7 @@
     "pos": "noun",
     "gender": "f",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1069,7 +1158,7 @@
     "pos": "noun",
     "gender": "m",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1088,7 +1177,20 @@
     "gender": "m",
     "head": "broj",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821,
+    "nouns": [
+     {
+      "w": "broj",
+      "g": "m",
+      "case": "N"
+     },
+     {
+      "w": "telefona",
+      "lemma": "telefon",
+      "g": "m",
+      "case": "G"
+     }
+    ]
    }
   },
   {
@@ -1103,9 +1205,10 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1123,7 +1226,7 @@
     "pos": "noun",
     "gender": "f",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1142,7 +1245,19 @@
     "gender": "n",
     "head": "ime",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821,
+    "nouns": [
+     {
+      "w": "ime",
+      "g": "n",
+      "case": "N"
+     },
+     {
+      "w": "prezime",
+      "g": "n",
+      "case": "N"
+     }
+    ]
    }
   },
   {
@@ -1161,7 +1276,17 @@
     "gender": "m",
     "head": "restoran",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821,
+    "nouns": [
+     {
+      "w": "restoran",
+      "g": "m",
+      "case": "N",
+      "agree": [
+       "loš"
+      ]
+     }
+    ]
    }
   },
   {
@@ -1179,7 +1304,7 @@
     "pos": "noun",
     "gender": "n",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1194,9 +1319,10 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1211,9 +1337,10 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1228,9 +1355,10 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1245,9 +1373,16 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "adj",
+    "forms": [
+     "omiljen",
+     "omiljena",
+     "omiljeno"
+    ],
+    "def": "omiljeni",
+    "form": "def",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1265,7 +1400,7 @@
     "pos": "noun",
     "gender": "m",
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1280,9 +1415,10 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1297,9 +1433,17 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [
+     {
+      "w": "student",
+      "g": "m",
+      "anim": true,
+      "case": "N"
+     }
+    ],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1314,9 +1458,16 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [
+     {
+      "w": "studentica",
+      "g": "f",
+      "case": "N"
+     }
+    ],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1331,9 +1482,17 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [
+     {
+      "w": "Amerikanac",
+      "g": "m",
+      "anim": true,
+      "case": "N"
+     }
+    ],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1348,9 +1507,10 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1365,9 +1525,10 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1382,9 +1543,10 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1399,9 +1561,10 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1416,9 +1579,10 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1433,9 +1597,10 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1450,9 +1615,16 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [
+     {
+      "w": "Hrvatica",
+      "g": "f",
+      "case": "N"
+     }
+    ],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1467,9 +1639,20 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [
+     {
+      "w": "zastava",
+      "g": "f",
+      "case": "N",
+      "agree": [
+       "bijela",
+       "crvena"
+      ]
+     }
+    ],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1484,9 +1667,18 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [
+     {
+      "w": "pitanju",
+      "lemma": "pitanje",
+      "g": "n",
+      "case": "L",
+      "prep": "na"
+     }
+    ],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1501,9 +1693,18 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [
+     {
+      "w": "pitanju",
+      "lemma": "pitanje",
+      "g": "n",
+      "case": "L",
+      "prep": "na"
+     }
+    ],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1518,9 +1719,10 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1535,9 +1737,10 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1552,9 +1755,17 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [
+     {
+      "w": "student",
+      "g": "m",
+      "anim": true,
+      "case": "N"
+     }
+    ],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1569,9 +1780,21 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [
+     {
+      "w": "hrvatski",
+      "g": "m",
+      "case": "A"
+     },
+     {
+      "w": "engleski",
+      "g": "m",
+      "case": "A"
+     }
+    ],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1586,9 +1809,16 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [
+     {
+      "w": "hrvatski",
+      "g": "m",
+      "case": "A"
+     }
+    ],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1603,9 +1833,25 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [
+     {
+      "w": "hrvatski",
+      "g": "m",
+      "case": "N"
+     },
+     {
+      "w": "početnike",
+      "lemma": "početnik",
+      "g": "m",
+      "anim": true,
+      "pl": true,
+      "case": "A",
+      "prep": "za"
+     }
+    ],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1620,9 +1866,19 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [
+     {
+      "w": "profesorica",
+      "g": "f",
+      "case": "N",
+      "agree": [
+       "vaša"
+      ]
+     }
+    ],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1637,9 +1893,19 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [
+     {
+      "w": "dan",
+      "g": "m",
+      "case": "N",
+      "agree": [
+       "dobar"
+      ]
+     }
+    ],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1654,9 +1920,10 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1671,9 +1938,20 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [
+     {
+      "w": "(ja)",
+      "g": "m",
+      "case": "N",
+      "agree": [
+       "umoran"
+      ],
+      "ref": true
+     }
+    ],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1688,9 +1966,20 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [
+     {
+      "w": "(ja)",
+      "g": "f",
+      "case": "N",
+      "agree": [
+       "umorna"
+      ],
+      "ref": true
+     }
+    ],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1705,9 +1994,10 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1722,9 +2012,10 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1739,9 +2030,10 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1756,9 +2048,26 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [
+     {
+      "w": "broj",
+      "g": "m",
+      "case": "N",
+      "agree": [
+       "koji",
+       "tvoj"
+      ]
+     },
+     {
+      "w": "telefona",
+      "lemma": "telefon",
+      "g": "m",
+      "case": "G"
+     }
+    ],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1773,9 +2082,25 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [
+     {
+      "w": "broj",
+      "g": "m",
+      "case": "N",
+      "agree": [
+       "moj"
+      ]
+     },
+     {
+      "w": "telefona",
+      "lemma": "telefon",
+      "g": "m",
+      "case": "G"
+     }
+    ],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1790,9 +2115,25 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [
+     {
+      "w": "broj",
+      "g": "m",
+      "case": "N",
+      "agree": [
+       "tvoj"
+      ]
+     },
+     {
+      "w": "telefona",
+      "lemma": "telefon",
+      "g": "m",
+      "case": "G"
+     }
+    ],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1807,9 +2148,20 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [
+     {
+      "w": "adresa",
+      "g": "f",
+      "case": "N",
+      "agree": [
+       "koja",
+       "tvoja"
+      ]
+     }
+    ],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1824,9 +2176,19 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [
+     {
+      "w": "adresa",
+      "g": "f",
+      "case": "N",
+      "agree": [
+       "moja"
+      ]
+     }
+    ],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1841,9 +2203,10 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1858,9 +2221,19 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [
+     {
+      "w": "broj",
+      "g": "m",
+      "case": "N",
+      "agree": [
+       "koji"
+      ]
+     }
+    ],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1875,9 +2248,20 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [
+     {
+      "w": "restoran",
+      "g": "m",
+      "case": "N",
+      "agree": [
+       "tvoj",
+       "omiljeni"
+      ]
+     }
+    ],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1892,9 +2276,20 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [
+     {
+      "w": "restoran",
+      "g": "m",
+      "case": "N",
+      "agree": [
+       "moj",
+       "omiljeni"
+      ]
+     }
+    ],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   },
   {
@@ -1909,9 +2304,19 @@
    "lastReviewed": 0,
    "deleted": false,
    "gram": {
-    "pos": "other",
+    "pos": "phrase",
+    "nouns": [
+     {
+      "w": "restoran",
+      "g": "m",
+      "case": "N",
+      "agree": [
+       "dobar"
+      ]
+     }
+    ],
     "by": "book",
-    "at": 1793016757231
+    "at": 1793018316821
    }
   }
  ]

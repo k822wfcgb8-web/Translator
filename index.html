@@ -280,7 +280,15 @@ h3 { font-size: 1rem; margin: 0; }
 .fc-label { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
 .fc-text { font-size: 1.45rem; font-weight: 700; margin: 6px 0 8px; }
 .fc-note { white-space: pre-line; text-align: left; font-size: .88rem; color: var(--muted); margin: 10px 0 0; border-top: 1px solid var(--line); padding-top: 8px; }
-.fc-gender { margin: 0 0 8px; display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; justify-content: center; font-size: .9rem; }
+.fc-gender { margin: 0 0 8px; display: grid; gap: 6px; justify-items: center; font-size: .9rem; }
+.g-line { display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: center; justify-content: center; }
+.g-w { font-weight: 700; }
+.g-lemma, .g-case { color: var(--muted); font-size: .85rem; }
+.g-agree { font-size: .85rem; color: var(--ink); }
+.g-forms { font-weight: 600; }
+.g-form.on { text-decoration: underline; text-underline-offset: 3px; }
+.g-form.g-m { color: var(--brand); } .g-form.g-f { color: var(--accent); } .g-form.g-n { color: var(--ok); }
+.g-fix { margin: 2px 0 0; padding: 6px 10px; border-radius: 10px; background: var(--warn-bg); color: var(--warn); font-size: .88rem; }
 .g-chip { display: inline-block; border: 1.5px solid currentColor; border-radius: 999px; padding: 2px 10px; font-weight: 700; font-size: .8rem; }
 .g-chip.g-m { color: var(--brand); }
 .g-chip.g-f { color: var(--accent); }
@@ -333,7 +341,7 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
 <header class="top">
   <div class="brand">
     <span class="logo" aria-hidden="true"></span>
-    <div><h1>Prevoditelj</h1><p>Croatian ⇄ English · v2.2</p></div>
+    <div><h1>Prevoditelj</h1><p>Croatian ⇄ English · v2.3</p></div>
   </div>
   <button id="settingsBtn" class="icon-btn" aria-label="Settings" title="Settings">⚙︎</button>
 </header>
@@ -483,7 +491,7 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
           <div class="fc-gender" id="fcBackGender" hidden></div>
           <button class="btn small" id="fcBackPlay" aria-label="Listen"><span aria-hidden="true">🔊</span> Listen</button>
           <p class="fc-note" id="fcNote" hidden></p>
-          <label class="g-edit">Gender
+          <label class="g-edit" id="fcGenderEdit">Gender
             <select id="fcGenderSel" aria-label="Noun gender for this card">
               <option value="">not checked yet</option>
               <option value="m">masculine</option>
@@ -988,68 +996,129 @@ ${text}
   return out;
 }
 
-/* ---------- noun gender (stored on each flash card as `gram`) ----------
- * gram = { pos: 'noun', gender: 'm'|'f'|'n', animate?, plural?, head?, note?, by, at }
- *      | { pos: 'other', by, at }       (checked: not a noun)
+/* ---------- grammar notes (stored on each flash card as `gram`) ----------
+ * gram = { pos: 'noun', gender: 'm'|'f'|'n', animate?, plural?, head?, note?, nouns?, fix?, by, at }  single noun / noun phrase
+ *      | { pos: 'phrase', nouns: [ … ], fix?, by, at }        sentence or multi-word card
+ *      | { pos: 'adj', forms: [m, f, n], def?, form?, by, at } adjective
+ *      | { pos: 'other', by, at }                                checked: no nouns or adjective forms to show
+ * noun entry = { w, lemma?, g: 'm'|'f'|'n', anim?, pl?, case: 'N'|'G'|'D'|'A'|'V'|'L'|'I', prep?, agree?: [words], ref? }
+ *   ref = a pronoun or name (or an implied subject like "(ti)") that adjectives/participles agree with.
  * A card with no `gram` hasn't been checked yet. `by` = book | claude | user; `at` = when it was set,
- * so merging two devices keeps the most recent classification. */
+ * so merging two devices keeps the most recent analysis (a user's own choice always wins over Claude's). */
 const G_LABEL = { m: 'masculine', f: 'feminine', n: 'neuter' };
+const CASES = { N: 'nominative', G: 'genitive', D: 'dative', A: 'accusative', V: 'vocative', L: 'locative', I: 'instrumental' };
 const MOJ = { m: ['moj', 'moji'], f: ['moja', 'moje'], n: ['moje', 'moja'] };     // [singular, plural]
 const OVAJ = { m: ['ovaj', 'ovi'], f: ['ova', 'ove'], n: ['ovo', 'ova'] };
-const GENDER_BATCH = 60;
+const GENDER_BATCH = 40;
+const GRAM_VERSION = 2;
+const str = (x, n) => String(x == null ? '' : x).trim().slice(0, n);
 
+function cleanNounEntry(e) {
+  if (!e || typeof e !== 'object' || !G_LABEL[e.g] || !CASES[e.case]) return null;
+  const o = { w: str(e.w, 40), g: e.g, case: e.case };
+  if (!o.w) return null;
+  if (str(e.lemma, 40) && str(e.lemma, 40).toLowerCase() !== o.w.toLowerCase()) o.lemma = str(e.lemma, 40);
+  if (e.anim && e.g === 'm') o.anim = true;
+  if (e.pl) o.pl = true;
+  if (str(e.prep, 20)) o.prep = str(e.prep, 20);
+  if (Array.isArray(e.agree)) { const a = e.agree.map(x => str(x, 30)).filter(Boolean).slice(0, 8); if (a.length) o.agree = a; }
+  if (e.ref) o.ref = true;
+  return o;
+}
 function cleanGram(g) {
   if (!g || typeof g !== 'object') return undefined;
   const at = Number(g.at) || 0;
   const by = ['book', 'claude', 'user'].includes(g.by) ? g.by : 'claude';
-  if (g.pos !== 'noun' || !G_LABEL[g.gender]) return { pos: 'other', by, at };
-  const o = { pos: 'noun', gender: g.gender };
-  if (g.gender === 'm' && g.animate) o.animate = true;
-  if (g.plural) o.plural = true;
-  if (g.head && String(g.head).trim()) o.head = String(g.head).trim().slice(0, 40);
-  if (g.note && String(g.note).trim()) o.note = String(g.note).trim().slice(0, 240);
-  o.by = by; o.at = at;
-  return o;
+  const nouns = Array.isArray(g.nouns) ? g.nouns.map(cleanNounEntry).filter(Boolean).slice(0, 12) : [];
+  const finish = o => { if (str(g.fix, 300)) o.fix = str(g.fix, 300); o.by = by; o.at = at; return o; };
+  if (g.pos === 'noun' && G_LABEL[g.gender]) {
+    const o = { pos: 'noun', gender: g.gender };
+    if (g.gender === 'm' && g.animate) o.animate = true;
+    if (g.plural) o.plural = true;
+    if (str(g.head, 40)) o.head = str(g.head, 40);
+    if (str(g.note, 240)) o.note = str(g.note, 240);
+    if (nouns.length) o.nouns = nouns;
+    return finish(o);
+  }
+  if (g.pos === 'phrase') return finish({ pos: 'phrase', nouns });
+  if (g.pos === 'adj' && Array.isArray(g.forms) && g.forms.length === 3 && g.forms.every(f => str(f, 30))) {
+    const o = { pos: 'adj', forms: g.forms.map(f => str(f, 30)) };
+    if (str(g.def, 30)) o.def = str(g.def, 30);
+    if (['m', 'f', 'n', 'def'].includes(g.form)) o.form = g.form;
+    return finish(o);
+  }
+  return finish({ pos: 'other' });
 }
-const newerGram = (a, b) => !!a && (!b || (a.at || 0) > (b.at || 0));
+// Which analysis to keep when two versions meet: the user's own choice beats Claude/book; otherwise the newest.
+const newerGram = (a, b) => {
+  if (!a) return false;
+  if (!b) return true;
+  if (b.by === 'user' && a.by !== 'user') return false;
+  if (a.by === 'user' && b.by !== 'user') return true;
+  return (a.at || 0) > (b.at || 0);
+};
 
-// Obvious sentences / long phrases are not nouns: no need to ask Claude.
-function looksLikeSentence(hr) {
-  const t = (hr || '').trim();
-  return /[.!?…]$/.test(t) || t.split(/\s+/).length > 4;
-}
+const NOUN_SYSTEM = `You annotate Croatian flash-card entries for English-speaking learners, so they can see each noun's gender and get endings right. Use standard Croatian (not Serbian or Bosnian). Use the English meaning to decide ambiguous entries.
 
-const NOUN_SYSTEM = `You classify Croatian flash-card entries for English-speaking learners. For each entry decide whether it is a noun or a noun phrase and, if so, give its grammatical gender in standard Croatian.
+For each entry choose a kind:
+- "noun": a single noun, or a noun phrase whose head is a noun (adjective / possessive / demonstrative + noun: "moja knjiga", "glavni grad"; noun + genitive or prepositional phrase: "broj telefona", "kava s vrhnjem"). Fill gender (of the head), animate, plural, head (the head noun as written, only for a phrase; "" for a single noun), note, and for a phrase also nouns.
+- "phrase": a sentence, question, greeting, verb phrase or any other multi-word entry. Fill nouns.
+- "adj": a single adjective (any gender form, comparative, ordinal). Fill forms = [masculine, feminine, neuter] nominative singular indefinite, e.g. ["dobar","dobra","dobro"]; def = the definite masculine form used after moj/taj (e.g. "dobri"), or "" if it doesn't exist (comparatives, ordinals already end in -i); form = which form the entry shows: "m", "f", "n", "def", or "" if it is the dictionary form or unclear.
+- "other": anything else (verbs, adverbs, pronouns, numerals, prepositions, interjections).
 
-Rules:
-- is_noun = true for a single noun (in whatever case or number it is written) or a noun phrase whose head is a noun: adjective / possessive / demonstrative + noun ("moja knjiga", "glavni grad"), or noun + genitive or prepositional phrase ("broj telefona", "kava s vrhnjem"). For a phrase, give the head noun's gender and put the head noun, as written, in "head". For a single noun, head is "".
-- is_noun = false for verbs, adjectives (also adjectives written in one gender form, e.g. "dobra", "umorna"), adverbs, pronouns, numerals, prepositions, greetings, interjections and full sentences or clauses. Then gender is "".
-- gender is the grammatical gender: "m", "f" or "n". Masculine nouns in -a that name men (tata, kolega, mladoženja) are "m"; say in note that they take -a endings. Feminine nouns ending in a consonant (ljubav, stvar, noć, obitelj, -ost nouns) are "f". The collectives djeca and braća are "f" (feminine singular endings, plural verb).
-- animate = true only for masculine nouns that name people or animals (their accusative singular looks like the genitive). Otherwise false.
-- plural = true if the entry is written in the plural, or the noun is used only in the plural (hlače, naočale, vrata, leđa). Give the gender whose plural endings it takes (oči → "f").
-- note: one short sentence, only for an irregularity a learner needs (consonant-final feminine, masculine in -a, -en- stem like ime/imena, adjectival declension like studeni or mlada, gender that varies). Otherwise "".
-- Use standard Croatian, not Serbian or Bosnian. Use the English meaning to decide ambiguous entries.
-- ALWAYS answer by calling classify_nouns exactly once, with one item per entry and the same "i" numbers. Never reply with plain text.`;
+nouns: one item for EVERY common noun in the entry (also inside verb phrases like "ići na izlet"), in order:
+- w: the word exactly as written; lemma: its nominative singular (for oči give "oko", for ljudi "čovjek", for djeca "djeca"); g: "m","f","n" (the gender whose endings the form takes: oči → "f", djeca → "f"); anim: true only for masculine nouns naming people or animals; pl: true if this form is plural; case: N, G, D, A, V, L or I as used in this sentence; prep: the preposition that governs the case ("u", "na", "o", "s", "od", "za", "kao" …) or ""; agree: every word in the entry that agrees with this noun in gender/number/case (adjectives, possessives, demonstratives, numbers like "dvije", past participles like "pala"), exactly as written.
+- Also add an item with ref: true for a pronoun, a person's name, or an implied subject written in brackets like "(ti)" or "(ona)", but ONLY when an adjective or past participle agrees with it (e.g. "Budi dobra!" → {w:"(ti)", g:"f", case:"N", agree:["dobra"], ref:true}; "James nije umoran." → {w:"James", g:"m", case:"N", agree:["umoran"], ref:true}).
+- Country and city names are nouns too (Hrvatska f, Split m).
+- If the entry has no nouns, nouns is [].
+
+fix: if the Croatian has a grammar or agreement mistake (e.g. "moj crvena film"), give the corrected entry ("moj crveni film"); otherwise "".
+note (kind "noun" only): one short sentence only for an irregularity a learner needs (consonant-final feminine like ljubav, masculine in -a like tata, -en- stem like ime/imena, adjectival declension like studeni). Otherwise "".
+
+ALWAYS answer by calling annotate_entries exactly once, with one item per entry and the same "i" numbers. Never reply with plain text.`;
 
 const NOUN_TOOL = {
-  name: 'classify_nouns',
-  description: 'Return the noun / gender classification for every entry.',
+  name: 'annotate_entries',
+  description: 'Return the grammar annotation for every entry.',
   input_schema: {
     type: 'object',
     properties: {
       items: { type: 'array', items: { type: 'object', properties: {
         i: { type: 'integer', description: 'The entry number you were given.' },
-        is_noun: { type: 'boolean' },
-        head: { type: 'string', description: 'Head noun of a noun phrase, as written; "" otherwise.' },
+        kind: { type: 'string', enum: ['noun', 'phrase', 'adj', 'other'] },
         gender: { type: 'string', enum: ['m', 'f', 'n', ''] },
         animate: { type: 'boolean' },
         plural: { type: 'boolean' },
-        note: { type: 'string' }
-      }, required: ['i', 'is_noun', 'head', 'gender', 'animate', 'plural', 'note'] } }
+        head: { type: 'string' },
+        note: { type: 'string' },
+        nouns: { type: 'array', items: { type: 'object', properties: {
+          w: { type: 'string' }, lemma: { type: 'string' },
+          g: { type: 'string', enum: ['m', 'f', 'n'] },
+          anim: { type: 'boolean' }, pl: { type: 'boolean' },
+          case: { type: 'string', enum: ['N', 'G', 'D', 'A', 'V', 'L', 'I'] },
+          prep: { type: 'string' },
+          agree: { type: 'array', items: { type: 'string' } },
+          ref: { type: 'boolean' }
+        }, required: ['w', 'g', 'case'] } },
+        forms: { type: 'array', items: { type: 'string' } },
+        def: { type: 'string' },
+        form: { type: 'string' },
+        fix: { type: 'string' }
+      }, required: ['i', 'kind'] } }
     },
     required: ['items']
   }
 };
+
+function gramFromItem(it, now) {
+  const base = { by: 'claude', at: now, fix: it.fix, nouns: it.nouns };
+  if (it.kind === 'noun' && G_LABEL[it.gender])
+    return cleanGram({ ...base, pos: 'noun', gender: it.gender, animate: it.animate, plural: it.plural, head: it.head, note: it.note,
+      nouns: str(it.head, 40) ? it.nouns : undefined });
+  if (it.kind === 'phrase') return cleanGram({ ...base, pos: 'phrase' });
+  if (it.kind === 'adj') return cleanGram({ ...base, pos: 'adj', forms: it.forms, def: it.def, form: it.form });
+  return cleanGram({ by: 'claude', at: now, pos: 'other' });
+}
 
 async function classifyBatch(list) {
   const entries = list.map((c, i) => ({ i, hr: c.hr, en: c.en }));
@@ -1065,10 +1134,10 @@ async function classifyBatch(list) {
       },
       body: JSON.stringify({
         model: settings.model,
-        max_tokens: 8000,
+        max_tokens: 16000,
         system: NOUN_SYSTEM,
         tools: [NOUN_TOOL],
-        messages: [{ role: 'user', content: 'Classify these entries:\n' + JSON.stringify(entries) }]
+        messages: [{ role: 'user', content: 'Annotate these entries:\n' + JSON.stringify(entries) }]
       })
     });
   } catch {
@@ -1087,18 +1156,14 @@ async function classifyBatch(list) {
     const s = reply.indexOf('{'), e = reply.lastIndexOf('}');
     try { const j = JSON.parse(reply.slice(s, e + 1)); if (Array.isArray(j.items)) items = j.items; } catch {}
   }
-  if (!items) throw new Error('Claude didn\'t return a usable gender list. Please try again.');
+  if (!items) throw new Error('Claude didn\'t return a usable grammar list. Please try again.');
   const now = Date.now();
   let n = 0;
   items.forEach(it => {
     const c = it && list[it.i];
     if (!c || c.deleted) return;
     if (c.gram && c.gram.by === 'user') return;   // never overwrite the user's own choice
-    c.gram = cleanGram({
-      pos: it.is_noun && G_LABEL[it.gender] ? 'noun' : 'other',
-      gender: it.gender, animate: it.animate, plural: it.plural, head: it.head, note: it.note,
-      by: 'claude', at: now
-    });
+    c.gram = gramFromItem(it, now);
     n++;
   });
   return n;
@@ -1106,22 +1171,21 @@ async function classifyBatch(list) {
 
 let classifying = false;
 async function classifyCards(list, { quiet = false } = {}) {
-  // Sentences are marked "not a noun" locally; only the rest go to Claude.
   const now = Date.now();
   let local = 0;
   list = list.filter(c => {
-    if (looksLikeSentence(c.hr)) { c.gram = { pos: 'other', by: 'claude', at: now }; local++; return false; }
+    if ((c.hr || '').length > 400) { c.gram = { pos: 'other', by: 'claude', at: now }; local++; return false; }   // too long to annotate usefully
     return true;
   });
   if (local) persistCards();
   if (!list.length) return local;
   if (!settings.key) { if (!quiet) toast('Add your Claude API key in Settings first.'); return local; }
-  if (classifying) { if (!quiet) toast('Already classifying. Please wait a moment.'); return local; }
+  if (classifying) { if (!quiet) toast('Already checking cards. Please wait a moment.'); return local; }
   classifying = true;
   let done = local;
   try {
     for (let k = 0; k < list.length; k += GENDER_BATCH) {
-      renderGenderStatus(`Classifying genders… ${Math.min(k + GENDER_BATCH, list.length)} of ${list.length}`);
+      renderGenderStatus(`Checking grammar… ${Math.min(k + GENDER_BATCH, list.length)} of ${list.length}`);
       done += await classifyBatch(list.slice(k, k + GENDER_BATCH));
       persistCards();
     }
@@ -1138,8 +1202,19 @@ async function classifyUnchecked() {
   const todo = live().filter(c => !c.gram);
   if (!todo.length) { toast('Every card has been checked.'); return; }
   const n = await classifyCards(todo);
-  const nouns = todo.filter(c => c.gram && c.gram.pos === 'noun').length;
-  if (n) toast(`Checked ${n} card${n === 1 ? '' : 's'}: ${nouns} noun${nouns === 1 ? '' : 's'}. Remember to Save to iCloud.`, 5500);
+  const fixes = todo.filter(c => c.gram && c.gram.fix).length;
+  if (n) toast(`Checked ${n} card${n === 1 ? '' : 's'}` + (fixes ? `; ${fixes} may have a mistake (marked ⚠)` : '') + '. Remember to Save to iCloud.', 6000);
+}
+
+// One-time upgrade: sentences that v2.2 skipped as "not a noun" get checked again.
+function migrateGram() {
+  if (Number(store.get('gramV', 1)) >= GRAM_VERSION) return;
+  let n = 0;
+  cards.forEach(c => {
+    if (c.gram && c.gram.pos === 'other' && c.gram.by === 'claude' && /\s/.test((c.hr || '').trim())) { delete c.gram; n++; }
+  });
+  store.set('gramV', GRAM_VERSION);
+  if (n) persistCards(false);
 }
 
 function renderGenderStatus(busyMsg) {
@@ -1147,44 +1222,96 @@ function renderGenderStatus(busyMsg) {
   const all = live();
   row.hidden = !all.length;
   const nouns = all.filter(c => c.gram && c.gram.pos === 'noun').length;
+  const phr = all.filter(c => c.gram && c.gram.pos === 'phrase' && c.gram.nouns.length).length;
+  const fixes = all.filter(c => c.gram && c.gram.fix).length;
   const todo = all.filter(c => !c.gram).length;
   $('#genderStatus').textContent = busyMsg ||
-    `Noun genders: ${nouns} noun${nouns === 1 ? '' : 's'} classified` +
+    `Grammar: ${nouns} noun${nouns === 1 ? '' : 's'}, ${phr} phrase${phr === 1 ? '' : 's'} with nouns` +
+    (fixes ? ` · ${fixes} marked ⚠` : '') +
     (todo ? ` · ${todo} card${todo === 1 ? '' : 's'} not checked yet` : ' · all cards checked');
   const b = $('#genderBtn');
   b.hidden = !todo && !busyMsg;
   b.disabled = !!busyMsg || classifying;
-  b.textContent = busyMsg ? 'Working…' : `Classify ${todo} now`;
+  b.textContent = busyMsg ? 'Working…' : `Check ${todo} now`;
 }
 
-// The gender line under the Croatian word: chip + "moj stan · ovaj stan" + any note.
+/* --- showing it on the flash card --- */
+const chipText = (g, anim, pl) => G_LABEL[g] + (anim ? ' · animate' : '') + (pl ? ' · plural' : '');
+
+// One line per noun: "film · masculine · nominative — agrees: moj, crveni"
+function nounLine(e) {
+  const row = el('div', 'g-line');
+  const w = el('span', 'g-w', e.w); w.lang = 'hr'; row.appendChild(w);
+  if (e.lemma) { const l = el('span', 'g-lemma', `(${e.lemma})`); l.lang = 'hr'; row.appendChild(l); }
+  row.appendChild(el('span', 'g-chip g-' + e.g, chipText(e.g, e.anim, e.pl)));
+  if (!e.ref || e.case !== 'N') row.appendChild(el('span', 'g-case', e.prep ? `${e.prep} + ${CASES[e.case]}` : CASES[e.case]));
+  if (e.agree && e.agree.length) {
+    const a = el('span', 'g-agree', 'agrees: ' + e.agree.join(', ')); a.lang = 'hr'; row.appendChild(a);
+  }
+  return row;
+}
+
 function fillGender(box, c) {
   box.innerHTML = '';
   const g = c && c.gram;
-  if (!g || g.pos !== 'noun' || !G_LABEL[g.gender]) { box.hidden = true; return; }
-  const k = g.plural ? 1 : 0;
-  const chip = el('span', 'g-chip g-' + g.gender,
-    G_LABEL[g.gender] + (g.animate ? ' · animate' : '') + (g.plural ? ' · plural' : ''));
-  box.appendChild(chip);
-  const word = (c.hr || '').replace(/\s*\([^)]*\)\s*/g, ' ').trim();
-  if (word && !/\s/.test(word)) {
-    const ex = el('span', 'g-ex', `${MOJ[g.gender][k]} ${word} · ${OVAJ[g.gender][k]} ${word}`);
-    ex.lang = 'hr'; box.appendChild(ex);
-  } else if (g.head) {
-    const ex = el('span', 'muted small', `from ${g.head}`); ex.lang = 'hr'; box.appendChild(ex);
+  if (!g) { box.hidden = true; return; }
+  let any = false;
+  if (g.pos === 'noun' && G_LABEL[g.gender]) {
+    if (g.nouns && g.nouns.length) g.nouns.forEach(e => box.appendChild(nounLine(e)));
+    else {
+      const row = el('div', 'g-line');
+      row.appendChild(el('span', 'g-chip g-' + g.gender, chipText(g.gender, g.animate, g.plural)));
+      const word = (c.hr || '').replace(/\s*\([^)]*\)\s*/g, ' ').trim();
+      if (word && !/\s/.test(word)) {
+        const k = g.plural ? 1 : 0;
+        const ex = el('span', 'g-ex', `${MOJ[g.gender][k]} ${word} · ${OVAJ[g.gender][k]} ${word}`); ex.lang = 'hr'; row.appendChild(ex);
+      }
+      box.appendChild(row);
+    }
+    const notes = [];
+    if (g.animate && !g.plural && !g.note) notes.push('Animate: the accusative looks like the genitive (vidim brata).');
+    if (g.note) notes.push(g.note);
+    if (notes.length) box.appendChild(el('p', 'g-note', notes.join(' ')));
+    any = true;
+  } else if (g.pos === 'phrase' && g.nouns.length) {
+    g.nouns.forEach(e => box.appendChild(nounLine(e)));
+    any = true;
+  } else if (g.pos === 'adj') {
+    const row = el('div', 'g-line');
+    row.appendChild(el('span', 'g-case', 'adjective'));
+    const forms = el('span', 'g-forms'); forms.lang = 'hr';
+    [['m', g.forms[0]], ['f', g.forms[1]], ['n', g.forms[2]]].forEach(([k, f], i) => {
+      if (i) forms.append(' · ');
+      const s = el('span', 'g-form g-' + k + (g.form === k ? ' on' : ''), f); s.title = G_LABEL[k];
+      forms.appendChild(s);
+    });
+    if (g.def) {
+      forms.append(' · ');
+      const s = el('span', 'g-form' + (g.form === 'def' ? ' on' : ''), g.def); forms.appendChild(s);
+      forms.append(' (after moj/taj)');
+    }
+    row.appendChild(forms);
+    box.appendChild(row);
+    any = true;
   }
-  const notes = [];
-  if (g.animate && !g.plural && !g.note) notes.push('Animate: the accusative looks like the genitive (vidim brata).');
-  if (g.note) notes.push(g.note);
-  if (notes.length) box.appendChild(el('p', 'g-note', notes.join(' ')));
-  box.hidden = false;
+  if (g.fix) {
+    const w = el('p', 'g-fix', '⚠ This looks wrong. Should be: ');
+    const f = el('strong', null, g.fix); f.lang = 'hr'; w.appendChild(f);
+    box.appendChild(w);
+    any = true;
+  }
+  box.hidden = !any;
 }
 
-// Show the gender on whichever side of the card holds the Croatian.
+// Show it on whichever side of the card holds the Croatian.
 function fillGenderFor(c) {
   const hrFront = !session || session.mode !== 'en-hr';
   fillGender($('#fcFrontGender'), hrFront ? c : null);
   fillGender($('#fcBackGender'), hrFront ? null : c);
+  // The gender picker is for single nouns (and for correcting a card wrongly marked "not a noun").
+  const g = c.gram;
+  const single = !/\s/.test((c.hr || '').trim());
+  $('#fcGenderEdit').hidden = !((g && g.pos === 'noun') || (single && (!g || g.pos === 'other')));
   $('#fcGenderSel').value = gramCode(c);
 }
 function gramCode(c) {
@@ -1201,9 +1328,10 @@ function setGenderFromUser(code) {
   if (code === 'other') c.gram = { pos: 'other', by: 'user', at: now };
   else {
     const gender = code[0];
-    const keepNote = old.pos === 'noun' && old.gender === gender;
+    const same = old.pos === 'noun' && old.gender === gender;
     c.gram = cleanGram({ pos: 'noun', gender, animate: code === 'ma', plural: old.plural, head: old.head,
-      note: keepNote ? old.note : '', by: 'user', at: now });
+      note: same ? old.note : '', by: 'user', at: now,
+      nouns: (old.nouns || []).map((e, i) => i === 0 && old.head ? { ...e, g: gender, anim: code === 'ma' } : e) });
   }
   persistCards();
   fillGenderFor(c);
@@ -1649,7 +1777,10 @@ function addCard(hr, en, note) {
   // Classify the new card's gender in the background (needs the API key; otherwise "Classify now" does it later).
   classifyCards([card], { quiet: true }).then(() => {
     const g = card.gram;
-    if (g && g.pos === 'noun') toast(`★ Saved · ${card.hr}: ${G_LABEL[g.gender]}${g.animate ? ', animate' : ''}${g.plural ? ', plural' : ''} noun`, 4500);
+    if (!g) return;
+    if (g.fix) toast(`★ Saved · ⚠ Check this card: it may need to be "${g.fix}"`, 6000);
+    else if (g.pos === 'noun' && !g.head) toast(`★ Saved · ${card.hr}: ${G_LABEL[g.gender]}${g.animate ? ', animate' : ''}${g.plural ? ', plural' : ''} noun`, 4500);
+    else if (g.nouns && g.nouns.length) toast('★ Saved · ' + g.nouns.filter(e => !e.ref).map(e => `${e.lemma || e.w} (${e.g})`).join(', '), 4500);
   });
   return true;
 }
@@ -2141,6 +2272,7 @@ $('#fcPrev').checked = !!store.get('fcPrev', false);
 $('#fcPrev').addEventListener('change', e => { store.set('fcPrev', e.target.checked); updateDue(); });
 $$('input[name=fcmode]').forEach(r => { r.checked = r.value === savedMode; r.addEventListener('change', () => store.set('fcmode', r.value)); });
 window.addEventListener('beforeunload', e => { if (sync.dirty && live().length) { e.preventDefault(); e.returnValue = ''; } });
+migrateGram();
 renderSync(); renderCardList(); updateDue();
 if (store.get('tab', 'translate') === 'cards') showTab('cards');
 
