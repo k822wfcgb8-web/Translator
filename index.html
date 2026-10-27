@@ -368,7 +368,7 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
 <header class="top">
   <div class="brand">
     <span class="logo" aria-hidden="true"></span>
-    <div><h1>Prevoditelj</h1><p>Croatian ⇄ English · v2.7</p></div>
+    <div><h1>Prevoditelj</h1><p>Croatian ⇄ English · v2.8</p></div>
   </div>
   <button id="settingsBtn" class="icon-btn" aria-label="Settings" title="Settings">⚙︎</button>
 </header>
@@ -2596,8 +2596,13 @@ $('#text-in').addEventListener('keydown', e => {
   if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) { e.preventDefault(); translate(); }
 });
 $('#dirToggle').addEventListener('click', () => {
-  if (state.recKind === 'dict') { killRec(); showIdleMic(); }
+  // Swapping starts fresh: stop the mic and any audio, and clear the old word, its results and practice.
+  if (state.recKind === 'dict' || state.recKind === 'practice') { killRec(); showIdleMic(); }
+  stopSpeaking();
+  $('#text-in').value = ''; $('#results').innerHTML = ''; state.last = null;
+  $('#practice').hidden = true;
   setSource(state.source === 'hr' ? 'en' : 'hr');
+  $('#text-in').focus();
 });
 $('#translateBtn').addEventListener('click', translate);
 $('#optGrammar').addEventListener('change', e => store.set('optGrammar', e.target.checked));
