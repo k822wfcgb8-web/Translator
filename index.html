@@ -368,7 +368,7 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
 <header class="top">
   <div class="brand">
     <span class="logo" aria-hidden="true"></span>
-    <div><h1>Prevoditelj</h1><p>Croatian ⇄ English · v2.6</p></div>
+    <div><h1>Prevoditelj</h1><p>Croatian ⇄ English · v2.7</p></div>
   </div>
   <button id="settingsBtn" class="icon-btn" aria-label="Settings" title="Settings">⚙︎</button>
 </header>
@@ -1388,11 +1388,74 @@ function setGenderFromUser(code) {
   toast('Gender saved. Remember to Save to iCloud.');
 }
 
-async function translate() {
+/* ---------- instant lookup in your flash cards (no Claude call) ----------
+ * If the whole text matches a card (Croatian side, or one of the English alternatives),
+ * show the card straight away. "Ask Claude" runs the full translation as before.
+ */
+const normEn = s => (s || '').toLowerCase().replace(/\([^)]*\)/g, ' ').replace(/[.!?,;:…"“”]+/gu, ' ')
+  .replace(/\s+/g, ' ').trim().replace(/^(to|a|an|the) /, '');
+function lookupCards(src, text) {
+  const byHr = () => { const c = findCard(text); return c ? [c] : []; };
+  const byEn = () => {
+    const n = normEn(text); if (!n) return [];
+    const seen = new Set();
+    return live().filter(c => (c.en || '').split(/\s*[\/;]\s*/).some(part => normEn(part) === n))
+      .filter(c => { const k = normHr(c.hr); if (seen.has(k)) return false; seen.add(k); return true; })
+      .slice(0, 6);
+  };
+  const order = src === 'hr' ? [['hr', byHr], ['en', byEn]] : [['en', byEn], ['hr', byHr]];
+  for (const [lang, find] of order) { const hits = find(); if (hits.length) return { lang, hits }; }
+  return null;
+}
+function cardSource(c) {
+  return (c.note || '').split('\n').find(l => /Tako lako|topic:/.test(l)) || '';
+}
+function renderCardHits(found, text) {
+  const results = $('#results'); results.innerHTML = '';
+  const c = el('div', 'card');
+  const hd = el('div', 'card-head');
+  hd.appendChild(el('h3', null, found.hits.length > 1 ? '★ From your flash cards (' + found.hits.length + ' matches)' : '★ From your flash cards'));
+  c.appendChild(hd);
+  const ul = el('ul', 'ex-list');
+  found.hits.forEach(h => {
+    const li = el('li', 'ex');
+    const t = el('div', 't');
+    const hrw = el('div', 'hr', h.hr); hrw.lang = 'hr';
+    t.append(hrw, el('div', 'en', h.en));
+    const from = cardSource(h);
+    if (from) { const f = el('div', 'muted small', from.replace(/^Tako lako /, 'Tako lako · ')); t.appendChild(f); }
+    li.append(t, playBtn(h.hr, 'hr', 'Listen'), practiseBtn(h.hr));
+    ul.appendChild(li);
+  });
+  c.appendChild(ul);
+  const sub = el('p', 'muted small', 'Found in your flash cards, so Claude wasn\'t asked (no cost).');
+  sub.style.margin = '10px 0 6px';
+  const ask = el('button', 'btn small', 'Ask Claude: corrections, grammar & examples'); ask.type = 'button';
+  ask.addEventListener('click', () => translate(true));
+  c.append(sub, ask);
+  results.appendChild(c);
+}
+
+async function translate(force) {
   if (state.busy) return;
   const src = state.source;
   const text = $('#text-in').value.trim();
   if (!text) { toast(`Type or speak some ${LANG[src].name} first.`); return; }
+
+  // Check the flash cards first, unless "Ask Claude" was tapped (force === true; a click event is not).
+  if (force !== true) {
+    const found = lookupCards(src, text);
+    if (found) {
+      if (found.lang !== src) setSource(found.lang);
+      const first = found.hits[0];
+      state.last = { src: found.lang, input: text, fromCards: true,
+        translation: found.lang === 'hr' ? first.en : first.hr,
+        croatian_text: found.lang === 'hr' ? text : first.hr, corrected_input: text,
+        corrections: [], grammar: [], examples: [], notes: [] };
+      renderCardHits(found, text);
+      return;
+    }
+  }
   if (!settings.key) { openSettings(); toast('Add your Claude API key first.'); return; }
 
   const grammar = $('#optGrammar').checked, examples = $('#optExamples').checked;

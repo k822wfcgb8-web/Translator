@@ -72,6 +72,7 @@ Then reload the page, and pick the voice in the app's Settings if you like.
 ## 4. How the features work
 
 - **Translate:** the box you typed or spoke in last is the "From" box. ⇅ swaps direction. ⌘/Ctrl + Enter also translates.
+- **Flash cards first:** if the whole text matches one of your flash cards (the Croatian side, or any English alternative on the card), the card is shown straight away and Claude isn't asked, so it costs nothing. Capitals and end punctuation are ignored, and "to", "a" or "the" at the start of the English is too. Tap **Ask Claude** for corrections, grammar and examples. Anything that isn't an exact card match goes to Claude as before.
 - **Corrections:** if Croatian input has mistakes (endings, č ć š ž đ, agreement), the answer shows the corrected sentence, what changed and why. **Use this** puts the correction into the Croatian box.
 - **Cases, endings & gender** (tick box): for each word that changes form, it shows the root, the case or verb form, gender, the ending, and why. It also shows what you originally typed if it was wrong, and how the ending would look for masculine, feminine and neuter words.
 - **Example phrases** (tick box): 2 or 3 phrases, each with 🔊 play and 🗣 practise buttons.
