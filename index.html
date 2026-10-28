@@ -385,7 +385,7 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
 <main>
   <nav class="tabs" role="tablist" aria-label="Sections">
     <button class="tab" role="tab" id="tabTranslate" aria-selected="true" aria-controls="view-translate">Translate</button>
-    <button class="tab" role="tab" id="tabCards" aria-selected="false" aria-controls="view-cards">Flash cards <span id="dueBadge" class="badge" hidden></span></button>
+    <button class="tab" role="tab" id="tabCards" aria-selected="false" aria-controls="view-cards">Flash cards</button>
   </nav>
 
   <div id="view-translate" role="tabpanel" aria-labelledby="tabTranslate">
@@ -482,10 +482,10 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
           <label class="field">Lesson <select id="fcLesson"></select></label>
         </div>
         <label class="check" id="fcPrevWrap" hidden><input type="checkbox" id="fcPrev"> <span id="fcPrevText">Add all previous lessons</span></label>
+        <label class="check" id="fcOwnWrap" hidden><input type="checkbox" id="fcOwn"> <span id="fcOwnText">Add my saved cards</span></label>
       </div>
       <div class="tools">
-        <button class="btn primary" id="studyDue">Study due cards</button>
-        <button class="btn" id="studyAll">Study all</button>
+        <button class="btn primary" id="studyAll">Study this set</button>
         <button class="btn accent" id="studyOwn" hidden>Study my cards</button>
       </div>
       <div class="gender-row" id="genderRow" hidden>
@@ -1778,16 +1778,21 @@ function rangeOf(sel) {
   if (sel.l === 'all') return [mb, mb + 99];
   return [mb + +sel.l, mb + +sel.l];
 }
-function matcher(sel, prev) {
+function matcher(sel, prev, own) {
+  const base = baseMatcher(sel, prev);
+  return own ? c => !hasBookTag(c) || base(c) : base;   // "Add my saved cards"
+}
+function baseMatcher(sel, prev) {
   if (sel.u === 'all') return () => true;
   if (sel.u === 'own') return c => !hasBookTag(c);
   if (sel.u === 'topics') return c => { const t = tagsOf(c).topics; return sel.m === 'all' ? t.length > 0 : t.includes(sel.m); };
   const [lo, hi] = rangeOf(sel);
-  if (prev) return c => !hasBookTag(c) || tagsOf(c).ranks.some(r => r <= hi);   // + my saved cards
+  if (prev) return c => tagsOf(c).ranks.some(r => r <= hi);   // this selection and everything before it
   return c => tagsOf(c).ranks.some(r => r >= lo && r <= hi);
 }
 const countOf = (pool, sel) => { const f = matcher(sel, false); let n = 0; for (const c of pool) if (f(c)) n++; return n; };
-function deckFilter(pool) { return pool.filter(matcher(pick, $('#fcPrev').checked && rangeOf(pick) !== null)); }
+const ownOn = () => $('#fcOwn').checked && pick.u !== 'all' && pick.u !== 'own';
+function deckFilter(pool) { return pool.filter(matcher(pick, $('#fcPrev').checked && rangeOf(pick) !== null, ownOn())); }
 
 function fillSelect(sel, options, want) {
   sel.innerHTML = '';
@@ -1854,8 +1859,9 @@ function renderDeckPick() {
     : level === 'module' ? 'Add everything before this module too'
     : level === 'phrases' ? 'Add everything before these phrases too'
     : 'Add all previous units too';
-  if (countOf(pool, { u: 'own' })) $('#fcPrevText').textContent += ' (+ my saved cards)';
   const nMine = countOf(pool, { u: 'own' });
+  $('#fcOwnWrap').hidden = !nMine || pick.u === 'all' || pick.u === 'own';
+  $('#fcOwnText').textContent = `Add my saved cards (${nMine})`;
   $('#studyOwn').hidden = !nMine;
   $('#studyOwn').textContent = `Study my cards (${nMine})`;
 }
@@ -2034,11 +2040,9 @@ function renderSync() {
   $('#syncText').textContent = txt;
   $('#syncCard').classList.toggle('dirty', !!sync.dirty);
 }
-function updateDue() {
-  const now = Date.now(), all = live(), due = all.filter(c => isDue(c, now)).length;
-  const b = $('#dueBadge'); b.hidden = !due; b.textContent = due;
-  const set = deckFilter(all), setDue = set.filter(c => isDue(c, now)).length;
-  $('#studyCounts').textContent = `${setDue} due · ${set.length} in this set`;
+function updateDue() {   // now only shows the size of the chosen set (no due dates any more)
+  const n = deckFilter(live()).length;
+  $('#studyCounts').textContent = `${n} card${n === 1 ? '' : 's'} in this set`;
 }
 function dueText(c) {
   const d = (c.due || 0) - Date.now();
@@ -2079,17 +2083,15 @@ function currentMode() { const r = document.querySelector('input[name=fcmode]:ch
 function startSession(all, ownOnly) {
   const now = Date.now();
   const set = ownOnly ? live().filter(c => !hasBookTag(c)) : deckFilter(live());
-  let pool = all ? set : set.filter(c => isDue(c, now));
+  const pool = set.slice();   // the whole chosen set, every time
   if (!pool.length) {
-    toast(!live().length ? 'No cards yet. Save some from the Translate tab.'
-      : !set.length ? 'No cards in that unit or lesson yet.'
-      : 'Nothing is due in this set right now. Try "Study all".');
+    toast(!live().length ? 'No cards yet. Save some from the Translate tab.' : 'No cards in that unit or lesson yet.');
     return;
   }
   shuffle(pool);   // always random order
   session = { queue: pool.map(c => c.id), mode: currentMode(), done: 0, knew: 0, tries: [], sayDone: false, sayOn: false,
               answer: currentAnswer() === 'type', ans: null,
-              pool: pool.map(c => c.id), need: {}, filler: [] };
+              pool: pool.map(c => c.id), need: {}, filler: [], missed: new Set() };
   $('#studySetup').hidden = true; $('#studyCard').hidden = false;
   renderStudy();
   $('#studyCard').scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -2097,7 +2099,7 @@ function startSession(all, ownOnly) {
 function endSession(finished) {
   if (state.recKind === 'card-say' || state.recKind === 'card-ans') { killRec(); showIdleMic(); }
   stopSpeaking();
-  if (finished && session) toast(`Session done: ${session.done} card${session.done === 1 ? '' : 's'} reviewed, ${session.knew} known first time. Remember to Save to iCloud.`, 6000);
+  if (finished && session) toast(`Session done: ${session.done} card${session.done === 1 ? '' : 's'}, ${session.knew} known first time.`, 6000);
   session = null;
   $('#studyCard').hidden = true; $('#studySetup').hidden = false;
   updateDue();
@@ -2142,8 +2144,9 @@ function reveal(suggest) {
   setSuggest(typeof suggest === 'boolean' ? suggest : null);
 }
 /* A missed card stays in the session until it has been answered right REPEAT_GOAL times
-   in total. Before each repeat, at least REPEAT_GAP other cards are shown; when the queue
-   is too short, random other cards from this session are added as fillers. */
+   in total. Each repeat goes to a random later spot, with at least REPEAT_GAP other cards
+   before it; when the queue is too short, random other cards from this session are added
+   as fillers. Nothing about right or wrong answers is saved: it lasts only for this session. */
 const REPEAT_GOAL = 3, REPEAT_GAP = 3;
 function requeue(id) {
   const q = session.queue;
@@ -2155,7 +2158,8 @@ function requeue(id) {
       const f = extra.shift(); q.push(f); session.filler.push(f);
     }
   }
-  q.splice(Math.min(REPEAT_GAP, q.length), 0, id);
+  const lo = Math.min(REPEAT_GAP, q.length);
+  q.splice(lo + Math.floor(Math.random() * (q.length - lo + 1)), 0, id);   // random spot after the gap
 }
 function grade(knew) {
   const c = curCard(); if (!c) return;
@@ -2170,22 +2174,15 @@ function grade(knew) {
       if (session.need[id] > 0) { requeue(id); renderStudy(); return; }   // not yet 3 right
       delete session.need[id];
     }
-    if (isFiller) { renderStudy(); return; }   // extra review only: no schedule change
-    c.level = Math.min(MAX_LEVEL, (c.level || 1) + 1);
-    c.due = now + INTERVAL_DAYS[c.level] * DAY;
+    if (isFiller) { renderStudy(); return; }   // extra review only
     session.done++;
-    if (!c._missed) session.knew++;
-    delete c._missed;
+    if (!session.missed.has(id)) session.knew++;
   } else {
-    c.level = 1; c.due = now; c._missed = true;
+    session.missed.add(id);
     if (!session.need[id]) session.need[id] = REPEAT_GOAL;   // needs 3 right in total; a repeat miss keeps the count
     requeue(id);
   }
-  c.updatedAt = now; c.lastReviewed = now;
-  const saved = cards.map(x => { const { _missed, ...rest } = x; return rest; });
-  store.set('cards', saved); sync.dirty = true; store.set('sync', sync);
-  renderSync(); renderCardList(); updateDue();
-  renderStudy();
+  renderStudy();   // session only: the card itself is not changed or saved
 }
 
 function renderSay() {
@@ -2639,7 +2636,6 @@ $('#cardsFile').addEventListener('change', e => { const f = e.target.files && e.
 $('#fcDelete').addEventListener('click', deleteCurrentCard);
 $('#genderBtn').addEventListener('click', classifyUnchecked);
 $('#fcGenderSel').addEventListener('change', e => setGenderFromUser(e.target.value));
-$('#studyDue').addEventListener('click', () => startSession(false));
 $('#studyAll').addEventListener('click', () => startSession(true));
 $('#studyOwn').addEventListener('click', () => startSession(true, true));   // all my saved cards, whatever the picker says
 $('#studyEnd').addEventListener('click', () => endSession(false));
@@ -2671,6 +2667,8 @@ $('#fcModule').addEventListener('change', e => { pick.m = e.target.value; pick.l
 $('#fcLesson').addEventListener('change', e => { pick.l = e.target.value; renderDeckPick(); updateDue(); });
 $('#fcPrev').checked = !!store.get('fcPrev', false);
 $('#fcPrev').addEventListener('change', e => { store.set('fcPrev', e.target.checked); updateDue(); });
+$('#fcOwn').checked = !!store.get('fcOwn', false);
+$('#fcOwn').addEventListener('change', e => { store.set('fcOwn', e.target.checked); updateDue(); });
 $$('input[name=fcmode]').forEach(r => { r.checked = r.value === savedMode; r.addEventListener('change', () => { store.set('fcmode', r.value); syncAnsRow(); }); });
 const savedAns = store.get('fcans', 'flip');
 $$('input[name=fcans]').forEach(r => { r.checked = r.value === savedAns; r.addEventListener('change', () => store.set('fcans', r.value)); });

@@ -37,7 +37,7 @@ Files:
    *If voice input misbehaves in the home-screen version, use it in regular Safari instead. Apple's speech recognition has been less reliable in home-screen apps on some iOS versions.*
 
 ### Keeping the API key safe from cleared data
-The key is saved in the browser on each device. Closing Safari or restarting doesn't remove it, but these do: **Clear History and Website Data**, deleting *github.io* under Safari's Website Data, and Safari's automatic clean-up of sites not opened for about 7 days (the home-screen version is exempt from that). Your flash-card progress on that device goes with it, so use **Save to iCloud** regularly.
+The key is saved in the browser on each device. Closing Safari or restarting doesn't remove it, but these do: **Clear History and Website Data**, deleting *github.io* under Safari's Website Data, and Safari's automatic clean-up of sites not opened for about 7 days (the home-screen version is exempt from that). Flash cards you saved on that device go with it, so use **Save to iCloud** after saving new cards.
 
 To have a backup of the key:
 - When you tap **Save** in Settings, Safari may ask whether to save the password. Tap **Save Password**. It goes into your Passwords app (iCloud Keychain) and syncs to your other Apple devices.
@@ -77,6 +77,9 @@ Then reload the page, and pick the voice in the app's Settings if you like.
 - **Cases, endings & gender** (tick box): for each word that changes form, it shows the root, the case or verb form, gender, the ending, and why. It also shows what you originally typed if it was wrong, and how the ending would look for masculine, feminine and neuter words.
 - **Example phrases** (tick box): 2 or 3 phrases, each with 🔊 play and 🗣 practise buttons.
 - **Practise saying it:** say the Croatian sentence up to 3 times. Each try is scored word by word: ✓ matched, ≈ nearly (often a č/ć or š/s difference), ✗ not heard. Silent tries aren't counted. The score reflects what the speech recogniser heard, so treat it as a guide.
+- **Studying flash cards:** pick a Unit, Module and Lesson, then tap **Study this set**. Tick **Add everything before this…** to include all earlier vocabulary, and **Add my saved cards** to mix in the cards you saved yourself. Every session goes through the whole chosen set in random order; tap ✕ to stop at any time.
+  - Nothing about right or wrong answers is saved. There are no due dates or levels; each session starts fresh.
+  - A card you miss comes back at a random later spot (at least 3 other cards in between) until you've answered it right 3 times in that session.
 - **Answer by typing or speaking** (Flash cards tab → *Answer by: Type or speak*): instead of flipping the card and grading yourself, type your answer or tap 🎤 and say it, then tap **Check** (or press Enter/Done). Works in both directions; Croatian answers get č ć đ š ž keys.
   - The app checks your answer on the device first, which is free and instant. It accepts any wording listed on the card ("table / desk"), with or without bracketed hints ("American (woman)" or "American"), and ignores capitals, punctuation, and *a / the / to*.
   - If your answer isn't word-for-word the card, Claude (Haiku 5.5, the cheapest model) judges it. It accepts synonyms and explains wrong endings, cases or genders in a sentence. Each of these checks is a very small request.
