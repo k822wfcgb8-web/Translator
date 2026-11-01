@@ -370,7 +370,7 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
 <header class="top">
   <div class="brand">
     <span class="logo" aria-hidden="true"></span>
-    <div><h1>Prevoditelj</h1><p>Croatian ⇄ English · v3.0</p></div>
+    <div><h1>Prevoditelj</h1><p>Croatian ⇄ English · v3.1</p></div>
   </div>
   <button id="settingsBtn" class="icon-btn" aria-label="Settings" title="Settings">⚙︎</button>
 </header>
@@ -2143,9 +2143,11 @@ function renderStudy() {
     (session.mode === 'mix' ? (frontIsHr ? ' → answer in English' : ' → answer in Croatian') : '');
   $('#fcFront').textContent = frontIsHr ? c.hr : c.en;
   $('#fcFront').lang = frontIsHr ? 'hr' : 'en';
+  $('#fcFrontPlay').hidden = !frontIsHr;   // 🔊 Listen only for Croatian
   $('#fcBackLabel').textContent = frontIsHr ? 'English' : 'Croatian';
   $('#fcBack').textContent = frontIsHr ? c.en : c.hr;
   $('#fcBack').lang = frontIsHr ? 'en' : 'hr';
+  $('#fcBackPlay').hidden = frontIsHr;   // no 🔊 Listen when the answer is English
   const note = $('#fcNote'); note.textContent = c.note || ''; note.hidden = !c.note;
   fillGenderFor(c);
   $('#fcBackWrap').hidden = true;
