@@ -469,6 +469,7 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
       <div class="seg" role="radiogroup" aria-label="Study mode">
         <label><input type="radio" name="fcmode" value="hr-en" checked> Croatian → English</label>
         <label><input type="radio" name="fcmode" value="en-hr"> English → Croatian</label>
+        <label><input type="radio" name="fcmode" value="mix"> Mixed</label>
       </div>
       <div class="seg" role="radiogroup" aria-label="How to answer" id="fcAnsRow">
         <span class="seg-title muted small">Answer by:</span>
@@ -1355,7 +1356,7 @@ function fillGender(box, c) {
 
 // Show it on whichever side of the card holds the Croatian.
 function fillGenderFor(c) {
-  const hrFront = !session || session.mode !== 'en-hr';
+  const hrFront = !session || cardDir(c) !== 'en-hr';
   fillGender($('#fcFrontGender'), hrFront ? c : null);
   fillGender($('#fcBackGender'), hrFront ? null : c);
   // The gender picker is for single nouns (and for correcting a card wrongly marked "not a noun").
@@ -2079,6 +2080,20 @@ function deleteCurrentCard() {
 }
 
 /* --- study session (simple spaced repetition) --- */
+/* Direction of the card on screen: 'hr-en' (Croatian shown, answer in English) or 'en-hr'.
+   In Mixed mode each card gets a random direction; a card that comes back for another try
+   (after a miss, or still short of 3 right) comes back the other way round. */
+function cardDir(c) {
+  if (!session) return 'hr-en';
+  if (session.mode !== 'mix') return session.mode;
+  c = c || curCard();
+  if (!c) return 'hr-en';
+  if (!session.dirOf[c.id]) session.dirOf[c.id] = Math.random() < 0.5 ? 'hr-en' : 'en-hr';
+  return session.dirOf[c.id];
+}
+function flipDir(id) {
+  if (session && session.mode === 'mix' && session.dirOf[id]) session.dirOf[id] = session.dirOf[id] === 'en-hr' ? 'hr-en' : 'en-hr';
+}
 function currentMode() { const r = document.querySelector('input[name=fcmode]:checked'); return r && r.value !== 'say' ? r.value : 'hr-en'; }
 function startSession(all, ownOnly) {
   const now = Date.now();
@@ -2091,7 +2106,7 @@ function startSession(all, ownOnly) {
   shuffle(pool);   // always random order
   session = { queue: pool.map(c => c.id), mode: currentMode(), done: 0, knew: 0, tries: [], sayDone: false, sayOn: false,
               answer: currentAnswer() === 'type', ans: null,
-              pool: pool.map(c => c.id), need: {}, filler: [], missed: new Set() };
+              pool: pool.map(c => c.id), need: {}, filler: [], missed: new Set(), dirOf: {} };
   $('#studySetup').hidden = true; $('#studyCard').hidden = false;
   renderStudy();
   $('#studyCard').scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -2110,13 +2125,14 @@ function renderStudy() {
   while (session && session.queue.length && !curCard()) session.queue.shift();
   const c = curCard();
   if (!c) { endSession(true); return; }
-  const m = session.mode;
+  const m = cardDir(c);
   disarmDelete();
   const need = session.need[c.id];
   $('#studyProgress').textContent = `${session.done} done · ${session.queue.length} to go` +
     (need ? ` · this one: ${REPEAT_GOAL - need} of ${REPEAT_GOAL} right` : '');
   const frontIsHr = m !== 'en-hr';
-  $('#fcFrontLabel').textContent = frontIsHr ? 'Croatian' : 'English';
+  $('#fcFrontLabel').textContent = (frontIsHr ? 'Croatian' : 'English') +
+    (session.mode === 'mix' ? (frontIsHr ? ' → answer in English' : ' → answer in Croatian') : '');
   $('#fcFront').textContent = frontIsHr ? c.hr : c.en;
   $('#fcFront').lang = frontIsHr ? 'hr' : 'en';
   $('#fcBackLabel').textContent = frontIsHr ? 'English' : 'Croatian';
@@ -2171,15 +2187,17 @@ function grade(knew) {
   if (knew) {
     if (session.need[id]) {
       session.need[id]--;
-      if (session.need[id] > 0) { requeue(id); renderStudy(); return; }   // not yet 3 right
+      if (session.need[id] > 0) { flipDir(id); requeue(id); renderStudy(); return; }   // not yet 3 right
       delete session.need[id];
     }
+    delete session.dirOf[id];   // finished: if it turns up again as a filler, pick a fresh direction
     if (isFiller) { renderStudy(); return; }   // extra review only
     session.done++;
     if (!session.missed.has(id)) session.knew++;
   } else {
     session.missed.add(id);
     if (!session.need[id]) session.need[id] = REPEAT_GOAL;   // needs 3 right in total; a repeat miss keeps the count
+    flipDir(id);   // Mixed mode: next time, the other way round
     requeue(id);
   }
   renderStudy();   // session only: the card itself is not changed or saved
@@ -2340,16 +2358,18 @@ function renderAnswerBox(c) {
   show.classList.toggle('primary', !on);
   setSuggest(null);
   if (!on) return;
-  const ansHr = session.mode === 'en-hr';
+  const ansHr = cardDir(c) === 'en-hr';
   const inp = $('#fcAnsIn');
   inp.value = ''; inp.disabled = false; inp.lang = ansHr ? 'hr' : 'en';
-  inp.placeholder = ansHr ? 'Type or say the Croatian' : 'Type or say the English';
+  inp.placeholder = ansHr ? 'Type or say the Croatian' : 'Type the English';
   $('#fcAnsLetters').hidden = !ansHr;
   $('#fcAnsLetters').querySelectorAll('button').forEach(b => b.disabled = false);
   setAnsCaps(false);
   $('#fcAnsCheck').disabled = false;
-  $('#fcAnsMic').disabled = !state.micAvailable;
-  $('#fcAnsMic').setAttribute('aria-label', ansHr ? 'Speak your answer in Croatian' : 'Speak your answer in English');
+  // Speaking is only for Croatian answers; English answers are typed.
+  $('#fcAnsMic').hidden = !ansHr;
+  $('#fcAnsMic').disabled = !ansHr || !state.micAvailable;
+  $('#fcAnsMic').setAttribute('aria-label', 'Speak your answer in Croatian');
   // On a computer, put the cursor in the box. On a phone, wait for a tap so the keyboard doesn't cover the card.
   try { if (!matchMedia('(pointer: coarse)').matches) inp.focus({ preventScroll: true }); } catch {}
 }
@@ -2373,7 +2393,8 @@ function typeAnsLetter(ch) {
 function cardAnsMic() {
   const c = curCard();
   if (!c || !session || !session.answer || !session.ans || session.ans.done || session.ans.checking) return;
-  const lang = session.mode === 'en-hr' ? 'hr' : 'en';
+  if (cardDir(c) !== 'en-hr') return;   // English answers are typed, not spoken
+  const lang = 'hr';
   const inp = $('#fcAnsIn'), before = inp.value;
   listen({
     kind: 'card-ans', lang: LANG[lang].rec, btn: $('#fcAnsMic'), interim: true, alts: 5,
@@ -2394,8 +2415,8 @@ async function checkAnswer() {
   if (A.checking || A.done) return;
   if (state.recKind === 'card-ans') { killRec(); showIdleMic(); }
   const inp = $('#fcAnsIn'), typed = inp.value.trim();
-  if (!typed) { toast('Type or say your answer first, or tap Don\'t know.'); inp.focus(); return; }
-  const frontIsHr = session.mode !== 'en-hr';
+  const frontIsHr = cardDir(c) !== 'en-hr';
+  if (!typed) { toast(frontIsHr ? 'Type your answer first, or tap Don\'t know.' : 'Type or say your answer first, or tap Don\'t know.'); inp.focus(); return; }
   const ansLang = frontIsHr ? 'en' : 'hr';
   const expected = frontIsHr ? c.en : c.hr;
   const spoken = !!(A.spoken && A.alts && A.alts.length);
@@ -2669,7 +2690,11 @@ $('#fcPrev').checked = !!store.get('fcPrev', false);
 $('#fcPrev').addEventListener('change', e => { store.set('fcPrev', e.target.checked); updateDue(); });
 $('#fcOwn').checked = !!store.get('fcOwn', false);
 $('#fcOwn').addEventListener('change', e => { store.set('fcOwn', e.target.checked); updateDue(); });
-$$('input[name=fcmode]').forEach(r => { r.checked = r.value === savedMode; r.addEventListener('change', () => { store.set('fcmode', r.value); syncAnsRow(); }); });
+$$('input[name=fcmode]').forEach(r => { r.checked = r.value === savedMode; r.addEventListener('change', () => {
+  store.set('fcmode', r.value);
+  if (r.value === 'mix') { const t = document.querySelector('input[name=fcans][value=type]'); if (t && !t.checked) { t.checked = true; store.set('fcans', 'type'); } }
+  syncAnsRow();
+}); });
 const savedAns = store.get('fcans', 'flip');
 $$('input[name=fcans]').forEach(r => { r.checked = r.value === savedAns; r.addEventListener('change', () => store.set('fcans', r.value)); });
 syncAnsRow();
