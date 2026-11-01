@@ -554,6 +554,7 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
         </div>
       </div>
       <div class="tools center">
+        <button class="btn big" id="fcDontKnow">I don't know</button>
         <button class="btn primary big" id="fcShow">Show answer</button>
         <button class="btn big" id="fcAgain" hidden>Still learning</button>
         <button class="btn primary big" id="fcKnew" hidden>Knew it ✓</button>
@@ -2156,7 +2157,7 @@ function reveal(suggest) {
     suggest = false;
   }
   $('#fcBackWrap').hidden = false;
-  $('#fcShow').hidden = true; $('#fcAgain').hidden = false; $('#fcKnew').hidden = false;
+  $('#fcShow').hidden = true; $('#fcDontKnow').hidden = true; $('#fcAgain').hidden = false; $('#fcKnew').hidden = false;
   setSuggest(typeof suggest === 'boolean' ? suggest : null);
 }
 /* A missed card stays in the session until it has been answered right REPEAT_GOAL times
@@ -2354,8 +2355,10 @@ function renderAnswerBox(c) {
   $('#fcAns').hidden = !on;
   const box = $('#fcResult'); box.hidden = true; box.innerHTML = ''; box.className = 'ans-result';
   const show = $('#fcShow');
-  show.textContent = on ? 'Don\'t know: show answer' : 'Show answer';
-  show.classList.toggle('primary', !on);
+  show.textContent = 'Show answer';
+  show.classList.add('primary');
+  show.hidden = on;                 // typing: "I don't know" is the way to give up and see the answer
+  $('#fcDontKnow').hidden = false;
   setSuggest(null);
   if (!on) return;
   const ansHr = cardDir(c) === 'en-hr';
@@ -2423,7 +2426,7 @@ async function checkAnswer() {
   const answers = spoken ? [typed, ...A.alts.map(a => a.trim()).filter(a => a && a !== typed)] : [typed];
   A.checking = true;
   lockAnswerBox(); A.done = false;          // locked while checking; "done" once there's a result
-  $('#fcShow').hidden = true;
+  $('#fcShow').hidden = true; $('#fcDontKnow').hidden = true;
   inp.blur();                               // drop the phone keyboard so the result is visible
 
   let r = localCheck(expected, answers, ansLang, spoken), by = 'device';
@@ -2665,6 +2668,7 @@ $('#fcAgain').addEventListener('click', () => grade(false));
 $('#fcKnew').addEventListener('click', () => grade(true));
 $('#fcSayBtn').addEventListener('click', cardSay);
 $('#fcAnsMic').addEventListener('click', cardAnsMic);
+$('#fcDontKnow').addEventListener('click', () => reveal(false));
 $('#fcAnsCheck').addEventListener('click', checkAnswer);
 $('#fcAnsIn').addEventListener('keydown', e => {
   if (e.key === 'Enter') { e.preventDefault(); e.stopPropagation(); if (!e.repeat) checkAnswer(); }
