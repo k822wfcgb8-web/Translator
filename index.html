@@ -370,7 +370,7 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
 <header class="top">
   <div class="brand">
     <span class="logo" aria-hidden="true"></span>
-    <div><h1>Prevoditelj</h1><p>Croatian ⇄ English · v3.1</p></div>
+    <div><h1>Prevoditelj</h1><p>Croatian ⇄ English · v3.2</p></div>
   </div>
   <button id="settingsBtn" class="icon-btn" aria-label="Settings" title="Settings">⚙︎</button>
 </header>
@@ -2320,34 +2320,52 @@ The learner ${spoken ? 'said (speech-recognition transcript)' : 'typed'}: "${ans
       'anthropic-version': '2023-06-01',
       'anthropic-dangerous-direct-browser-access': 'true'
     },
-    body: JSON.stringify({ model, max_tokens: more ? 2000 : 400, system: CHECK_SYSTEM, tools: [CHECK_TOOL],
+    // tool_choice makes Claude always answer with report_check (never plain text).
+    body: JSON.stringify({ model, max_tokens: more ? 4000 : 800, system: CHECK_SYSTEM, tools: [CHECK_TOOL],
+                           tool_choice: { type: 'tool', name: 'report_check' },
                            messages: [{ role: 'user', content: user }] })
   });
-  const ctl = new AbortController(), timer = setTimeout(() => ctl.abort(), 15000);
-  try {
-    let res = await post(CHECK_MODEL, ctl.signal);
-    if (res.status === 404 && settings.model !== CHECK_MODEL) res = await post(settings.model, ctl.signal);
-    if (!res.ok) {
-      let detail = '';
-      try { const j = await res.json(); detail = (j && j.error && j.error.message) || ''; } catch {}
-      throw new Error(apiError(res.status, detail));
-    }
-    const data = await res.json();
-    const block = (data.content || []).find(b => b.type === 'tool_use' && b.input);
-    let out = block ? block.input : null;
-    if (!out) {
-      const reply = (data.content || []).filter(b => b.type === 'text').map(b => b.text).join('\n');
-      const s = reply.indexOf('{'), e = reply.lastIndexOf('}');
-      if (s >= 0 && e > s) { try { out = JSON.parse(reply.slice(s, e + 1)); } catch {} }
-    }
-    if (!out || !['correct', 'nearly', 'wrong'].includes(out.verdict)) throw new Error('Claude didn\'t return a usable check.');
-    return { verdict: out.verdict, feedback: String(out.feedback || '').trim(),
-             grammar: more && out.verdict !== 'correct' && Array.isArray(out.grammar) ? out.grammar.filter(g => g && g.word) : [] };
-  } catch (e) {
-    if (e && e.name === 'AbortError') throw new Error('Claude took too long to answer.');
-    if (e instanceof TypeError) throw new Error('Couldn\'t reach Claude. Check your internet connection.');
-    throw e;
-  } finally { clearTimeout(timer); }
+  // One attempt: returns the parsed check, or null if Claude's reply couldn't be read.
+  const attempt = async () => {
+    const ctl = new AbortController(), timer = setTimeout(() => ctl.abort(), 20000);
+    try {
+      let res = await post(CHECK_MODEL, ctl.signal);
+      if (res.status === 404 && settings.model !== CHECK_MODEL) res = await post(settings.model, ctl.signal);
+      if (!res.ok) {
+        let detail = '';
+        try { const j = await res.json(); detail = (j && j.error && j.error.message) || ''; } catch {}
+        throw new Error(apiError(res.status, detail));
+      }
+      const data = await res.json();
+      const block = (data.content || []).find(b => b.type === 'tool_use' && b.input);
+      let out = block ? block.input : null;
+      if (!out || !out.verdict) {
+        const reply = (data.content || []).filter(b => b.type === 'text').map(b => b.text).join('\n');
+        const s = reply.indexOf('{'), e = reply.lastIndexOf('}');
+        if (s >= 0 && e > s) { try { out = JSON.parse(reply.slice(s, e + 1)); } catch {} }
+        if ((!out || !out.verdict) && reply) {   // plain words: "Correct. …" / "Nearly: …" / "Wrong …"
+          const m = reply.match(/\b(correct|nearly|wrong|incorrect)\b/i);
+          if (m) out = { verdict: m[1], feedback: reply.trim().slice(0, 400) };
+        }
+      }
+      if (!out) return null;
+      // Accept small wording differences ("Correct", "incorrect", "almost"…).
+      const v = String(out.verdict || '').trim().toLowerCase();
+      const verdict = /^(correct|right|yes)/.test(v) ? 'correct'
+        : /^(nearly|almost|partial|close)/.test(v) ? 'nearly'
+        : /^(wrong|incorrect|no)/.test(v) ? 'wrong' : null;
+      if (!verdict) return null;
+      return { verdict, feedback: String(out.feedback || '').trim(),
+               grammar: more && verdict !== 'correct' && Array.isArray(out.grammar) ? out.grammar.filter(g => g && g.word) : [] };
+    } catch (e) {
+      if (e && e.name === 'AbortError') throw new Error('Claude took too long to answer.');
+      if (e instanceof TypeError) throw new Error('Couldn\'t reach Claude. Check your internet connection.');
+      throw e;
+    } finally { clearTimeout(timer); }
+  };
+  const r = (await attempt()) || (await attempt());   // one automatic retry
+  if (!r) throw new Error('Claude didn\'t return a usable check (tried twice).');
+  return r;
 }
 
 function setSuggest(s) {

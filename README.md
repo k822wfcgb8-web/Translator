@@ -95,6 +95,7 @@ Then reload the page, and pick the voice in the app's Settings if you like.
 
 The version number is shown under the app's name. It goes up with every update pushed to GitHub: the first number for big changes, the second for smaller ones. If your device still shows the old number after an update, reload the page (or close and reopen the home-screen app).
 
+- **v3.2** (Nov 1, 2026): Fixed "Claude didn't return a usable check": Claude must now always answer in the app's check format, gets more room for its reply, and the app retries once automatically.
 - **v3.1** (Nov 1, 2026): Flash cards: 🔊 Listen only appears for Croatian; no Listen button on English words, on either the question or the answer side.
 - **v3.0** (Nov 1, 2026): Flash cards redesigned as a quiz: every card has an answer box like the Translate tab, with **Check**, **I don't know**, **✕ Clear**, and an **Explain more (cases & gender)** tick box. *Flip & self-grade* removed.
 - **v2.9** (Nov 1, 2026): Flash cards: **Mixed** direction; English answers are typed only (🎤 only for Croatian answers); missed cards come back in the opposite direction in Mixed mode; new **I don't know** button.
