@@ -80,11 +80,19 @@ Then reload the page, and pick the voice in the app's Settings if you like.
 - **Studying flash cards:** pick a Unit, Module and Lesson, then tap **Study this set**. Tick **Add everything before this…** to include all earlier vocabulary, and **Add my saved cards** to mix in the cards you saved yourself. Every session goes through the whole chosen set in random order; tap ✕ to stop at any time.
   - Nothing about right or wrong answers is saved. There are no due dates or levels; each session starts fresh.
   - A card you miss comes back at a random later spot (at least 3 other cards in between) until you've answered it right 3 times in that session.
-- **Answer by typing or speaking** (Flash cards tab → *Answer by: Type or speak*): instead of flipping the card and grading yourself, type your answer or tap 🎤 and say it, then tap **Check** (or press Enter/Done). Works in both directions; Croatian answers get č ć đ š ž keys.
+- **Direction:** *Croatian → English*, *English → Croatian*, or **Mixed**. In Mixed, each card picks its direction at random and the card says which language to answer in. A card you miss comes back later the other way round, and switches again on each repeat. Choosing Mixed turns on *Type or speak* (you can switch back to Flip).
+- **Answer by typing or speaking** (Flash cards tab → *Answer by: Type or speak*): instead of flipping the card and grading yourself, type your answer or tap 🎤 and say it, then tap **Check** (or press Enter/Done). Croatian answers can be typed or spoken and get č ć đ š ž keys; English answers are typed only (no 🎤).
   - The app checks your answer on the device first, which is free and instant. It accepts any wording listed on the card ("table / desk"), with or without bracketed hints ("American (woman)" or "American"), and ignores capitals, punctuation, and *a / the / to*.
   - If your answer isn't word-for-word the card, Claude (Haiku 5.5, the cheapest model) judges it. It accepts synonyms and explains wrong endings, cases or genders in a sentence. Each of these checks is a very small request.
   - The result is ✓ Correct, ≈ Nearly or ✗ Not quite, and the matching button (*Knew it* or *Still learning*) is outlined as the suggestion. Press Enter or tap it to accept, or tap the other button if you disagree, for example when speech recognition misheard you.
   - A typed Croatian answer with a missing or wrong č ć đ š ž counts as *Nearly*. A spoken one counts as correct, because the recogniser often can't tell those letters apart.
-  - **Don't know** shows the answer and suggests *Still learning*. *Flip & self-grade* works exactly as before.
+  - **I don't know** shows the answer straight away and suggests *Still learning*. It's there in both answer modes; with *Flip & self-grade*, **Show answer** still lets you grade yourself.
   - **Say it** (pronunciation practice) appears only after a ✓ Correct answer, for that card only. It's optional: say the Croatian up to 3 times and each try is scored word by word, or just tap *Knew it* to move on. It doesn't change the grade. (It replaces the old *Say it* study mode.)
 - **Grammar on flash cards:** under the Croatian, each card shows the gender of every noun (masculine / feminine / neuter, plus animate or plural), its case in that sentence (with the preposition that decides it), and which words agree with it. Adjective cards show all three forms (dobar · dobra · dobro · dobri). A ⚠ line appears if a card's Croatian looks wrong. New cards are checked by Claude when you save them; cards that couldn't be checked yet (no key, offline) can be done with **Check now** on the Flash cards tab. You can correct a single noun's gender with the Gender menu after **Show answer**.
+
+## 5. Version history
+
+The version number is shown under the app's name. It goes up with every update pushed to GitHub: the first number for big changes, the second for smaller ones. If your device still shows the old number after an update, reload the page (or close and reopen the home-screen app).
+
+- **v2.9** (Nov 1, 2026): Flash cards: **Mixed** direction; English answers are typed only (🎤 only for Croatian answers); missed cards come back in the opposite direction in Mixed mode; new **I don't know** button.
+- **v2.8**: Version before this history was started.
