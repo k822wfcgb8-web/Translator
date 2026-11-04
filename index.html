@@ -331,6 +331,7 @@ h3 { font-size: 1rem; margin: 0; }
 @media (min-width: 620px) { .pick3 { grid-template-columns: 1.3fr 1fr 1.6fr; } }
 .pick3 select { width: 100%; min-height: 44px; border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; background: var(--surface-2); font-size: 16px; font-weight: 400; }
 .pick3 select:disabled { opacity: .5; }
+@media (min-width: 620px) { .pick3.pick1 { grid-template-columns: 1fr; } }
 .card-list { list-style: none; padding: 0; margin: 8px 0 0; display: grid; gap: 8px; }
 .card-list li { display: flex; gap: 8px; align-items: center; border: 1px solid var(--line); border-radius: 12px; padding: 8px 10px; }
 .card-list .t { flex: 1; min-width: 0; }
@@ -370,7 +371,7 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
 <header class="top">
   <div class="brand">
     <span class="logo" aria-hidden="true"></span>
-    <div><h1>Prevoditelj</h1><p>Croatian ⇄ English · v3.2</p></div>
+    <div><h1>Prevoditelj</h1><p>Croatian ⇄ English · v3.4</p></div>
   </div>
   <button id="settingsBtn" class="icon-btn" aria-label="Settings" title="Settings">⚙︎</button>
 </header>
@@ -478,6 +479,9 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
           <label class="field">Unit <select id="fcUnit"></select></label>
           <label class="field">Module <select id="fcModule"></select></label>
           <label class="field">Lesson <select id="fcLesson"></select></label>
+        </div>
+        <div class="pick3 pick1">
+          <label class="field">Handout <select id="fcHandout"></select></label>
         </div>
         <label class="check" id="fcPrevWrap" hidden><input type="checkbox" id="fcPrev"> <span id="fcPrevText">Add all previous lessons</span></label>
         <label class="check" id="fcOwnWrap" hidden><input type="checkbox" id="fcOwn"> <span id="fcOwnText">Add my saved cards</span></label>
@@ -1765,7 +1769,57 @@ function tagsOf(c) {
   tagCache.set(note, t);
   return t;
 }
-const hasBookTag = c => { const t = tagsOf(c); return t.ranks.length > 0 || t.topics.length > 0; };
+const HANDOUT_TAG = /(^|\n)Handout:/;
+const hasBookTag = c => { const t = tagsOf(c); return t.ranks.length > 0 || t.topics.length > 0 || HANDOUT_TAG.test(c.note || ''); };
+
+/* --- Handouts (Claude-made reference sheets) ---
+ * handouts.json sits next to this page on GitHub and is loaded at start-up (the last copy is kept for offline use).
+ * A card belongs to a handout when its Croatian matches a handout word, so book cards that are also on a
+ * handout count too. Handout words the device doesn't have yet are added as new cards.
+ */
+let HANDOUTS = [];                 // [{ id, title, file }]
+const hoIndex = new Map();         // normHr -> Set of handout ids
+const handoutsOf = c => hoIndex.get(normHr(c.hr));
+function applyHandouts(data) {
+  if (!data || data.app !== 'prevoditelj' || !Array.isArray(data.handouts) || !Array.isArray(data.cards)) return false;
+  HANDOUTS = data.handouts.filter(h => h && h.id && h.title).map(h => ({ id: String(h.id), title: String(h.title), file: String(h.file || '') }));
+  hoIndex.clear();
+  data.cards.forEach(c => {
+    if (!c || typeof c.hr !== 'string' || !Array.isArray(c.ho)) return;
+    const k = normHr(c.hr); if (!hoIndex.has(k)) hoIndex.set(k, new Set());
+    c.ho.forEach(h => hoIndex.get(k).add(String(h)));
+  });
+  const ids = new Set(cards.map(c => c.id));
+  const have = new Set(live().map(c => normHr(c.hr)));
+  let added = 0;
+  data.cards.forEach(raw => {
+    if (!raw || !raw.id || typeof raw.hr !== 'string') return;
+    const k = normHr(raw.hr);
+    if (ids.has(String(raw.id))) return;   // already here (or deleted on purpose)
+    if (have.has(k)) {
+      // Word already on this device: if the file files it under a book lesson, add that lesson tag to the existing card.
+      const tagLine = (String(raw.note || '').split('\n').find(x => /U\d+\s*·\s*M\d+\s*·\s*Lesson\s*\d+/.test(x)) || '').replace(/^Tako lako\s*/, '');
+      if (!tagLine) return;
+      const want = tagsOf({ note: tagLine }).ranks[0];
+      live().filter(c => normHr(c.hr) === k && !tagsOf(c).ranks.includes(want)).forEach(c => {
+        c.note = (c.note ? c.note + '\n' : '') + 'Also: ' + tagLine; c.updatedAt = Date.now(); added++;
+      });
+      return;
+    }
+    cards.push(cleanCard(raw)); ids.add(String(raw.id)); have.add(k); added++;
+  });
+  if (added) persistCards(false); else { renderDeckPick(); updateDue(); }
+  return true;
+}
+async function loadHandouts() {
+  applyHandouts(store.get('handouts', null));   // last copy first, so the picker works offline
+  try {
+    const res = await fetch('handouts.json', { cache: 'no-cache' });
+    if (!res.ok) return;
+    const data = await res.json();
+    if (applyHandouts(data)) store.set('handouts', data);
+  } catch { /* offline or opened from a file: keep the stored copy */ }
+}
 function lessonOf(c) {   // first lesson tag (kept for older code paths)
   const r = tagsOf(c).ranks.find(x => x % 10000 !== PB_SLOT);
   if (r === undefined) return null;
@@ -1775,7 +1829,9 @@ function lessonOf(c) {   // first lesson tag (kept for older code paths)
 const lessonRank = L => L.u * 10000 + L.m * 100 + L.l;
 function shuffle(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
 
-const pick = { u: store.get('fcU', 'all'), m: store.get('fcM', 'all'), l: store.get('fcL', 'all') };
+const pick = { u: store.get('fcU', 'all'), m: store.get('fcM', 'all'), l: store.get('fcL', 'all'), h: store.get('fcH', 'none') };
+const hoOn = () => pick.h !== 'none' && HANDOUTS.length > 0;
+const hoMatcher = h => c => { const s = handoutsOf(c); return !!s && (h === 'all' || s.has(h)); };
 
 // The rank range a selection covers. null = no range (all / own / topics).
 function rangeOf(sel) {
@@ -1801,7 +1857,10 @@ function baseMatcher(sel, prev) {
 }
 const countOf = (pool, sel) => { const f = matcher(sel, false); let n = 0; for (const c of pool) if (f(c)) n++; return n; };
 const ownOn = () => $('#fcOwn').checked && pick.u !== 'all' && pick.u !== 'own';
-function deckFilter(pool) { return pool.filter(matcher(pick, $('#fcPrev').checked && rangeOf(pick) !== null, ownOn())); }
+function deckFilter(pool) {
+  if (hoOn()) return pool.filter(hoMatcher(pick.h));   // a handout is its own set
+  return pool.filter(matcher(pick, $('#fcPrev').checked && rangeOf(pick) !== null, ownOn()));
+}
 
 function fillSelect(sel, options, want) {
   sel.innerHTML = '';
@@ -1858,8 +1917,20 @@ function renderDeckPick() {
   pick.l = fillSelect(lSel, lesOpts, pick.l);
   lSel.disabled = lesOpts.length < 2;
 
-  store.set('fcU', pick.u); store.set('fcM', pick.m); store.set('fcL', pick.l);
-  const level = !/^\d+$/.test(pick.u) ? null
+  // Handout picker: its own set. While one is chosen, Unit / Module / Lesson are greyed out.
+  const hSel = $('#fcHandout');
+  const hoOpts = [['none', HANDOUTS.length ? 'None: use Unit / Module / Lesson' : 'None (handouts not loaded yet)']];
+  if (HANDOUTS.length) {
+    hoOpts.push(['all', `All handouts (${pool.filter(hoMatcher('all')).length})`]);
+    HANDOUTS.forEach(h => { const n = pool.filter(hoMatcher(h.id)).length; hoOpts.push([h.id, `${h.title} (${n})`, !n]); });
+  }
+  const shownH = fillSelect(hSel, hoOpts, pick.h);
+  if (HANDOUTS.length) pick.h = shownH;   // before handouts load, keep the remembered choice
+  hSel.disabled = hoOpts.length < 2;
+  [uSel, mSel, lSel].forEach(s => { if (hoOn()) s.disabled = true; else if (s === uSel) s.disabled = false; });
+
+  store.set('fcU', pick.u); store.set('fcM', pick.m); store.set('fcL', pick.l); store.set('fcH', pick.h);
+  const level = hoOn() || !/^\d+$/.test(pick.u) ? null
     : pick.m === 'pb' ? 'phrases'
     : (/^\d+$/.test(pick.m) && pick.l !== 'all') ? 'lesson'
     : /^\d+$/.test(pick.m) ? 'module' : 'unit';
@@ -1869,7 +1940,7 @@ function renderDeckPick() {
     : level === 'phrases' ? 'Add everything before these phrases too'
     : 'Add all previous units too';
   const nMine = countOf(pool, { u: 'own' });
-  $('#fcOwnWrap').hidden = !nMine || pick.u === 'all' || pick.u === 'own';
+  $('#fcOwnWrap').hidden = !nMine || pick.u === 'all' || pick.u === 'own' || hoOn();
   $('#fcOwnText').textContent = `Add my saved cards (${nMine})`;
   $('#studyOwn').hidden = !nMine;
   $('#studyOwn').textContent = `Study my cards (${nMine})`;
@@ -2743,6 +2814,7 @@ if (savedMode === 'say') { savedMode = 'hr-en'; store.set('fcmode', savedMode); 
 $('#fcUnit').addEventListener('change', e => { pick.u = e.target.value; pick.m = 'all'; pick.l = 'all'; renderDeckPick(); updateDue(); });
 $('#fcModule').addEventListener('change', e => { pick.m = e.target.value; pick.l = 'all'; renderDeckPick(); updateDue(); });
 $('#fcLesson').addEventListener('change', e => { pick.l = e.target.value; renderDeckPick(); updateDue(); });
+$('#fcHandout').addEventListener('change', e => { pick.h = e.target.value; renderDeckPick(); updateDue(); });
 $('#fcPrev').checked = !!store.get('fcPrev', false);
 $('#fcPrev').addEventListener('change', e => { store.set('fcPrev', e.target.checked); updateDue(); });
 $('#fcOwn').checked = !!store.get('fcOwn', false);
@@ -2753,6 +2825,7 @@ $$('input[name=fcmode]').forEach(r => { r.checked = r.value === savedMode; r.add
 window.addEventListener('beforeunload', e => { if (sync.dirty && live().length) { e.preventDefault(); e.returnValue = ''; } });
 migrateGram();
 renderSync(); renderCardList(); updateDue();
+loadHandouts();
 if (store.get('tab', 'translate') === 'cards') showTab('cards');
 
 // Test hook (used only by automated checks).

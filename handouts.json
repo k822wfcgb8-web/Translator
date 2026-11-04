@@ -1,0 +1,9783 @@
+{
+ "app": "prevoditelj",
+ "kind": "handouts",
+ "version": 1,
+ "savedAt": 1793664000000,
+ "source": "Claude-made reference handouts in Taka Lako Class/Claude outputs",
+ "handouts": [
+  {
+   "id": "family",
+   "title": "Obitelj (family)",
+   "file": "Croatian_Family.pdf"
+  },
+  {
+   "id": "groceries",
+   "title": "Namirnice (groceries)",
+   "file": "Croatian_Groceries.pdf"
+  },
+  {
+   "id": "tools",
+   "title": "Kućni alat (household tools)",
+   "file": "Croatian_Household_Tools.pdf"
+  },
+  {
+   "id": "house",
+   "title": "Kuća i namještaj (house and furniture)",
+   "file": "Croatian_House_and_Furniture.pdf"
+  },
+  {
+   "id": "questions",
+   "title": "Upitne riječi (question words)",
+   "file": "Croatian_Question_Words-1.pdf"
+  },
+  {
+   "id": "kwords",
+   "title": "K-words anchor phrases",
+   "file": "K_Words_Anchor_Phrases.pdf"
+  },
+  {
+   "id": "conj",
+   "title": "Veznici (conjunctions)",
+   "file": "Croatian_Conjunctions.pdf"
+  },
+  {
+   "id": "short",
+   "title": "Kratke riječi (short words)",
+   "file": "Croatian_Short_Words.pdf"
+  }
+ ],
+ "cards": [
+  {
+   "id": "ho-family-obitelj",
+   "hr": "obitelj",
+   "en": "family",
+   "note": "Handout: Obitelj (family)\nnoun, feminine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-family-roditelji",
+   "hr": "roditelji",
+   "en": "parents",
+   "note": "Handout: Obitelj (family)\nnoun, masculine, plural only",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000,
+    "plural": true
+   }
+  },
+  {
+   "id": "ho-family-roditelj",
+   "hr": "roditelj",
+   "en": "parent",
+   "note": "Handout: Obitelj (family)\nnoun, masculine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000,
+    "animate": true
+   }
+  },
+  {
+   "id": "ho-family-otac",
+   "hr": "otac",
+   "en": "father",
+   "note": "Handout: Obitelj (family)\nnoun, masculine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000,
+    "animate": true
+   }
+  },
+  {
+   "id": "ho-family-tata",
+   "hr": "tata",
+   "en": "dad",
+   "note": "Handout: Obitelj (family)\nnoun, masculine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000,
+    "animate": true
+   }
+  },
+  {
+   "id": "ho-family-majka",
+   "hr": "majka",
+   "en": "mother",
+   "note": "Handout: Obitelj (family)\nnoun, feminine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-family-mama",
+   "hr": "mama",
+   "en": "mum / mom",
+   "note": "Handout: Obitelj (family)\nnoun, feminine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-family-sin",
+   "hr": "sin",
+   "en": "son",
+   "note": "Handout: Obitelj (family)\nnoun, masculine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000,
+    "animate": true
+   }
+  },
+  {
+   "id": "ho-family-sinovi",
+   "hr": "sinovi",
+   "en": "sons",
+   "note": "Handout: Obitelj (family)\nnoun, masculine, plural only",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000,
+    "plural": true
+   }
+  },
+  {
+   "id": "ho-family-kci",
+   "hr": "kći",
+   "en": "daughter",
+   "note": "Handout: Obitelj (family)\nnoun, feminine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-family-dijete",
+   "hr": "dijete",
+   "en": "child",
+   "note": "Handout: Obitelj (family)\nnoun, neuter",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-family-djeca",
+   "hr": "djeca",
+   "en": "children",
+   "note": "Handout: Obitelj (family)",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-family-brat",
+   "hr": "brat",
+   "en": "brother",
+   "note": "Handout: Obitelj (family)\nnoun, masculine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000,
+    "animate": true
+   }
+  },
+  {
+   "id": "ho-family-braca",
+   "hr": "braća",
+   "en": "brothers",
+   "note": "Handout: Obitelj (family)",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-family-sestra",
+   "hr": "sestra",
+   "en": "sister",
+   "note": "Handout: Obitelj (family)\nnoun, feminine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-family-braca-i-sestre",
+   "hr": "braća i sestre",
+   "en": "siblings",
+   "note": "Handout: Obitelj (family)",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-family-blizanci",
+   "hr": "blizanci",
+   "en": "twins",
+   "note": "Handout: Obitelj (family)\nnoun, masculine, plural only",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000,
+    "plural": true
+   }
+  },
+  {
+   "id": "ho-family-muz-suprug",
+   "hr": "muž / suprug",
+   "en": "husband",
+   "note": "Handout: Obitelj (family)\nnoun, masculine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000,
+    "animate": true
+   }
+  },
+  {
+   "id": "ho-family-zena-supruga",
+   "hr": "žena / supruga",
+   "en": "wife",
+   "note": "Handout: Obitelj (family)\nnoun, feminine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-family-djed",
+   "hr": "djed",
+   "en": "grandfather",
+   "note": "Handout: Obitelj (family)\nnoun, masculine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000,
+    "animate": true
+   }
+  },
+  {
+   "id": "ho-family-baka",
+   "hr": "baka",
+   "en": "grandmother",
+   "note": "Handout: Obitelj (family)\nnoun, feminine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-family-unuk",
+   "hr": "unuk",
+   "en": "grandson",
+   "note": "Handout: Obitelj (family)\nnoun, masculine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000,
+    "animate": true
+   }
+  },
+  {
+   "id": "ho-family-unuci",
+   "hr": "unuci",
+   "en": "grandchildren",
+   "note": "Handout: Obitelj (family)\nnoun, masculine, plural only",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000,
+    "plural": true
+   }
+  },
+  {
+   "id": "ho-family-unuka",
+   "hr": "unuka",
+   "en": "granddaughter",
+   "note": "Handout: Obitelj (family)\nnoun, feminine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-family-pradjed",
+   "hr": "pradjed",
+   "en": "great-grandfather",
+   "note": "Handout: Obitelj (family)\nnoun, masculine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000,
+    "animate": true
+   }
+  },
+  {
+   "id": "ho-family-prabaka",
+   "hr": "prabaka",
+   "en": "great-grandmother",
+   "note": "Handout: Obitelj (family)\nnoun, feminine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-family-praunuk",
+   "hr": "praunuk",
+   "en": "great-grandson",
+   "note": "Handout: Obitelj (family)\nnoun, masculine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000,
+    "animate": true
+   }
+  },
+  {
+   "id": "ho-family-praunuka",
+   "hr": "praunuka",
+   "en": "great-granddaughter",
+   "note": "Handout: Obitelj (family)\nnoun, feminine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-family-stric",
+   "hr": "stric",
+   "en": "uncle (father's brother)",
+   "note": "Handout: Obitelj (family)\nnoun, masculine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000,
+    "animate": true
+   }
+  },
+  {
+   "id": "ho-family-strina",
+   "hr": "strina",
+   "en": "aunt (wife of father's brother)",
+   "note": "Handout: Obitelj (family)\nnoun, feminine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-family-ujak",
+   "hr": "ujak",
+   "en": "uncle (mother's brother)",
+   "note": "Handout: Obitelj (family)\nnoun, masculine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000,
+    "animate": true
+   }
+  },
+  {
+   "id": "ho-family-ujna",
+   "hr": "ujna",
+   "en": "aunt (wife of mother's brother)",
+   "note": "Handout: Obitelj (family)\nnoun, feminine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-family-tetka-teta",
+   "hr": "tetka / teta",
+   "en": "aunt",
+   "note": "Handout: Obitelj (family)\nnoun, feminine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-family-tetak",
+   "hr": "tetak",
+   "en": "uncle (aunt's husband)",
+   "note": "Handout: Obitelj (family)\nnoun, masculine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000,
+    "animate": true
+   }
+  },
+  {
+   "id": "ho-family-bratic-rodak",
+   "hr": "bratić / rođak",
+   "en": "cousin (male)",
+   "note": "Handout: Obitelj (family)\nnoun, masculine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000,
+    "animate": true
+   }
+  },
+  {
+   "id": "ho-family-sestricna-rodakinja",
+   "hr": "sestrična / rođakinja",
+   "en": "cousin (female)",
+   "note": "Handout: Obitelj (family)\nnoun, feminine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-family-necak",
+   "hr": "nećak",
+   "en": "nephew",
+   "note": "Handout: Obitelj (family)\nnoun, masculine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000,
+    "animate": true
+   }
+  },
+  {
+   "id": "ho-family-necakinja",
+   "hr": "nećakinja",
+   "en": "niece",
+   "note": "Handout: Obitelj (family)\nnoun, feminine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-family-svekar",
+   "hr": "svekar",
+   "en": "father-in-law (husband's father)",
+   "note": "Handout: Obitelj (family)\nnoun, masculine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000,
+    "animate": true
+   }
+  },
+  {
+   "id": "ho-family-punac",
+   "hr": "punac",
+   "en": "father-in-law (wife's father)",
+   "note": "Handout: Obitelj (family)\nnoun, masculine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000,
+    "animate": true
+   }
+  },
+  {
+   "id": "ho-family-svekrva",
+   "hr": "svekrva",
+   "en": "mother-in-law (husband's mother)",
+   "note": "Handout: Obitelj (family)\nnoun, feminine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-family-punica",
+   "hr": "punica",
+   "en": "mother-in-law (wife's mother)",
+   "note": "Handout: Obitelj (family)\nnoun, feminine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-family-zet",
+   "hr": "zet",
+   "en": "son-in-law",
+   "note": "Handout: Obitelj (family)\nnoun, masculine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000,
+    "animate": true
+   }
+  },
+  {
+   "id": "ho-family-snaha",
+   "hr": "snaha",
+   "en": "daughter-in-law",
+   "note": "Handout: Obitelj (family)\nnoun, feminine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-family-sogor",
+   "hr": "šogor",
+   "en": "brother-in-law",
+   "note": "Handout: Obitelj (family)\nnoun, masculine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000,
+    "animate": true
+   }
+  },
+  {
+   "id": "ho-family-sogorica",
+   "hr": "šogorica",
+   "en": "sister-in-law",
+   "note": "Handout: Obitelj (family)\nnoun, feminine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-family-djever",
+   "hr": "djever",
+   "en": "brother-in-law (husband's brother)",
+   "note": "Handout: Obitelj (family)\nnoun, masculine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000,
+    "animate": true
+   }
+  },
+  {
+   "id": "ho-family-surjak",
+   "hr": "šurjak",
+   "en": "brother-in-law (wife's brother)",
+   "note": "Handout: Obitelj (family)\nnoun, masculine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000,
+    "animate": true
+   }
+  },
+  {
+   "id": "ho-family-zaova",
+   "hr": "zaova",
+   "en": "sister-in-law (husband's sister)",
+   "note": "Handout: Obitelj (family)\nnoun, feminine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-family-svastika",
+   "hr": "svastika",
+   "en": "sister-in-law (wife's sister)",
+   "note": "Handout: Obitelj (family)\nnoun, feminine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-family-ocuh",
+   "hr": "očuh",
+   "en": "stepfather",
+   "note": "Handout: Obitelj (family)\nnoun, masculine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000,
+    "animate": true
+   }
+  },
+  {
+   "id": "ho-family-maceha",
+   "hr": "maćeha",
+   "en": "stepmother",
+   "note": "Handout: Obitelj (family)\nnoun, feminine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-family-pastorak",
+   "hr": "pastorak",
+   "en": "stepson",
+   "note": "Handout: Obitelj (family)\nnoun, masculine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000,
+    "animate": true
+   }
+  },
+  {
+   "id": "ho-family-pastorka",
+   "hr": "pastorka",
+   "en": "stepdaughter",
+   "note": "Handout: Obitelj (family)\nnoun, feminine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-family-polubrat",
+   "hr": "polubrat",
+   "en": "half-brother",
+   "note": "Handout: Obitelj (family)\nnoun, masculine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000,
+    "animate": true
+   }
+  },
+  {
+   "id": "ho-family-polusestra",
+   "hr": "polusestra",
+   "en": "half-sister",
+   "note": "Handout: Obitelj (family)\nnoun, feminine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-family-kum",
+   "hr": "kum",
+   "en": "godfather / best man",
+   "note": "Handout: Obitelj (family)\nnoun, masculine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000,
+    "animate": true
+   }
+  },
+  {
+   "id": "ho-family-kuma",
+   "hr": "kuma",
+   "en": "godmother / maid of honour",
+   "note": "Handout: Obitelj (family)\nnoun, feminine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-family-decko",
+   "hr": "dečko",
+   "en": "boyfriend",
+   "note": "Handout: Obitelj (family)\nnoun, masculine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000,
+    "animate": true
+   }
+  },
+  {
+   "id": "ho-family-djevojka-cura",
+   "hr": "djevojka / cura",
+   "en": "girlfriend",
+   "note": "Handout: Obitelj (family)\nnoun, feminine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-family-zarucnik",
+   "hr": "zaručnik",
+   "en": "fiancé",
+   "note": "Handout: Obitelj (family)\nnoun, masculine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000,
+    "animate": true
+   }
+  },
+  {
+   "id": "ho-family-zarucnica",
+   "hr": "zaručnica",
+   "en": "fiancée",
+   "note": "Handout: Obitelj (family)\nnoun, feminine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-family-rodbina",
+   "hr": "rodbina",
+   "en": "relatives (all of them)",
+   "note": "Handout: Obitelj (family)\nnoun, feminine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-family-udovac",
+   "hr": "udovac",
+   "en": "widower",
+   "note": "Handout: Obitelj (family)\nnoun, masculine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000,
+    "animate": true
+   }
+  },
+  {
+   "id": "ho-family-udovica",
+   "hr": "udovica",
+   "en": "widow",
+   "note": "Handout: Obitelj (family)\nnoun, feminine",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-family-bivsi",
+   "hr": "bivši",
+   "en": "former / ex-",
+   "note": "Handout: Obitelj (family)\nadjective",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "bivši",
+     "bivša",
+     "bivše"
+    ],
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-family-ozenjen",
+   "hr": "oženjen",
+   "en": "married (of a man)",
+   "note": "Handout: Obitelj (family)",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-family-udana",
+   "hr": "udana",
+   "en": "married (of a woman)",
+   "note": "Handout: Obitelj (family)",
+   "ho": [
+    "family"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-voce",
+   "hr": "voće",
+   "en": "fruit",
+   "note": "Handout: Namirnice (groceries)\nnoun, neuter",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-povrce",
+   "hr": "povrće",
+   "en": "vegetables",
+   "note": "Handout: Namirnice (groceries)\nnoun, neuter",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-zacini",
+   "hr": "začini",
+   "en": "spices / condiments",
+   "note": "Handout: Namirnice (groceries)\nnoun, masculine, plural only",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000,
+    "plural": true
+   }
+  },
+  {
+   "id": "ho-groceries-jabuka",
+   "hr": "jabuka",
+   "en": "apple",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-kruska",
+   "hr": "kruška",
+   "en": "pear",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-banana",
+   "hr": "banana",
+   "en": "banana",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-naranca",
+   "hr": "naranča",
+   "en": "orange",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-mandarina",
+   "hr": "mandarina",
+   "en": "mandarin",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-limun",
+   "hr": "limun",
+   "en": "lemon",
+   "note": "Handout: Namirnice (groceries)\nnoun, masculine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-grozde",
+   "hr": "grožđe",
+   "en": "grapes",
+   "note": "Handout: Namirnice (groceries)\nnoun, neuter",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-jagoda",
+   "hr": "jagoda",
+   "en": "strawberry",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-malina",
+   "hr": "malina",
+   "en": "raspberry",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-tresnja",
+   "hr": "trešnja",
+   "en": "cherry",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-sljiva",
+   "hr": "šljiva",
+   "en": "plum",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-breskva",
+   "hr": "breskva",
+   "en": "peach",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-marelica",
+   "hr": "marelica",
+   "en": "apricot",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-smokva",
+   "hr": "smokva",
+   "en": "fig",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-lubenica",
+   "hr": "lubenica",
+   "en": "watermelon",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-dinja",
+   "hr": "dinja",
+   "en": "melon",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-krumpir",
+   "hr": "krumpir",
+   "en": "potato",
+   "note": "Handout: Namirnice (groceries)\nnoun, masculine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-rajcica",
+   "hr": "rajčica",
+   "en": "tomato",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-krastavac",
+   "hr": "krastavac",
+   "en": "cucumber",
+   "note": "Handout: Namirnice (groceries)\nnoun, masculine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-luk",
+   "hr": "luk",
+   "en": "onion",
+   "note": "Handout: Namirnice (groceries)\nnoun, masculine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-cesnjak",
+   "hr": "češnjak",
+   "en": "garlic",
+   "note": "Handout: Namirnice (groceries)\nnoun, masculine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-mrkva",
+   "hr": "mrkva",
+   "en": "carrot",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-paprika",
+   "hr": "paprika",
+   "en": "pepper (vegetable)",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-zelena-salata",
+   "hr": "zelena salata",
+   "en": "lettuce",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-kupus",
+   "hr": "kupus",
+   "en": "cabbage",
+   "note": "Handout: Namirnice (groceries)\nnoun, masculine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-grah",
+   "hr": "grah",
+   "en": "beans",
+   "note": "Handout: Namirnice (groceries)\nnoun, masculine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-grasak",
+   "hr": "grašak",
+   "en": "peas",
+   "note": "Handout: Namirnice (groceries)\nnoun, masculine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-gljiva",
+   "hr": "gljiva",
+   "en": "mushroom",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-spinat",
+   "hr": "špinat",
+   "en": "spinach",
+   "note": "Handout: Namirnice (groceries)\nnoun, masculine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-kukuruz",
+   "hr": "kukuruz",
+   "en": "corn",
+   "note": "Handout: Namirnice (groceries)\nnoun, masculine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-tikvica",
+   "hr": "tikvica",
+   "en": "zucchini",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-patlidzan",
+   "hr": "patlidžan",
+   "en": "eggplant",
+   "note": "Handout: Namirnice (groceries)\nnoun, masculine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-brokula",
+   "hr": "brokula",
+   "en": "broccoli",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-meso",
+   "hr": "meso",
+   "en": "meat",
+   "note": "Handout: Namirnice (groceries)\nnoun, neuter",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-piletina",
+   "hr": "piletina",
+   "en": "chicken (meat)",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-govedina",
+   "hr": "govedina",
+   "en": "beef",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-svinjetina",
+   "hr": "svinjetina",
+   "en": "pork",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-janjetina",
+   "hr": "janjetina",
+   "en": "lamb",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-teletina",
+   "hr": "teletina",
+   "en": "veal",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-mljeveno-meso",
+   "hr": "mljeveno meso",
+   "en": "minced meat",
+   "note": "Handout: Namirnice (groceries)\nnoun, neuter",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-sunka",
+   "hr": "šunka",
+   "en": "ham",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-kobasica",
+   "hr": "kobasica",
+   "en": "sausage",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-slanina",
+   "hr": "slanina",
+   "en": "bacon",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-riba",
+   "hr": "riba",
+   "en": "fish",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-tuna",
+   "hr": "tuna",
+   "en": "tuna",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-kozice",
+   "hr": "kozice",
+   "en": "prawns",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine, plural only",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000,
+    "plural": true
+   }
+  },
+  {
+   "id": "ho-groceries-lignje",
+   "hr": "lignje",
+   "en": "squid",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine, plural only",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000,
+    "plural": true
+   }
+  },
+  {
+   "id": "ho-groceries-sol",
+   "hr": "sol",
+   "en": "salt",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-papar",
+   "hr": "papar",
+   "en": "pepper (spice)",
+   "note": "Handout: Namirnice (groceries)\nnoun, masculine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-ulje",
+   "hr": "ulje",
+   "en": "oil",
+   "note": "Handout: Namirnice (groceries)\nnoun, neuter",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-maslinovo-ulje",
+   "hr": "maslinovo ulje",
+   "en": "olive oil",
+   "note": "Handout: Namirnice (groceries)\nnoun, neuter",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-ocat",
+   "hr": "ocat",
+   "en": "vinegar",
+   "note": "Handout: Namirnice (groceries)\nnoun, masculine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-senf",
+   "hr": "senf",
+   "en": "mustard",
+   "note": "Handout: Namirnice (groceries)\nnoun, masculine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-kecap",
+   "hr": "kečap",
+   "en": "ketchup",
+   "note": "Handout: Namirnice (groceries)\nnoun, masculine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-majoneza",
+   "hr": "majoneza",
+   "en": "mayonnaise",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-umak",
+   "hr": "umak",
+   "en": "sauce",
+   "note": "Handout: Namirnice (groceries)\nnoun, masculine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-med",
+   "hr": "med",
+   "en": "honey",
+   "note": "Handout: Namirnice (groceries)\nnoun, masculine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-pekmez-dzem",
+   "hr": "pekmez / džem",
+   "en": "jam",
+   "note": "Handout: Namirnice (groceries)\nnoun, masculine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-ajvar",
+   "hr": "ajvar",
+   "en": "pepper relish",
+   "note": "Handout: Namirnice (groceries)\nnoun, masculine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-persin",
+   "hr": "peršin",
+   "en": "parsley",
+   "note": "Handout: Namirnice (groceries)\nnoun, masculine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-bosiljak",
+   "hr": "bosiljak",
+   "en": "basil",
+   "note": "Handout: Namirnice (groceries)\nnoun, masculine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-mlijeko",
+   "hr": "mlijeko",
+   "en": "milk",
+   "note": "Handout: Namirnice (groceries)\nnoun, neuter",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-sir",
+   "hr": "sir",
+   "en": "cheese",
+   "note": "Handout: Namirnice (groceries)\nnoun, masculine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-maslac",
+   "hr": "maslac",
+   "en": "butter",
+   "note": "Handout: Namirnice (groceries)\nnoun, masculine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-jogurt",
+   "hr": "jogurt",
+   "en": "yogurt",
+   "note": "Handout: Namirnice (groceries)\nnoun, masculine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-vrhnje",
+   "hr": "vrhnje",
+   "en": "sour cream",
+   "note": "Handout: Namirnice (groceries)\nnoun, neuter",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-jaje",
+   "hr": "jaje",
+   "en": "egg",
+   "note": "Handout: Namirnice (groceries)\nnoun, neuter",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-jaja",
+   "hr": "jaja",
+   "en": "eggs",
+   "note": "Handout: Namirnice (groceries)\nnoun, neuter, plural only",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1793664000000,
+    "plural": true
+   }
+  },
+  {
+   "id": "ho-groceries-kruh",
+   "hr": "kruh",
+   "en": "bread",
+   "note": "Handout: Namirnice (groceries)\nnoun, masculine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-pecivo",
+   "hr": "pecivo",
+   "en": "bread roll",
+   "note": "Handout: Namirnice (groceries)\nnoun, neuter",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-brasno",
+   "hr": "brašno",
+   "en": "flour",
+   "note": "Handout: Namirnice (groceries)\nnoun, neuter",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-riza",
+   "hr": "riža",
+   "en": "rice",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-tjestenina",
+   "hr": "tjestenina",
+   "en": "pasta",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-secer",
+   "hr": "šećer",
+   "en": "sugar",
+   "note": "Handout: Namirnice (groceries)\nnoun, masculine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-kava",
+   "hr": "kava",
+   "en": "coffee",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-caj",
+   "hr": "čaj",
+   "en": "tea",
+   "note": "Handout: Namirnice (groceries)\nnoun, masculine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-voda",
+   "hr": "voda",
+   "en": "water",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-sok",
+   "hr": "sok",
+   "en": "juice",
+   "note": "Handout: Namirnice (groceries)\nnoun, masculine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-vino",
+   "hr": "vino",
+   "en": "wine",
+   "note": "Handout: Namirnice (groceries)\nnoun, neuter",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-pivo",
+   "hr": "pivo",
+   "en": "beer",
+   "note": "Handout: Namirnice (groceries)\nnoun, neuter",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-kilogram-kila",
+   "hr": "kilogram / kila",
+   "en": "kilo / kilogram",
+   "note": "Handout: Namirnice (groceries)",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-pola-kile",
+   "hr": "pola kile",
+   "en": "half a kilo",
+   "note": "Handout: Namirnice (groceries)",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-deset-deka",
+   "hr": "deset deka",
+   "en": "100 grams",
+   "note": "Handout: Namirnice (groceries)",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-litra",
+   "hr": "litra",
+   "en": "litre / liter",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-boca",
+   "hr": "boca",
+   "en": "bottle",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-komad",
+   "hr": "komad",
+   "en": "piece",
+   "note": "Handout: Namirnice (groceries)\nnoun, masculine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-vrecica",
+   "hr": "vrećica",
+   "en": "bag",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-kutija",
+   "hr": "kutija",
+   "en": "box / carton",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-staklenka",
+   "hr": "staklenka",
+   "en": "jar",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-limenka",
+   "hr": "limenka",
+   "en": "can / tin",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-groceries-glavica",
+   "hr": "glavica",
+   "en": "head (of lettuce, onion)",
+   "note": "Handout: Namirnice (groceries)\nnoun, feminine",
+   "ho": [
+    "groceries"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-alat",
+   "hr": "alat",
+   "en": "tools",
+   "note": "Handout: Kućni alat (household tools)\nnoun, masculine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-cekic",
+   "hr": "čekić",
+   "en": "hammer",
+   "note": "Handout: Kućni alat (household tools)\nnoun, masculine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-odvijac",
+   "hr": "odvijač",
+   "en": "screwdriver",
+   "note": "Handout: Kućni alat (household tools)\nnoun, masculine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-vijak",
+   "hr": "vijak",
+   "en": "screw",
+   "note": "Handout: Kućni alat (household tools)\nnoun, masculine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-cavao",
+   "hr": "čavao",
+   "en": "nail",
+   "note": "Handout: Kućni alat (household tools)\nnoun, masculine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-busilica",
+   "hr": "bušilica",
+   "en": "drill",
+   "note": "Handout: Kućni alat (household tools)\nnoun, feminine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-pila",
+   "hr": "pila",
+   "en": "saw",
+   "note": "Handout: Kućni alat (household tools)\nnoun, feminine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-klijesta",
+   "hr": "kliješta",
+   "en": "pliers",
+   "note": "Handout: Kućni alat (household tools)\nnoun, neuter, plural only",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1793664000000,
+    "plural": true
+   }
+  },
+  {
+   "id": "ho-tools-kljuc",
+   "hr": "ključ",
+   "en": "key / wrench",
+   "note": "Handout: Kućni alat (household tools)\nnoun, masculine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-francuski-kljuc",
+   "hr": "francuski ključ",
+   "en": "adjustable wrench",
+   "note": "Handout: Kućni alat (household tools)\nnoun, masculine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-metar",
+   "hr": "metar",
+   "en": "tape measure",
+   "note": "Handout: Kućni alat (household tools)\nnoun, masculine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-ljepilo",
+   "hr": "ljepilo",
+   "en": "glue",
+   "note": "Handout: Kućni alat (household tools)\nnoun, neuter",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-ljepljiva-traka",
+   "hr": "ljepljiva traka",
+   "en": "tape",
+   "note": "Handout: Kućni alat (household tools)\nnoun, feminine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-boja",
+   "hr": "boja",
+   "en": "paint / colour",
+   "note": "Handout: Kućni alat (household tools)\nnoun, feminine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-kist",
+   "hr": "kist",
+   "en": "paintbrush",
+   "note": "Handout: Kućni alat (household tools)\nnoun, masculine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-uze",
+   "hr": "uže",
+   "en": "rope",
+   "note": "Handout: Kućni alat (household tools)\nnoun, neuter",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-skare",
+   "hr": "škare",
+   "en": "scissors",
+   "note": "Handout: Kućni alat (household tools)\nnoun, feminine, plural only",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000,
+    "plural": true
+   }
+  },
+  {
+   "id": "ho-tools-kutija-za-alat",
+   "hr": "kutija za alat",
+   "en": "toolbox",
+   "note": "Handout: Kućni alat (household tools)\nnoun, feminine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-vrt",
+   "hr": "vrt",
+   "en": "garden",
+   "note": "Handout: Kućni alat (household tools) · Kuća i namještaj (house and furniture)\nnoun, masculine",
+   "ho": [
+    "tools",
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-ljestve",
+   "hr": "ljestve",
+   "en": "ladder",
+   "note": "Handout: Kućni alat (household tools)\nnoun, feminine, plural only",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000,
+    "plural": true
+   }
+  },
+  {
+   "id": "ho-tools-lopata",
+   "hr": "lopata",
+   "en": "shovel",
+   "note": "Handout: Kućni alat (household tools)\nnoun, feminine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-grablje",
+   "hr": "grablje",
+   "en": "rake",
+   "note": "Handout: Kućni alat (household tools)\nnoun, feminine, plural only",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000,
+    "plural": true
+   }
+  },
+  {
+   "id": "ho-tools-sjekira",
+   "hr": "sjekira",
+   "en": "axe",
+   "note": "Handout: Kućni alat (household tools)\nnoun, feminine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-crijevo",
+   "hr": "crijevo",
+   "en": "hose",
+   "note": "Handout: Kućni alat (household tools)\nnoun, neuter",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-kanta-za-zalijevanje",
+   "hr": "kanta za zalijevanje",
+   "en": "watering can",
+   "note": "Handout: Kućni alat (household tools)\nnoun, feminine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-rukavice",
+   "hr": "rukavice",
+   "en": "gloves",
+   "note": "Handout: Kućni alat (household tools)\nnoun, feminine, plural only",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000,
+    "plural": true
+   }
+  },
+  {
+   "id": "ho-tools-kuhinja",
+   "hr": "kuhinja",
+   "en": "kitchen",
+   "note": "Handout: Kućni alat (household tools) · Kuća i namještaj (house and furniture)\nnoun, feminine",
+   "ho": [
+    "tools",
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-lonac",
+   "hr": "lonac",
+   "en": "pot",
+   "note": "Handout: Kućni alat (household tools)\nnoun, masculine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-tava",
+   "hr": "tava",
+   "en": "frying pan",
+   "note": "Handout: Kućni alat (household tools)\nnoun, feminine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-tanjur",
+   "hr": "tanjur",
+   "en": "plate",
+   "note": "Handout: Kućni alat (household tools)\nnoun, masculine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-zdjela",
+   "hr": "zdjela",
+   "en": "bowl",
+   "note": "Handout: Kućni alat (household tools)\nnoun, feminine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-salica",
+   "hr": "šalica",
+   "en": "cup",
+   "note": "Handout: Kućni alat (household tools)\nnoun, feminine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-casa",
+   "hr": "čaša",
+   "en": "glass",
+   "note": "Handout: Kućni alat (household tools)\nnoun, feminine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-vilica",
+   "hr": "vilica",
+   "en": "fork",
+   "note": "Handout: Kućni alat (household tools)\nnoun, feminine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-zlica",
+   "hr": "žlica",
+   "en": "spoon",
+   "note": "Handout: Kućni alat (household tools)\nnoun, feminine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-zlicica",
+   "hr": "žličica",
+   "en": "teaspoon",
+   "note": "Handout: Kućni alat (household tools)\nnoun, feminine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-noz",
+   "hr": "nož",
+   "en": "knife",
+   "note": "Handout: Kućni alat (household tools)\nnoun, masculine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-daska-za-rezanje",
+   "hr": "daska za rezanje",
+   "en": "cutting board",
+   "note": "Handout: Kućni alat (household tools)\nnoun, feminine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-otvarac",
+   "hr": "otvarač",
+   "en": "bottle opener",
+   "note": "Handout: Kućni alat (household tools)\nnoun, masculine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-hladnjak",
+   "hr": "hladnjak",
+   "en": "fridge",
+   "note": "Handout: Kućni alat (household tools)\nnoun, masculine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-stednjak",
+   "hr": "štednjak",
+   "en": "stove",
+   "note": "Handout: Kućni alat (household tools)\nnoun, masculine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-pecnica",
+   "hr": "pećnica",
+   "en": "oven",
+   "note": "Handout: Kućni alat (household tools)\nnoun, feminine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-ciscenje",
+   "hr": "čišćenje",
+   "en": "cleaning",
+   "note": "Handout: Kućni alat (household tools)\nnoun, neuter",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-metla",
+   "hr": "metla",
+   "en": "broom",
+   "note": "Handout: Kućni alat (household tools)\nnoun, feminine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-lopatica",
+   "hr": "lopatica",
+   "en": "dustpan",
+   "note": "Handout: Kućni alat (household tools)\nnoun, feminine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-usisavac",
+   "hr": "usisavač",
+   "en": "vacuum cleaner",
+   "note": "Handout: Kućni alat (household tools)\nnoun, masculine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-krpa",
+   "hr": "krpa",
+   "en": "cloth / rag",
+   "note": "Handout: Kućni alat (household tools)\nnoun, feminine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-spuzva",
+   "hr": "spužva",
+   "en": "sponge",
+   "note": "Handout: Kućni alat (household tools)\nnoun, feminine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-kanta",
+   "hr": "kanta",
+   "en": "bucket / bin",
+   "note": "Handout: Kućni alat (household tools)\nnoun, feminine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-deterdzent",
+   "hr": "deterdžent",
+   "en": "detergent",
+   "note": "Handout: Kućni alat (household tools)\nnoun, masculine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-glacalo",
+   "hr": "glačalo",
+   "en": "iron (for clothes)",
+   "note": "Handout: Kućni alat (household tools)\nnoun, neuter",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-perilica-rublja",
+   "hr": "perilica rublja",
+   "en": "washing machine",
+   "note": "Handout: Kućni alat (household tools)\nnoun, feminine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-zarulja",
+   "hr": "žarulja",
+   "en": "light bulb",
+   "note": "Handout: Kućni alat (household tools)\nnoun, feminine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-baterija",
+   "hr": "baterija",
+   "en": "battery",
+   "note": "Handout: Kućni alat (household tools)\nnoun, feminine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-baterijska-svjetiljka",
+   "hr": "baterijska svjetiljka",
+   "en": "flashlight / torch",
+   "note": "Handout: Kućni alat (household tools)\nnoun, feminine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-produzni-kabel",
+   "hr": "produžni kabel",
+   "en": "extension cord",
+   "note": "Handout: Kućni alat (household tools)\nnoun, masculine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-uticnica",
+   "hr": "utičnica",
+   "en": "socket / outlet",
+   "note": "Handout: Kućni alat (household tools)\nnoun, feminine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-utikac",
+   "hr": "utikač",
+   "en": "plug",
+   "note": "Handout: Kućni alat (household tools)\nnoun, masculine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-prekidac",
+   "hr": "prekidač",
+   "en": "switch",
+   "note": "Handout: Kućni alat (household tools)\nnoun, masculine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-osigurac",
+   "hr": "osigurač",
+   "en": "fuse",
+   "note": "Handout: Kućni alat (household tools)\nnoun, masculine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-brava",
+   "hr": "brava",
+   "en": "lock",
+   "note": "Handout: Kućni alat (household tools)\nnoun, feminine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-slavina",
+   "hr": "slavina",
+   "en": "tap / faucet",
+   "note": "Handout: Kućni alat (household tools)\nnoun, feminine",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-popraviti",
+   "hr": "popraviti",
+   "en": "to fix / to repair",
+   "note": "Handout: Kućni alat (household tools)",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-zabiti",
+   "hr": "zabiti",
+   "en": "to hammer in",
+   "note": "Handout: Kućni alat (household tools)",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-busiti",
+   "hr": "bušiti",
+   "en": "to drill",
+   "note": "Handout: Kućni alat (household tools)",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-rezati",
+   "hr": "rezati",
+   "en": "to cut",
+   "note": "Handout: Kućni alat (household tools)",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-mjeriti",
+   "hr": "mjeriti",
+   "en": "to measure",
+   "note": "Handout: Kućni alat (household tools)",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-bojiti",
+   "hr": "bojiti",
+   "en": "to paint",
+   "note": "Handout: Kućni alat (household tools)",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-posuditi",
+   "hr": "posuditi",
+   "en": "to borrow / to lend",
+   "note": "Handout: Kućni alat (household tools)",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-vratiti",
+   "hr": "vratiti",
+   "en": "to give back / to return",
+   "note": "Handout: Kućni alat (household tools)",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-cistiti",
+   "hr": "čistiti",
+   "en": "to clean",
+   "note": "Handout: Kućni alat (household tools)",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-prati",
+   "hr": "prati",
+   "en": "to wash",
+   "note": "Handout: Kućni alat (household tools)",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-ukljuciti",
+   "hr": "uključiti",
+   "en": "to switch on",
+   "note": "Handout: Kućni alat (household tools)",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-tools-iskljuciti",
+   "hr": "isključiti",
+   "en": "to switch off",
+   "note": "Handout: Kućni alat (household tools)",
+   "ho": [
+    "tools"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-kuca",
+   "hr": "kuća",
+   "en": "house",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, feminine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-stan",
+   "hr": "stan",
+   "en": "flat / apartment",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, masculine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-soba",
+   "hr": "soba",
+   "en": "room",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, feminine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-dnevni-boravak",
+   "hr": "dnevni boravak",
+   "en": "living room",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, masculine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-blagovaonica",
+   "hr": "blagovaonica",
+   "en": "dining room",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, feminine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-spavaca-soba",
+   "hr": "spavaća soba",
+   "en": "bedroom",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, feminine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-djecja-soba",
+   "hr": "dječja soba",
+   "en": "children's room",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, feminine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-radna-soba",
+   "hr": "radna soba",
+   "en": "study / home office",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, feminine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-kupaonica",
+   "hr": "kupaonica",
+   "en": "bathroom",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, feminine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-zahod-wc",
+   "hr": "zahod / WC",
+   "en": "toilet (room)",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, masculine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-hodnik",
+   "hr": "hodnik",
+   "en": "hallway",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, masculine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-predsoblje",
+   "hr": "predsoblje",
+   "en": "entrance hall",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, neuter",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-ostava",
+   "hr": "ostava",
+   "en": "pantry",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, feminine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-praonica-rublja",
+   "hr": "praonica rublja",
+   "en": "laundry room",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, feminine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-podrum",
+   "hr": "podrum",
+   "en": "basement / cellar",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, masculine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-tavan",
+   "hr": "tavan",
+   "en": "attic",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, masculine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-garaza",
+   "hr": "garaža",
+   "en": "garage",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, feminine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-balkon",
+   "hr": "balkon",
+   "en": "balcony",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, masculine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-terasa",
+   "hr": "terasa",
+   "en": "terrace",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, feminine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-kat",
+   "hr": "kat",
+   "en": "floor (storey)",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, masculine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-prizemlje",
+   "hr": "prizemlje",
+   "en": "ground floor",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, neuter",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-stube-stepenice",
+   "hr": "stube / stepenice",
+   "en": "stairs",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, feminine, plural only",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000,
+    "plural": true
+   }
+  },
+  {
+   "id": "ho-house-pod",
+   "hr": "pod",
+   "en": "floor (surface) / under",
+   "note": "Handout: Kuća i namještaj (house and furniture) · Kratke riječi (short words)\nnoun, masculine",
+   "ho": [
+    "house",
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-zid",
+   "hr": "zid",
+   "en": "wall",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, masculine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-strop",
+   "hr": "strop",
+   "en": "ceiling",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, masculine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-krov",
+   "hr": "krov",
+   "en": "roof",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, masculine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-prozor",
+   "hr": "prozor",
+   "en": "window",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, masculine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-vrata",
+   "hr": "vrata",
+   "en": "door",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, neuter, plural only",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1793664000000,
+    "plural": true
+   }
+  },
+  {
+   "id": "ho-house-dizalo",
+   "hr": "dizalo",
+   "en": "lift / elevator",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, neuter",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-sudoper",
+   "hr": "sudoper",
+   "en": "kitchen sink",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, masculine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-kuhinjski-ormaric",
+   "hr": "kuhinjski ormarić",
+   "en": "cupboard",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, masculine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-perilica-posuda",
+   "hr": "perilica posuđa",
+   "en": "dishwasher",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, feminine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-mikrovalna-pecnica",
+   "hr": "mikrovalna pećnica",
+   "en": "microwave",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, feminine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-namjestaj",
+   "hr": "namještaj",
+   "en": "furniture",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, masculine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-stol",
+   "hr": "stol",
+   "en": "table",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, masculine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-stolica",
+   "hr": "stolica",
+   "en": "chair",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, feminine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-fotelja",
+   "hr": "fotelja",
+   "en": "armchair",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, feminine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-kauc-trosjed",
+   "hr": "kauč / trosjed",
+   "en": "sofa",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, masculine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-stolic",
+   "hr": "stolić",
+   "en": "coffee table",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, masculine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-polica",
+   "hr": "polica",
+   "en": "shelf / bookcase",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, feminine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-televizor",
+   "hr": "televizor",
+   "en": "television",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, masculine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-tepih",
+   "hr": "tepih",
+   "en": "rug / carpet",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, masculine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-zavjesa",
+   "hr": "zavjesa",
+   "en": "curtain",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, feminine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-svjetiljka-lampa",
+   "hr": "svjetiljka / lampa",
+   "en": "lamp",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, feminine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-slika",
+   "hr": "slika",
+   "en": "picture / painting",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, feminine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-sat",
+   "hr": "sat",
+   "en": "clock / watch",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, masculine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-radijator",
+   "hr": "radijator",
+   "en": "radiator",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, masculine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-klima-uredaj",
+   "hr": "klima-uređaj",
+   "en": "air conditioner",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, masculine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-krevet",
+   "hr": "krevet",
+   "en": "bed",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, masculine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-ormar",
+   "hr": "ormar",
+   "en": "wardrobe",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, masculine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-komoda",
+   "hr": "komoda",
+   "en": "chest of drawers",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, feminine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-ladica",
+   "hr": "ladica",
+   "en": "drawer",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, feminine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-nocni-ormaric",
+   "hr": "noćni ormarić",
+   "en": "bedside table",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, masculine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-ogledalo",
+   "hr": "ogledalo",
+   "en": "mirror",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, neuter",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-jastuk",
+   "hr": "jastuk",
+   "en": "pillow",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, masculine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-pokrivac-deka",
+   "hr": "pokrivač / deka",
+   "en": "blanket",
+   "note": "Handout: Kuća i namještaj (house and furniture)",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-poplun",
+   "hr": "poplun",
+   "en": "duvet",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, masculine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-plahta",
+   "hr": "plahta",
+   "en": "sheet",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, feminine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-umivaonik",
+   "hr": "umivaonik",
+   "en": "washbasin",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, masculine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-kada",
+   "hr": "kada",
+   "en": "bathtub",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, feminine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-tus",
+   "hr": "tuš",
+   "en": "shower",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, masculine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-zahodska-skoljka",
+   "hr": "zahodska školjka",
+   "en": "toilet bowl",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, feminine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-rucnik",
+   "hr": "ručnik",
+   "en": "towel",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, masculine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-sapun",
+   "hr": "sapun",
+   "en": "soap",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, masculine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-house-cetkica-za-zube",
+   "hr": "četkica za zube",
+   "en": "toothbrush",
+   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, feminine",
+   "ho": [
+    "house"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-questions-tko",
+   "hr": "tko",
+   "en": "who",
+   "note": "Handout: Upitne riječi (question words)",
+   "ho": [
+    "questions"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-questions-koga",
+   "hr": "koga",
+   "en": "whom",
+   "note": "Handout: Upitne riječi (question words)",
+   "ho": [
+    "questions"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-questions-od-koga",
+   "hr": "od koga",
+   "en": "from whom",
+   "note": "Handout: Upitne riječi (question words)",
+   "ho": [
+    "questions"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-questions-komu-kome",
+   "hr": "komu / kome",
+   "en": "to whom / for whom",
+   "note": "Handout: Upitne riječi (question words)",
+   "ho": [
+    "questions"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-questions-o-kome-o-komu",
+   "hr": "o kome / o komu",
+   "en": "about whom",
+   "note": "Handout: Upitne riječi (question words)",
+   "ho": [
+    "questions"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-questions-s-kim",
+   "hr": "s kim",
+   "en": "with whom",
+   "note": "Handout: Upitne riječi (question words)",
+   "ho": [
+    "questions"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-questions-ciji",
+   "hr": "čiji",
+   "en": "whose",
+   "note": "Handout: Upitne riječi (question words)\nadjective",
+   "ho": [
+    "questions"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "čiji",
+     "čija",
+     "čije"
+    ],
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-questions-sto",
+   "hr": "što",
+   "en": "what",
+   "note": "Handout: Upitne riječi (question words)",
+   "ho": [
+    "questions"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-questions-cega",
+   "hr": "čega",
+   "en": "of what / from what",
+   "note": "Handout: Upitne riječi (question words)",
+   "ho": [
+    "questions"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-questions-cemu",
+   "hr": "čemu",
+   "en": "to what / what for",
+   "note": "Handout: Upitne riječi (question words)",
+   "ho": [
+    "questions"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-questions-o-cemu",
+   "hr": "o čemu",
+   "en": "about what",
+   "note": "Handout: Upitne riječi (question words)",
+   "ho": [
+    "questions"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-questions-cime-cim",
+   "hr": "čime / čim",
+   "en": "with what (tool)",
+   "note": "Handout: Upitne riječi (question words)",
+   "ho": [
+    "questions"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-questions-koji",
+   "hr": "koji",
+   "en": "which",
+   "note": "Handout: Upitne riječi (question words)\nadjective",
+   "ho": [
+    "questions"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "koji",
+     "koja",
+     "koje"
+    ],
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-questions-kakav",
+   "hr": "kakav",
+   "en": "what kind of / what … like",
+   "note": "Handout: Upitne riječi (question words)\nadjective",
+   "ho": [
+    "questions"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "kakav",
+     "kakva",
+     "kakvo"
+    ],
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-questions-gdje",
+   "hr": "gdje",
+   "en": "where",
+   "note": "Handout: Upitne riječi (question words)",
+   "ho": [
+    "questions"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-questions-kamo",
+   "hr": "kamo",
+   "en": "where to",
+   "note": "Handout: Upitne riječi (question words)",
+   "ho": [
+    "questions"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-questions-odakle-otkud",
+   "hr": "odakle / otkud",
+   "en": "where from",
+   "note": "Handout: Upitne riječi (question words)",
+   "ho": [
+    "questions"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-questions-kuda",
+   "hr": "kuda",
+   "en": "which way",
+   "note": "Handout: Upitne riječi (question words)",
+   "ho": [
+    "questions"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-questions-dokle",
+   "hr": "dokle",
+   "en": "how far / up to where",
+   "note": "Handout: Upitne riječi (question words)",
+   "ho": [
+    "questions"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-questions-kada-kad",
+   "hr": "kada / kad",
+   "en": "when",
+   "note": "Handout: Upitne riječi (question words) · Veznici (conjunctions)",
+   "ho": [
+    "questions",
+    "conj"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-questions-u-koliko-sati",
+   "hr": "u koliko sati",
+   "en": "at what time",
+   "note": "Handout: Upitne riječi (question words)",
+   "ho": [
+    "questions"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-questions-koliko-je-sati",
+   "hr": "koliko je sati",
+   "en": "what time is it",
+   "note": "Handout: Upitne riječi (question words)",
+   "ho": [
+    "questions"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-questions-otkad-otkada",
+   "hr": "otkad / otkada",
+   "en": "since when / since (time)",
+   "note": "Handout: Upitne riječi (question words) · Veznici (conjunctions)",
+   "ho": [
+    "questions",
+    "conj"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-questions-dokad-dokada",
+   "hr": "dokad / dokada",
+   "en": "until when",
+   "note": "Handout: Upitne riječi (question words)",
+   "ho": [
+    "questions"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-questions-zasto",
+   "hr": "zašto",
+   "en": "why",
+   "note": "Handout: Upitne riječi (question words)",
+   "ho": [
+    "questions"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-questions-zbog-cega",
+   "hr": "zbog čega",
+   "en": "because of what",
+   "note": "Handout: Upitne riječi (question words)",
+   "ho": [
+    "questions"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-questions-cemu-sluzi",
+   "hr": "čemu služi",
+   "en": "what is it for",
+   "note": "Handout: Upitne riječi (question words)",
+   "ho": [
+    "questions"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-questions-kako",
+   "hr": "kako",
+   "en": "how / as (the way)",
+   "note": "Handout: Upitne riječi (question words) · Veznici (conjunctions)",
+   "ho": [
+    "questions",
+    "conj"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-questions-koliko",
+   "hr": "koliko",
+   "en": "how much / how many",
+   "note": "Handout: Upitne riječi (question words)",
+   "ho": [
+    "questions"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-questions-koliko-kosta",
+   "hr": "koliko košta",
+   "en": "how much does it cost",
+   "note": "Handout: Upitne riječi (question words) · K-words anchor phrases",
+   "ho": [
+    "questions",
+    "kwords"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-questions-koliko-dugo",
+   "hr": "koliko dugo",
+   "en": "how long",
+   "note": "Handout: Upitne riječi (question words)",
+   "ho": [
+    "questions"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-questions-koliko-cesto",
+   "hr": "koliko često",
+   "en": "how often",
+   "note": "Handout: Upitne riječi (question words)",
+   "ho": [
+    "questions"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-questions-koliko-godina",
+   "hr": "koliko godina",
+   "en": "how old",
+   "note": "Handout: Upitne riječi (question words)",
+   "ho": [
+    "questions"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-questions-je-li",
+   "hr": "je li",
+   "en": "is it …? / whether",
+   "note": "Handout: Upitne riječi (question words) · Veznici (conjunctions)",
+   "ho": [
+    "questions",
+    "conj"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-questions-zar",
+   "hr": "zar",
+   "en": "really? / surely not?",
+   "note": "Handout: Upitne riječi (question words)",
+   "ho": [
+    "questions"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-questions-zar-ne",
+   "hr": "zar ne",
+   "en": "isn't it? / right?",
+   "note": "Handout: Upitne riječi (question words)",
+   "ho": [
+    "questions"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-kwords-kako-si",
+   "hr": "Kako si?",
+   "en": "How are you?",
+   "note": "Handout: K-words anchor phrases",
+   "ho": [
+    "kwords"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-kwords-kako-se-zoves",
+   "hr": "Kako se zoveš?",
+   "en": "What's your name?",
+   "note": "Handout: K-words anchor phrases",
+   "ho": [
+    "kwords"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-kwords-kada-je-koncert",
+   "hr": "Kada je koncert?",
+   "en": "When is the concert?",
+   "note": "Handout: K-words anchor phrases",
+   "ho": [
+    "kwords"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-kwords-kamo-ides",
+   "hr": "Kamo ideš?",
+   "en": "Where are you going?",
+   "note": "Handout: K-words anchor phrases",
+   "ho": [
+    "kwords"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-kwords-kuda-idemo",
+   "hr": "Kuda idemo?",
+   "en": "Which way are we going?",
+   "note": "Handout: K-words anchor phrases",
+   "ho": [
+    "kwords"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-kwords-koja-je-tvoja-kuca",
+   "hr": "Koja je tvoja kuća?",
+   "en": "Which is your house?",
+   "note": "Handout: K-words anchor phrases",
+   "ho": [
+    "kwords"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-kwords-kakvo-je-vrijeme",
+   "hr": "Kakvo je vrijeme?",
+   "en": "What is the weather like?",
+   "note": "Handout: K-words anchor phrases",
+   "ho": [
+    "kwords"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-kwords-koga-cekas",
+   "hr": "Koga čekaš?",
+   "en": "Whom are you waiting for?",
+   "note": "Handout: K-words anchor phrases",
+   "ho": [
+    "kwords"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-conj-i",
+   "hr": "i",
+   "en": "and",
+   "note": "Handout: Veznici (conjunctions)",
+   "ho": [
+    "conj"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-conj-a",
+   "hr": "a",
+   "en": "and (contrast) / while / whereas",
+   "note": "Handout: Veznici (conjunctions)",
+   "ho": [
+    "conj"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-conj-pa",
+   "hr": "pa",
+   "en": "and so / and then",
+   "note": "Handout: Veznici (conjunctions)",
+   "ho": [
+    "conj"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-conj-ali",
+   "hr": "ali",
+   "en": "but",
+   "note": "Handout: Veznici (conjunctions)",
+   "ho": [
+    "conj"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-conj-no",
+   "hr": "no",
+   "en": "but (formal)",
+   "note": "Handout: Veznici (conjunctions)",
+   "ho": [
+    "conj"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-conj-nego",
+   "hr": "nego",
+   "en": "but rather / than",
+   "note": "Handout: Veznici (conjunctions)",
+   "ho": [
+    "conj"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-conj-vec",
+   "hr": "već",
+   "en": "but rather (after a negative) / already",
+   "note": "Handout: Veznici (conjunctions) · Kratke riječi (short words)",
+   "ho": [
+    "conj",
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-conj-ili",
+   "hr": "ili",
+   "en": "or",
+   "note": "Handout: Veznici (conjunctions)",
+   "ho": [
+    "conj"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-conj-niti",
+   "hr": "niti",
+   "en": "nor",
+   "note": "Handout: Veznici (conjunctions)",
+   "ho": [
+    "conj"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-conj-jer",
+   "hr": "jer",
+   "en": "because",
+   "note": "Handout: Veznici (conjunctions)",
+   "ho": [
+    "conj"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-conj-da",
+   "hr": "da",
+   "en": "that / yes",
+   "note": "Handout: Veznici (conjunctions) · Kratke riječi (short words)",
+   "ho": [
+    "conj",
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-conj-zato-sto",
+   "hr": "zato što",
+   "en": "because",
+   "note": "Handout: Veznici (conjunctions)",
+   "ho": [
+    "conj"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-conj-buduci-da",
+   "hr": "budući da",
+   "en": "since (reason)",
+   "note": "Handout: Veznici (conjunctions)",
+   "ho": [
+    "conj"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-conj-posto",
+   "hr": "pošto",
+   "en": "since / after",
+   "note": "Handout: Veznici (conjunctions)",
+   "ho": [
+    "conj"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-conj-ako",
+   "hr": "ako",
+   "en": "if",
+   "note": "Handout: Veznici (conjunctions)",
+   "ho": [
+    "conj"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-conj-osim-ako",
+   "hr": "osim ako",
+   "en": "unless",
+   "note": "Handout: Veznici (conjunctions)",
+   "ho": [
+    "conj"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-conj-iako-premda-mada",
+   "hr": "iako / premda / mada",
+   "en": "although",
+   "note": "Handout: Veznici (conjunctions)",
+   "ho": [
+    "conj"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-conj-cak-i-ako",
+   "hr": "čak i ako",
+   "en": "even if",
+   "note": "Handout: Veznici (conjunctions)",
+   "ho": [
+    "conj"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-conj-makar",
+   "hr": "makar",
+   "en": "even if / at least",
+   "note": "Handout: Veznici (conjunctions)",
+   "ho": [
+    "conj"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-conj-dok",
+   "hr": "dok",
+   "en": "while",
+   "note": "Handout: Veznici (conjunctions)",
+   "ho": [
+    "conj"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-conj-dok-ne",
+   "hr": "dok ne",
+   "en": "until",
+   "note": "Handout: Veznici (conjunctions)",
+   "ho": [
+    "conj"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-conj-prije-nego-sto",
+   "hr": "prije nego što",
+   "en": "before",
+   "note": "Handout: Veznici (conjunctions)",
+   "ho": [
+    "conj"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-conj-nakon-sto",
+   "hr": "nakon što",
+   "en": "after",
+   "note": "Handout: Veznici (conjunctions)",
+   "ho": [
+    "conj"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-conj-cim",
+   "hr": "čim",
+   "en": "as soon as",
+   "note": "Handout: Veznici (conjunctions)",
+   "ho": [
+    "conj"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-conj-dok-god",
+   "hr": "dok god",
+   "en": "as long as",
+   "note": "Handout: Veznici (conjunctions)",
+   "ho": [
+    "conj"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-conj-kako-bi",
+   "hr": "kako bi",
+   "en": "so that / in order to",
+   "note": "Handout: Veznici (conjunctions)",
+   "ho": [
+    "conj"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-conj-tako-da",
+   "hr": "tako … da",
+   "en": "so … that",
+   "note": "Handout: Veznici (conjunctions)",
+   "ho": [
+    "conj"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-conj-kao-da",
+   "hr": "kao da",
+   "en": "as if",
+   "note": "Handout: Veznici (conjunctions)",
+   "ho": [
+    "conj"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-conj-u-slucaju-da",
+   "hr": "u slučaju da",
+   "en": "in case",
+   "note": "Handout: Veznici (conjunctions)",
+   "ho": [
+    "conj"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-conj-i-i",
+   "hr": "i … i",
+   "en": "both … and",
+   "note": "Handout: Veznici (conjunctions)",
+   "ho": [
+    "conj"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-conj-ili-ili",
+   "hr": "ili … ili",
+   "en": "either … or",
+   "note": "Handout: Veznici (conjunctions)",
+   "ho": [
+    "conj"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-conj-ni-ni",
+   "hr": "ni … ni",
+   "en": "neither … nor",
+   "note": "Handout: Veznici (conjunctions)",
+   "ho": [
+    "conj"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-conj-ne-samo-nego-i",
+   "hr": "ne samo … nego i",
+   "en": "not only … but also",
+   "note": "Handout: Veznici (conjunctions)",
+   "ho": [
+    "conj"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-conj-bilo-bilo",
+   "hr": "bilo … bilo",
+   "en": "whether … or",
+   "note": "Handout: Veznici (conjunctions)",
+   "ho": [
+    "conj"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-u",
+   "hr": "u",
+   "en": "in / at / on (a day)",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-na",
+   "hr": "na",
+   "en": "on / at",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-kod",
+   "hr": "kod",
+   "en": "at someone's place",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-iz",
+   "hr": "iz",
+   "en": "from (a place)",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-od",
+   "hr": "od",
+   "en": "from (a person) / since",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-do",
+   "hr": "do",
+   "en": "to / as far as / until",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-prema",
+   "hr": "prema",
+   "en": "toward",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-preko",
+   "hr": "preko",
+   "en": "across / over / via",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-kroz",
+   "hr": "kroz",
+   "en": "through",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-oko",
+   "hr": "oko",
+   "en": "around / about (approximately)",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-ispod",
+   "hr": "ispod",
+   "en": "below / underneath",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-iznad",
+   "hr": "iznad",
+   "en": "above / over",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-ispred",
+   "hr": "ispred",
+   "en": "in front of",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-iza",
+   "hr": "iza",
+   "en": "behind",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-pokraj-kraj",
+   "hr": "pokraj / kraj",
+   "en": "next to / beside",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-izmedu",
+   "hr": "između",
+   "en": "between",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-uz",
+   "hr": "uz",
+   "en": "along / alongside",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-blizu",
+   "hr": "blizu",
+   "en": "near",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-po",
+   "hr": "po",
+   "en": "around (all over) / to fetch",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-prije",
+   "hr": "prije",
+   "en": "before / ago",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-poslije",
+   "hr": "poslije",
+   "en": "after",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-nakon",
+   "hr": "nakon",
+   "en": "after",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-tijekom",
+   "hr": "tijekom",
+   "en": "during",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-za",
+   "hr": "za",
+   "en": "for / in (time from now)",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-s-sa",
+   "hr": "s / sa",
+   "en": "with",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-bez",
+   "hr": "bez",
+   "en": "without",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-o",
+   "hr": "o",
+   "en": "about (a topic)",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-zbog",
+   "hr": "zbog",
+   "en": "because of",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-osim",
+   "hr": "osim",
+   "en": "except / besides",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-umjesto",
+   "hr": "umjesto",
+   "en": "instead of",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-protiv",
+   "hr": "protiv",
+   "en": "against",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-ne",
+   "hr": "ne",
+   "en": "no / not",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-nije",
+   "hr": "nije",
+   "en": "isn't / is not",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-ni",
+   "hr": "ni",
+   "en": "not even / nor",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-mozda",
+   "hr": "možda",
+   "en": "maybe",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-naravno",
+   "hr": "naravno",
+   "en": "of course",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-moze",
+   "hr": "može",
+   "en": "OK / sure",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-dobro",
+   "hr": "dobro",
+   "en": "good / OK",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-tu",
+   "hr": "tu",
+   "en": "here",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-ovdje",
+   "hr": "ovdje",
+   "en": "here",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-tamo",
+   "hr": "tamo",
+   "en": "there",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-ovamo",
+   "hr": "ovamo",
+   "en": "(to) here",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-evo",
+   "hr": "evo",
+   "en": "here is / here you go",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-kuci",
+   "hr": "kući",
+   "en": "home (going home)",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-doma",
+   "hr": "doma",
+   "en": "at home",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-sada-sad",
+   "hr": "sada / sad",
+   "en": "now",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-onda",
+   "hr": "onda",
+   "en": "then",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-tada",
+   "hr": "tada",
+   "en": "then / at that time",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-jos",
+   "hr": "još",
+   "en": "still / yet",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-danas",
+   "hr": "danas",
+   "en": "today",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-sutra",
+   "hr": "sutra",
+   "en": "tomorrow",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-jucer",
+   "hr": "jučer",
+   "en": "yesterday",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-uvijek",
+   "hr": "uvijek",
+   "en": "always",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-nikada-nikad",
+   "hr": "nikada / nikad",
+   "en": "never",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-cesto",
+   "hr": "često",
+   "en": "often",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-ponekad",
+   "hr": "ponekad",
+   "en": "sometimes",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-opet",
+   "hr": "opet",
+   "en": "again",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-odmah",
+   "hr": "odmah",
+   "en": "right away",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-vrlo",
+   "hr": "vrlo",
+   "en": "very",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-jako",
+   "hr": "jako",
+   "en": "very / a lot",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-malo",
+   "hr": "malo",
+   "en": "a little",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-puno",
+   "hr": "puno",
+   "en": "a lot",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-mnogo",
+   "hr": "mnogo",
+   "en": "much / many",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-previse",
+   "hr": "previše",
+   "en": "too much",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-dosta",
+   "hr": "dosta",
+   "en": "enough / quite",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-samo",
+   "hr": "samo",
+   "en": "only / just",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-cak",
+   "hr": "čak",
+   "en": "even",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-skoro",
+   "hr": "skoro",
+   "en": "almost",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-takoder",
+   "hr": "također",
+   "en": "also / too",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-isto",
+   "hr": "isto",
+   "en": "also / the same",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-svi",
+   "hr": "svi",
+   "en": "everyone",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-sve",
+   "hr": "sve",
+   "en": "everything",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-netko",
+   "hr": "netko",
+   "en": "someone",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-nitko",
+   "hr": "nitko",
+   "en": "no one / nobody",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-nesto",
+   "hr": "nešto",
+   "en": "something",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-nista",
+   "hr": "ništa",
+   "en": "nothing",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-kao",
+   "hr": "kao",
+   "en": "like / as",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-molim",
+   "hr": "molim",
+   "en": "please / you're welcome / pardon?",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-hvala",
+   "hr": "hvala",
+   "en": "thanks / thank you",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-hajde",
+   "hr": "hajde",
+   "en": "come on",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-hajdemo",
+   "hr": "hajdemo",
+   "en": "let's go",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-kruh",
+   "hr": "kruh",
+   "en": "bread",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nWorksheet: U pekari\nnoun, masculine (inanimate)\nAcc. sg. kruh · Acc. pl. kruhove\nKupujem ove kruhove.",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-pecivo",
+   "hr": "pecivo",
+   "en": "pastry / roll",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nWorksheet: U pekari\nnoun, neuter\nAcc. sg. pecivo · Acc. pl. peciva\nMolim svježa peciva.",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-kroasan",
+   "hr": "kroasan",
+   "en": "croissant",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nWorksheet: U pekari\nnoun, masculine (inanimate)\nAcc. sg. kroasan · Acc. pl. kroasane\nŽelim čokoladne kroasane.",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-krafna",
+   "hr": "krafna",
+   "en": "doughnut",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nWorksheet: U pekari\nnoun, feminine\nAcc. sg. krafnu · Acc. pl. krafne\nMolim sve ove krafne.",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-burek",
+   "hr": "burek",
+   "en": "burek",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nWorksheet: U pekari\nnoun, masculine (inanimate)\nAcc. sg. burek · Acc. pl. bureke\nTrebam tople bureke.",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-pita",
+   "hr": "pita",
+   "en": "pie / strudel",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nWorksheet: U pekari\nnoun, feminine\nAcc. sg. pitu · Acc. pl. pite\nVolim slatke pite.",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-krostula",
+   "hr": "kroštula",
+   "en": "crispy pastry",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nWorksheet: U pekari\nnoun, feminine\nAcc. sg. kroštulu · Acc. pl. kroštule\nUzmite ove kroštule!",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-sendvic",
+   "hr": "sendvič",
+   "en": "sandwich",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nWorksheet: U pekari\nnoun, masculine (inanimate)\nAcc. sg. sendvič · Acc. pl. sendviče\nPripremite sendviče.",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-jogurt",
+   "hr": "jogurt",
+   "en": "yogurt",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nWorksheet: U pekari\nnoun, masculine (inanimate)\nAcc. sg. jogurt · Acc. pl. jogurte\nKupujem voćne jogurte.",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-kava",
+   "hr": "kava",
+   "en": "coffee",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nWorksheet: U pekari\nnoun, feminine\nAcc. sg. kavu · Acc. pl. kave\nNosite li ove kave?",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793750400000
+   }
+  }
+ ]
+}

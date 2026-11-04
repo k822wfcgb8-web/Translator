@@ -6,6 +6,8 @@ Files:
 - `index.html`: the whole app
 - `icon-180.png`: home-screen icon
 - `README.md`: this guide
+- `handouts.json`: flash cards for the word lists in the *Claude outputs* handouts (loaded by the app automatically)
+- `make_handouts.py`: the script that builds `handouts.json` from those word lists
 
 **Your API key is NOT in these files, and must never be added to them.** Each person types the key into the app's Settings on their own device. It is saved only in that browser.
 
@@ -80,6 +82,11 @@ Then reload the page, and pick the voice in the app's Settings if you like.
 - **Studying flash cards:** pick a Unit, Module and Lesson, then tap **Study this set**. Tick **Add everything before this…** to include all earlier vocabulary, and **Add my saved cards** to mix in the cards you saved yourself. Every session goes through the whole chosen set in random order; tap ✕ to stop at any time.
   - Nothing about right or wrong answers is saved. There are no due dates or levels; each session starts fresh.
   - A card you miss comes back at a random later spot (at least 3 other cards in between) until you've answered it right 3 times in that session.
+- **Handouts:** the **Handout** picker studies the words from one of the Claude-made reference sheets (Family, Groceries, Household tools, House and furniture, Question words, K-words, Conjunctions, Short words), or **All handouts**. A handout is its own set: while one is picked, Unit, Module and Lesson are greyed out. Pick **None** to go back to them.
+  - The app loads `handouts.json` from the website each time it opens, and keeps the last copy for offline use. Words you don't have yet are added as cards; words you already have from the book are counted in the handout and aren't duplicated.
+  - Only the word lists are included, not the example sentences or the grammar sheets (biti, Zvati se, cases, pronouns).
+  - Adding a new handout: ask Claude to add its words to `handouts.json`, then Commit and Push in GitHub Desktop.
+  - `handouts.json` also carries words from class worksheets, filed under a book lesson (the `LESSONS` list in `make_handouts.py`). They show up under that Unit, Module and Lesson, not in the Handout picker.
 - **Direction:** *Croatian → English*, *English → Croatian*, or **Mixed**. In Mixed, each card picks its direction at random and the card says which language to answer in. A card you miss comes back later the other way round, and switches again on each repeat.
 - **Every card is a quiz:** below the word, an answer box laid out like the Translate tab shows the direction (e.g. *English → Hrvatski*). Type your answer, or for Croatian answers tap 🎤 and say it, then tap **Check** (or press Enter/Done). Croatian answers get č ć đ š ž keys; English answers are typed only (no 🎤). **✕ Clear** empties the box. (The old *Flip & self-grade* mode was removed in v3.0.)
   - **Explain more (cases & gender):** tick this to get, after a wrong or nearly-right answer, a word-by-word breakdown of the Croatian (root, case, gender, ending and why), like Translate's *Explain cases & gender*. Unticked, you get a sentence or two. The tick is remembered; the longer explanation costs a little more per check.
@@ -95,6 +102,8 @@ Then reload the page, and pick the voice in the app's Settings if you like.
 
 The version number is shown under the app's name. It goes up with every update pushed to GitHub: the first number for big changes, the second for smaller ones. If your device still shows the old number after an update, reload the page (or close and reopen the home-screen app).
 
+- **v3.4** (Nov 4, 2026): Added the 10 bakery words from the *U pekari* worksheet to Tako lako U1 · M1 · Lesson 6 (delivered in `handouts.json`). Words you already had, such as kruh and kava, get the Lesson 6 tag added instead of a duplicate card.
+- **v3.3** (Nov 2, 2026): New **Handout** picker on the Flash cards tab, with 460 words from the eight vocabulary handouts in *Claude outputs*. They load automatically from `handouts.json`.
 - **v3.2** (Nov 1, 2026): Fixed "Claude didn't return a usable check": Claude must now always answer in the app's check format, gets more room for its reply, and the app retries once automatically.
 - **v3.1** (Nov 1, 2026): Flash cards: 🔊 Listen only appears for Croatian; no Listen button on English words, on either the question or the answer side.
 - **v3.0** (Nov 1, 2026): Flash cards redesigned as a quiz: every card has an answer box like the Translate tab, with **Check**, **I don't know**, **✕ Clear**, and an **Explain more (cases & gender)** tick box. *Flip & self-grade* removed.
