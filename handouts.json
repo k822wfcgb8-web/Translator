@@ -9778,6 +9778,893 @@
     "by": "book",
     "at": 1793750400000
    }
+  },
+  {
+   "id": "tl-u1m1l6-profesor",
+   "hr": "profesor",
+   "en": "professor (man)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, masculine, animate",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793750400000,
+    "animate": true
+   }
+  },
+  {
+   "id": "tl-u1m1l6-profesorica",
+   "hr": "profesorica",
+   "en": "professor (woman)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, feminine",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-glumac",
+   "hr": "glumac",
+   "en": "actor",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, masculine, animate",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793750400000,
+    "animate": true
+   }
+  },
+  {
+   "id": "tl-u1m1l6-glumica",
+   "hr": "glumica",
+   "en": "actress",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, feminine",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-pjevac",
+   "hr": "pjevač",
+   "en": "singer (man)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, masculine, animate",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793750400000,
+    "animate": true
+   }
+  },
+  {
+   "id": "tl-u1m1l6-pjevacica",
+   "hr": "pjevačica",
+   "en": "singer (woman)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, feminine",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-umjetnik",
+   "hr": "umjetnik",
+   "en": "artist (man)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, masculine, animate",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793750400000,
+    "animate": true
+   }
+  },
+  {
+   "id": "tl-u1m1l6-umjetnica",
+   "hr": "umjetnica",
+   "en": "artist (woman)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, feminine",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-programer",
+   "hr": "programer",
+   "en": "programmer (man)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, masculine, animate",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793750400000,
+    "animate": true
+   }
+  },
+  {
+   "id": "tl-u1m1l6-programerka",
+   "hr": "programerka",
+   "en": "programmer (woman)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, feminine",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-menadzer",
+   "hr": "menadžer",
+   "en": "manager (man)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, masculine, animate",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793750400000,
+    "animate": true
+   }
+  },
+  {
+   "id": "tl-u1m1l6-menadzerica",
+   "hr": "menadžerica",
+   "en": "manager (woman)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, feminine",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-novinar",
+   "hr": "novinar",
+   "en": "journalist (man)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, masculine, animate",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793750400000,
+    "animate": true
+   }
+  },
+  {
+   "id": "tl-u1m1l6-novinarka",
+   "hr": "novinarka",
+   "en": "journalist (woman)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, feminine",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-vozac",
+   "hr": "vozač",
+   "en": "driver (man)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, masculine, animate",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793750400000,
+    "animate": true
+   }
+  },
+  {
+   "id": "tl-u1m1l6-vozacica",
+   "hr": "vozačica",
+   "en": "driver (woman)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, feminine",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-ekonomist",
+   "hr": "ekonomist",
+   "en": "economist (man)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, masculine, animate",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793750400000,
+    "animate": true
+   }
+  },
+  {
+   "id": "tl-u1m1l6-ekonomistica",
+   "hr": "ekonomistica",
+   "en": "economist (woman)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, feminine",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-policajac",
+   "hr": "policajac",
+   "en": "police officer (man)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, masculine, animate",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793750400000,
+    "animate": true
+   }
+  },
+  {
+   "id": "tl-u1m1l6-policajka",
+   "hr": "policajka",
+   "en": "police officer (woman)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, feminine",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-politicar",
+   "hr": "političar",
+   "en": "politician (man)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, masculine, animate",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793750400000,
+    "animate": true
+   }
+  },
+  {
+   "id": "tl-u1m1l6-politicarka",
+   "hr": "političarka",
+   "en": "politician (woman)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, feminine",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-kuhar",
+   "hr": "kuhar",
+   "en": "cook / chef (man)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, masculine, animate",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793750400000,
+    "animate": true
+   }
+  },
+  {
+   "id": "tl-u1m1l6-kuharica",
+   "hr": "kuharica",
+   "en": "cook (woman)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, feminine",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-prodavac",
+   "hr": "prodavač",
+   "en": "vendor / salesman",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, masculine, animate",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793750400000,
+    "animate": true
+   }
+  },
+  {
+   "id": "tl-u1m1l6-prodavacica",
+   "hr": "prodavačica",
+   "en": "vendor / saleswoman",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, feminine",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-odvjetnik",
+   "hr": "odvjetnik",
+   "en": "lawyer (man)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, masculine, animate",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793750400000,
+    "animate": true
+   }
+  },
+  {
+   "id": "tl-u1m1l6-odvjetnica",
+   "hr": "odvjetnica",
+   "en": "lawyer (woman)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, feminine",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-glazbenik",
+   "hr": "glazbenik",
+   "en": "musician (man)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, masculine, animate",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793750400000,
+    "animate": true
+   }
+  },
+  {
+   "id": "tl-u1m1l6-glazbenica",
+   "hr": "glazbenica",
+   "en": "musician (woman)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, feminine",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-vatrogasac",
+   "hr": "vatrogasac",
+   "en": "firefighter",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, masculine, animate",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793750400000,
+    "animate": true
+   }
+  },
+  {
+   "id": "tl-u1m1l6-zena-vatrogasac",
+   "hr": "žena vatrogasac",
+   "en": "firefighter (woman)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nphrase (vatrogasac stays masculine)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-lijecnik",
+   "hr": "liječnik",
+   "en": "doctor",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, masculine, animate",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793750400000,
+    "animate": true
+   }
+  },
+  {
+   "id": "tl-u1m1l6-lijecnica",
+   "hr": "liječnica",
+   "en": "female doctor",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, feminine",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-inzenjer",
+   "hr": "inženjer",
+   "en": "engineer (man)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, masculine, animate",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793750400000,
+    "animate": true
+   }
+  },
+  {
+   "id": "tl-u1m1l6-inzenjerka",
+   "hr": "inženjerka",
+   "en": "engineer (woman)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, feminine",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-dizajner",
+   "hr": "dizajner",
+   "en": "designer (man)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, masculine, animate",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793750400000,
+    "animate": true
+   }
+  },
+  {
+   "id": "tl-u1m1l6-dizajnerica",
+   "hr": "dizajnerica",
+   "en": "designer (woman)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, feminine",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-umirovljenik",
+   "hr": "umirovljenik",
+   "en": "retiree",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, masculine, animate",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793750400000,
+    "animate": true
+   }
+  },
+  {
+   "id": "tl-u1m1l6-umirovljenica",
+   "hr": "umirovljenica",
+   "en": "retiree (woman)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, feminine",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-boksac",
+   "hr": "boksač",
+   "en": "boxer (man)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, masculine, animate",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793750400000,
+    "animate": true
+   }
+  },
+  {
+   "id": "tl-u1m1l6-boksacica",
+   "hr": "boksačica",
+   "en": "boxer (woman)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, feminine",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-arhitekt",
+   "hr": "arhitekt",
+   "en": "architect (man)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, masculine, animate",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793750400000,
+    "animate": true
+   }
+  },
+  {
+   "id": "tl-u1m1l6-arhitektica",
+   "hr": "arhitektica",
+   "en": "architect (woman)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, feminine",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-automehanicar",
+   "hr": "automehaničar",
+   "en": "car mechanic (man)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, masculine, animate",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793750400000,
+    "animate": true
+   }
+  },
+  {
+   "id": "tl-u1m1l6-automehanicarka",
+   "hr": "automehaničarka",
+   "en": "car mechanic (woman)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, feminine",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-frizer",
+   "hr": "frizer",
+   "en": "hairdresser (man)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, masculine, animate",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793750400000,
+    "animate": true
+   }
+  },
+  {
+   "id": "tl-u1m1l6-frizerka",
+   "hr": "frizerka",
+   "en": "hairdresser (woman)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: Zadatak 1: Profesija / zanimanje\nnoun, feminine",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793750400000
+   }
   }
  ]
 }

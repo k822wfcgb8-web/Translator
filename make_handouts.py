@@ -281,6 +281,43 @@ for tag, sheet, lid, rows in LESSONS:
                           "lastReviewed": 0, "deleted": False,
                           "gram": {"pos": "noun", "gender": g, "by": "book", "at": TS_LESSONS}})
 
+# Professions from Lesson 6, Zadatak 1 (Profesija / zanimanje). Row: (english, croatian, g)
+# English matches the wording of cards already in the book deck where the word exists.
+PROFESSIONS = ("Tako lako U1 · M1 · Lesson 6: Roditelji", "Zadatak 1: Profesija / zanimanje", "u1m1l6", [
+    ("professor (man)", "profesor", "ma"), ("professor (woman)", "profesorica", "f"),
+    ("actor", "glumac", "ma"), ("actress", "glumica", "f"),
+    ("singer (man)", "pjevač", "ma"), ("singer (woman)", "pjevačica", "f"),
+    ("artist (man)", "umjetnik", "ma"), ("artist (woman)", "umjetnica", "f"),
+    ("programmer (man)", "programer", "ma"), ("programmer (woman)", "programerka", "f"),
+    ("manager (man)", "menadžer", "ma"), ("manager (woman)", "menadžerica", "f"),
+    ("journalist (man)", "novinar", "ma"), ("journalist (woman)", "novinarka", "f"),
+    ("driver (man)", "vozač", "ma"), ("driver (woman)", "vozačica", "f"),
+    ("economist (man)", "ekonomist", "ma"), ("economist (woman)", "ekonomistica", "f"),
+    ("police officer (man)", "policajac", "ma"), ("police officer (woman)", "policajka", "f"),
+    ("politician (man)", "političar", "ma"), ("politician (woman)", "političarka", "f"),
+    ("cook / chef (man)", "kuhar", "ma"), ("cook (woman)", "kuharica", "f"),
+    ("vendor / salesman", "prodavač", "ma"), ("vendor / saleswoman", "prodavačica", "f"),
+    ("lawyer (man)", "odvjetnik", "ma"), ("lawyer (woman)", "odvjetnica", "f"),
+    ("musician (man)", "glazbenik", "ma"), ("musician (woman)", "glazbenica", "f"),
+    ("firefighter", "vatrogasac", "ma"), ("firefighter (woman)", "žena vatrogasac", ""),
+    ("doctor", "liječnik", "ma"), ("female doctor", "liječnica", "f"),
+    ("engineer (man)", "inženjer", "ma"), ("engineer (woman)", "inženjerka", "f"),
+    ("designer (man)", "dizajner", "ma"), ("designer (woman)", "dizajnerica", "f"),
+    ("retiree", "umirovljenik", "ma"), ("retiree (woman)", "umirovljenica", "f"),
+    ("boxer (man)", "boksač", "ma"), ("boxer (woman)", "boksačica", "f"),
+    ("architect (man)", "arhitekt", "ma"), ("architect (woman)", "arhitektica", "f"),
+    ("car mechanic (man)", "automehaničar", "ma"), ("car mechanic (woman)", "automehaničarka", "f"),
+    ("hairdresser (man)", "frizer", "ma"), ("hairdresser (woman)", "frizerka", "f"),
+])
+tag, sheet, lid, rows = PROFESSIONS
+for en, hr, g in rows:
+    kind = ("noun, " + GLABEL[g[0]] + (", animate" if g == "ma" else "")) if g else "phrase (vatrogasac stays masculine)"
+    gr = gram(g); gr["at"] = TS_LESSONS
+    out_cards.append({"id": f"tl-{lid}-{slug(hr)}", "hr": hr, "en": en,
+                      "note": f"{tag}\nBook: {sheet}\n{kind}",
+                      "level": 1, "due": 0, "createdAt": TS_LESSONS, "updatedAt": TS_LESSONS,
+                      "lastReviewed": 0, "deleted": False, "gram": gr})
+
 ids = [c["id"] for c in out_cards]
 assert len(ids) == len(set(ids)), "duplicate ids"
 data = {"app": "prevoditelj", "kind": "handouts", "version": 1, "savedAt": TS,

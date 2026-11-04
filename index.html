@@ -1803,6 +1803,10 @@ function applyHandouts(data) {
       const want = tagsOf({ note: tagLine }).ranks[0];
       live().filter(c => normHr(c.hr) === k && !tagsOf(c).ranks.includes(want)).forEach(c => {
         c.note = (c.note ? c.note + '\n' : '') + 'Also: ' + tagLine; c.updatedAt = Date.now(); added++;
+        // Same word, new meaning in this lesson (e.g. kuharica: cookbook / cook): add the missing English.
+        const nE = e => e.trim().toLowerCase(), mine = (c.en || '').split(' / ').map(nE);
+        const extra = String(raw.en || '').split(' / ').filter(e => e.trim() && !mine.includes(nE(e)));
+        if (extra.length) c.en = (c.en ? c.en + ' / ' : '') + extra.join(' / ');
       });
       return;
     }

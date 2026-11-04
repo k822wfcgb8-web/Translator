@@ -102,7 +102,7 @@ Then reload the page, and pick the voice in the app's Settings if you like.
 
 The version number is shown under the app's name. It goes up with every update pushed to GitHub: the first number for big changes, the second for smaller ones. If your device still shows the old number after an update, reload the page (or close and reopen the home-screen app).
 
-- **v3.4** (Nov 4, 2026): Added the 10 bakery words from the *U pekari* worksheet to Tako lako U1 · M1 · Lesson 6 (delivered in `handouts.json`). Words you already had, such as kruh and kava, get the Lesson 6 tag added instead of a duplicate card.
+- **v3.4** (Nov 4, 2026): Added the 10 bakery words from the *U pekari* worksheet to Tako lako U1 · M1 · Lesson 6 (delivered in `handouts.json`). Words you already had, such as kruh and kava, get the Lesson 6 tag added instead of a duplicate card. Also added the 48 professions from Lesson 6, Zadatak 1 (profesor / profesorica, glumac / glumica, …). When a word you already have gets a new meaning in the lesson, the meaning is added to your card (kuharica: cookbook / cook (woman)).
 - **v3.3** (Nov 2, 2026): New **Handout** picker on the Flash cards tab, with 460 words from the eight vocabulary handouts in *Claude outputs*. They load automatically from `handouts.json`.
 - **v3.2** (Nov 1, 2026): Fixed "Claude didn't return a usable check": Claude must now always answer in the app's check format, gets more room for its reply, and the app retries once automatically.
 - **v3.1** (Nov 1, 2026): Flash cards: 🔊 Listen only appears for Croatian; no Listen button on English words, on either the question or the answer side.
