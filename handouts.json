@@ -10665,6 +10665,486 @@
     "by": "book",
     "at": 1793750400000
    }
+  },
+  {
+   "id": "tl-u1m1l6-adj-dobar",
+   "hr": "dobar",
+   "en": "good",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: 1.1.6 Zadaci 2-4\nadjective, masculine (m dobar · f dobra · n dobro)\nTata Hrvoje: profesor, dobar, drag.",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "dobar",
+     "dobra",
+     "dobro"
+    ],
+    "def": "dobri",
+    "form": "m",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-adj-dobra",
+   "hr": "dobra",
+   "en": "good (feminine)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: 1.1.6 Zadaci 2-4\nadjective, feminine (m dobar · f dobra · n dobro)\nJako je dobra i draga.",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "dobar",
+     "dobra",
+     "dobro"
+    ],
+    "def": "dobri",
+    "form": "f",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-adj-drag",
+   "hr": "drag",
+   "en": "dear / kind (masculine)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: 1.1.6 Zadaci 2-4\nadjective, masculine (m drag · f draga · n drago)\nOn je simpatičan i drag.",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "drag",
+     "draga",
+     "drago"
+    ],
+    "def": "dragi",
+    "form": "m",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-adj-draga",
+   "hr": "draga",
+   "en": "dear / kind (feminine)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: 1.1.6 Zadaci 2-4\nadjective, feminine (m drag · f draga · n drago)\nJako je vrijedna, dobra i draga.",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "drag",
+     "draga",
+     "drago"
+    ],
+    "def": "dragi",
+    "form": "f",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-adj-vrijedan",
+   "hr": "vrijedan",
+   "en": "hard-working (masculine)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: 1.1.6 Zadaci 2-4\nadjective, masculine (m vrijedan · f vrijedna · n vrijedno)\nJako je vrijedan i dobar.",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "vrijedan",
+     "vrijedna",
+     "vrijedno"
+    ],
+    "def": "vrijedni",
+    "form": "m",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-adj-vrijedna",
+   "hr": "vrijedna",
+   "en": "hard-working (feminine)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: 1.1.6 Zadaci 2-4\nadjective, feminine (m vrijedan · f vrijedna · n vrijedno)\nMama Ljubica: ekonomistica, vrijedna.",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "vrijedan",
+     "vrijedna",
+     "vrijedno"
+    ],
+    "def": "vrijedni",
+    "form": "f",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-adj-strog",
+   "hr": "strog",
+   "en": "strict",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: 1.1.6 Zadaci 2-4\nadjective, masculine (m strog · f stroga · n strogo)\nOn je vrijedan i strog.",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "strog",
+     "stroga",
+     "strogo"
+    ],
+    "def": "strogi",
+    "form": "m",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-adj-stroga",
+   "hr": "stroga",
+   "en": "strict (feminine)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: 1.1.6 Zadaci 2-4\nadjective, feminine (m strog · f stroga · n strogo)\nMoja profesorica je stroga.",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "strog",
+     "stroga",
+     "strogo"
+    ],
+    "def": "strogi",
+    "form": "f",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-adj-simpatican",
+   "hr": "simpatičan",
+   "en": "likeable",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: 1.1.6 Zadaci 2-4\nadjective, masculine (m simpatičan · f simpatična · n simpatično)\nOn je simpatičan i drag.",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "simpatičan",
+     "simpatična",
+     "simpatično"
+    ],
+    "def": "simpatični",
+    "form": "m",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-adj-simpaticna",
+   "hr": "simpatična",
+   "en": "likeable / nice (feminine)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: 1.1.6 Zadaci 2-4\nadjective, feminine (m simpatičan · f simpatična · n simpatično)\nMoja prijateljica je simpatična.",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "simpatičan",
+     "simpatična",
+     "simpatično"
+    ],
+    "def": "simpatični",
+    "form": "f",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-adj-visok",
+   "hr": "visok",
+   "en": "tall",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: 1.1.6 Zadaci 2-4\nadjective, masculine (m visok · f visoka · n visoko)\nTata John: Amerikanac, visok, odvjetnik.",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "visok",
+     "visoka",
+     "visoko"
+    ],
+    "def": "visoki",
+    "form": "m",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-adj-visoka",
+   "hr": "visoka",
+   "en": "tall (feminine)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: 1.1.6 Zadaci 2-4\nadjective, feminine (m visok · f visoka · n visoko)\nPrijateljica Silvija: studentica, dobra, visoka.",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "visok",
+     "visoka",
+     "visoko"
+    ],
+    "def": "visoki",
+    "form": "f",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-adj-smijesan",
+   "hr": "smiješan",
+   "en": "funny (masculine)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: 1.1.6 Zadaci 2-4\nadjective, masculine (m smiješan · f smiješna · n smiješno)\nMoj brat je smiješan.",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "smiješan",
+     "smiješna",
+     "smiješno"
+    ],
+    "def": "smiješni",
+    "form": "m",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-adj-smijesna",
+   "hr": "smiješna",
+   "en": "funny (feminine)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: 1.1.6 Zadaci 2-4\nadjective, feminine (m smiješan · f smiješna · n smiješno)\nPrijateljica Suzana: studentica, smiješna, vrijedna.",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "smiješan",
+     "smiješna",
+     "smiješno"
+    ],
+    "def": "smiješni",
+    "form": "f",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-adj-ozbiljan",
+   "hr": "ozbiljan",
+   "en": "serious",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: 1.1.6 Zadaci 2-4\nadjective, masculine (m ozbiljan · f ozbiljna · n ozbiljno)\nMoj tata je ozbiljan.",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "ozbiljan",
+     "ozbiljna",
+     "ozbiljno"
+    ],
+    "def": "ozbiljni",
+    "form": "m",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-adj-ozbiljna",
+   "hr": "ozbiljna",
+   "en": "serious (feminine)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: 1.1.6 Zadaci 2-4\nadjective, feminine (m ozbiljan · f ozbiljna · n ozbiljno)\nMama Josipa: odvjetnica, vrijedna, ozbiljna.",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "ozbiljan",
+     "ozbiljna",
+     "ozbiljno"
+    ],
+    "def": "ozbiljni",
+    "form": "f",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-adj-lijep",
+   "hr": "lijep",
+   "en": "beautiful / nice (masculine)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: 1.1.6 Zadaci 2-4\nadjective, masculine (m lijep · f lijepa · n lijepo)\nTamara je baš lijepo ime.",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "lijep",
+     "lijepa",
+     "lijepo"
+    ],
+    "def": "lijepi",
+    "form": "m",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-adj-lijepa",
+   "hr": "lijepa",
+   "en": "beautiful / nice (feminine)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: 1.1.6 Zadaci 2-4\nadjective, feminine (m lijep · f lijepa · n lijepo)\nSestra je lijepa.",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "lijep",
+     "lijepa",
+     "lijepo"
+    ],
+    "def": "lijepi",
+    "form": "f",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-adj-zanimljiv",
+   "hr": "zanimljiv",
+   "en": "interesting (masculine)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: 1.1.6 Zadaci 2-4\nadjective, masculine (m zanimljiv · f zanimljiva · n zanimljivo)\nBaš zanimljivo.",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "zanimljiv",
+     "zanimljiva",
+     "zanimljivo"
+    ],
+    "def": "zanimljivi",
+    "form": "m",
+    "by": "book",
+    "at": 1793750400000
+   }
+  },
+  {
+   "id": "tl-u1m1l6-adj-zanimljiva",
+   "hr": "zanimljiva",
+   "en": "interesting (feminine)",
+   "note": "Tako lako U1 · M1 · Lesson 6: Roditelji\nBook: 1.1.6 Zadaci 2-4\nadjective, feminine (m zanimljiv · f zanimljiva · n zanimljivo)\nMoja mama je zanimljiva.",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793750400000,
+   "updatedAt": 1793750400000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "zanimljiv",
+     "zanimljiva",
+     "zanimljivo"
+    ],
+    "def": "zanimljivi",
+    "form": "f",
+    "by": "book",
+    "at": 1793750400000
+   }
   }
  ]
 }

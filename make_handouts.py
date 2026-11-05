@@ -318,6 +318,46 @@ for en, hr, g in rows:
                       "level": 1, "due": 0, "createdAt": TS_LESSONS, "updatedAt": TS_LESSONS,
                       "lastReviewed": 0, "deleted": False, "gram": gr})
 
+# Adjectives from Lesson 6 (1.1.6 Zadatak 2-4: dialogues and the Laura / Lorena / Ivana profiles).
+# Row: (english, croatian, form m|f, example from the lesson)
+# English on words already in the book deck matches that card, so only the Lesson 6 tag is added there.
+ADJ_L6 = ("Tako lako U1 · M1 · Lesson 6: Roditelji", "1.1.6 Zadaci 2-4", "u1m1l6", [
+    ("good", "dobar", "m", "Tata Hrvoje: profesor, dobar, drag."),
+    ("good (feminine)", "dobra", "f", "Jako je dobra i draga."),
+    ("dear / kind (masculine)", "drag", "m", "On je simpatičan i drag."),
+    ("dear / kind (feminine)", "draga", "f", "Jako je vrijedna, dobra i draga."),
+    ("hard-working (masculine)", "vrijedan", "m", "Jako je vrijedan i dobar."),
+    ("hard-working (feminine)", "vrijedna", "f", "Mama Ljubica: ekonomistica, vrijedna."),
+    ("strict", "strog", "m", "On je vrijedan i strog."),
+    ("strict (feminine)", "stroga", "f", "Moja profesorica je stroga."),
+    ("likeable", "simpatičan", "m", "On je simpatičan i drag."),
+    ("likeable / nice (feminine)", "simpatična", "f", "Moja prijateljica je simpatična."),
+    ("tall", "visok", "m", "Tata John: Amerikanac, visok, odvjetnik."),
+    ("tall (feminine)", "visoka", "f", "Prijateljica Silvija: studentica, dobra, visoka."),
+    ("funny (masculine)", "smiješan", "m", "Moj brat je smiješan."),
+    ("funny (feminine)", "smiješna", "f", "Prijateljica Suzana: studentica, smiješna, vrijedna."),
+    ("serious", "ozbiljan", "m", "Moj tata je ozbiljan."),
+    ("serious (feminine)", "ozbiljna", "f", "Mama Josipa: odvjetnica, vrijedna, ozbiljna."),
+    ("beautiful / nice (masculine)", "lijep", "m", "Tamara je baš lijepo ime."),
+    ("beautiful / nice (feminine)", "lijepa", "f", "Sestra je lijepa."),
+    ("interesting (masculine)", "zanimljiv", "m", "Baš zanimljivo."),
+    ("interesting (feminine)", "zanimljiva", "f", "Moja mama je zanimljiva."),
+])
+ADJ_FORMS = {"dobar": ["dobar", "dobra", "dobro"], "drag": ["drag", "draga", "drago"],
+             "vrijedan": ["vrijedan", "vrijedna", "vrijedno"], "strog": ["strog", "stroga", "strogo"],
+             "simpatičan": ["simpatičan", "simpatična", "simpatično"], "visok": ["visok", "visoka", "visoko"],
+             "smiješan": ["smiješan", "smiješna", "smiješno"], "ozbiljan": ["ozbiljan", "ozbiljna", "ozbiljno"],
+             "lijep": ["lijep", "lijepa", "lijepo"], "zanimljiv": ["zanimljiv", "zanimljiva", "zanimljivo"]}
+tag, sheet, lid, rows = ADJ_L6
+for en, hr, form, ex in rows:
+    forms = next(v for v in ADJ_FORMS.values() if hr in v)
+    gr = {"pos": "adj", "forms": forms, "def": forms[0] if forms[0].endswith("i") else (forms[1][:-1] + "i"),
+          "form": form, "by": "book", "at": TS_LESSONS}
+    note = f"{tag}\nBook: {sheet}\nadjective, {GLABEL[form]} (m {forms[0]} · f {forms[1]} · n {forms[2]})\n{ex}"
+    out_cards.append({"id": f"tl-{lid}-adj-{slug(hr)}", "hr": hr, "en": en, "note": note,
+                      "level": 1, "due": 0, "createdAt": TS_LESSONS, "updatedAt": TS_LESSONS,
+                      "lastReviewed": 0, "deleted": False, "gram": gr})
+
 ids = [c["id"] for c in out_cards]
 assert len(ids) == len(set(ids)), "duplicate ids"
 data = {"app": "prevoditelj", "kind": "handouts", "version": 1, "savedAt": TS,
