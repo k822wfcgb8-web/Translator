@@ -322,6 +322,8 @@ h3 { font-size: 1rem; margin: 0; }
 .ans-result.near .ans-head { color: var(--warn); }
 .ans-result.bad .ans-head { color: var(--bad); }
 .ans-you { font-weight: 700; }
+.ans-orig { font-style: italic; }
+.ans-right { font-weight: 700; color: var(--ok); }
 .ans-result .words { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0; }
 .ans-result .wd.miss { text-decoration: none; }
 .ans-checking { display: flex; align-items: center; gap: 10px; color: var(--muted); }
@@ -2364,7 +2366,7 @@ const CHECK_SYSTEM = `You check a learner's answer to one Croatian/English flash
 - "nearly": the right word or idea with a real mistake: a wrong ending, case, gender, number, or verb person; a wrong or missing č ć đ š ž in a typed Croatian answer; a bigger spelling mistake; or only part of a multi-part answer.
 - "wrong": a different meaning or word, the wrong language, or no real attempt.
 - A spoken answer is a speech-recognition transcript: don't penalise č/ć, š/s, ž/z, đ/dž or similar-sounding differences that recognition commonly confuses, and consider the other transcripts given.
-- feedback: one or two short, friendly English sentences. If not correct, say what was wrong and give the right form. If correct but worded differently from the card, say it's fine and give the card's wording. No filler praise.
+- feedback: one or two short, friendly English sentences. If not correct, quote the original phrase from the card, say what was wrong and give the right form. If correct but worded differently from the card, say it's fine and give the card's wording. No filler praise.
 - grammar: ONLY when the request says "More detail: yes" and the verdict is not "correct". Break down the correct Croatian (the card's Croatian) word by word, for every word that inflects (nouns, adjectives, pronouns, numerals, verbs): the word, its root / dictionary form, part of speech, form (case + number, or tense + person + number), gender, ending, and why that form is used (mention the preposition or verb that decides the case). If the learner wrote that word in a different form, put exactly what they wrote in user_wrote, otherwise "". Otherwise leave grammar out.
 Report with the report_check tool.`;
 const CHECK_TOOL = {
@@ -2551,17 +2553,23 @@ async function checkAnswer() {
     }
   }
   A.checking = false; A.done = true;
-  showAnswerResult(r, { typed, spoken, ansLang, expected, by });
+  showAnswerResult(r, { typed, spoken, ansLang, expected, by,
+                        front: frontIsHr ? c.hr : c.en, frontLang: frontIsHr ? 'hr' : 'en' });
 }
 
 function showAnswerResult(r, o) {
   const kind = r.verdict === 'correct' ? 'ok' : r.verdict === 'nearly' ? 'near' : r.verdict === 'wrong' ? 'bad' : 'unk';
   const box = $('#fcResult'); box.innerHTML = ''; box.className = 'ans-result ' + kind; box.hidden = false;
   box.appendChild(el('p', 'ans-head', { ok: '✓ Correct', near: '≈ Nearly', bad: '✗ Not quite', unk: 'Compare your answer' }[kind]));
-  const you = el('p', 'small');
-  you.append(document.createTextNode(o.spoken ? 'You said: ' : 'You typed: '));
-  const q = el('span', 'ans-you', `“${r.heard || o.typed}”`); q.lang = o.ansLang; you.appendChild(q);
-  box.appendChild(you);
+  // When the answer wasn't right, show the card's original phrase, the answer given and
+  // the correct answer together so they can be compared at a glance.
+  const line = (label, text, lang, cls) => {
+    const p = el('p', 'small'); p.append(document.createTextNode(label));
+    const t = el('span', cls, `“${text}”`); t.lang = lang; p.appendChild(t); box.appendChild(p);
+  };
+  if (kind !== 'ok' && o.front) line('Original phrase: ', o.front, o.frontLang, 'ans-orig');
+  line(o.spoken ? 'You said: ' : 'You typed: ', r.heard || o.typed, o.ansLang, 'ans-you');
+  if (kind !== 'ok' && o.expected) line('Correct answer: ', o.expected, o.ansLang, 'ans-right');
   // Croatian answers that weren't exactly right: mark each word against the card.
   const target = o.ansLang === 'hr' && kind !== 'ok' ? (r.match || bestVariant(o.expected, o.typed)) : '';
   if (tokens(target).length > 1) {
