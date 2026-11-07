@@ -252,6 +252,7 @@ h3 { font-size: 1rem; margin: 0; }
 .dots { display: inline-flex; gap: 5px; margin-left: 4px; }
 .dots span { width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--brand); }
 .dots span.used { background: var(--brand); }
+.dots span.used.ok { background: var(--ok); border-color: var(--ok); }
 .attempts-list { list-style: none; padding: 0; margin: 10px 0 0; display: grid; gap: 8px; }
 .attempt { border: 1px solid var(--line); border-radius: 12px; padding: 8px 12px; }
 .attempt .hd { display: flex; justify-content: space-between; gap: 8px; font-weight: 700; }
@@ -373,7 +374,7 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
 <header class="top">
   <div class="brand">
     <span class="logo" aria-hidden="true"></span>
-    <div><h1>Prevoditelj</h1><p>Croatian ⇄ English · v3.4</p></div>
+    <div><h1>Prevoditelj</h1><p>Croatian ⇄ English · v3.6</p></div>
   </div>
   <button id="settingsBtn" class="icon-btn" aria-label="Settings" title="Settings">⚙︎</button>
 </header>
@@ -2213,8 +2214,14 @@ function renderStudy() {
   const m = cardDir(c);
   disarmDelete();
   const need = session.need[c.id];
-  $('#studyProgress').textContent = `${session.done} done · ${session.queue.length} to go` +
+  const prog = $('#studyProgress');
+  prog.textContent = `${session.done} done · ${session.queue.length} to go` +
     (need ? ` · this one: ${REPEAT_GOAL - need} of ${REPEAT_GOAL} right` : '');
+  if (need) {   // a missed card being repeated: one filled dot per right answer so far
+    const dots = el('span', 'dots'); dots.setAttribute('aria-hidden', 'true');
+    for (let k = 0; k < REPEAT_GOAL; k++) { const d = el('span'); if (k < REPEAT_GOAL - need) d.className = 'used ok'; dots.appendChild(d); }
+    prog.appendChild(dots);
+  }
   const frontIsHr = m !== 'en-hr';
   $('#fcFrontLabel').textContent = (frontIsHr ? 'Croatian' : 'English') +
     (session.mode === 'mix' ? (frontIsHr ? ' → answer in English' : ' → answer in Croatian') : '');
@@ -2294,7 +2301,13 @@ function renderSay() {
   if (!session || !session.sayOn) return;
   const used = session.tries.length, max = 3;
   const dots = $('#fcSayDots'); dots.innerHTML = '';
-  for (let k = 0; k < max; k++) { const d = el('span'); if (k < used) d.className = 'used'; dots.appendChild(d); }
+  // A try said right shows green; once it's said right, all three dots fill in green.
+  for (let k = 0; k < max; k++) {
+    const d = el('span'), t = session.tries[k];
+    if (session.sayDone && (k >= used || (t && t.score >= 0.999))) d.className = 'used ok';
+    else if (k < used) d.className = 'used';
+    dots.appendChild(d);
+  }
   $('#fcSayText').textContent = session.sayDone ? 'Done!' : (used < max ? `Try ${used + 1} of ${max}` : 'No tries left');
   $('#fcSayBtn').disabled = !state.micAvailable || session.sayDone || used >= max;
   const list = $('#fcSayList'); list.innerHTML = '';
