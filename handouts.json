@@ -7080,10 +7080,11 @@
    "id": "ho-questions-je-li",
    "hr": "je li",
    "en": "is it …? / whether",
-   "note": "Handout: Upitne riječi (question words) · Veznici (conjunctions)",
+   "note": "Handout: Upitne riječi (question words) · Veznici (conjunctions) · Kratke riječi (short words)",
    "ho": [
     "questions",
-    "conj"
+    "conj",
+    "short"
    ],
    "level": 1,
    "due": 0,
@@ -7161,9 +7162,10 @@
    "id": "ho-kwords-kako-se-zoves",
    "hr": "Kako se zoveš?",
    "en": "What's your name?",
-   "note": "Handout: K-words anchor phrases",
+   "note": "Handout: K-words anchor phrases · Kratke riječi (short words)",
    "ho": [
-    "kwords"
+    "kwords",
+    "short"
    ],
    "level": 1,
    "due": 0,
@@ -9583,6 +9585,166 @@
    "id": "ho-short-hajdemo",
    "hr": "hajdemo",
    "en": "let's go",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-se",
+   "hr": "se",
+   "en": "oneself / each other (goes with some verbs)",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-li",
+   "hr": "li",
+   "en": "(question word for yes/no questions)",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-imas-li",
+   "hr": "imaš li",
+   "en": "do you have …?",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-zovem-se",
+   "hr": "zovem se",
+   "en": "my name is …",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-ne-zovem-se",
+   "hr": "ne zovem se",
+   "en": "my name isn't …",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-vidimo-se",
+   "hr": "vidimo se",
+   "en": "see you / see each other",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-svida-mi-se",
+   "hr": "sviđa mi se",
+   "en": "I like it",
+   "note": "Handout: Kratke riječi (short words)",
+   "ho": [
+    "short"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-short-kako-se-kaze",
+   "hr": "Kako se kaže …?",
+   "en": "How do you say …?",
    "note": "Handout: Kratke riječi (short words)",
    "ho": [
     "short"

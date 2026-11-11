@@ -199,6 +199,12 @@ H.append(("short", "Kratke riječi (short words)", "Croatian_Short_Words.pdf", [
     ("someone", "netko", ""), ("no one / nobody", "nitko", ""), ("something", "nešto", ""),
     ("nothing", "ništa", ""), ("like / as", "kao", ""), ("please / you're welcome / pardon?", "molim", ""),
     ("thanks / thank you", "hvala", ""), ("come on", "hajde", ""), ("let's go", "hajdemo", ""),
+    # Page 5 (added Nov 7, 2026): little grammar words se and li
+    ("oneself / each other (goes with some verbs)", "se", ""), ("(question word for yes/no questions)", "li", ""),
+    ("is it …? / whether", "je li", ""), ("do you have …?", "imaš li", ""),
+    ("my name is …", "zovem se", ""), ("my name isn't …", "ne zovem se", ""), ("What's your name?", "Kako se zoveš?", ""),
+    ("see you / see each other", "vidimo se", ""), ("I like it", "sviđa mi se", ""),
+    ("How do you say …?", "Kako se kaže …?", ""),
 ]))
 
 
