@@ -358,6 +358,29 @@ for en, hr, form, ex in rows:
                       "level": 1, "due": 0, "createdAt": TS_LESSONS, "updatedAt": TS_LESSONS,
                       "lastReviewed": 0, "deleted": False, "gram": gr})
 
+# Learning-objective words from the Veterans Day worksheet "Domovinski rat i glazba: Lupi petama"
+# (Prljavo Kazalište), filed under U1 · M2 · Lesson 1. Examples are simple sentences, not song lyrics.
+# Row: (english, croatian, g, kind, forms, example)   g as in gram(); kind/forms go in the note.
+TS_L7 = 1794441600000  # 2026-11-11
+WAR_SONG = ("Tako lako U1 · M2 · Lesson 1: Ljudi i stvari", "Domovinski rat i glazba: Lupi petama", "u1m2l1", [
+    ("war", "rat", "m", "noun, masculine (inanimate)", "Acc. sg. rat · Acc. pl. ratove", "Rat je završio."),
+    ("friends", "prijatelji", "mpl", "noun, masculine plural (animate)", "Sg. prijatelj · Acc. pl. prijatelje", "Moji prijatelji su ovdje."),
+    ("to hug / to embrace", "zagrliti", "", "verb, perfective (ja zagrlim)", "Imperfective: grliti", "Želim te zagrliti."),
+    ("flag", "zastava", "f", "noun, feminine", "Acc. sg. zastavu · Acc. pl. zastave", "Hrvatska zastava je crvena, bijela i plava."),
+    ("tear (crying)", "suza", "f", "noun, feminine", "Acc. sg. suzu · Acc. pl. suze", "Imam suzu u oku."),
+    ("dove / pigeon", "golub", "ma", "noun, masculine, animate", "Acc. sg. goluba · Acc. pl. golubove", "Golub je bijel."),
+    ("sky", "nebo", "n", "noun, neuter", "Acc. sg. nebo · Pl. nebesa", "Nebo je plavo."),
+    ("night", "noć", "f", "noun, feminine (ends in a consonant)", "Acc. sg. noć · Acc. pl. noći", "Laku noć!"),
+    ("Sunday", "nedjelja", "f", "noun, feminine", "Acc. sg. nedjelju · on Sundays: nedjeljom", "U nedjelju gledam utakmicu."),
+])
+tag, sheet, lid, rows = WAR_SONG
+for en, hr, g, kind, forms, ex in rows:
+    gr = gram(g); gr["at"] = TS_L7
+    out_cards.append({"id": f"tl-{lid}-{slug(hr)}", "hr": hr, "en": en,
+                      "note": f"{tag}\nWorksheet: {sheet}\n{kind}\n{forms}\n{ex}",
+                      "level": 1, "due": 0, "createdAt": TS_L7, "updatedAt": TS_L7,
+                      "lastReviewed": 0, "deleted": False, "gram": gr})
+
 ids = [c["id"] for c in out_cards]
 assert len(ids) == len(set(ids)), "duplicate ids"
 data = {"app": "prevoditelj", "kind": "handouts", "version": 1, "savedAt": TS,

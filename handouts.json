@@ -11145,6 +11145,169 @@
     "by": "book",
     "at": 1793750400000
    }
+  },
+  {
+   "id": "tl-u1m2l1-rat",
+   "hr": "rat",
+   "en": "war",
+   "note": "Tako lako U1 · M2 · Lesson 1: Ljudi i stvari\nWorksheet: Domovinski rat i glazba: Lupi petama\nnoun, masculine (inanimate)\nAcc. sg. rat · Acc. pl. ratove\nRat je završio.",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m2l1-prijatelji",
+   "hr": "prijatelji",
+   "en": "friends",
+   "note": "Tako lako U1 · M2 · Lesson 1: Ljudi i stvari\nWorksheet: Domovinski rat i glazba: Lupi petama\nnoun, masculine plural (animate)\nSg. prijatelj · Acc. pl. prijatelje\nMoji prijatelji su ovdje.",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1794441600000,
+    "plural": true
+   }
+  },
+  {
+   "id": "tl-u1m2l1-zagrliti",
+   "hr": "zagrliti",
+   "en": "to hug / to embrace",
+   "note": "Tako lako U1 · M2 · Lesson 1: Ljudi i stvari\nWorksheet: Domovinski rat i glazba: Lupi petama\nverb, perfective (ja zagrlim)\nImperfective: grliti\nŽelim te zagrliti.",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m2l1-zastava",
+   "hr": "zastava",
+   "en": "flag",
+   "note": "Tako lako U1 · M2 · Lesson 1: Ljudi i stvari\nWorksheet: Domovinski rat i glazba: Lupi petama\nnoun, feminine\nAcc. sg. zastavu · Acc. pl. zastave\nHrvatska zastava je crvena, bijela i plava.",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m2l1-suza",
+   "hr": "suza",
+   "en": "tear (crying)",
+   "note": "Tako lako U1 · M2 · Lesson 1: Ljudi i stvari\nWorksheet: Domovinski rat i glazba: Lupi petama\nnoun, feminine\nAcc. sg. suzu · Acc. pl. suze\nImam suzu u oku.",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m2l1-golub",
+   "hr": "golub",
+   "en": "dove / pigeon",
+   "note": "Tako lako U1 · M2 · Lesson 1: Ljudi i stvari\nWorksheet: Domovinski rat i glazba: Lupi petama\nnoun, masculine, animate\nAcc. sg. goluba · Acc. pl. golubove\nGolub je bijel.",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1794441600000,
+    "animate": true
+   }
+  },
+  {
+   "id": "tl-u1m2l1-nebo",
+   "hr": "nebo",
+   "en": "sky",
+   "note": "Tako lako U1 · M2 · Lesson 1: Ljudi i stvari\nWorksheet: Domovinski rat i glazba: Lupi petama\nnoun, neuter\nAcc. sg. nebo · Pl. nebesa\nNebo je plavo.",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m2l1-noc",
+   "hr": "noć",
+   "en": "night",
+   "note": "Tako lako U1 · M2 · Lesson 1: Ljudi i stvari\nWorksheet: Domovinski rat i glazba: Lupi petama\nnoun, feminine (ends in a consonant)\nAcc. sg. noć · Acc. pl. noći\nLaku noć!",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m2l1-nedjelja",
+   "hr": "nedjelja",
+   "en": "Sunday",
+   "note": "Tako lako U1 · M2 · Lesson 1: Ljudi i stvari\nWorksheet: Domovinski rat i glazba: Lupi petama\nnoun, feminine\nAcc. sg. nedjelju · on Sundays: nedjeljom\nU nedjelju gledam utakmicu.",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1794441600000
+   }
   }
  ]
 }
