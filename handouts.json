@@ -11308,6 +11308,2451 @@
     "by": "book",
     "at": 1794441600000
    }
+  },
+  {
+   "id": "tl-u1m0l1-nula",
+   "hr": "nula",
+   "en": "zero (0)",
+   "note": "Tako lako U1 · M0 · Lesson 1: Brojevi 1–21\nBeginner list (Claude)\nnumber",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l1-jedan",
+   "hr": "jedan",
+   "en": "one (1)",
+   "note": "Tako lako U1 · M0 · Lesson 1: Brojevi 1–21\nBeginner list (Claude)\nnumber; agrees like an adjective: jedan sat, jedna kava, jedno pivo",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "jedan",
+     "jedna",
+     "jedno"
+    ],
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l1-dva",
+   "hr": "dva",
+   "en": "two (2)",
+   "note": "Tako lako U1 · M0 · Lesson 1: Brojevi 1–21\nBeginner list (Claude)\nnumber; dva for masculine/neuter, dvije for feminine (dvije kave)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l1-dvije",
+   "hr": "dvije",
+   "en": "two (2, feminine)",
+   "note": "Tako lako U1 · M0 · Lesson 1: Brojevi 1–21\nBeginner list (Claude)\nnumber; with feminine nouns: dvije sestre",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l1-tri",
+   "hr": "tri",
+   "en": "three (3)",
+   "note": "Tako lako U1 · M0 · Lesson 1: Brojevi 1–21\nBeginner list (Claude)\nnumber",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l1-cetiri",
+   "hr": "četiri",
+   "en": "four (4)",
+   "note": "Tako lako U1 · M0 · Lesson 1: Brojevi 1–21\nBeginner list (Claude)\nnumber",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l1-pet",
+   "hr": "pet",
+   "en": "five (5)",
+   "note": "Tako lako U1 · M0 · Lesson 1: Brojevi 1–21\nBeginner list (Claude)\nnumber; from 5 on, the noun goes in genitive plural: pet kava",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l1-sest",
+   "hr": "šest",
+   "en": "six (6)",
+   "note": "Tako lako U1 · M0 · Lesson 1: Brojevi 1–21\nBeginner list (Claude)\nnumber",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l1-sedam",
+   "hr": "sedam",
+   "en": "seven (7)",
+   "note": "Tako lako U1 · M0 · Lesson 1: Brojevi 1–21\nBeginner list (Claude)\nnumber",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l1-osam",
+   "hr": "osam",
+   "en": "eight (8)",
+   "note": "Tako lako U1 · M0 · Lesson 1: Brojevi 1–21\nBeginner list (Claude)\nnumber",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l1-devet",
+   "hr": "devet",
+   "en": "nine (9)",
+   "note": "Tako lako U1 · M0 · Lesson 1: Brojevi 1–21\nBeginner list (Claude)\nnumber",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l1-deset",
+   "hr": "deset",
+   "en": "ten (10)",
+   "note": "Tako lako U1 · M0 · Lesson 1: Brojevi 1–21\nBeginner list (Claude)\nnumber",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l1-jedanaest",
+   "hr": "jedanaest",
+   "en": "eleven (11)",
+   "note": "Tako lako U1 · M0 · Lesson 1: Brojevi 1–21\nBeginner list (Claude)\nnumber",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l1-dvanaest",
+   "hr": "dvanaest",
+   "en": "twelve (12)",
+   "note": "Tako lako U1 · M0 · Lesson 1: Brojevi 1–21\nBeginner list (Claude)\nnumber",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l1-trinaest",
+   "hr": "trinaest",
+   "en": "thirteen (13)",
+   "note": "Tako lako U1 · M0 · Lesson 1: Brojevi 1–21\nBeginner list (Claude)\nnumber",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l1-cetrnaest",
+   "hr": "četrnaest",
+   "en": "fourteen (14)",
+   "note": "Tako lako U1 · M0 · Lesson 1: Brojevi 1–21\nBeginner list (Claude)\nnumber",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l1-petnaest",
+   "hr": "petnaest",
+   "en": "fifteen (15)",
+   "note": "Tako lako U1 · M0 · Lesson 1: Brojevi 1–21\nBeginner list (Claude)\nnumber",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l1-sesnaest",
+   "hr": "šesnaest",
+   "en": "sixteen (16)",
+   "note": "Tako lako U1 · M0 · Lesson 1: Brojevi 1–21\nBeginner list (Claude)\nnumber",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l1-sedamnaest",
+   "hr": "sedamnaest",
+   "en": "seventeen (17)",
+   "note": "Tako lako U1 · M0 · Lesson 1: Brojevi 1–21\nBeginner list (Claude)\nnumber",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l1-osamnaest",
+   "hr": "osamnaest",
+   "en": "eighteen (18)",
+   "note": "Tako lako U1 · M0 · Lesson 1: Brojevi 1–21\nBeginner list (Claude)\nnumber",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l1-devetnaest",
+   "hr": "devetnaest",
+   "en": "nineteen (19)",
+   "note": "Tako lako U1 · M0 · Lesson 1: Brojevi 1–21\nBeginner list (Claude)\nnumber",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l1-dvadeset",
+   "hr": "dvadeset",
+   "en": "twenty (20)",
+   "note": "Tako lako U1 · M0 · Lesson 1: Brojevi 1–21\nBeginner list (Claude)\nnumber",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l1-dvadeset-jedan",
+   "hr": "dvadeset jedan",
+   "en": "twenty-one (21)",
+   "note": "Tako lako U1 · M0 · Lesson 1: Brojevi 1–21\nBeginner list (Claude)\nnumber; written as two words",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l1-koliko",
+   "hr": "Koliko?",
+   "en": "How many? / How much?",
+   "note": "Tako lako U1 · M0 · Lesson 1: Brojevi 1–21\nBeginner list (Claude)\nquestion word",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l2-ponedjeljak",
+   "hr": "ponedjeljak",
+   "en": "Monday",
+   "note": "Tako lako U1 · M0 · Lesson 2: Dani u tjednu\nBeginner list (Claude)\nday; on Monday = u ponedjeljak",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l2-utorak",
+   "hr": "utorak",
+   "en": "Tuesday",
+   "note": "Tako lako U1 · M0 · Lesson 2: Dani u tjednu\nBeginner list (Claude)\nday",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l2-srijeda",
+   "hr": "srijeda",
+   "en": "Wednesday",
+   "note": "Tako lako U1 · M0 · Lesson 2: Dani u tjednu\nBeginner list (Claude)\nday; on Wednesday = u srijedu",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l2-cetvrtak",
+   "hr": "četvrtak",
+   "en": "Thursday",
+   "note": "Tako lako U1 · M0 · Lesson 2: Dani u tjednu\nBeginner list (Claude)\nday",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l2-petak",
+   "hr": "petak",
+   "en": "Friday",
+   "note": "Tako lako U1 · M0 · Lesson 2: Dani u tjednu\nBeginner list (Claude)\nday",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l2-subota",
+   "hr": "subota",
+   "en": "Saturday",
+   "note": "Tako lako U1 · M0 · Lesson 2: Dani u tjednu\nBeginner list (Claude)\nday; on Saturday = u subotu",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l2-nedjelja",
+   "hr": "nedjelja",
+   "en": "Sunday",
+   "note": "Tako lako U1 · M0 · Lesson 2: Dani u tjednu\nBeginner list (Claude)\nday; on Sundays = nedjeljom",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l2-dan",
+   "hr": "dan",
+   "en": "day",
+   "note": "Tako lako U1 · M0 · Lesson 2: Dani u tjednu\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l2-tjedan",
+   "hr": "tjedan",
+   "en": "week",
+   "note": "Tako lako U1 · M0 · Lesson 2: Dani u tjednu\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l2-vikend",
+   "hr": "vikend",
+   "en": "weekend",
+   "note": "Tako lako U1 · M0 · Lesson 2: Dani u tjednu\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l2-danas",
+   "hr": "danas",
+   "en": "today",
+   "note": "Tako lako U1 · M0 · Lesson 2: Dani u tjednu\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l2-sutra",
+   "hr": "sutra",
+   "en": "tomorrow",
+   "note": "Tako lako U1 · M0 · Lesson 2: Dani u tjednu\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l2-jucer",
+   "hr": "jučer",
+   "en": "yesterday",
+   "note": "Tako lako U1 · M0 · Lesson 2: Dani u tjednu\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l2-koji-je-danas-dan",
+   "hr": "Koji je danas dan?",
+   "en": "What day is it today?",
+   "note": "Tako lako U1 · M0 · Lesson 2: Dani u tjednu\nBeginner list (Claude)\nphrase",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l2-danas-je-ponedjeljak",
+   "hr": "Danas je ponedjeljak.",
+   "en": "Today is Monday.",
+   "note": "Tako lako U1 · M0 · Lesson 2: Dani u tjednu\nBeginner list (Claude)\nphrase",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l2-u-ponedjeljak",
+   "hr": "u ponedjeljak",
+   "en": "on Monday",
+   "note": "Tako lako U1 · M0 · Lesson 2: Dani u tjednu\nBeginner list (Claude)\nu + accusative for days",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l3-sijecanj",
+   "hr": "siječanj",
+   "en": "January",
+   "note": "Tako lako U1 · M0 · Lesson 3: Mjeseci\nBeginner list (Claude)\nmonth; in January = u siječnju",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l3-veljaca",
+   "hr": "veljača",
+   "en": "February",
+   "note": "Tako lako U1 · M0 · Lesson 3: Mjeseci\nBeginner list (Claude)\nmonth",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l3-ozujak",
+   "hr": "ožujak",
+   "en": "March",
+   "note": "Tako lako U1 · M0 · Lesson 3: Mjeseci\nBeginner list (Claude)\nmonth",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l3-travanj",
+   "hr": "travanj",
+   "en": "April",
+   "note": "Tako lako U1 · M0 · Lesson 3: Mjeseci\nBeginner list (Claude)\nmonth",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l3-svibanj",
+   "hr": "svibanj",
+   "en": "May",
+   "note": "Tako lako U1 · M0 · Lesson 3: Mjeseci\nBeginner list (Claude)\nmonth",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l3-lipanj",
+   "hr": "lipanj",
+   "en": "June",
+   "note": "Tako lako U1 · M0 · Lesson 3: Mjeseci\nBeginner list (Claude)\nmonth",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l3-srpanj",
+   "hr": "srpanj",
+   "en": "July",
+   "note": "Tako lako U1 · M0 · Lesson 3: Mjeseci\nBeginner list (Claude)\nmonth",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l3-kolovoz",
+   "hr": "kolovoz",
+   "en": "August",
+   "note": "Tako lako U1 · M0 · Lesson 3: Mjeseci\nBeginner list (Claude)\nmonth",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l3-rujan",
+   "hr": "rujan",
+   "en": "September",
+   "note": "Tako lako U1 · M0 · Lesson 3: Mjeseci\nBeginner list (Claude)\nmonth",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l3-listopad",
+   "hr": "listopad",
+   "en": "October",
+   "note": "Tako lako U1 · M0 · Lesson 3: Mjeseci\nBeginner list (Claude)\nmonth",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l3-studeni",
+   "hr": "studeni",
+   "en": "November",
+   "note": "Tako lako U1 · M0 · Lesson 3: Mjeseci\nBeginner list (Claude)\nmonth; adjective-like form",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l3-prosinac",
+   "hr": "prosinac",
+   "en": "December",
+   "note": "Tako lako U1 · M0 · Lesson 3: Mjeseci\nBeginner list (Claude)\nmonth",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l3-mjesec",
+   "hr": "mjesec",
+   "en": "month",
+   "note": "Tako lako U1 · M0 · Lesson 3: Mjeseci\nBeginner list (Claude)\nalso means moon",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l3-godina",
+   "hr": "godina",
+   "en": "year",
+   "note": "Tako lako U1 · M0 · Lesson 3: Mjeseci\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l3-u-sijecnju",
+   "hr": "u siječnju",
+   "en": "in January",
+   "note": "Tako lako U1 · M0 · Lesson 3: Mjeseci\nBeginner list (Claude)\nu + locative for months",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l4-sekunda",
+   "hr": "sekunda",
+   "en": "second",
+   "note": "Tako lako U1 · M0 · Lesson 4: Jedinice vremena\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l4-minuta",
+   "hr": "minuta",
+   "en": "minute",
+   "note": "Tako lako U1 · M0 · Lesson 4: Jedinice vremena\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l4-sat",
+   "hr": "sat",
+   "en": "hour",
+   "note": "Tako lako U1 · M0 · Lesson 4: Jedinice vremena\nBeginner list (Claude)\nsat = hour and also clock / watch",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l4-dan",
+   "hr": "dan",
+   "en": "day",
+   "note": "Tako lako U1 · M0 · Lesson 4: Jedinice vremena\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l4-tjedan",
+   "hr": "tjedan",
+   "en": "week",
+   "note": "Tako lako U1 · M0 · Lesson 4: Jedinice vremena\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l4-mjesec",
+   "hr": "mjesec",
+   "en": "month",
+   "note": "Tako lako U1 · M0 · Lesson 4: Jedinice vremena\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l4-godina",
+   "hr": "godina",
+   "en": "year",
+   "note": "Tako lako U1 · M0 · Lesson 4: Jedinice vremena\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l4-desetljece",
+   "hr": "desetljeće",
+   "en": "decade",
+   "note": "Tako lako U1 · M0 · Lesson 4: Jedinice vremena\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l4-stoljece",
+   "hr": "stoljeće",
+   "en": "century",
+   "note": "Tako lako U1 · M0 · Lesson 4: Jedinice vremena\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l4-jutro",
+   "hr": "jutro",
+   "en": "morning",
+   "note": "Tako lako U1 · M0 · Lesson 4: Jedinice vremena\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l4-podne",
+   "hr": "podne",
+   "en": "noon",
+   "note": "Tako lako U1 · M0 · Lesson 4: Jedinice vremena\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l4-popodne",
+   "hr": "popodne",
+   "en": "afternoon",
+   "note": "Tako lako U1 · M0 · Lesson 4: Jedinice vremena\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l4-vecer",
+   "hr": "večer",
+   "en": "evening",
+   "note": "Tako lako U1 · M0 · Lesson 4: Jedinice vremena\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l4-noc",
+   "hr": "noć",
+   "en": "night",
+   "note": "Tako lako U1 · M0 · Lesson 4: Jedinice vremena\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l4-ponoc",
+   "hr": "ponoć",
+   "en": "midnight",
+   "note": "Tako lako U1 · M0 · Lesson 4: Jedinice vremena\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l4-koliko-je-sati",
+   "hr": "koliko je sati",
+   "en": "what time is it",
+   "note": "Tako lako U1 · M0 · Lesson 4: Jedinice vremena\nBeginner list (Claude)\nphrase",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l4-pola-sata",
+   "hr": "pola sata",
+   "en": "half an hour",
+   "note": "Tako lako U1 · M0 · Lesson 4: Jedinice vremena\nBeginner list (Claude)\nphrase",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l5-boja",
+   "hr": "boja",
+   "en": "color",
+   "note": "Tako lako U1 · M0 · Lesson 5: Boje\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l5-koje-je-boje",
+   "hr": "Koje je boje?",
+   "en": "What color is it?",
+   "note": "Tako lako U1 · M0 · Lesson 5: Boje\nBeginner list (Claude)\nphrase",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l5-crven",
+   "hr": "crven",
+   "en": "red (masculine)",
+   "note": "Tako lako U1 · M0 · Lesson 5: Boje\nBeginner list (Claude)\nadjective",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "crven",
+     "crvena",
+     "crveno"
+    ],
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l5-crvena",
+   "hr": "crvena",
+   "en": "red",
+   "note": "Tako lako U1 · M0 · Lesson 5: Boje\nBeginner list (Claude)\nadjective, feminine",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "crven",
+     "crvena",
+     "crveno"
+    ],
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l5-plav",
+   "hr": "plav",
+   "en": "blue (masculine)",
+   "note": "Tako lako U1 · M0 · Lesson 5: Boje\nBeginner list (Claude)\nadjective",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "plav",
+     "plava",
+     "plavo"
+    ],
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l5-plava",
+   "hr": "plava",
+   "en": "blue",
+   "note": "Tako lako U1 · M0 · Lesson 5: Boje\nBeginner list (Claude)\nadjective, feminine",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "plav",
+     "plava",
+     "plavo"
+    ],
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l5-zelen",
+   "hr": "zelen",
+   "en": "green (masculine)",
+   "note": "Tako lako U1 · M0 · Lesson 5: Boje\nBeginner list (Claude)\nadjective",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "zelen",
+     "zelena",
+     "zeleno"
+    ],
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l5-zelena",
+   "hr": "zelena",
+   "en": "green",
+   "note": "Tako lako U1 · M0 · Lesson 5: Boje\nBeginner list (Claude)\nadjective, feminine",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "zelen",
+     "zelena",
+     "zeleno"
+    ],
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l5-zut",
+   "hr": "žut",
+   "en": "yellow",
+   "note": "Tako lako U1 · M0 · Lesson 5: Boje\nBeginner list (Claude)\nadjective",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "žut",
+     "žuta",
+     "žuto"
+    ],
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l5-zuta",
+   "hr": "žuta",
+   "en": "yellow",
+   "note": "Tako lako U1 · M0 · Lesson 5: Boje\nBeginner list (Claude)\nadjective, feminine",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "žut",
+     "žuta",
+     "žuto"
+    ],
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l5-crn",
+   "hr": "crn",
+   "en": "black (masculine)",
+   "note": "Tako lako U1 · M0 · Lesson 5: Boje\nBeginner list (Claude)\nadjective",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "crn",
+     "crna",
+     "crno"
+    ],
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l5-crna",
+   "hr": "crna",
+   "en": "black",
+   "note": "Tako lako U1 · M0 · Lesson 5: Boje\nBeginner list (Claude)\nadjective, feminine",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "crn",
+     "crna",
+     "crno"
+    ],
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l5-bijel",
+   "hr": "bijel",
+   "en": "white (masculine)",
+   "note": "Tako lako U1 · M0 · Lesson 5: Boje\nBeginner list (Claude)\nadjective",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "bijel",
+     "bijela",
+     "bijelo"
+    ],
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l5-bijela",
+   "hr": "bijela",
+   "en": "white",
+   "note": "Tako lako U1 · M0 · Lesson 5: Boje\nBeginner list (Claude)\nadjective, feminine",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "bijel",
+     "bijela",
+     "bijelo"
+    ],
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l5-smed",
+   "hr": "smeđ",
+   "en": "brown (masculine)",
+   "note": "Tako lako U1 · M0 · Lesson 5: Boje\nBeginner list (Claude)\nadjective",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "smeđ",
+     "smeđa",
+     "smeđe"
+    ],
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l5-smeda",
+   "hr": "smeđa",
+   "en": "brown",
+   "note": "Tako lako U1 · M0 · Lesson 5: Boje\nBeginner list (Claude)\nadjective, feminine",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "smeđ",
+     "smeđa",
+     "smeđe"
+    ],
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l5-siv",
+   "hr": "siv",
+   "en": "grey (masculine)",
+   "note": "Tako lako U1 · M0 · Lesson 5: Boje\nBeginner list (Claude)\nadjective",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "siv",
+     "siva",
+     "sivo"
+    ],
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l5-siva",
+   "hr": "siva",
+   "en": "grey (feminine)",
+   "note": "Tako lako U1 · M0 · Lesson 5: Boje\nBeginner list (Claude)\nadjective, feminine",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "siv",
+     "siva",
+     "sivo"
+    ],
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l5-narancast",
+   "hr": "narančast",
+   "en": "orange (masculine)",
+   "note": "Tako lako U1 · M0 · Lesson 5: Boje\nBeginner list (Claude)\nadjective",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "narančast",
+     "narančasta",
+     "narančasto"
+    ],
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l5-narancasta",
+   "hr": "narančasta",
+   "en": "orange",
+   "note": "Tako lako U1 · M0 · Lesson 5: Boje\nBeginner list (Claude)\nadjective, feminine",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "narančast",
+     "narančasta",
+     "narančasto"
+    ],
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l5-ljubicast",
+   "hr": "ljubičast",
+   "en": "purple (masculine)",
+   "note": "Tako lako U1 · M0 · Lesson 5: Boje\nBeginner list (Claude)\nadjective",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "ljubičast",
+     "ljubičasta",
+     "ljubičasto"
+    ],
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l5-ljubicasta",
+   "hr": "ljubičasta",
+   "en": "purple",
+   "note": "Tako lako U1 · M0 · Lesson 5: Boje\nBeginner list (Claude)\nadjective, feminine",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "ljubičast",
+     "ljubičasta",
+     "ljubičasto"
+    ],
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l5-ruzicast",
+   "hr": "ružičast",
+   "en": "pink (masculine)",
+   "note": "Tako lako U1 · M0 · Lesson 5: Boje\nBeginner list (Claude)\nadjective",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "ružičast",
+     "ružičasta",
+     "ružičasto"
+    ],
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u1m0l5-ruzicasta",
+   "hr": "ružičasta",
+   "en": "pink (feminine)",
+   "note": "Tako lako U1 · M0 · Lesson 5: Boje\nBeginner list (Claude)\nadjective, feminine",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "ružičast",
+     "ružičasta",
+     "ružičasto"
+    ],
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u2m1l1-kontinent",
+   "hr": "kontinent",
+   "en": "continent",
+   "note": "Tako lako U2 · M1 · Lesson 1: Odakle si?\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u2m1l1-europa",
+   "hr": "Europa",
+   "en": "Europe",
+   "note": "Tako lako U2 · M1 · Lesson 1: Odakle si?\nBeginner list (Claude)\nfrom Europe = iz Europe",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u2m1l1-azija",
+   "hr": "Azija",
+   "en": "Asia",
+   "note": "Tako lako U2 · M1 · Lesson 1: Odakle si?\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u2m1l1-afrika",
+   "hr": "Afrika",
+   "en": "Africa",
+   "note": "Tako lako U2 · M1 · Lesson 1: Odakle si?\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u2m1l1-sjeverna-amerika",
+   "hr": "Sjeverna Amerika",
+   "en": "North America",
+   "note": "Tako lako U2 · M1 · Lesson 1: Odakle si?\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u2m1l1-juzna-amerika",
+   "hr": "Južna Amerika",
+   "en": "South America",
+   "note": "Tako lako U2 · M1 · Lesson 1: Odakle si?\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u2m1l1-australija",
+   "hr": "Australija",
+   "en": "Australia",
+   "note": "Tako lako U2 · M1 · Lesson 1: Odakle si?\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u2m1l1-antarktika",
+   "hr": "Antarktika",
+   "en": "Antarctica",
+   "note": "Tako lako U2 · M1 · Lesson 1: Odakle si?\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u2m1l1-hrvatska",
+   "hr": "Hrvatska",
+   "en": "Croatia",
+   "note": "Tako lako U2 · M1 · Lesson 1: Odakle si?\nBeginner list (Claude)\nfrom Croatia = iz Hrvatske",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u2m1l1-amerika",
+   "hr": "Amerika",
+   "en": "America / USA",
+   "note": "Tako lako U2 · M1 · Lesson 1: Odakle si?\nBeginner list (Claude)\nfrom America = iz Amerike",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u2m1l1-njemacka",
+   "hr": "Njemačka",
+   "en": "Germany",
+   "note": "Tako lako U2 · M1 · Lesson 1: Odakle si?\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u2m1l1-italija",
+   "hr": "Italija",
+   "en": "Italy",
+   "note": "Tako lako U2 · M1 · Lesson 1: Odakle si?\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u2m1l1-francuska",
+   "hr": "Francuska",
+   "en": "France",
+   "note": "Tako lako U2 · M1 · Lesson 1: Odakle si?\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u2m1l1-engleska",
+   "hr": "Engleska",
+   "en": "England",
+   "note": "Tako lako U2 · M1 · Lesson 1: Odakle si?\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u2m1l1-kanada",
+   "hr": "Kanada",
+   "en": "Canada",
+   "note": "Tako lako U2 · M1 · Lesson 1: Odakle si?\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u2m1l1-meksiko",
+   "hr": "Meksiko",
+   "en": "Mexico",
+   "note": "Tako lako U2 · M1 · Lesson 1: Odakle si?\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u2m1l1-odakle-ste",
+   "hr": "Odakle ste?",
+   "en": "Where are you from? (formal / plural)",
+   "note": "Tako lako U2 · M1 · Lesson 1: Odakle si?\nBeginner list (Claude)\nphrase",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u2m1l1-ja-sam-iz-amerike",
+   "hr": "Ja sam iz Amerike.",
+   "en": "I am from America.",
+   "note": "Tako lako U2 · M1 · Lesson 1: Odakle si?\nBeginner list (Claude)\niz + genitive",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u2m1l1-moji-roditelji-su-iz-zagreba",
+   "hr": "Moji roditelji su iz Zagreba.",
+   "en": "My parents are from Zagreb.",
+   "note": "Tako lako U2 · M1 · Lesson 1: Odakle si?\nBeginner list (Claude)\niz + genitive",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u2m1l1-na-primjer",
+   "hr": "na primjer",
+   "en": "for example",
+   "note": "Tako lako U2 · M1 · Lesson 1: Odakle si?\nBeginner list (Claude)\nphrase",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u2m3l4-tvrdava",
+   "hr": "tvrđava",
+   "en": "fortress",
+   "note": "Tako lako U2 · M3 · Lesson 4: Moji interesi\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u2m3l4-slapovi",
+   "hr": "slapovi",
+   "en": "waterfalls",
+   "note": "Tako lako U2 · M3 · Lesson 4: Moji interesi\nBeginner list (Claude)\nsg. slap",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1794441600000,
+    "plural": true
+   }
+  },
+  {
+   "id": "tl-u2m3l4-katedrala",
+   "hr": "katedrala",
+   "en": "cathedral",
+   "note": "Tako lako U2 · M3 · Lesson 4: Moji interesi\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u2m3l4-plaza",
+   "hr": "plaža",
+   "en": "beach",
+   "note": "Tako lako U2 · M3 · Lesson 4: Moji interesi\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u2m3l4-more",
+   "hr": "more",
+   "en": "sea",
+   "note": "Tako lako U2 · M3 · Lesson 4: Moji interesi\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u2m3l4-jezero",
+   "hr": "jezero",
+   "en": "lake",
+   "note": "Tako lako U2 · M3 · Lesson 4: Moji interesi\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u2m3l4-rijeka",
+   "hr": "rijeka",
+   "en": "river",
+   "note": "Tako lako U2 · M3 · Lesson 4: Moji interesi\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u2m3l4-suma",
+   "hr": "šuma",
+   "en": "forest",
+   "note": "Tako lako U2 · M3 · Lesson 4: Moji interesi\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u2m3l4-muzej",
+   "hr": "muzej",
+   "en": "museum",
+   "note": "Tako lako U2 · M3 · Lesson 4: Moji interesi\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u2m3l4-izlet",
+   "hr": "izlet",
+   "en": "trip / excursion",
+   "note": "Tako lako U2 · M3 · Lesson 4: Moji interesi\nBeginner list (Claude)",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u2m3l4-plivati",
+   "hr": "plivati",
+   "en": "to swim",
+   "note": "Tako lako U2 · M3 · Lesson 4: Moji interesi\nBeginner list (Claude)\nverb",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u2m3l4-uzivajte",
+   "hr": "Uživajte!",
+   "en": "Enjoy! (to a group)",
+   "note": "Tako lako U2 · M3 · Lesson 4: Moji interesi\nBeginner list (Claude)\nphrase; to one person: Uživaj!",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u2m3l4-pozdrav",
+   "hr": "pozdrav",
+   "en": "greeting / regards",
+   "note": "Tako lako U2 · M3 · Lesson 4: Moji interesi\nBeginner list (Claude)\nPozdrav iz Splita = Greetings from Split",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u2m3l4-steta-je",
+   "hr": "Šteta je.",
+   "en": "It's a pity.",
+   "note": "Tako lako U2 · M3 · Lesson 4: Moji interesi\nBeginner list (Claude)\nphrase",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u2m3l4-istina",
+   "hr": "Istina.",
+   "en": "True. / That's right.",
+   "note": "Tako lako U2 · M3 · Lesson 4: Moji interesi\nBeginner list (Claude)\nphrase",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u2m3l4-mozemo-zajedno",
+   "hr": "Možemo zajedno?",
+   "en": "Can we go together?",
+   "note": "Tako lako U2 · M3 · Lesson 4: Moji interesi\nBeginner list (Claude)\nphrase",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1794441600000
+   }
+  },
+  {
+   "id": "tl-u2m3l4-imas-li-plan",
+   "hr": "Imaš li plan?",
+   "en": "Do you have plans?",
+   "note": "Tako lako U2 · M3 · Lesson 4: Moji interesi\nBeginner list (Claude)\nphrase",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794441600000,
+   "updatedAt": 1794441600000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1794441600000
+   }
   }
  ]
 }

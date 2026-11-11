@@ -381,6 +381,103 @@ for en, hr, g, kind, forms, ex in rows:
                       "level": 1, "due": 0, "createdAt": TS_L7, "updatedAt": TS_L7,
                       "lastReviewed": 0, "deleted": False, "gram": gr})
 
+# Beginner gap-fill (2026-11-11): lessons that had no cards. Unit 1 Module 0 and the two empty Unit 2 lessons.
+# The book's pages for these are images or don't load, so the lists are standard beginner vocabulary chosen by Claude.
+# English on words already in the deck matches that card, so those only get the lesson tag.
+# Row: (english, croatian, g, extra note line)   g as in gram()
+BEGINNER = [
+    ("U1 · M0 · Lesson 1: Brojevi 1–21", "u1m0l1", [
+        ("zero (0)", "nula", "f", "number"),
+        ("one (1)", "jedan", "adj:jedan|jedna|jedno", "number; agrees like an adjective: jedan sat, jedna kava, jedno pivo"),
+        ("two (2)", "dva", "", "number; dva for masculine/neuter, dvije for feminine (dvije kave)"),
+        ("two (2, feminine)", "dvije", "", "number; with feminine nouns: dvije sestre"),
+        ("three (3)", "tri", "", "number"), ("four (4)", "četiri", "", "number"),
+        ("five (5)", "pet", "", "number; from 5 on, the noun goes in genitive plural: pet kava"),
+        ("six (6)", "šest", "", "number"), ("seven (7)", "sedam", "", "number"), ("eight (8)", "osam", "", "number"),
+        ("nine (9)", "devet", "", "number"), ("ten (10)", "deset", "", "number"),
+        ("eleven (11)", "jedanaest", "", "number"), ("twelve (12)", "dvanaest", "", "number"),
+        ("thirteen (13)", "trinaest", "", "number"), ("fourteen (14)", "četrnaest", "", "number"),
+        ("fifteen (15)", "petnaest", "", "number"), ("sixteen (16)", "šesnaest", "", "number"),
+        ("seventeen (17)", "sedamnaest", "", "number"), ("eighteen (18)", "osamnaest", "", "number"),
+        ("nineteen (19)", "devetnaest", "", "number"), ("twenty (20)", "dvadeset", "", "number"),
+        ("twenty-one (21)", "dvadeset jedan", "", "number; written as two words"),
+        ("How many? / How much?", "Koliko?", "", "question word"),
+    ]),
+    ("U1 · M0 · Lesson 2: Dani u tjednu", "u1m0l2", [
+        ("Monday", "ponedjeljak", "m", "day; on Monday = u ponedjeljak"), ("Tuesday", "utorak", "m", "day"),
+        ("Wednesday", "srijeda", "f", "day; on Wednesday = u srijedu"), ("Thursday", "četvrtak", "m", "day"),
+        ("Friday", "petak", "m", "day"), ("Saturday", "subota", "f", "day; on Saturday = u subotu"),
+        ("Sunday", "nedjelja", "f", "day; on Sundays = nedjeljom"),
+        ("day", "dan", "m", ""), ("week", "tjedan", "m", ""), ("weekend", "vikend", "m", ""),
+        ("today", "danas", "", ""), ("tomorrow", "sutra", "", ""), ("yesterday", "jučer", "", ""),
+        ("What day is it today?", "Koji je danas dan?", "", "phrase"),
+        ("Today is Monday.", "Danas je ponedjeljak.", "", "phrase"),
+        ("on Monday", "u ponedjeljak", "", "u + accusative for days"),
+    ]),
+    ("U1 · M0 · Lesson 3: Mjeseci", "u1m0l3", [
+        ("January", "siječanj", "m", "month; in January = u siječnju"), ("February", "veljača", "f", "month"),
+        ("March", "ožujak", "m", "month"), ("April", "travanj", "m", "month"), ("May", "svibanj", "m", "month"),
+        ("June", "lipanj", "m", "month"), ("July", "srpanj", "m", "month"), ("August", "kolovoz", "m", "month"),
+        ("September", "rujan", "m", "month"), ("October", "listopad", "m", "month"),
+        ("November", "studeni", "m", "month; adjective-like form"), ("December", "prosinac", "m", "month"),
+        ("month", "mjesec", "m", "also means moon"), ("year", "godina", "f", ""),
+        ("in January", "u siječnju", "", "u + locative for months"),
+    ]),
+    ("U1 · M0 · Lesson 4: Jedinice vremena", "u1m0l4", [
+        ("second", "sekunda", "f", ""), ("minute", "minuta", "f", ""),
+        ("hour", "sat", "m", "sat = hour and also clock / watch"), ("day", "dan", "m", ""),
+        ("week", "tjedan", "m", ""), ("month", "mjesec", "m", ""), ("year", "godina", "f", ""),
+        ("decade", "desetljeće", "n", ""), ("century", "stoljeće", "n", ""),
+        ("morning", "jutro", "n", ""), ("noon", "podne", "n", ""), ("afternoon", "popodne", "n", ""),
+        ("evening", "večer", "f", ""), ("night", "noć", "f", ""), ("midnight", "ponoć", "f", ""),
+        ("what time is it", "koliko je sati", "", "phrase"), ("half an hour", "pola sata", "", "phrase"),
+    ]),
+    ("U1 · M0 · Lesson 5: Boje", "u1m0l5", [
+        ("color", "boja", "f", ""), ("What color is it?", "Koje je boje?", "", "phrase"),
+        ("red (masculine)", "crven", "adj:crven|crvena|crveno", "adjective"), ("red", "crvena", "adj:crven|crvena|crveno", "adjective, feminine"),
+        ("blue (masculine)", "plav", "adj:plav|plava|plavo", "adjective"), ("blue", "plava", "adj:plav|plava|plavo", "adjective, feminine"),
+        ("green (masculine)", "zelen", "adj:zelen|zelena|zeleno", "adjective"), ("green", "zelena", "adj:zelen|zelena|zeleno", "adjective, feminine"),
+        ("yellow", "žut", "adj:žut|žuta|žuto", "adjective"), ("yellow", "žuta", "adj:žut|žuta|žuto", "adjective, feminine"),
+        ("black (masculine)", "crn", "adj:crn|crna|crno", "adjective"), ("black", "crna", "adj:crn|crna|crno", "adjective, feminine"),
+        ("white (masculine)", "bijel", "adj:bijel|bijela|bijelo", "adjective"), ("white", "bijela", "adj:bijel|bijela|bijelo", "adjective, feminine"),
+        ("brown (masculine)", "smeđ", "adj:smeđ|smeđa|smeđe", "adjective"), ("brown", "smeđa", "adj:smeđ|smeđa|smeđe", "adjective, feminine"),
+        ("grey (masculine)", "siv", "adj:siv|siva|sivo", "adjective"), ("grey (feminine)", "siva", "adj:siv|siva|sivo", "adjective, feminine"),
+        ("orange (masculine)", "narančast", "adj:narančast|narančasta|narančasto", "adjective"), ("orange", "narančasta", "adj:narančast|narančasta|narančasto", "adjective, feminine"),
+        ("purple (masculine)", "ljubičast", "adj:ljubičast|ljubičasta|ljubičasto", "adjective"), ("purple", "ljubičasta", "adj:ljubičast|ljubičasta|ljubičasto", "adjective, feminine"),
+        ("pink (masculine)", "ružičast", "adj:ružičast|ružičasta|ružičasto", "adjective"), ("pink (feminine)", "ružičasta", "adj:ružičast|ružičasta|ružičasto", "adjective, feminine"),
+    ]),
+    ("U2 · M1 · Lesson 1: Odakle si?", "u2m1l1", [
+        ("continent", "kontinent", "m", ""), ("Europe", "Europa", "f", "from Europe = iz Europe"),
+        ("Asia", "Azija", "f", ""), ("Africa", "Afrika", "f", ""),
+        ("North America", "Sjeverna Amerika", "f", ""), ("South America", "Južna Amerika", "f", ""),
+        ("Australia", "Australija", "f", ""), ("Antarctica", "Antarktika", "f", ""),
+        ("Croatia", "Hrvatska", "f", "from Croatia = iz Hrvatske"), ("America / USA", "Amerika", "f", "from America = iz Amerike"),
+        ("Germany", "Njemačka", "f", ""), ("Italy", "Italija", "f", ""), ("France", "Francuska", "f", ""),
+        ("England", "Engleska", "f", ""), ("Canada", "Kanada", "f", ""), ("Mexico", "Meksiko", "m", ""),
+        ("Where are you from? (formal / plural)", "Odakle ste?", "", "phrase"),
+        ("I am from America.", "Ja sam iz Amerike.", "", "iz + genitive"),
+        ("My parents are from Zagreb.", "Moji roditelji su iz Zagreba.", "", "iz + genitive"),
+        ("for example", "na primjer", "", "phrase"),
+    ]),
+    ("U2 · M3 · Lesson 4: Moji interesi", "u2m3l4", [
+        ("fortress", "tvrđava", "f", ""), ("waterfalls", "slapovi", "mpl", "sg. slap"),
+        ("cathedral", "katedrala", "f", ""), ("beach", "plaža", "f", ""), ("sea", "more", "n", ""),
+        ("lake", "jezero", "n", ""), ("river", "rijeka", "f", ""), ("forest", "šuma", "f", ""),
+        ("museum", "muzej", "m", ""), ("trip / excursion", "izlet", "m", ""), ("to swim", "plivati", "", "verb"),
+        ("Enjoy! (to a group)", "Uživajte!", "", "phrase; to one person: Uživaj!"),
+        ("greeting / regards", "pozdrav", "m", "Pozdrav iz Splita = Greetings from Split"),
+        ("It's a pity.", "Šteta je.", "", "phrase"), ("True. / That's right.", "Istina.", "", "phrase"),
+        ("Can we go together?", "Možemo zajedno?", "", "phrase"), ("Do you have plans?", "Imaš li plan?", "", "phrase"),
+    ]),
+]
+for tag, lid, rows in BEGINNER:
+    for en, hr, g, extra in rows:
+        gr = gram(g); gr["at"] = TS_L7
+        note = f"Tako lako {tag}\nBeginner list (Claude)" + (f"\n{extra}" if extra else "")
+        out_cards.append({"id": f"tl-{lid}-{slug(hr)}", "hr": hr, "en": en, "note": note,
+                          "level": 1, "due": 0, "createdAt": TS_L7, "updatedAt": TS_L7,
+                          "lastReviewed": 0, "deleted": False, "gram": gr})
+
 ids = [c["id"] for c in out_cards]
 assert len(ids) == len(set(ids)), "duplicate ids"
 data = {"app": "prevoditelj", "kind": "handouts", "version": 1, "savedAt": TS,
