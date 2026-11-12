@@ -374,7 +374,7 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
 <header class="top">
   <div class="brand">
     <span class="logo" aria-hidden="true"></span>
-    <div><h1>Prevoditelj</h1><p>Croatian ⇄ English · v3.9</p></div>
+    <div><h1>Prevoditelj</h1><p>Croatian ⇄ English · v3.10</p></div>
   </div>
   <button id="settingsBtn" class="icon-btn" aria-label="Settings" title="Settings">⚙︎</button>
 </header>
@@ -945,7 +945,7 @@ const SYSTEM = `You are a Croatian–English translator and a patient Croatian t
 Rules:
 - Use standard Croatian (hrvatski standardni jezik): ijekavian forms and Croatian vocabulary (e.g. tisuća, kruh, vlak, tjedan, točno), not Serbian or Bosnian variants. Always use correct diacritics: č ć đ š ž.
 - You are told which box the user typed in, but trust the text itself: if Croatian was typed in the English box (or the reverse), translate in the correct direction and set detected_language accordingly.
-- If the input is Croatian, check it carefully, whether it is right or wrong. Fix spelling, missing or wrong diacritics, case endings, gender/number agreement, verb forms and word order. List every fix in "corrections" with a short, friendly explanation in English. Translate the corrected meaning. If nothing is wrong, return an empty corrections list and corrected_input identical to the input.
+- If the input is Croatian, check it carefully, whether it is right or wrong. Fix spelling, missing or wrong diacritics, case endings, gender/number agreement, verb forms and word order. List every fix in "corrections" with a short, friendly explanation in English. Ignore capitalisation and punctuation completely: never list them as corrections and never change them in corrected_input. Translate the corrected meaning. If nothing is wrong, return an empty corrections list and corrected_input identical to the input.
 - Translations must be natural, not word-for-word, and keep the register of the original.
 - When English is ambiguous in Croatian (you = ti / Vi / vi; "I was" = bio sam / bila sam; adjectives that describe the speaker or listener), choose the most likely form for the translation and explain the alternatives, including the male/female forms, in "notes".
 - Grammar (only when requested): analyse the Croatian text (croatian_text) word by word for every word that inflects: nouns, adjectives, pronouns, numerals and verbs. Do not make separate entries for prepositions, conjunctions or particles, but mention them in "why" when they decide the case (e.g. "u + locative for location", "u + accusative for direction"). For each entry give the root / dictionary form (nominative singular for nouns, nominative singular masculine for adjectives, infinitive for verbs), the form (case + number, or tense + person + number), gender, the ending, and why that form is used and how the ending is built from the root. If the user wrote that word wrongly, put exactly what they wrote in "user_wrote" and explain why the correct ending is different. Use gender_compare to show how the same case looks for masculine, feminine and neuter words whenever gender changes the ending.
@@ -1509,6 +1509,22 @@ function playBtn(text, code, label) {
   b.addEventListener('click', () => speak(text, code, b));
   return b;
 }
+function copyBtn(text, label) {
+  const b = el('button', 'btn small'); b.type = 'button';
+  b.innerHTML = '<span aria-hidden="true">📋</span>';
+  b.setAttribute('aria-label', label || 'Copy'); b.title = 'Copy';
+  b.addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(text); }
+    catch {
+      const t = document.createElement('textarea'); t.value = text; t.setAttribute('readonly', '');
+      t.style.position = 'fixed'; t.style.opacity = '0'; document.body.appendChild(t);
+      t.select(); t.setSelectionRange(0, text.length);
+      try { document.execCommand('copy'); } catch {} t.remove();
+    }
+    toast('Copied.', 1800);
+  });
+  return b;
+}
 function practiseBtn(text) {
   const b = el('button', 'btn small'); b.type = 'button';
   b.innerHTML = '<span aria-hidden="true">🗣</span>';
@@ -1521,6 +1537,9 @@ function renderResults(r) {
   const results = $('#results'); results.innerHTML = '';
   const inputWasHr = r.src === 'hr';
   const norm = s => (s || '').trim().replace(/\s+/g, ' ');
+  // Capitals and punctuation don't count as mistakes: compare letters and digits only
+  const loose = s => (s || '').normalize('NFC').toLowerCase().replace(/[^\p{L}\p{N}\s]/gu, ' ').replace(/\s+/g, ' ').trim();
+  r.corrections = (r.corrections || []).filter(x => loose(x.original) !== loose(x.corrected));
 
   // The translation itself, with listen / practise / save-as-flash-card
   const outLang = inputWasHr ? 'en' : 'hr';
@@ -1531,6 +1550,7 @@ function renderResults(r) {
     hd.appendChild(el('h3', null, outLang === 'hr' ? 'Hrvatski · Croatian' : 'English'));
     const tools = el('div', 'tools');
     tools.appendChild(playBtn(outText, outLang, 'Listen to the translation'));
+    tools.appendChild(copyBtn(outText, 'Copy the translation'));
     if (outLang === 'hr') tools.appendChild(practiseBtn(outText));
     const cardHr = (r.croatian_text || (inputWasHr ? r.corrected_input : outText) || '').trim();
     const cardEn = (inputWasHr ? outText : r.input || '').trim();
@@ -1540,7 +1560,7 @@ function renderResults(r) {
     results.appendChild(c);
   }
 
-  if (inputWasHr && (r.corrections.length || norm(r.corrected_input) !== norm(r.input))) {
+  if (inputWasHr && (r.corrections.length || loose(r.corrected_input) !== loose(r.input))) {
     const c = el('div', 'card');
     const hd = el('div', 'card-head'); hd.appendChild(el('h3', null, '✏️ Corrected Croatian'));
     const use = el('button', 'btn small', 'Use this'); use.type = 'button';
