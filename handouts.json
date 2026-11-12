@@ -11472,6 +11472,42 @@
    }
   },
   {
+   "id": "tl-u1m2l1-zagrljaj",
+   "hr": "zagrljaj",
+   "en": "a hug / an embrace",
+   "note": "Tako lako U1 · M2 · Lesson 1: Ljudi i stvari\nWorksheet: Domovinski rat i glazba: Lupi petama\nnoun, masculine (inanimate)\nAcc. sg. zagrljaj · Pl. zagrljaji · Verb: zagrliti\nDaj mi zagrljaj!",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794528000000,
+   "updatedAt": 1794528000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1794528000000
+   }
+  },
+  {
+   "id": "tl-u1m2l1-golubica",
+   "hr": "golubica",
+   "en": "dove (female) / dove of peace",
+   "note": "Tako lako U1 · M2 · Lesson 1: Ljudi i stvari\nWorksheet: Domovinski rat i glazba: Lupi petama\nnoun, feminine, animate\nAcc. sg. golubicu · Pl. golubice · golubica mira = dove of peace\nGolubica mira je bijela.",
+   "level": 1,
+   "due": 0,
+   "createdAt": 1794528000000,
+   "updatedAt": 1794528000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1794528000000
+   }
+  },
+  {
    "id": "tl-u1m0l1-nula",
    "hr": "nula",
    "en": "zero (0)",

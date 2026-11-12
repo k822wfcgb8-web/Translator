@@ -387,6 +387,18 @@ for en, hr, g, kind, forms, ex in rows:
                       "level": 1, "due": 0, "createdAt": TS_L7, "updatedAt": TS_L7,
                       "lastReviewed": 0, "deleted": False, "gram": gr})
 
+# Two more Lupi petama words (2026-11-12): the noun "a hug" next to the verb, and the female dove of peace.
+TS_L8 = 1794528000000  # 2026-11-12
+for en, hr, g, kind, forms, ex in [
+    ("a hug / an embrace", "zagrljaj", "m", "noun, masculine (inanimate)", "Acc. sg. zagrljaj · Pl. zagrljaji · Verb: zagrliti", "Daj mi zagrljaj!"),
+    ("dove (female) / dove of peace", "golubica", "f", "noun, feminine, animate", "Acc. sg. golubicu · Pl. golubice · golubica mira = dove of peace", "Golubica mira je bijela."),
+]:
+    gr = gram(g); gr["at"] = TS_L8
+    out_cards.append({"id": f"tl-{lid}-{slug(hr)}", "hr": hr, "en": en,
+                      "note": f"{tag}\nWorksheet: {sheet}\n{kind}\n{forms}\n{ex}",
+                      "level": 1, "due": 0, "createdAt": TS_L8, "updatedAt": TS_L8,
+                      "lastReviewed": 0, "deleted": False, "gram": gr})
+
 # Beginner gap-fill (2026-11-11): lessons that had no cards. Unit 1 Module 0 and the two empty Unit 2 lessons.
 # The book's pages for these are images or don't load, so the lists are standard beginner vocabulary chosen by Claude.
 # English on words already in the deck matches that card, so those only get the lesson tag.
