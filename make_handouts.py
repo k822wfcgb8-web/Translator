@@ -208,6 +208,60 @@ H.append(("short", "Kratke riječi (short words)", "Croatian_Short_Words.pdf", [
 ]))
 
 
+# W00 · U0 (added Nov 15, 2026): reference set not tied to a class week or a Tako lako lesson.
+# Holds every short word (above) plus the 21 verbs from the W00_U0_Glagol sheets: infinitive + the 6 present forms.
+# English "he has (also: she, it)": the app strips brackets, so "he has" is the typed answer it accepts.
+VERBS = [  # (infinitive, english, pattern, [ja, ti, on, mi, vi, oni], [english base forms])
+    ("biti", "to be", "irregular; short forms (long: jesam, jesi, jest…)", ["sam", "si", "je", "smo", "ste", "su"], ["am", "are", "is", "are", "are", "are"]),
+    ("dati", "to give", "-am verb", ["dam", "daš", "da", "damo", "date", "daju"], ["give", "give", "gives", "give", "give", "give"]),
+    ("govoriti", "to speak", "-im verb", ["govorim", "govoriš", "govori", "govorimo", "govorite", "govore"], ["speak", "speak", "speaks", "speak", "speak", "speak"]),
+    ("htjeti", "to want", "irregular; short forms ću, ćeš… make the future", ["hoću", "hoćeš", "hoće", "hoćemo", "hoćete", "hoće"], ["want", "want", "wants", "want", "want", "want"]),
+    ("ići", "to go", "-em verb (stem id-)", ["idem", "ideš", "ide", "idemo", "idete", "idu"], ["go", "go", "goes", "go", "go", "go"]),
+    ("imati", "to have", "-am verb; negative nemam", ["imam", "imaš", "ima", "imamo", "imate", "imaju"], ["have", "have", "has", "have", "have", "have"]),
+    ("jesti", "to eat", "-em verb (stem jed-)", ["jedem", "jedeš", "jede", "jedemo", "jedete", "jedu"], ["eat", "eat", "eats", "eat", "eat", "eat"]),
+    ("misliti", "to think", "-im verb", ["mislim", "misliš", "misli", "mislimo", "mislite", "misle"], ["think", "think", "thinks", "think", "think", "think"]),
+    ("moći", "can / to be able to", "irregular (mog- / mož-)", ["mogu", "možeš", "može", "možemo", "možete", "mogu"], ["can", "can", "can", "can", "can", "can"]),
+    ("morati", "must / to have to", "-am verb", ["moram", "moraš", "mora", "moramo", "morate", "moraju"], ["must", "must", "must", "must", "must", "must"]),
+    ("piti", "to drink", "-em verb", ["pijem", "piješ", "pije", "pijemo", "pijete", "piju"], ["drink", "drink", "drinks", "drink", "drink", "drink"]),
+    ("raditi", "to work / to do", "-im verb", ["radim", "radiš", "radi", "radimo", "radite", "rade"], ["work", "work", "works", "work", "work", "work"]),
+    ("razumjeti", "to understand", "-em verb", ["razumijem", "razumiješ", "razumije", "razumijemo", "razumijete", "razumiju"], ["understand", "understand", "understands", "understand", "understand", "understand"]),
+    ("spavati", "to sleep", "-am verb", ["spavam", "spavaš", "spava", "spavamo", "spavate", "spavaju"], ["sleep", "sleep", "sleeps", "sleep", "sleep", "sleep"]),
+    ("trebati", "to need", "-am verb", ["trebam", "trebaš", "treba", "trebamo", "trebate", "trebaju"], ["need", "need", "needs", "need", "need", "need"]),
+    ("vidjeti", "to see", "-im verb", ["vidim", "vidiš", "vidi", "vidimo", "vidite", "vide"], ["see", "see", "sees", "see", "see", "see"]),
+    ("voljeti", "to like / to love", "-im verb", ["volim", "voliš", "voli", "volimo", "volite", "vole"], ["like", "like", "likes", "like", "like", "like"]),
+    ("željeti", "to wish / would like", "-im verb", ["želim", "želiš", "želi", "želimo", "želite", "žele"], ["wish", "wish", "wishes", "wish", "wish", "wish"]),
+    ("živjeti", "to live", "-im verb", ["živim", "živiš", "živi", "živimo", "živite", "žive"], ["live", "live", "lives", "live", "live", "live"]),
+    ("znati", "to know", "-am verb", ["znam", "znaš", "zna", "znamo", "znate", "znaju"], ["know", "know", "knows", "know", "know", "know"]),
+]
+WHO = ["I {}", "you {} (informal)", "he {} (also: she, it)", "we {}", "you {} (plural or polite)", "they {}"]
+SECOND = {"raditi": "do", "voljeti": "love", "željeti": "want"}   # second meaning on the sheet: "I work / I do"
+SECOND3 = {"do": "does", "love": "loves", "want": "wants"}
+VERB_NOTE = {}
+w00 = []
+for inf, en, pat, forms, ens in VERBS:
+    w00.append((en, inf, ""))
+    VERB_NOTE[inf] = f"verb, infinitive · {pat}"
+    for i, (hr, e) in enumerate(zip(forms, ens)):
+        s = SECOND.get(inf)
+        if s:  # "I work / I do", "he works / he does (also: she, it)"
+            who, tail = WHO[i].split(" {}")
+            txt = f"{who} {e} / {who} {SECOND3[s] if i == 2 else s}{tail}"
+        else:
+            txt = WHO[i].format(e)
+        w00.append((txt, hr, ""))
+        VERB_NOTE.setdefault(hr, f"verb {inf} ({en}) · present tense")
+# sviđati se: the person is in the dative ("it pleases me")
+w00.append(("to like (to be pleasing)", "sviđati se", ""))
+VERB_NOTE["sviđati se"] = "verb, infinitive · -am verb, “backwards”: the person who likes is in the dative"
+for en, hr in [("I like it", "sviđa mi se"), ("you like it (informal)", "sviđa ti se"), ("he likes it", "sviđa mu se"),
+               ("she likes it", "sviđa joj se"), ("we like it", "sviđa nam se"), ("you like it (plural or polite)", "sviđa vam se"),
+               ("they like it", "sviđa im se")]:
+    w00.append((en, hr, ""))
+    VERB_NOTE.setdefault(hr, "verb sviđati se (to like) · present tense, person in the dative")
+short_rows = [r for h in H if h[0] == "short" for r in h[3]]
+H.append(("w00u0", "W00 · U0 Reference (short words & verbs)", "W00_U0_Kratke-rijeci_ref.pdf + W00_U0_Glagol sheets", short_rows + w00))
+
+
 def norm(s):
     return re.sub(r"\s+", " ", re.sub(r"[.!?,;:…]+$", "", s.strip().lower()))
 
@@ -257,6 +311,7 @@ out_cards = []
 for c in cards:
     g = c.pop("_g")
     kind = ("noun, " + GLABEL[g[0]] + (", plural only" if g.endswith("pl") else "")) if g and not g.startswith("adj") else ("adjective" if g else "")
+    kind = kind or VERB_NOTE.get(c["hr"], "")
     note = "Handout: " + " · ".join(titles[h] for h in c["ho"]) + (("\n" + kind) if kind else "")
     out_cards.append({"id": c["id"], "hr": c["hr"], "en": c["en"], "note": note, "ho": c["ho"],
                       "level": 1, "due": 0, "createdAt": TS, "updatedAt": TS, "lastReviewed": 0,
