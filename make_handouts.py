@@ -172,18 +172,8 @@ H.append(("conj", "Veznici (conjunctions)", "Croatian_Conjunctions.pdf", [
     ("not only … but also", "ne samo … nego i", ""), ("whether … or", "bilo … bilo", ""),
 ]))
 
-H.append(("short", "Kratke riječi (short words)", "Croatian_Short_Words.pdf", [
-    ("in / at / on (a day)", "u", ""), ("on / at", "na", ""), ("at someone's place", "kod", ""),
-    ("from (a place)", "iz", ""), ("from (a person) / since", "od", ""), ("to / as far as / until", "do", ""),
-    ("toward", "prema", ""), ("across / over / via", "preko", ""), ("through", "kroz", ""),
-    ("around / about (approximately)", "oko", ""), ("under", "pod", ""), ("below / underneath", "ispod", ""),
-    ("above / over", "iznad", ""), ("in front of", "ispred", ""), ("behind", "iza", ""),
-    ("next to / beside", "pokraj / kraj", ""), ("between", "između", ""), ("along / alongside", "uz", ""),
-    ("near", "blizu", ""), ("around (all over) / to fetch", "po", ""), ("before / ago", "prije", ""),
-    ("after", "poslije", ""), ("after", "nakon", ""), ("during", "tijekom", ""),
-    ("for / in (time from now)", "za", ""), ("with", "s / sa", ""), ("without", "bez", ""),
-    ("about (a topic)", "o", ""), ("because of", "zbog", ""), ("except / besides", "osim", ""),
-    ("instead of", "umjesto", ""), ("against", "protiv", ""),
+H.append(("short", "Kratke riječi (short words)", "W00_U0_Kratke-rijeci_ref.pdf", [
+    # Prepositions moved to their own handout (Prijedlozi) on Nov 17, 2026.
     ("yes", "da", ""), ("no / not", "ne", ""), ("isn't / is not", "nije", ""), ("not even / nor", "ni", ""),
     ("maybe", "možda", ""), ("of course", "naravno", ""), ("OK / sure", "može", ""), ("good / OK", "dobro", ""),
     ("here", "tu", ""), ("here", "ovdje", ""), ("there", "tamo", ""), ("(to) here", "ovamo", ""),
@@ -206,6 +196,231 @@ H.append(("short", "Kratke riječi (short words)", "Croatian_Short_Words.pdf", [
     ("see you / see each other", "vidimo se", ""), ("I like it", "sviđa mi se", ""),
     ("How do you say …?", "Kako se kaže …?", ""),
 ]))
+
+
+# Prijedlozi (added Nov 17, 2026): the prepositions sheet W00_U0_Prijedlozi_ref.pdf.
+# Prepositions first (their case is in PREP_NOTE, shown under the card), then short phrases that practise the case endings.
+G, D, A, L, I = "genitive", "dative", "accusative", "locative", "instrumental"
+PREPS = [  # (english, croatian, case note)
+    ("in / at / on (a day)", "u", f"preposition + {L} (where) or {A} (where to; on a day)"),
+    ("on / at", "na", f"preposition + {L} (where) or {A} (where to)"),
+    ("at someone's place", "kod", f"preposition + {G}"),
+    ("from (a place) / out of", "iz", f"preposition + {G}"),
+    ("from (a person) / since", "od", f"preposition + {G}"),
+    ("to / as far as / until", "do", f"preposition + {G}"),
+    ("toward", "prema", f"preposition + {D}"),
+    ("to (a person's place)", "k / ka", f"preposition + {D}; ka before k and g"),
+    ("across / over / via", "preko", f"preposition + {G}"),
+    ("through", "kroz", f"preposition + {A}"),
+    ("down", "niz", f"preposition + {A}"),
+    ("around / about (approximately)", "oko", f"preposition + {G}"),
+    ("under", "pod", f"preposition + {I} (where) or {A} (where to)"),
+    ("below / underneath", "ispod", f"preposition + {G}"),
+    ("above / over", "iznad", f"preposition + {G}"),
+    ("in front of", "ispred", f"preposition + {G}"),
+    ("behind", "iza", f"preposition + {G}"),
+    ("next to / beside", "pokraj / kraj", f"preposition + {G}"),
+    ("between", "između", f"preposition + {G}"),
+    ("along / alongside", "uz", f"preposition + {A}"),
+    ("near", "blizu", f"preposition + {G}"),
+    ("around (all over) / to fetch", "po", f"preposition + {L} (all over) or {A} (to fetch)"),
+    ("before / ago", "prije", f"preposition + {G}"),
+    ("after", "poslije", f"preposition + {G}"),
+    ("after", "nakon", f"preposition + {G}"),
+    ("during", "tijekom", f"preposition + {G}"),
+    ("for / in (time from now)", "za", f"preposition + {A} (for; in + time) or {I} (behind, at)"),
+    ("with / off (a surface)", "s / sa", f"preposition + {I} (with) or {G} (off, from); sa before s, z, š, ž and mnom"),
+    ("without", "bez", f"preposition + {G}"),
+    ("about (a topic)", "o", f"preposition + {L}"),
+    ("because of", "zbog", f"preposition + {G}"),
+    ("except / besides", "osim", f"preposition + {G}"),
+    ("instead of", "umjesto", f"preposition + {G}"),
+    ("against", "protiv", f"preposition + {G}"),
+]
+PREP_PHRASES = [  # (english, croatian, case note)
+    ("in town / in the city", "u gradu", f"u + {L}: where"),
+    ("into town / to town", "u grad", f"u + {A}: where to"),
+    ("from town", "iz grada", f"iz + {G}: where from"),
+    ("at the seaside", "na moru", f"na + {L}: where"),
+    ("to the seaside", "na more", f"na + {A}: where to"),
+    ("from the seaside", "s mora", f"s + {G}: where from"),
+    ("at work", "na poslu", f"na + {L}: where"),
+    ("from work", "s posla", f"s + {G}: where from"),
+    ("at Grandma's", "kod bake", f"kod + {G}: where"),
+    ("to Grandma's", "k baki", f"k + {D}: where to"),
+    ("from Grandma", "od bake", f"od + {G}: where from"),
+    ("under the table", "pod stolom", f"pod + {I}: where"),
+    ("from America", "iz Amerike", f"iz + {G}"),
+    ("with Mom", "s mamom", f"s + {I}"),
+    ("coffee with milk", "kava s mlijekom", f"s + {I}"),
+    ("without sugar", "bez šećera", f"bez + {G}"),
+    ("for you (informal)", "za tebe", f"za + {A}"),
+    ("about the family", "o obitelji", f"o + {L}"),
+    ("after work", "poslije posla", f"poslije + {G}"),
+    ("before lunch", "prije ručka", f"prije + {G}"),
+    ("two days ago", "prije dva dana", f"prije + {G}"),
+    ("in a week", "za tjedan dana", f"za + {A}: in + time"),
+    ("from nine to five", "od devet do pet", f"od … do + {G}"),
+    ("because of the rain", "zbog kiše", f"zbog + {G}"),
+    ("at my place", "kod mene", f"kod + {G}"),
+    ("at your place (informal)", "kod tebe", f"kod + {G}"),
+    ("with me", "sa mnom", f"s + {I}; sa before mnom"),
+    ("with you (informal)", "s tobom", f"s + {I}"),
+    ("for me", "za mene", f"za + {A}"),
+    ("about me", "o meni", f"o + {L}"),
+]
+# These were on the Kratke riječi handout until Nov 17, 2026; their cards keep the old ho-short-… ids.
+LEGACY_SHORT = {"u", "na", "kod", "iz", "od", "do", "prema", "preko", "kroz", "oko", "ispod", "iznad", "ispred", "iza",
+                "pokraj / kraj", "između", "uz", "blizu", "po", "prije", "poslije", "nakon", "tijekom", "za", "s / sa",
+                "bez", "o", "zbog", "osim", "umjesto", "protiv"}
+PREP_NOTE = {hr: note for _e, hr, note in PREPS + PREP_PHRASES}
+prep_rows = [(e, hr, "") for e, hr, _n in PREPS + PREP_PHRASES]
+H.append(("prep", "Prijedlozi (prepositions)", "W00_U0_Prijedlozi_ref.pdf", prep_rows))
+
+
+# Pridjevi (added Nov 17, 2026): the adjectives sheet W00_U0_Pridjevi_ref.pdf, masculine form with all three forms.
+# Most are already book cards and just count in this handout; sladak, kiseo, svjež, vruć and hladan are new.
+ADJ_ROWS = [  # (english, masculine, adj:m|f|n), same words and order as W00_U0_Pridjevi_ref.pdf
+    ('active', 'aktivan', "adj:aktivan|aktivna|aktivno"),
+    ('ambitious', 'ambiciozan', "adj:ambiciozan|ambiciozna|ambiciozno"),
+    ('approachable', 'pristupačan', "adj:pristupačan|pristupačna|pristupačno"),
+    ('arrogant', 'arogantan', "adj:arogantan|arogantna|arogantno"),
+    ('cheerful', 'veseo', "adj:veseo|vesela|veselo"),
+    ('communicative', 'komunikativan', "adj:komunikativan|komunikativna|komunikativno"),
+    ('compassionate', 'suosjećajan', "adj:suosjećajan|suosjećajna|suosjećajno"),
+    ('creative', 'kreativan', "adj:kreativan|kreativna|kreativno"),
+    ('dear / kind', 'drag', "adj:drag|draga|drago"),
+    ('decisive', 'odlučan', "adj:odlučan|odlučna|odlučno"),
+    ('dominant', 'dominantan', "adj:dominantan|dominantna|dominantno"),
+    ('dynamic', 'dinamičan', "adj:dinamičan|dinamična|dinamično"),
+    ('emotional', 'emotivan', "adj:emotivan|emotivna|emotivno"),
+    ('energetic', 'energičan', "adj:energičan|energična|energično"),
+    ('fun', 'zabavan', "adj:zabavan|zabavna|zabavno"),
+    ('funny', 'smiješan', "adj:smiješan|smiješna|smiješno"),
+    ('hard-working', 'marljiv', "adj:marljiv|marljiva|marljivo"),
+    ('hard-working / diligent', 'vrijedan', "adj:vrijedan|vrijedna|vrijedno"),
+    ('hysterical', 'histeričan', "adj:histeričan|histerična|histerično"),
+    ('independent', 'samostalan', "adj:samostalan|samostalna|samostalno"),
+    ('intelligent', 'inteligentan', "adj:inteligentan|inteligentna|inteligentno"),
+    ('irresponsible', 'neodgovoran', "adj:neodgovoran|neodgovorna|neodgovorno"),
+    ('irritating', 'iritantan', "adj:iritantan|iritantna|iritantno"),
+    ('jealous', 'ljubomoran', "adj:ljubomoran|ljubomorna|ljubomorno"),
+    ('kind / friendly', 'ljubazan', "adj:ljubazan|ljubazna|ljubazno"),
+    ('likeable / nice', 'simpatičan', "adj:simpatičan|simpatična|simpatično"),
+    ('loud', 'glasan', "adj:glasan|glasna|glasno"),
+    ('optimistic', 'optimističan', "adj:optimističan|optimistična|optimistično"),
+    ('organized', 'organiziran', "adj:organiziran|organizirana|organizirano"),
+    ('patient', 'strpljiv', "adj:strpljiv|strpljiva|strpljivo"),
+    ('polite', 'pristojan', "adj:pristojan|pristojna|pristojno"),
+    ('possessive', 'posesivan', "adj:posesivan|posesivna|posesivno"),
+    ('productive', 'produktivan', "adj:produktivan|produktivna|produktivno"),
+    ('quiet', 'tih', "adj:tih|tiha|tiho"),
+    ('refined', 'profinjen', "adj:profinjen|profinjena|profinjeno"),
+    ('responsible', 'odgovoran', "adj:odgovoran|odgovorna|odgovorno"),
+    ('romantic', 'romantičan', "adj:romantičan|romantična|romantično"),
+    ('rude', 'bezobrazan', "adj:bezobrazan|bezobrazna|bezobrazno"),
+    ('self-confident', 'samopouzdan', "adj:samopouzdan|samopouzdana|samopouzdano"),
+    ('selfish', 'sebičan', "adj:sebičan|sebična|sebično"),
+    ('serious', 'ozbiljan', "adj:ozbiljan|ozbiljna|ozbiljno"),
+    ('smart', 'pametan', "adj:pametan|pametna|pametno"),
+    ('sociable', 'druželjubiv', "adj:druželjubiv|druželjubiva|druželjubivo"),
+    ('strict', 'strog', "adj:strog|stroga|strogo"),
+    ('stupid', 'glup', "adj:glup|glupa|glupo"),
+    ('witty / funny', 'duhovit', "adj:duhovit|duhovita|duhovito"),
+    ('bald', 'ćelav', "adj:ćelav|ćelava|ćelavo"),
+    ('beautiful / nice', 'lijep', "adj:lijep|lijepa|lijepo"),
+    ('curly', 'kovrčav', "adj:kovrčav|kovrčava|kovrčavo"),
+    ('good-looking', 'zgodan', "adj:zgodan|zgodna|zgodno"),
+    ('old', 'star', "adj:star|stara|staro"),
+    ('short (height) / low', 'nizak', "adj:nizak|niska|nisko"),
+    ('slim / thin', 'mršav', "adj:mršav|mršava|mršavo"),
+    ('tall / high', 'visok', "adj:visok|visoka|visoko"),
+    ('ugly', 'ružan', "adj:ružan|ružna|ružno"),
+    ('busy / hectic', 'užurban', "adj:užurban|užurbana|užurbano"),
+    ('busy / taken', 'zauzet', "adj:zauzet|zauzeta|zauzeto"),
+    ('dressed', 'odjeven', "adj:odjeven|odjevena|odjeveno"),
+    ('free', 'slobodan', "adj:slobodan|slobodna|slobodno"),
+    ('healthy', 'zdrav', "adj:zdrav|zdrava|zdravo"),
+    ('hungry', 'gladan', "adj:gladan|gladna|gladno"),
+    ('ill / sick', 'bolestan', "adj:bolestan|bolesna|bolesno"),
+    ('invited', 'pozvan', "adj:pozvan|pozvana|pozvano"),
+    ('ready', 'spreman', "adj:spreman|spremna|spremno"),
+    ('relaxed', 'opušten', "adj:opušten|opuštena|opušteno"),
+    ('strong', 'jak', "adj:jak|jaka|jako"),
+    ('sure / safe', 'siguran', "adj:siguran|sigurna|sigurno"),
+    ('tired', 'umoran', "adj:umoran|umorna|umorno"),
+    ('big / large', 'velik', "adj:velik|velika|veliko"),
+    ('empty', 'prazan', "adj:prazan|prazna|prazno"),
+    ('heavy / difficult', 'težak', "adj:težak|teška|teško"),
+    ('light / easy', 'lagan', "adj:lagan|lagana|lagano"),
+    ('short', 'kratak', "adj:kratak|kratka|kratko"),
+    ('small / little (also malen)', 'mali', "adj:mali|mala|malo"),
+    ('wide / broad', 'širok', "adj:širok|široka|široko"),
+    ('appropriate', 'prikladan', "adj:prikladan|prikladna|prikladno"),
+    ('attractive', 'atraktivan', "adj:atraktivan|atraktivna|atraktivno"),
+    ('bad', 'loš', "adj:loš|loša|loše"),
+    ('boring', 'dosadan', "adj:dosadan|dosadna|dosadno"),
+    ('different', 'drugačiji', "adj:drugačiji|drugačija|drugačije"),
+    ('easy', 'lak', "adj:lak|laka|lako"),
+    ('excellent', 'odličan', "adj:odličan|odlična|odlično"),
+    ('favourite', 'omiljen', "adj:omiljen|omiljena|omiljeno"),
+    ('forbidden', 'zabranjen', "adj:zabranjen|zabranjena|zabranjeno"),
+    ('good', 'dobar', "adj:dobar|dobra|dobro"),
+    ('gorgeous / wonderful', 'predivan', "adj:predivan|predivna|predivno"),
+    ('high-quality', 'kvalitetan', "adj:kvalitetan|kvalitetna|kvalitetno"),
+    ('interesting', 'interesantan', "adj:interesantan|interesantna|interesantno"),
+    ('interesting', 'zanimljiv', "adj:zanimljiv|zanimljiva|zanimljivo"),
+    ('necessary', 'potreban', "adj:potreban|potrebna|potrebno"),
+    ('popular', 'popularan', "adj:popularan|popularna|popularno"),
+    ('similar', 'sličan', "adj:sličan|slična|slično"),
+    ('well-known / famous', 'poznat', "adj:poznat|poznata|poznato"),
+    ('bright / light', 'svijetao', "adj:svijetao|svijetla|svijetlo"),
+    ('built', 'izgrađen', "adj:izgrađen|izgrađena|izgrađeno"),
+    ('clean', 'čist', "adj:čist|čista|čisto"),
+    ('colourful', 'šaren', "adj:šaren|šarena|šareno"),
+    ('comfortable', 'udoban', "adj:udoban|udobna|udobno"),
+    ('distant / far away', 'udaljen', "adj:udaljen|udaljena|udaljeno"),
+    ('former / ex-', 'bivši', "adj:bivši|bivša|bivše"),
+    ('founded', 'osnovan', "adj:osnovan|osnovana|osnovano"),
+    ('furnished', 'namješten', "adj:namješten|namještena|namješteno"),
+    ('messy / untidy', 'neuredan', "adj:neuredan|neuredna|neuredno"),
+    ('modern', 'moderan', "adj:moderan|moderna|moderno"),
+    ('neat / tidy', 'uredan', "adj:uredan|uredna|uredno"),
+    ('new', 'nov', "adj:nov|nova|novo"),
+    ('next', 'sljedeći', "adj:sljedeći|sljedeća|sljedeće"),
+    ('old-fashioned', 'staromodan', "adj:staromodan|staromodna|staromodno"),
+    ('open / outdoor', 'otvoren', "adj:otvoren|otvorena|otvoreno"),
+    ('planned / scheduled', 'predviđen', "adj:predviđen|predviđena|predviđeno"),
+    ('private', 'privatan', "adj:privatan|privatna|privatno"),
+    ('rich', 'bogat', "adj:bogat|bogata|bogato"),
+    ('traditional', 'tradicionalan', "adj:tradicionalan|tradicionalna|tradicionalno"),
+    ('unfurnished', 'nenamješten', "adj:nenamješten|nenamještena|nenamješteno"),
+    ('unhealthy', 'nezdrav', "adj:nezdrav|nezdrava|nezdravo"),
+    ('warm', 'topao', "adj:topao|topla|toplo"),
+    ('well-kept / decorated', 'uređen', "adj:uređen|uređena|uređeno"),
+    ('affordable / good value', 'povoljan', "adj:povoljan|povoljna|povoljno"),
+    ('cheap', 'jeftin', "adj:jeftin|jeftina|jeftino"),
+    ('expensive', 'skup', "adj:skup|skupa|skupo"),
+    ('reliable', 'pouzdan', "adj:pouzdan|pouzdana|pouzdano"),
+    ('slow', 'spor', "adj:spor|spora|sporo"),
+    ('cold', 'hladan', "adj:hladan|hladna|hladno"),
+    ('fresh', 'svjež', "adj:svjež|svježa|svježe"),
+    ('hot', 'vruć', "adj:vruć|vruća|vruće"),
+    ('sour', 'kiseo', "adj:kiseo|kisela|kiselo"),
+    ('sweet', 'sladak', "adj:sladak|slatka|slatko"),
+    ('black', 'crn', "adj:crn|crna|crno"),
+    ('blue / blond', 'plav', "adj:plav|plava|plavo"),
+    ('brown', 'smeđ', "adj:smeđ|smeđa|smeđe"),
+    ('green', 'zelen', "adj:zelen|zelena|zeleno"),
+    ('grey', 'siv', "adj:siv|siva|sivo"),
+    ('orange', 'narančast', "adj:narančast|narančasta|narančasto"),
+    ('pink', 'ružičast', "adj:ružičast|ružičasta|ružičasto"),
+    ('purple', 'ljubičast', "adj:ljubičast|ljubičasta|ljubičasto"),
+    ('red', 'crven', "adj:crven|crvena|crveno"),
+    ('white', 'bijel', "adj:bijel|bijela|bijelo"),
+    ('yellow', 'žut', "adj:žut|žuta|žuto"),
+]
+H.append(("adj", "Pridjevi (adjectives)", "W00_U0_Pridjevi_ref.pdf", ADJ_ROWS))
 
 
 # W00 · U0 (added Nov 15, 2026): reference set not tied to a class week or a Tako lako lesson.
@@ -259,7 +474,8 @@ for en, hr in [("I like it", "sviđa mi se"), ("you like it (informal)", "sviđa
     w00.append((en, hr, ""))
     VERB_NOTE.setdefault(hr, "verb sviđati se (to like) · present tense, person in the dative")
 short_rows = [r for h in H if h[0] == "short" for r in h[3]]
-H.append(("w00u0", "W00 · U0 Reference (short words & verbs)", "W00_U0_Kratke-rijeci_ref.pdf + W00_U0_Glagol sheets", short_rows + w00))
+# Nov 17, 2026: the prepositions (now their own handout) stay in the W00 · U0 set too.
+H.append(("w00u0", "W00 · U0 Reference (short words, prepositions & verbs)", "W00_U0_Kratke-rijeci_ref.pdf + W00_U0_Prijedlozi_ref.pdf + W00_U0_Glagol sheets", short_rows + prep_rows + w00))
 
 
 def norm(s):
@@ -302,7 +518,10 @@ for hid, title, _f, rows in H:
             if c["gram"]["pos"] == "other" and g:
                 c["gram"] = gram(g)
             continue
-        c = {"id": f"ho-{hid}-{slug(hr)}", "hr": hr, "en": en, "ho": [hid], "gram": gram(g), "_g": g}
+        cid = f"ho-{hid}-{slug(hr)}"
+        if hid == "prep" and hr in LEGACY_SHORT:  # moved from Kratke riječi: keep the card id devices already have
+            cid = f"ho-short-{slug(hr)}"
+        c = {"id": cid, "hr": hr, "en": en, "ho": [hid], "gram": gram(g), "_g": g}
         by_hr[k] = c
         cards.append(c)
 
@@ -311,7 +530,7 @@ out_cards = []
 for c in cards:
     g = c.pop("_g")
     kind = ("noun, " + GLABEL[g[0]] + (", plural only" if g.endswith("pl") else "")) if g and not g.startswith("adj") else ("adjective" if g else "")
-    kind = kind or VERB_NOTE.get(c["hr"], "")
+    kind = kind or VERB_NOTE.get(c["hr"], "") or PREP_NOTE.get(c["hr"], "")
     note = "Handout: " + " · ".join(titles[h] for h in c["ho"]) + (("\n" + kind) if kind else "")
     out_cards.append({"id": c["id"], "hr": c["hr"], "en": c["en"], "note": note, "ho": c["ho"],
                       "level": 1, "due": 0, "createdAt": TS, "updatedAt": TS, "lastReviewed": 0,
