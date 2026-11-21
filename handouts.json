@@ -56,9 +56,14 @@
    "file": "W00_U0_Pridjevi_ref.pdf"
   },
   {
+   "id": "time",
+   "title": "Vrijeme (time)",
+   "file": "W00_U0_Vrijeme_study.pdf"
+  },
+  {
    "id": "w00u0",
-   "title": "W00 · U0 Reference (short words, prepositions & verbs)",
-   "file": "W00_U0_Kratke-rijeci_ref.pdf + W00_U0_Prijedlozi_ref.pdf + W00_U0_Glagol sheets"
+   "title": "W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "file": "W00_U0_Kratke-rijeci_ref.pdf + W00_U0_Prijedlozi_ref.pdf + W00_U0_Glagol sheets + W00_U0_Vrijeme_study.pdf"
   }
  ],
  "cards": [
@@ -5513,7 +5518,7 @@
    "id": "ho-house-pod",
    "hr": "pod",
    "en": "floor (surface) / under",
-   "note": "Handout: Kuća i namještaj (house and furniture) · Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\nnoun, masculine",
+   "note": "Handout: Kuća i namještaj (house and furniture) · Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, masculine",
    "ho": [
     "house",
     "prep",
@@ -5998,10 +6003,12 @@
   {
    "id": "ho-house-sat",
    "hr": "sat",
-   "en": "clock / watch",
-   "note": "Handout: Kuća i namještaj (house and furniture)\nnoun, masculine",
+   "en": "clock / watch / hour",
+   "note": "Handout: Kuća i namještaj (house and furniture) · Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, masculine\n2 sata · 5 sati; sat = hour and also clock / watch",
    "ho": [
-    "house"
+    "house",
+    "time",
+    "w00u0"
    ],
    "level": 1,
    "due": 0,
@@ -6834,9 +6841,11 @@
    "id": "ho-questions-u-koliko-sati",
    "hr": "u koliko sati",
    "en": "at what time",
-   "note": "Handout: Upitne riječi (question words)",
+   "note": "Handout: Upitne riječi (question words) · Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
-    "questions"
+    "questions",
+    "time",
+    "w00u0"
    ],
    "level": 1,
    "due": 0,
@@ -6854,9 +6863,11 @@
    "id": "ho-questions-koliko-je-sati",
    "hr": "koliko je sati",
    "en": "what time is it",
-   "note": "Handout: Upitne riječi (question words)",
+   "note": "Handout: Upitne riječi (question words) · Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
-    "questions"
+    "questions",
+    "time",
+    "w00u0"
    ],
    "level": 1,
    "due": 0,
@@ -7037,9 +7048,11 @@
    "id": "ho-questions-koliko-dugo",
    "hr": "koliko dugo",
    "en": "how long",
-   "note": "Handout: Upitne riječi (question words)",
+   "note": "Handout: Upitne riječi (question words) · Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
-    "questions"
+    "questions",
+    "time",
+    "w00u0"
    ],
    "level": 1,
    "due": 0,
@@ -7057,9 +7070,11 @@
    "id": "ho-questions-koliko-cesto",
    "hr": "koliko često",
    "en": "how often",
-   "note": "Handout: Upitne riječi (question words)",
+   "note": "Handout: Upitne riječi (question words) · Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
-    "questions"
+    "questions",
+    "time",
+    "w00u0"
    ],
    "level": 1,
    "due": 0,
@@ -7097,7 +7112,7 @@
    "id": "ho-questions-je-li",
    "hr": "je li",
    "en": "is it …? / whether",
-   "note": "Handout: Upitne riječi (question words) · Veznici (conjunctions) · Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Upitne riječi (question words) · Veznici (conjunctions) · Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "questions",
     "conj",
@@ -7180,7 +7195,7 @@
    "id": "ho-kwords-kako-se-zoves",
    "hr": "Kako se zoveš?",
    "en": "What's your name?",
-   "note": "Handout: K-words anchor phrases · Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: K-words anchor phrases · Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "kwords",
     "short",
@@ -7442,10 +7457,11 @@
    "id": "ho-conj-vec",
    "hr": "već",
    "en": "but rather (after a negative) / already",
-   "note": "Handout: Veznici (conjunctions) · Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Veznici (conjunctions) · Kratke riječi (short words) · Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "conj",
     "short",
+    "time",
     "w00u0"
    ],
    "level": 1,
@@ -7524,7 +7540,7 @@
    "id": "ho-conj-da",
    "hr": "da",
    "en": "that / yes / he gives (also: she, it)",
-   "note": "Handout: Veznici (conjunctions) · Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)\nverb dati (to give) · present tense",
+   "note": "Handout: Veznici (conjunctions) · Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)\nverb dati (to give) · present tense",
    "ho": [
     "conj",
     "short",
@@ -8006,7 +8022,7 @@
    "id": "ho-short-ne",
    "hr": "ne",
    "en": "no / not",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -8027,7 +8043,7 @@
    "id": "ho-short-nije",
    "hr": "nije",
    "en": "isn't / is not",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -8048,7 +8064,7 @@
    "id": "ho-short-ni",
    "hr": "ni",
    "en": "not even / nor",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -8069,7 +8085,7 @@
    "id": "ho-short-mozda",
    "hr": "možda",
    "en": "maybe",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -8090,7 +8106,7 @@
    "id": "ho-short-naravno",
    "hr": "naravno",
    "en": "of course",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -8111,7 +8127,7 @@
    "id": "ho-short-moze",
    "hr": "može",
    "en": "OK / sure / he can (also: she, it)",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)\nverb moći (can / to be able to) · present tense",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)\nverb moći (can / to be able to) · present tense",
    "ho": [
     "short",
     "w00u0"
@@ -8132,7 +8148,7 @@
    "id": "ho-short-dobro",
    "hr": "dobro",
    "en": "good / OK",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -8153,7 +8169,7 @@
    "id": "ho-short-tu",
    "hr": "tu",
    "en": "here",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -8174,7 +8190,7 @@
    "id": "ho-short-ovdje",
    "hr": "ovdje",
    "en": "here",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -8195,7 +8211,7 @@
    "id": "ho-short-tamo",
    "hr": "tamo",
    "en": "there",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -8216,7 +8232,7 @@
    "id": "ho-short-ovamo",
    "hr": "ovamo",
    "en": "(to) here",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -8237,7 +8253,7 @@
    "id": "ho-short-evo",
    "hr": "evo",
    "en": "here is / here you go",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -8258,7 +8274,7 @@
    "id": "ho-short-kuci",
    "hr": "kući",
    "en": "home (going home)",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -8279,7 +8295,7 @@
    "id": "ho-short-doma",
    "hr": "doma",
    "en": "at home",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -8300,9 +8316,10 @@
    "id": "ho-short-sada-sad",
    "hr": "sada / sad",
    "en": "now",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
+    "time",
     "w00u0"
    ],
    "level": 1,
@@ -8321,9 +8338,10 @@
    "id": "ho-short-onda",
    "hr": "onda",
    "en": "then",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
+    "time",
     "w00u0"
    ],
    "level": 1,
@@ -8342,9 +8360,10 @@
    "id": "ho-short-tada",
    "hr": "tada",
    "en": "then / at that time",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
+    "time",
     "w00u0"
    ],
    "level": 1,
@@ -8363,9 +8382,10 @@
    "id": "ho-short-jos",
    "hr": "još",
    "en": "still / yet",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
+    "time",
     "w00u0"
    ],
    "level": 1,
@@ -8384,9 +8404,10 @@
    "id": "ho-short-danas",
    "hr": "danas",
    "en": "today",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
+    "time",
     "w00u0"
    ],
    "level": 1,
@@ -8405,9 +8426,10 @@
    "id": "ho-short-sutra",
    "hr": "sutra",
    "en": "tomorrow",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
+    "time",
     "w00u0"
    ],
    "level": 1,
@@ -8426,9 +8448,10 @@
    "id": "ho-short-jucer",
    "hr": "jučer",
    "en": "yesterday",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
+    "time",
     "w00u0"
    ],
    "level": 1,
@@ -8447,9 +8470,10 @@
    "id": "ho-short-uvijek",
    "hr": "uvijek",
    "en": "always",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
+    "time",
     "w00u0"
    ],
    "level": 1,
@@ -8468,9 +8492,10 @@
    "id": "ho-short-nikada-nikad",
    "hr": "nikada / nikad",
    "en": "never",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\ntakes ne: Nikad ne pijem kavu.",
    "ho": [
     "short",
+    "time",
     "w00u0"
    ],
    "level": 1,
@@ -8489,9 +8514,10 @@
    "id": "ho-short-cesto",
    "hr": "često",
    "en": "often",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
+    "time",
     "w00u0"
    ],
    "level": 1,
@@ -8510,9 +8536,10 @@
    "id": "ho-short-ponekad",
    "hr": "ponekad",
    "en": "sometimes",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
+    "time",
     "w00u0"
    ],
    "level": 1,
@@ -8531,7 +8558,7 @@
    "id": "ho-short-opet",
    "hr": "opet",
    "en": "again",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -8552,9 +8579,10 @@
    "id": "ho-short-odmah",
    "hr": "odmah",
    "en": "right away",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
+    "time",
     "w00u0"
    ],
    "level": 1,
@@ -8573,7 +8601,7 @@
    "id": "ho-short-vrlo",
    "hr": "vrlo",
    "en": "very",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -8594,7 +8622,7 @@
    "id": "ho-short-jako",
    "hr": "jako",
    "en": "very / a lot",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -8615,7 +8643,7 @@
    "id": "ho-short-malo",
    "hr": "malo",
    "en": "a little",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -8636,7 +8664,7 @@
    "id": "ho-short-puno",
    "hr": "puno",
    "en": "a lot",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -8657,7 +8685,7 @@
    "id": "ho-short-mnogo",
    "hr": "mnogo",
    "en": "much / many",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -8678,7 +8706,7 @@
    "id": "ho-short-previse",
    "hr": "previše",
    "en": "too much",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -8699,7 +8727,7 @@
    "id": "ho-short-dosta",
    "hr": "dosta",
    "en": "enough / quite",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -8720,7 +8748,7 @@
    "id": "ho-short-samo",
    "hr": "samo",
    "en": "only / just",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -8741,7 +8769,7 @@
    "id": "ho-short-cak",
    "hr": "čak",
    "en": "even",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -8762,7 +8790,7 @@
    "id": "ho-short-skoro",
    "hr": "skoro",
    "en": "almost",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -8783,7 +8811,7 @@
    "id": "ho-short-takoder",
    "hr": "također",
    "en": "also / too",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -8804,7 +8832,7 @@
    "id": "ho-short-isto",
    "hr": "isto",
    "en": "also / the same",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -8825,7 +8853,7 @@
    "id": "ho-short-svi",
    "hr": "svi",
    "en": "everyone",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -8846,7 +8874,7 @@
    "id": "ho-short-sve",
    "hr": "sve",
    "en": "everything",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -8867,7 +8895,7 @@
    "id": "ho-short-netko",
    "hr": "netko",
    "en": "someone",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -8888,7 +8916,7 @@
    "id": "ho-short-nitko",
    "hr": "nitko",
    "en": "no one / nobody",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -8909,7 +8937,7 @@
    "id": "ho-short-nesto",
    "hr": "nešto",
    "en": "something",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -8930,7 +8958,7 @@
    "id": "ho-short-nista",
    "hr": "ništa",
    "en": "nothing",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -8951,7 +8979,7 @@
    "id": "ho-short-kao",
    "hr": "kao",
    "en": "like / as",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -8972,7 +9000,7 @@
    "id": "ho-short-molim",
    "hr": "molim",
    "en": "please / you're welcome / pardon?",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -8993,7 +9021,7 @@
    "id": "ho-short-hvala",
    "hr": "hvala",
    "en": "thanks / thank you",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -9014,7 +9042,7 @@
    "id": "ho-short-hajde",
    "hr": "hajde",
    "en": "come on",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -9035,7 +9063,7 @@
    "id": "ho-short-hajdemo",
    "hr": "hajdemo",
    "en": "let's go",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -9056,7 +9084,7 @@
    "id": "ho-short-se",
    "hr": "se",
    "en": "oneself / each other (goes with some verbs)",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -9077,7 +9105,7 @@
    "id": "ho-short-li",
    "hr": "li",
    "en": "(question word for yes/no questions)",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -9098,7 +9126,7 @@
    "id": "ho-short-imas-li",
    "hr": "imaš li",
    "en": "do you have …?",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -9119,7 +9147,7 @@
    "id": "ho-short-zovem-se",
    "hr": "zovem se",
    "en": "my name is …",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -9140,7 +9168,7 @@
    "id": "ho-short-ne-zovem-se",
    "hr": "ne zovem se",
    "en": "my name isn't …",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -9161,7 +9189,7 @@
    "id": "ho-short-vidimo-se",
    "hr": "vidimo se",
    "en": "see you / see each other",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -9182,7 +9210,7 @@
    "id": "ho-short-svida-mi-se",
    "hr": "sviđa mi se",
    "en": "I like it",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)\nverb sviđati se (to like) · present tense, person in the dative",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)\nverb sviđati se (to like) · present tense, person in the dative",
    "ho": [
     "short",
     "w00u0"
@@ -9203,7 +9231,7 @@
    "id": "ho-short-kako-se-kaze",
    "hr": "Kako se kaže …?",
    "en": "How do you say …?",
-   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions & verbs)",
+   "note": "Handout: Kratke riječi (short words) · W00 · U0 Reference (short words, prepositions, verbs & time)",
    "ho": [
     "short",
     "w00u0"
@@ -9224,7 +9252,7 @@
    "id": "ho-short-u",
    "hr": "u",
    "en": "in / at / on (a day)",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\npreposition + locative (where) or accusative (where to; on a day)",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\npreposition + locative (where) or accusative (where to; on a day)",
    "ho": [
     "prep",
     "w00u0"
@@ -9245,7 +9273,7 @@
    "id": "ho-short-na",
    "hr": "na",
    "en": "on / at",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\npreposition + locative (where) or accusative (where to)",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\npreposition + locative (where) or accusative (where to)",
    "ho": [
     "prep",
     "w00u0"
@@ -9266,7 +9294,7 @@
    "id": "ho-short-kod",
    "hr": "kod",
    "en": "at someone's place",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\npreposition + genitive",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\npreposition + genitive",
    "ho": [
     "prep",
     "w00u0"
@@ -9287,7 +9315,7 @@
    "id": "ho-short-iz",
    "hr": "iz",
    "en": "from (a place) / out of",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\npreposition + genitive",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\npreposition + genitive",
    "ho": [
     "prep",
     "w00u0"
@@ -9308,7 +9336,7 @@
    "id": "ho-short-od",
    "hr": "od",
    "en": "from (a person) / since",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\npreposition + genitive",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\npreposition + genitive",
    "ho": [
     "prep",
     "w00u0"
@@ -9329,7 +9357,7 @@
    "id": "ho-short-do",
    "hr": "do",
    "en": "to / as far as / until",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\npreposition + genitive",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\npreposition + genitive",
    "ho": [
     "prep",
     "w00u0"
@@ -9350,7 +9378,7 @@
    "id": "ho-short-prema",
    "hr": "prema",
    "en": "toward",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\npreposition + dative",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\npreposition + dative",
    "ho": [
     "prep",
     "w00u0"
@@ -9371,7 +9399,7 @@
    "id": "ho-prep-k-ka",
    "hr": "k / ka",
    "en": "to (a person's place)",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\npreposition + dative; ka before k and g",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\npreposition + dative; ka before k and g",
    "ho": [
     "prep",
     "w00u0"
@@ -9392,7 +9420,7 @@
    "id": "ho-short-preko",
    "hr": "preko",
    "en": "across / over / via",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\npreposition + genitive",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\npreposition + genitive",
    "ho": [
     "prep",
     "w00u0"
@@ -9413,7 +9441,7 @@
    "id": "ho-short-kroz",
    "hr": "kroz",
    "en": "through",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\npreposition + accusative",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\npreposition + accusative",
    "ho": [
     "prep",
     "w00u0"
@@ -9434,7 +9462,7 @@
    "id": "ho-prep-niz",
    "hr": "niz",
    "en": "down",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\npreposition + accusative",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\npreposition + accusative",
    "ho": [
     "prep",
     "w00u0"
@@ -9455,7 +9483,7 @@
    "id": "ho-short-oko",
    "hr": "oko",
    "en": "around / about (approximately)",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\npreposition + genitive",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\npreposition + genitive",
    "ho": [
     "prep",
     "w00u0"
@@ -9476,7 +9504,7 @@
    "id": "ho-short-ispod",
    "hr": "ispod",
    "en": "below / underneath",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\npreposition + genitive",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\npreposition + genitive",
    "ho": [
     "prep",
     "w00u0"
@@ -9497,7 +9525,7 @@
    "id": "ho-short-iznad",
    "hr": "iznad",
    "en": "above / over",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\npreposition + genitive",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\npreposition + genitive",
    "ho": [
     "prep",
     "w00u0"
@@ -9518,7 +9546,7 @@
    "id": "ho-short-ispred",
    "hr": "ispred",
    "en": "in front of",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\npreposition + genitive",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\npreposition + genitive",
    "ho": [
     "prep",
     "w00u0"
@@ -9539,7 +9567,7 @@
    "id": "ho-short-iza",
    "hr": "iza",
    "en": "behind",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\npreposition + genitive",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\npreposition + genitive",
    "ho": [
     "prep",
     "w00u0"
@@ -9560,7 +9588,7 @@
    "id": "ho-short-pokraj-kraj",
    "hr": "pokraj / kraj",
    "en": "next to / beside",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\npreposition + genitive",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\npreposition + genitive",
    "ho": [
     "prep",
     "w00u0"
@@ -9581,7 +9609,7 @@
    "id": "ho-short-izmedu",
    "hr": "između",
    "en": "between",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\npreposition + genitive",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\npreposition + genitive",
    "ho": [
     "prep",
     "w00u0"
@@ -9602,7 +9630,7 @@
    "id": "ho-short-uz",
    "hr": "uz",
    "en": "along / alongside",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\npreposition + accusative",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\npreposition + accusative",
    "ho": [
     "prep",
     "w00u0"
@@ -9623,7 +9651,7 @@
    "id": "ho-short-blizu",
    "hr": "blizu",
    "en": "near",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\npreposition + genitive",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\npreposition + genitive",
    "ho": [
     "prep",
     "w00u0"
@@ -9644,7 +9672,7 @@
    "id": "ho-short-po",
    "hr": "po",
    "en": "around (all over) / to fetch",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\npreposition + locative (all over) or accusative (to fetch)",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\npreposition + locative (all over) or accusative (to fetch)",
    "ho": [
     "prep",
     "w00u0"
@@ -9665,9 +9693,10 @@
    "id": "ho-short-prije",
    "hr": "prije",
    "en": "before / ago",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\npreposition + genitive",
+   "note": "Handout: Prijedlozi (prepositions) · Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\npreposition + genitive\nprije + genitive = ago: prije dva dana",
    "ho": [
     "prep",
+    "time",
     "w00u0"
    ],
    "level": 1,
@@ -9686,9 +9715,10 @@
    "id": "ho-short-poslije",
    "hr": "poslije",
    "en": "after",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\npreposition + genitive",
+   "note": "Handout: Prijedlozi (prepositions) · Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\npreposition + genitive",
    "ho": [
     "prep",
+    "time",
     "w00u0"
    ],
    "level": 1,
@@ -9707,7 +9737,7 @@
    "id": "ho-short-nakon",
    "hr": "nakon",
    "en": "after",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\npreposition + genitive",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\npreposition + genitive",
    "ho": [
     "prep",
     "w00u0"
@@ -9728,7 +9758,7 @@
    "id": "ho-short-tijekom",
    "hr": "tijekom",
    "en": "during",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\npreposition + genitive",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\npreposition + genitive",
    "ho": [
     "prep",
     "w00u0"
@@ -9749,7 +9779,7 @@
    "id": "ho-short-za",
    "hr": "za",
    "en": "for / in (time from now)",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\npreposition + accusative (for; in + time) or instrumental (behind, at)",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\npreposition + accusative (for; in + time) or instrumental (behind, at)",
    "ho": [
     "prep",
     "w00u0"
@@ -9770,7 +9800,7 @@
    "id": "ho-short-s-sa",
    "hr": "s / sa",
    "en": "with / off (a surface)",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\npreposition + instrumental (with) or genitive (off, from); sa before s, z, š, ž and mnom",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\npreposition + instrumental (with) or genitive (off, from); sa before s, z, š, ž and mnom",
    "ho": [
     "prep",
     "w00u0"
@@ -9791,7 +9821,7 @@
    "id": "ho-short-bez",
    "hr": "bez",
    "en": "without",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\npreposition + genitive",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\npreposition + genitive",
    "ho": [
     "prep",
     "w00u0"
@@ -9812,7 +9842,7 @@
    "id": "ho-short-o",
    "hr": "o",
    "en": "about (a topic)",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\npreposition + locative",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\npreposition + locative",
    "ho": [
     "prep",
     "w00u0"
@@ -9833,7 +9863,7 @@
    "id": "ho-short-zbog",
    "hr": "zbog",
    "en": "because of",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\npreposition + genitive",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\npreposition + genitive",
    "ho": [
     "prep",
     "w00u0"
@@ -9854,7 +9884,7 @@
    "id": "ho-short-osim",
    "hr": "osim",
    "en": "except / besides",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\npreposition + genitive",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\npreposition + genitive",
    "ho": [
     "prep",
     "w00u0"
@@ -9875,7 +9905,7 @@
    "id": "ho-short-umjesto",
    "hr": "umjesto",
    "en": "instead of",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\npreposition + genitive",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\npreposition + genitive",
    "ho": [
     "prep",
     "w00u0"
@@ -9896,7 +9926,7 @@
    "id": "ho-short-protiv",
    "hr": "protiv",
    "en": "against",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\npreposition + genitive",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\npreposition + genitive",
    "ho": [
     "prep",
     "w00u0"
@@ -9917,7 +9947,7 @@
    "id": "ho-prep-u-gradu",
    "hr": "u gradu",
    "en": "in town / in the city",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\nu + locative: where",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\nu + locative: where",
    "ho": [
     "prep",
     "w00u0"
@@ -9938,7 +9968,7 @@
    "id": "ho-prep-u-grad",
    "hr": "u grad",
    "en": "into town / to town",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\nu + accusative: where to",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\nu + accusative: where to",
    "ho": [
     "prep",
     "w00u0"
@@ -9959,7 +9989,7 @@
    "id": "ho-prep-iz-grada",
    "hr": "iz grada",
    "en": "from town",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\niz + genitive: where from",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\niz + genitive: where from",
    "ho": [
     "prep",
     "w00u0"
@@ -9980,7 +10010,7 @@
    "id": "ho-prep-na-moru",
    "hr": "na moru",
    "en": "at the seaside",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\nna + locative: where",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\nna + locative: where",
    "ho": [
     "prep",
     "w00u0"
@@ -10001,7 +10031,7 @@
    "id": "ho-prep-na-more",
    "hr": "na more",
    "en": "to the seaside",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\nna + accusative: where to",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\nna + accusative: where to",
    "ho": [
     "prep",
     "w00u0"
@@ -10022,7 +10052,7 @@
    "id": "ho-prep-s-mora",
    "hr": "s mora",
    "en": "from the seaside",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\ns + genitive: where from",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\ns + genitive: where from",
    "ho": [
     "prep",
     "w00u0"
@@ -10043,7 +10073,7 @@
    "id": "ho-prep-na-poslu",
    "hr": "na poslu",
    "en": "at work",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\nna + locative: where",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\nna + locative: where",
    "ho": [
     "prep",
     "w00u0"
@@ -10064,7 +10094,7 @@
    "id": "ho-prep-s-posla",
    "hr": "s posla",
    "en": "from work",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\ns + genitive: where from",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\ns + genitive: where from",
    "ho": [
     "prep",
     "w00u0"
@@ -10085,7 +10115,7 @@
    "id": "ho-prep-kod-bake",
    "hr": "kod bake",
    "en": "at Grandma's",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\nkod + genitive: where",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\nkod + genitive: where",
    "ho": [
     "prep",
     "w00u0"
@@ -10106,7 +10136,7 @@
    "id": "ho-prep-k-baki",
    "hr": "k baki",
    "en": "to Grandma's",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\nk + dative: where to",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\nk + dative: where to",
    "ho": [
     "prep",
     "w00u0"
@@ -10127,7 +10157,7 @@
    "id": "ho-prep-od-bake",
    "hr": "od bake",
    "en": "from Grandma",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\nod + genitive: where from",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\nod + genitive: where from",
    "ho": [
     "prep",
     "w00u0"
@@ -10148,7 +10178,7 @@
    "id": "ho-prep-pod-stolom",
    "hr": "pod stolom",
    "en": "under the table",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\npod + instrumental: where",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\npod + instrumental: where",
    "ho": [
     "prep",
     "w00u0"
@@ -10169,7 +10199,7 @@
    "id": "ho-prep-iz-amerike",
    "hr": "iz Amerike",
    "en": "from America",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\niz + genitive",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\niz + genitive",
    "ho": [
     "prep",
     "w00u0"
@@ -10190,7 +10220,7 @@
    "id": "ho-prep-s-mamom",
    "hr": "s mamom",
    "en": "with Mom",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\ns + instrumental",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\ns + instrumental",
    "ho": [
     "prep",
     "w00u0"
@@ -10211,7 +10241,7 @@
    "id": "ho-prep-kava-s-mlijekom",
    "hr": "kava s mlijekom",
    "en": "coffee with milk",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\ns + instrumental",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\ns + instrumental",
    "ho": [
     "prep",
     "w00u0"
@@ -10232,7 +10262,7 @@
    "id": "ho-prep-bez-secera",
    "hr": "bez šećera",
    "en": "without sugar",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\nbez + genitive",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\nbez + genitive",
    "ho": [
     "prep",
     "w00u0"
@@ -10253,7 +10283,7 @@
    "id": "ho-prep-za-tebe",
    "hr": "za tebe",
    "en": "for you (informal)",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\nza + accusative",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\nza + accusative",
    "ho": [
     "prep",
     "w00u0"
@@ -10274,7 +10304,7 @@
    "id": "ho-prep-o-obitelji",
    "hr": "o obitelji",
    "en": "about the family",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\no + locative",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\no + locative",
    "ho": [
     "prep",
     "w00u0"
@@ -10295,7 +10325,7 @@
    "id": "ho-prep-poslije-posla",
    "hr": "poslije posla",
    "en": "after work",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\nposlije + genitive",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\nposlije + genitive",
    "ho": [
     "prep",
     "w00u0"
@@ -10316,7 +10346,7 @@
    "id": "ho-prep-prije-rucka",
    "hr": "prije ručka",
    "en": "before lunch",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\nprije + genitive",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\nprije + genitive",
    "ho": [
     "prep",
     "w00u0"
@@ -10337,9 +10367,10 @@
    "id": "ho-prep-prije-dva-dana",
    "hr": "prije dva dana",
    "en": "two days ago",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\nprije + genitive",
+   "note": "Handout: Prijedlozi (prepositions) · Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nprije + genitive\nprije + genitive = ago",
    "ho": [
     "prep",
+    "time",
     "w00u0"
    ],
    "level": 1,
@@ -10358,9 +10389,10 @@
    "id": "ho-prep-za-tjedan-dana",
    "hr": "za tjedan dana",
    "en": "in a week",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\nza + accusative: in + time",
+   "note": "Handout: Prijedlozi (prepositions) · Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nza + accusative: in + time\nza + accusative = in (from now)",
    "ho": [
     "prep",
+    "time",
     "w00u0"
    ],
    "level": 1,
@@ -10379,9 +10411,10 @@
    "id": "ho-prep-od-devet-do-pet",
    "hr": "od devet do pet",
    "en": "from nine to five",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\nod … do + genitive",
+   "note": "Handout: Prijedlozi (prepositions) · Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nod … do + genitive",
    "ho": [
     "prep",
+    "time",
     "w00u0"
    ],
    "level": 1,
@@ -10400,7 +10433,7 @@
    "id": "ho-prep-zbog-kise",
    "hr": "zbog kiše",
    "en": "because of the rain",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\nzbog + genitive",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\nzbog + genitive",
    "ho": [
     "prep",
     "w00u0"
@@ -10421,7 +10454,7 @@
    "id": "ho-prep-kod-mene",
    "hr": "kod mene",
    "en": "at my place",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\nkod + genitive",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\nkod + genitive",
    "ho": [
     "prep",
     "w00u0"
@@ -10442,7 +10475,7 @@
    "id": "ho-prep-kod-tebe",
    "hr": "kod tebe",
    "en": "at your place (informal)",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\nkod + genitive",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\nkod + genitive",
    "ho": [
     "prep",
     "w00u0"
@@ -10463,7 +10496,7 @@
    "id": "ho-prep-sa-mnom",
    "hr": "sa mnom",
    "en": "with me",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\ns + instrumental; sa before mnom",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\ns + instrumental; sa before mnom",
    "ho": [
     "prep",
     "w00u0"
@@ -10484,7 +10517,7 @@
    "id": "ho-prep-s-tobom",
    "hr": "s tobom",
    "en": "with you (informal)",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\ns + instrumental",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\ns + instrumental",
    "ho": [
     "prep",
     "w00u0"
@@ -10505,7 +10538,7 @@
    "id": "ho-prep-za-mene",
    "hr": "za mene",
    "en": "for me",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\nza + accusative",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\nza + accusative",
    "ho": [
     "prep",
     "w00u0"
@@ -10526,7 +10559,7 @@
    "id": "ho-prep-o-meni",
    "hr": "o meni",
    "en": "about me",
-   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions & verbs)\no + locative",
+   "note": "Handout: Prijedlozi (prepositions) · W00 · U0 Reference (short words, prepositions, verbs & time)\no + locative",
    "ho": [
     "prep",
     "w00u0"
@@ -13172,9 +13205,11 @@
    "id": "ho-adj-sljedeci",
    "hr": "sljedeći",
    "en": "next",
-   "note": "Handout: Pridjevi (adjectives)\nadjective",
+   "note": "Handout: Pridjevi (adjectives) · Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nadjective\nsynonym: idući",
    "ho": [
-    "adj"
+    "adj",
+    "time",
+    "w00u0"
    ],
    "level": 1,
    "due": 0,
@@ -13969,10 +14004,3129 @@
    }
   },
   {
+   "id": "ho-time-sekunda",
+   "hr": "sekunda",
+   "en": "second",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, feminine\n2 sekunde · 5 sekundi",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-minuta",
+   "hr": "minuta",
+   "en": "minute",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, feminine\n2 minute · 5 minuta",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-dan",
+   "hr": "dan",
+   "en": "day",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, masculine\n2 dana · 5 dana",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-tjedan",
+   "hr": "tjedan",
+   "en": "week",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, masculine\n2 tjedna · 5 tjedana",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-mjesec",
+   "hr": "mjesec",
+   "en": "month",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, masculine\n2 mjeseca · 5 mjeseci; also means moon",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-godina",
+   "hr": "godina",
+   "en": "year",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, feminine\n2 godine · 5 godina",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-desetljece",
+   "hr": "desetljeće",
+   "en": "decade",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, neuter\n2 desetljeća · 5 desetljeća",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-stoljece",
+   "hr": "stoljeće",
+   "en": "century",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, neuter\nu 21. stoljeću = in the 21st century",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-tisucljece",
+   "hr": "tisućljeće",
+   "en": "millennium",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, neuter",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-vrijeme",
+   "hr": "vrijeme",
+   "en": "time / weather",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, neuter\nNemam vremena = I don't have time; Kakvo je vrijeme? = What's the weather like?",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-trenutak",
+   "hr": "trenutak",
+   "en": "moment",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, masculine",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-pola-sata",
+   "hr": "pola sata",
+   "en": "half an hour",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-cetvrt-sata",
+   "hr": "četvrt sata",
+   "en": "quarter of an hour",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-sat-vremena",
+   "hr": "sat vremena",
+   "en": "an hour (length of time)",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nČekam sat vremena = I've been waiting for an hour",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-kalendar",
+   "hr": "kalendar",
+   "en": "calendar",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, masculine",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-datum",
+   "hr": "datum",
+   "en": "date",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, masculine",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-dvije-minute",
+   "hr": "dvije minute",
+   "en": "two minutes",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\n2–4: dvije with feminine nouns, then the small-number form",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-pet-minuta",
+   "hr": "pet minuta",
+   "en": "five minutes",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\n5 and up: genitive plural",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-prekjucer",
+   "hr": "prekjučer",
+   "en": "the day before yesterday",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-prekosutra",
+   "hr": "prekosutra",
+   "en": "the day after tomorrow",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-uskoro",
+   "hr": "uskoro",
+   "en": "soon",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-kasnije",
+   "hr": "kasnije",
+   "en": "later",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-jos-ne",
+   "hr": "još ne",
+   "en": "not yet",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-rano",
+   "hr": "rano",
+   "en": "early",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-kasno",
+   "hr": "kasno",
+   "en": "late",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-prosli",
+   "hr": "prošli",
+   "en": "last / previous",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nadjective",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "adj",
+    "forms": [
+     "prošli",
+     "prošla",
+     "prošlo"
+    ],
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-ovaj-tjedan",
+   "hr": "ovaj tjedan",
+   "en": "this week",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-prosli-tjedan",
+   "hr": "prošli tjedan",
+   "en": "last week",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-sljedeci-tjedan",
+   "hr": "sljedeći tjedan",
+   "en": "next week",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nalso: idući tjedan",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-ovaj-mjesec",
+   "hr": "ovaj mjesec",
+   "en": "this month",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-sljedeci-mjesec",
+   "hr": "sljedeći mjesec",
+   "en": "next month",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-ove-godine",
+   "hr": "ove godine",
+   "en": "this year",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\ngodina is feminine, so the genitive: ove godine",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-prosle-godine",
+   "hr": "prošle godine",
+   "en": "last year",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\ngenitive",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-sljedece-godine",
+   "hr": "sljedeće godine",
+   "en": "next year",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\ngenitive",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-prije-sat-vremena",
+   "hr": "prije sat vremena",
+   "en": "an hour ago",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nprije + genitive = ago",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-za-pet-minuta",
+   "hr": "za pet minuta",
+   "en": "in five minutes",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nza + accusative = in (from now)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-jutro",
+   "hr": "jutro",
+   "en": "morning",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, neuter\nin the morning = ujutro; this morning = jutros",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-ujutro",
+   "hr": "ujutro",
+   "en": "in the morning",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nno preposition",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-jutros",
+   "hr": "jutros",
+   "en": "this morning",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-prijepodne",
+   "hr": "prijepodne",
+   "en": "late morning (before noon)",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, neuter",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-podne",
+   "hr": "podne",
+   "en": "noon",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, neuter\nat noon = u podne",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-u-podne",
+   "hr": "u podne",
+   "en": "at noon",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-poslijepodne",
+   "hr": "poslijepodne",
+   "en": "afternoon",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, neuter\nalso: popodne",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-popodne",
+   "hr": "popodne",
+   "en": "afternoon / in the afternoon",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, neuter",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-vecer",
+   "hr": "večer",
+   "en": "evening",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, feminine\nin the evening = navečer; this evening = večeras",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-navecer",
+   "hr": "navečer",
+   "en": "in the evening",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nno preposition",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-veceras",
+   "hr": "večeras",
+   "en": "this evening",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-noc",
+   "hr": "noć",
+   "en": "night",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, feminine\nat night = noću; tonight = noćas",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-nocu",
+   "hr": "noću",
+   "en": "at night",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nno preposition",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-nocas",
+   "hr": "noćas",
+   "en": "tonight",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-sinoc",
+   "hr": "sinoć",
+   "en": "last night",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-ponoc",
+   "hr": "ponoć",
+   "en": "midnight",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, feminine\nat midnight = u ponoć",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-u-ponoc",
+   "hr": "u ponoć",
+   "en": "at midnight",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-dobro-jutro",
+   "hr": "Dobro jutro!",
+   "en": "Good morning!",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\ngreeting",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-dobar-dan",
+   "hr": "Dobar dan!",
+   "en": "Good day! / Hello",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\ngreeting (daytime)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-dobra-vecer",
+   "hr": "Dobra večer!",
+   "en": "Good evening!",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\ngreeting; večer is feminine",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-laku-noc",
+   "hr": "Laku noć!",
+   "en": "Good night!",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\ngreeting",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-jedan-sat",
+   "hr": "jedan sat",
+   "en": "one o'clock",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-dva-sata",
+   "hr": "dva sata",
+   "en": "two o'clock / two hours",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\n2–4: sata (tri sata, četiri sata)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-pet-sati",
+   "hr": "pet sati",
+   "en": "five o'clock / five hours",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\n5 and up: sati (pet … dvanaest sati)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-tri-i-deset",
+   "hr": "tri i deset",
+   "en": "ten past three (3:10)",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nlong form: tri sata i deset minuta",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-tri-i-cetvrt",
+   "hr": "tri i četvrt",
+   "en": "quarter past three (3:15)",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nalso: tri i petnaest",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-pola-cetiri",
+   "hr": "pola četiri",
+   "en": "half past three (3:30)",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\npola counts toward the NEXT hour: pola četiri = 3:30",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-cetvrt-do-cetiri",
+   "hr": "četvrt do četiri",
+   "en": "quarter to four (3:45)",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-pet-do-cetiri",
+   "hr": "pet do četiri",
+   "en": "five to four (3:55)",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-u-sedam-sati",
+   "hr": "u sedam sati",
+   "en": "at seven o'clock",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nu + time",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-u-pola-osam",
+   "hr": "u pola osam",
+   "en": "at half past seven (7:30)",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\npola osam = 7:30",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-u-sedam-ujutro",
+   "hr": "u sedam ujutro",
+   "en": "at seven in the morning",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-u-osam-navecer",
+   "hr": "u osam navečer",
+   "en": "at eight in the evening",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-ponedjeljak",
+   "hr": "ponedjeljak",
+   "en": "Monday",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, masculine\non Monday = u ponedjeljak; on Mondays = ponedjeljkom",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-utorak",
+   "hr": "utorak",
+   "en": "Tuesday",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, masculine\non Tuesday = u utorak; on Tuesdays = utorkom",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-srijeda",
+   "hr": "srijeda",
+   "en": "Wednesday",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, feminine\non Wednesday = u srijedu; on Wednesdays = srijedom",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-cetvrtak",
+   "hr": "četvrtak",
+   "en": "Thursday",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, masculine\non Thursday = u četvrtak; on Thursdays = četvrtkom",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-petak",
+   "hr": "petak",
+   "en": "Friday",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, masculine\non Friday = u petak; on Fridays = petkom",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-subota",
+   "hr": "subota",
+   "en": "Saturday",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, feminine\non Saturday = u subotu; on Saturdays = subotom",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-nedjelja",
+   "hr": "nedjelja",
+   "en": "Sunday",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, feminine\non Sunday = u nedjelju; on Sundays = nedjeljom",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-u-ponedjeljak",
+   "hr": "u ponedjeljak",
+   "en": "on Monday",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nu + accusative",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-u-srijedu",
+   "hr": "u srijedu",
+   "en": "on Wednesday",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nu + accusative: srijeda → srijedu",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-u-petak",
+   "hr": "u petak",
+   "en": "on Friday",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nu + accusative",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-u-subotu",
+   "hr": "u subotu",
+   "en": "on Saturday",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nu + accusative: subota → subotu",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-u-nedjelju",
+   "hr": "u nedjelju",
+   "en": "on Sunday",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nu + accusative: nedjelja → nedjelju",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-ponedjeljkom",
+   "hr": "ponedjeljkom",
+   "en": "on Mondays / every Monday",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\ninstrumental, no u",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-petkom",
+   "hr": "petkom",
+   "en": "on Fridays / every Friday",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\ninstrumental, no u",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-subotom",
+   "hr": "subotom",
+   "en": "on Saturdays / every Saturday",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\ninstrumental, no u",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-nedjeljom",
+   "hr": "nedjeljom",
+   "en": "on Sundays / every Sunday",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\ninstrumental, no u",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-vikend",
+   "hr": "vikend",
+   "en": "weekend",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, masculine\non the weekend = za vikend",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-za-vikend",
+   "hr": "za vikend",
+   "en": "on the weekend",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nalso: preko vikenda",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-radni-dan",
+   "hr": "radni dan",
+   "en": "workday",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-praznik",
+   "hr": "praznik",
+   "en": "holiday (day off)",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, masculine",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-sijecanj",
+   "hr": "siječanj",
+   "en": "January",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, masculine\nin January = u siječnju · 1. siječnja",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-veljaca",
+   "hr": "veljača",
+   "en": "February",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, feminine\nin February = u veljači · 1. veljače",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-ozujak",
+   "hr": "ožujak",
+   "en": "March",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, masculine\nin March = u ožujku · 1. ožujka",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-travanj",
+   "hr": "travanj",
+   "en": "April",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, masculine\nin April = u travnju · 1. travnja",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-svibanj",
+   "hr": "svibanj",
+   "en": "May",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, masculine\nin May = u svibnju · 1. svibnja",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-lipanj",
+   "hr": "lipanj",
+   "en": "June",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, masculine\nin June = u lipnju · 1. lipnja",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-srpanj",
+   "hr": "srpanj",
+   "en": "July",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, masculine\nin July = u srpnju · 1. srpnja",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-kolovoz",
+   "hr": "kolovoz",
+   "en": "August",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, masculine\nin August = u kolovozu · 1. kolovoza",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-rujan",
+   "hr": "rujan",
+   "en": "September",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, masculine\nin September = u rujnu · 1. rujna",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-listopad",
+   "hr": "listopad",
+   "en": "October",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, masculine\nin October = u listopadu · 1. listopada",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-studeni",
+   "hr": "studeni",
+   "en": "November",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, masculine\nin November = u studenom · 1. studenoga",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-prosinac",
+   "hr": "prosinac",
+   "en": "December",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, masculine\nin December = u prosincu · 1. prosinca",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-u-sijecnju",
+   "hr": "u siječnju",
+   "en": "in January",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nu + locative",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-u-svibnju",
+   "hr": "u svibnju",
+   "en": "in May",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nu + locative",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-u-kolovozu",
+   "hr": "u kolovozu",
+   "en": "in August",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nu + locative",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-rodendan",
+   "hr": "rođendan",
+   "en": "birthday",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, masculine\nRođendan mi je u svibnju = My birthday is in May",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "m",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-godisnje-doba",
+   "hr": "godišnje doba",
+   "en": "season (of the year)",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, neuter",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-proljece",
+   "hr": "proljeće",
+   "en": "spring",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, neuter\nin spring = u proljeće",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-ljeto",
+   "hr": "ljeto",
+   "en": "summer",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, neuter\nin summer = ljeti",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "n",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-jesen",
+   "hr": "jesen",
+   "en": "autumn / fall",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, feminine\nin autumn = u jesen",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-zima",
+   "hr": "zima",
+   "en": "winter",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nnoun, feminine\nin winter = zimi",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "noun",
+    "gender": "f",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-u-proljece",
+   "hr": "u proljeće",
+   "en": "in spring",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-ljeti",
+   "hr": "ljeti",
+   "en": "in summer",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nno preposition",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-u-jesen",
+   "hr": "u jesen",
+   "en": "in autumn / in the fall",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-zimi",
+   "hr": "zimi",
+   "en": "in winter",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nno preposition",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-obicno",
+   "hr": "obično",
+   "en": "usually",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-rijetko",
+   "hr": "rijetko",
+   "en": "rarely",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-svaki-dan",
+   "hr": "svaki dan",
+   "en": "every day",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-svaki-tjedan",
+   "hr": "svaki tjedan",
+   "en": "every week",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-svaki-mjesec",
+   "hr": "svaki mjesec",
+   "en": "every month",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-svake-godine",
+   "hr": "svake godine",
+   "en": "every year",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\ngenitive",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-dnevno",
+   "hr": "dnevno",
+   "en": "daily",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-tjedno",
+   "hr": "tjedno",
+   "en": "weekly",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-mjesecno",
+   "hr": "mjesečno",
+   "en": "monthly",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-godisnje",
+   "hr": "godišnje",
+   "en": "yearly",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-jednom-tjedno",
+   "hr": "jednom tjedno",
+   "en": "once a week",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-dvaput-dnevno",
+   "hr": "dvaput dnevno",
+   "en": "twice a day",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nalso: dva puta dnevno",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-s-vremena-na-vrijeme",
+   "hr": "s vremena na vrijeme",
+   "en": "from time to time",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-stalno",
+   "hr": "stalno",
+   "en": "all the time / constantly",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-samo-malo",
+   "hr": "Samo malo!",
+   "en": "Just a minute!",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nphrase",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-samo-trenutak",
+   "hr": "Samo trenutak!",
+   "en": "Just a moment!",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nphrase",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-cekaj-malo",
+   "hr": "Čekaj malo!",
+   "en": "Wait a second! (informal)",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nformal / plural: Čekajte malo!",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-cekajte-malo",
+   "hr": "Čekajte malo!",
+   "en": "Wait a second! (formal / plural)",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-odmah-dolazim",
+   "hr": "Odmah dolazim.",
+   "en": "I'm coming right away.",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-zurim-se",
+   "hr": "Žurim se.",
+   "en": "I'm in a hurry.",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-kasnim",
+   "hr": "Kasnim.",
+   "en": "I'm late. / I'm running late.",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-nema-zurbe",
+   "hr": "Nema žurbe.",
+   "en": "No hurry.",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-polako",
+   "hr": "Polako.",
+   "en": "Take it easy. / Slowly.",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-na-vrijeme",
+   "hr": "na vrijeme",
+   "en": "on time",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-imas-li-vremena",
+   "hr": "Imaš li vremena?",
+   "en": "Do you have time? (informal)",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nvremena = genitive of vrijeme",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-nemam-vremena",
+   "hr": "Nemam vremena.",
+   "en": "I don't have time.",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nvremena = genitive of vrijeme",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-vrijeme-je-za-rucak",
+   "hr": "Vrijeme je za ručak.",
+   "en": "It's time for lunch.",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-koliko-traje",
+   "hr": "Koliko traje?",
+   "en": "How long does it last?",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-prije-ili-kasnije",
+   "hr": "Prije ili kasnije.",
+   "en": "Sooner or later.",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-vidimo-se-uskoro",
+   "hr": "Vidimo se uskoro!",
+   "en": "See you soon!",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-do-sutra",
+   "hr": "Do sutra!",
+   "en": "See you tomorrow!",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nliterally: until tomorrow",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
+   "id": "ho-time-tko-rano-rani-dvije-srece-grabi",
+   "hr": "Tko rano rani, dvije sreće grabi.",
+   "en": "The early bird catches the worm.",
+   "note": "Handout: Vrijeme (time) · W00 · U0 Reference (short words, prepositions, verbs & time)\nproverb",
+   "ho": [
+    "time",
+    "w00u0"
+   ],
+   "level": 1,
+   "due": 0,
+   "createdAt": 1793664000000,
+   "updatedAt": 1793664000000,
+   "lastReviewed": 0,
+   "deleted": false,
+   "gram": {
+    "pos": "other",
+    "by": "book",
+    "at": 1793664000000
+   }
+  },
+  {
    "id": "ho-w00u0-biti",
    "hr": "biti",
    "en": "to be",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb, infinitive · irregular; short forms (long: jesam, jesi, jest…)",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb, infinitive · irregular; short forms (long: jesam, jesi, jest…)",
    "ho": [
     "w00u0"
    ],
@@ -13992,7 +17146,7 @@
    "id": "ho-w00u0-sam",
    "hr": "sam",
    "en": "I am",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb biti (to be) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb biti (to be) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -14012,7 +17166,7 @@
    "id": "ho-w00u0-si",
    "hr": "si",
    "en": "you are (informal)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb biti (to be) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb biti (to be) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -14032,7 +17186,7 @@
    "id": "ho-w00u0-je",
    "hr": "je",
    "en": "he is (also: she, it)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb biti (to be) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb biti (to be) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -14052,7 +17206,7 @@
    "id": "ho-w00u0-smo",
    "hr": "smo",
    "en": "we are",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb biti (to be) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb biti (to be) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -14072,7 +17226,7 @@
    "id": "ho-w00u0-ste",
    "hr": "ste",
    "en": "you are (plural or polite)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb biti (to be) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb biti (to be) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -14092,7 +17246,7 @@
    "id": "ho-w00u0-su",
    "hr": "su",
    "en": "they are",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb biti (to be) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb biti (to be) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -14112,7 +17266,7 @@
    "id": "ho-w00u0-dati",
    "hr": "dati",
    "en": "to give",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb, infinitive · -am verb",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb, infinitive · -am verb",
    "ho": [
     "w00u0"
    ],
@@ -14132,7 +17286,7 @@
    "id": "ho-w00u0-dam",
    "hr": "dam",
    "en": "I give",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb dati (to give) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb dati (to give) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -14152,7 +17306,7 @@
    "id": "ho-w00u0-das",
    "hr": "daš",
    "en": "you give (informal)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb dati (to give) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb dati (to give) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -14172,7 +17326,7 @@
    "id": "ho-w00u0-damo",
    "hr": "damo",
    "en": "we give",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb dati (to give) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb dati (to give) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -14192,7 +17346,7 @@
    "id": "ho-w00u0-date",
    "hr": "date",
    "en": "you give (plural or polite)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb dati (to give) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb dati (to give) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -14212,7 +17366,7 @@
    "id": "ho-w00u0-daju",
    "hr": "daju",
    "en": "they give",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb dati (to give) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb dati (to give) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -14232,7 +17386,7 @@
    "id": "ho-w00u0-govoriti",
    "hr": "govoriti",
    "en": "to speak",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb, infinitive · -im verb",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb, infinitive · -im verb",
    "ho": [
     "w00u0"
    ],
@@ -14252,7 +17406,7 @@
    "id": "ho-w00u0-govorim",
    "hr": "govorim",
    "en": "I speak",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb govoriti (to speak) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb govoriti (to speak) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -14272,7 +17426,7 @@
    "id": "ho-w00u0-govoris",
    "hr": "govoriš",
    "en": "you speak (informal)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb govoriti (to speak) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb govoriti (to speak) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -14292,7 +17446,7 @@
    "id": "ho-w00u0-govori",
    "hr": "govori",
    "en": "he speaks (also: she, it)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb govoriti (to speak) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb govoriti (to speak) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -14312,7 +17466,7 @@
    "id": "ho-w00u0-govorimo",
    "hr": "govorimo",
    "en": "we speak",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb govoriti (to speak) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb govoriti (to speak) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -14332,7 +17486,7 @@
    "id": "ho-w00u0-govorite",
    "hr": "govorite",
    "en": "you speak (plural or polite)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb govoriti (to speak) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb govoriti (to speak) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -14352,7 +17506,7 @@
    "id": "ho-w00u0-govore",
    "hr": "govore",
    "en": "they speak",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb govoriti (to speak) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb govoriti (to speak) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -14372,7 +17526,7 @@
    "id": "ho-w00u0-htjeti",
    "hr": "htjeti",
    "en": "to want",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb, infinitive · irregular; short forms ću, ćeš… make the future",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb, infinitive · irregular; short forms ću, ćeš… make the future",
    "ho": [
     "w00u0"
    ],
@@ -14392,7 +17546,7 @@
    "id": "ho-w00u0-hocu",
    "hr": "hoću",
    "en": "I want",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb htjeti (to want) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb htjeti (to want) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -14412,7 +17566,7 @@
    "id": "ho-w00u0-hoces",
    "hr": "hoćeš",
    "en": "you want (informal)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb htjeti (to want) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb htjeti (to want) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -14432,7 +17586,7 @@
    "id": "ho-w00u0-hoce",
    "hr": "hoće",
    "en": "he wants (also: she, it) / they want",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb htjeti (to want) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb htjeti (to want) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -14452,7 +17606,7 @@
    "id": "ho-w00u0-hocemo",
    "hr": "hoćemo",
    "en": "we want",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb htjeti (to want) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb htjeti (to want) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -14472,7 +17626,7 @@
    "id": "ho-w00u0-hocete",
    "hr": "hoćete",
    "en": "you want (plural or polite)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb htjeti (to want) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb htjeti (to want) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -14492,7 +17646,7 @@
    "id": "ho-w00u0-ici",
    "hr": "ići",
    "en": "to go",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb, infinitive · -em verb (stem id-)",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb, infinitive · -em verb (stem id-)",
    "ho": [
     "w00u0"
    ],
@@ -14512,7 +17666,7 @@
    "id": "ho-w00u0-idem",
    "hr": "idem",
    "en": "I go",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb ići (to go) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb ići (to go) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -14532,7 +17686,7 @@
    "id": "ho-w00u0-ides",
    "hr": "ideš",
    "en": "you go (informal)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb ići (to go) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb ići (to go) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -14552,7 +17706,7 @@
    "id": "ho-w00u0-ide",
    "hr": "ide",
    "en": "he goes (also: she, it)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb ići (to go) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb ići (to go) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -14572,7 +17726,7 @@
    "id": "ho-w00u0-idemo",
    "hr": "idemo",
    "en": "we go",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb ići (to go) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb ići (to go) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -14592,7 +17746,7 @@
    "id": "ho-w00u0-idete",
    "hr": "idete",
    "en": "you go (plural or polite)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb ići (to go) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb ići (to go) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -14612,7 +17766,7 @@
    "id": "ho-w00u0-idu",
    "hr": "idu",
    "en": "they go",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb ići (to go) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb ići (to go) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -14632,7 +17786,7 @@
    "id": "ho-w00u0-imati",
    "hr": "imati",
    "en": "to have",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb, infinitive · -am verb; negative nemam",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb, infinitive · -am verb; negative nemam",
    "ho": [
     "w00u0"
    ],
@@ -14652,7 +17806,7 @@
    "id": "ho-w00u0-imam",
    "hr": "imam",
    "en": "I have",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb imati (to have) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb imati (to have) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -14672,7 +17826,7 @@
    "id": "ho-w00u0-imas",
    "hr": "imaš",
    "en": "you have (informal)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb imati (to have) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb imati (to have) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -14692,7 +17846,7 @@
    "id": "ho-w00u0-ima",
    "hr": "ima",
    "en": "he has (also: she, it)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb imati (to have) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb imati (to have) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -14712,7 +17866,7 @@
    "id": "ho-w00u0-imamo",
    "hr": "imamo",
    "en": "we have",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb imati (to have) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb imati (to have) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -14732,7 +17886,7 @@
    "id": "ho-w00u0-imate",
    "hr": "imate",
    "en": "you have (plural or polite)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb imati (to have) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb imati (to have) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -14752,7 +17906,7 @@
    "id": "ho-w00u0-imaju",
    "hr": "imaju",
    "en": "they have",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb imati (to have) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb imati (to have) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -14772,7 +17926,7 @@
    "id": "ho-w00u0-jesti",
    "hr": "jesti",
    "en": "to eat",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb, infinitive · -em verb (stem jed-)",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb, infinitive · -em verb (stem jed-)",
    "ho": [
     "w00u0"
    ],
@@ -14792,7 +17946,7 @@
    "id": "ho-w00u0-jedem",
    "hr": "jedem",
    "en": "I eat",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb jesti (to eat) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb jesti (to eat) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -14812,7 +17966,7 @@
    "id": "ho-w00u0-jedes",
    "hr": "jedeš",
    "en": "you eat (informal)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb jesti (to eat) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb jesti (to eat) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -14832,7 +17986,7 @@
    "id": "ho-w00u0-jede",
    "hr": "jede",
    "en": "he eats (also: she, it)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb jesti (to eat) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb jesti (to eat) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -14852,7 +18006,7 @@
    "id": "ho-w00u0-jedemo",
    "hr": "jedemo",
    "en": "we eat",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb jesti (to eat) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb jesti (to eat) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -14872,7 +18026,7 @@
    "id": "ho-w00u0-jedete",
    "hr": "jedete",
    "en": "you eat (plural or polite)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb jesti (to eat) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb jesti (to eat) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -14892,7 +18046,7 @@
    "id": "ho-w00u0-jedu",
    "hr": "jedu",
    "en": "they eat",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb jesti (to eat) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb jesti (to eat) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -14912,7 +18066,7 @@
    "id": "ho-w00u0-misliti",
    "hr": "misliti",
    "en": "to think",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb, infinitive · -im verb",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb, infinitive · -im verb",
    "ho": [
     "w00u0"
    ],
@@ -14932,7 +18086,7 @@
    "id": "ho-w00u0-mislim",
    "hr": "mislim",
    "en": "I think",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb misliti (to think) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb misliti (to think) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -14952,7 +18106,7 @@
    "id": "ho-w00u0-mislis",
    "hr": "misliš",
    "en": "you think (informal)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb misliti (to think) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb misliti (to think) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -14972,7 +18126,7 @@
    "id": "ho-w00u0-misli",
    "hr": "misli",
    "en": "he thinks (also: she, it)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb misliti (to think) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb misliti (to think) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -14992,7 +18146,7 @@
    "id": "ho-w00u0-mislimo",
    "hr": "mislimo",
    "en": "we think",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb misliti (to think) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb misliti (to think) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -15012,7 +18166,7 @@
    "id": "ho-w00u0-mislite",
    "hr": "mislite",
    "en": "you think (plural or polite)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb misliti (to think) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb misliti (to think) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -15032,7 +18186,7 @@
    "id": "ho-w00u0-misle",
    "hr": "misle",
    "en": "they think",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb misliti (to think) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb misliti (to think) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -15052,7 +18206,7 @@
    "id": "ho-w00u0-moci",
    "hr": "moći",
    "en": "can / to be able to",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb, infinitive · irregular (mog- / mož-)",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb, infinitive · irregular (mog- / mož-)",
    "ho": [
     "w00u0"
    ],
@@ -15072,7 +18226,7 @@
    "id": "ho-w00u0-mogu",
    "hr": "mogu",
    "en": "I can / they can",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb moći (can / to be able to) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb moći (can / to be able to) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -15092,7 +18246,7 @@
    "id": "ho-w00u0-mozes",
    "hr": "možeš",
    "en": "you can (informal)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb moći (can / to be able to) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb moći (can / to be able to) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -15112,7 +18266,7 @@
    "id": "ho-w00u0-mozemo",
    "hr": "možemo",
    "en": "we can",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb moći (can / to be able to) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb moći (can / to be able to) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -15132,7 +18286,7 @@
    "id": "ho-w00u0-mozete",
    "hr": "možete",
    "en": "you can (plural or polite)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb moći (can / to be able to) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb moći (can / to be able to) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -15152,7 +18306,7 @@
    "id": "ho-w00u0-morati",
    "hr": "morati",
    "en": "must / to have to",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb, infinitive · -am verb",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb, infinitive · -am verb",
    "ho": [
     "w00u0"
    ],
@@ -15172,7 +18326,7 @@
    "id": "ho-w00u0-moram",
    "hr": "moram",
    "en": "I must",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb morati (must / to have to) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb morati (must / to have to) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -15192,7 +18346,7 @@
    "id": "ho-w00u0-moras",
    "hr": "moraš",
    "en": "you must (informal)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb morati (must / to have to) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb morati (must / to have to) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -15212,7 +18366,7 @@
    "id": "ho-w00u0-mora",
    "hr": "mora",
    "en": "he must (also: she, it)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb morati (must / to have to) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb morati (must / to have to) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -15232,7 +18386,7 @@
    "id": "ho-w00u0-moramo",
    "hr": "moramo",
    "en": "we must",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb morati (must / to have to) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb morati (must / to have to) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -15252,7 +18406,7 @@
    "id": "ho-w00u0-morate",
    "hr": "morate",
    "en": "you must (plural or polite)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb morati (must / to have to) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb morati (must / to have to) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -15272,7 +18426,7 @@
    "id": "ho-w00u0-moraju",
    "hr": "moraju",
    "en": "they must",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb morati (must / to have to) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb morati (must / to have to) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -15292,7 +18446,7 @@
    "id": "ho-w00u0-piti",
    "hr": "piti",
    "en": "to drink",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb, infinitive · -em verb",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb, infinitive · -em verb",
    "ho": [
     "w00u0"
    ],
@@ -15312,7 +18466,7 @@
    "id": "ho-w00u0-pijem",
    "hr": "pijem",
    "en": "I drink",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb piti (to drink) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb piti (to drink) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -15332,7 +18486,7 @@
    "id": "ho-w00u0-pijes",
    "hr": "piješ",
    "en": "you drink (informal)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb piti (to drink) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb piti (to drink) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -15352,7 +18506,7 @@
    "id": "ho-w00u0-pije",
    "hr": "pije",
    "en": "he drinks (also: she, it)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb piti (to drink) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb piti (to drink) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -15372,7 +18526,7 @@
    "id": "ho-w00u0-pijemo",
    "hr": "pijemo",
    "en": "we drink",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb piti (to drink) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb piti (to drink) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -15392,7 +18546,7 @@
    "id": "ho-w00u0-pijete",
    "hr": "pijete",
    "en": "you drink (plural or polite)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb piti (to drink) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb piti (to drink) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -15412,7 +18566,7 @@
    "id": "ho-w00u0-piju",
    "hr": "piju",
    "en": "they drink",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb piti (to drink) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb piti (to drink) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -15432,7 +18586,7 @@
    "id": "ho-w00u0-raditi",
    "hr": "raditi",
    "en": "to work / to do",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb, infinitive · -im verb",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb, infinitive · -im verb",
    "ho": [
     "w00u0"
    ],
@@ -15452,7 +18606,7 @@
    "id": "ho-w00u0-radim",
    "hr": "radim",
    "en": "I work / I do",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb raditi (to work / to do) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb raditi (to work / to do) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -15472,7 +18626,7 @@
    "id": "ho-w00u0-radis",
    "hr": "radiš",
    "en": "you work / you do (informal)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb raditi (to work / to do) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb raditi (to work / to do) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -15492,7 +18646,7 @@
    "id": "ho-w00u0-radi",
    "hr": "radi",
    "en": "he works / he does (also: she, it)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb raditi (to work / to do) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb raditi (to work / to do) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -15512,7 +18666,7 @@
    "id": "ho-w00u0-radimo",
    "hr": "radimo",
    "en": "we work / we do",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb raditi (to work / to do) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb raditi (to work / to do) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -15532,7 +18686,7 @@
    "id": "ho-w00u0-radite",
    "hr": "radite",
    "en": "you work / you do (plural or polite)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb raditi (to work / to do) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb raditi (to work / to do) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -15552,7 +18706,7 @@
    "id": "ho-w00u0-rade",
    "hr": "rade",
    "en": "they work / they do",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb raditi (to work / to do) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb raditi (to work / to do) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -15572,7 +18726,7 @@
    "id": "ho-w00u0-razumjeti",
    "hr": "razumjeti",
    "en": "to understand",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb, infinitive · -em verb",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb, infinitive · -em verb",
    "ho": [
     "w00u0"
    ],
@@ -15592,7 +18746,7 @@
    "id": "ho-w00u0-razumijem",
    "hr": "razumijem",
    "en": "I understand",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb razumjeti (to understand) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb razumjeti (to understand) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -15612,7 +18766,7 @@
    "id": "ho-w00u0-razumijes",
    "hr": "razumiješ",
    "en": "you understand (informal)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb razumjeti (to understand) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb razumjeti (to understand) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -15632,7 +18786,7 @@
    "id": "ho-w00u0-razumije",
    "hr": "razumije",
    "en": "he understands (also: she, it)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb razumjeti (to understand) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb razumjeti (to understand) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -15652,7 +18806,7 @@
    "id": "ho-w00u0-razumijemo",
    "hr": "razumijemo",
    "en": "we understand",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb razumjeti (to understand) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb razumjeti (to understand) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -15672,7 +18826,7 @@
    "id": "ho-w00u0-razumijete",
    "hr": "razumijete",
    "en": "you understand (plural or polite)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb razumjeti (to understand) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb razumjeti (to understand) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -15692,7 +18846,7 @@
    "id": "ho-w00u0-razumiju",
    "hr": "razumiju",
    "en": "they understand",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb razumjeti (to understand) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb razumjeti (to understand) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -15712,7 +18866,7 @@
    "id": "ho-w00u0-spavati",
    "hr": "spavati",
    "en": "to sleep",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb, infinitive · -am verb",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb, infinitive · -am verb",
    "ho": [
     "w00u0"
    ],
@@ -15732,7 +18886,7 @@
    "id": "ho-w00u0-spavam",
    "hr": "spavam",
    "en": "I sleep",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb spavati (to sleep) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb spavati (to sleep) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -15752,7 +18906,7 @@
    "id": "ho-w00u0-spavas",
    "hr": "spavaš",
    "en": "you sleep (informal)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb spavati (to sleep) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb spavati (to sleep) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -15772,7 +18926,7 @@
    "id": "ho-w00u0-spava",
    "hr": "spava",
    "en": "he sleeps (also: she, it)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb spavati (to sleep) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb spavati (to sleep) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -15792,7 +18946,7 @@
    "id": "ho-w00u0-spavamo",
    "hr": "spavamo",
    "en": "we sleep",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb spavati (to sleep) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb spavati (to sleep) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -15812,7 +18966,7 @@
    "id": "ho-w00u0-spavate",
    "hr": "spavate",
    "en": "you sleep (plural or polite)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb spavati (to sleep) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb spavati (to sleep) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -15832,7 +18986,7 @@
    "id": "ho-w00u0-spavaju",
    "hr": "spavaju",
    "en": "they sleep",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb spavati (to sleep) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb spavati (to sleep) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -15852,7 +19006,7 @@
    "id": "ho-w00u0-trebati",
    "hr": "trebati",
    "en": "to need",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb, infinitive · -am verb",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb, infinitive · -am verb",
    "ho": [
     "w00u0"
    ],
@@ -15872,7 +19026,7 @@
    "id": "ho-w00u0-trebam",
    "hr": "trebam",
    "en": "I need",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb trebati (to need) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb trebati (to need) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -15892,7 +19046,7 @@
    "id": "ho-w00u0-trebas",
    "hr": "trebaš",
    "en": "you need (informal)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb trebati (to need) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb trebati (to need) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -15912,7 +19066,7 @@
    "id": "ho-w00u0-treba",
    "hr": "treba",
    "en": "he needs (also: she, it)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb trebati (to need) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb trebati (to need) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -15932,7 +19086,7 @@
    "id": "ho-w00u0-trebamo",
    "hr": "trebamo",
    "en": "we need",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb trebati (to need) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb trebati (to need) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -15952,7 +19106,7 @@
    "id": "ho-w00u0-trebate",
    "hr": "trebate",
    "en": "you need (plural or polite)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb trebati (to need) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb trebati (to need) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -15972,7 +19126,7 @@
    "id": "ho-w00u0-trebaju",
    "hr": "trebaju",
    "en": "they need",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb trebati (to need) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb trebati (to need) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -15992,7 +19146,7 @@
    "id": "ho-w00u0-vidjeti",
    "hr": "vidjeti",
    "en": "to see",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb, infinitive · -im verb",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb, infinitive · -im verb",
    "ho": [
     "w00u0"
    ],
@@ -16012,7 +19166,7 @@
    "id": "ho-w00u0-vidim",
    "hr": "vidim",
    "en": "I see",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb vidjeti (to see) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb vidjeti (to see) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -16032,7 +19186,7 @@
    "id": "ho-w00u0-vidis",
    "hr": "vidiš",
    "en": "you see (informal)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb vidjeti (to see) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb vidjeti (to see) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -16052,7 +19206,7 @@
    "id": "ho-w00u0-vidi",
    "hr": "vidi",
    "en": "he sees (also: she, it)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb vidjeti (to see) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb vidjeti (to see) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -16072,7 +19226,7 @@
    "id": "ho-w00u0-vidimo",
    "hr": "vidimo",
    "en": "we see",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb vidjeti (to see) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb vidjeti (to see) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -16092,7 +19246,7 @@
    "id": "ho-w00u0-vidite",
    "hr": "vidite",
    "en": "you see (plural or polite)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb vidjeti (to see) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb vidjeti (to see) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -16112,7 +19266,7 @@
    "id": "ho-w00u0-vide",
    "hr": "vide",
    "en": "they see",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb vidjeti (to see) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb vidjeti (to see) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -16132,7 +19286,7 @@
    "id": "ho-w00u0-voljeti",
    "hr": "voljeti",
    "en": "to like / to love",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb, infinitive · -im verb",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb, infinitive · -im verb",
    "ho": [
     "w00u0"
    ],
@@ -16152,7 +19306,7 @@
    "id": "ho-w00u0-volim",
    "hr": "volim",
    "en": "I like / I love",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb voljeti (to like / to love) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb voljeti (to like / to love) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -16172,7 +19326,7 @@
    "id": "ho-w00u0-volis",
    "hr": "voliš",
    "en": "you like / you love (informal)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb voljeti (to like / to love) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb voljeti (to like / to love) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -16192,7 +19346,7 @@
    "id": "ho-w00u0-voli",
    "hr": "voli",
    "en": "he likes / he loves (also: she, it)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb voljeti (to like / to love) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb voljeti (to like / to love) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -16212,7 +19366,7 @@
    "id": "ho-w00u0-volimo",
    "hr": "volimo",
    "en": "we like / we love",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb voljeti (to like / to love) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb voljeti (to like / to love) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -16232,7 +19386,7 @@
    "id": "ho-w00u0-volite",
    "hr": "volite",
    "en": "you like / you love (plural or polite)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb voljeti (to like / to love) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb voljeti (to like / to love) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -16252,7 +19406,7 @@
    "id": "ho-w00u0-vole",
    "hr": "vole",
    "en": "they like / they love",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb voljeti (to like / to love) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb voljeti (to like / to love) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -16272,7 +19426,7 @@
    "id": "ho-w00u0-zeljeti",
    "hr": "željeti",
    "en": "to wish / would like",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb, infinitive · -im verb",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb, infinitive · -im verb",
    "ho": [
     "w00u0"
    ],
@@ -16292,7 +19446,7 @@
    "id": "ho-w00u0-zelim",
    "hr": "želim",
    "en": "I wish / I want",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb željeti (to wish / would like) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb željeti (to wish / would like) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -16312,7 +19466,7 @@
    "id": "ho-w00u0-zelis",
    "hr": "želiš",
    "en": "you wish / you want (informal)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb željeti (to wish / would like) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb željeti (to wish / would like) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -16332,7 +19486,7 @@
    "id": "ho-w00u0-zeli",
    "hr": "želi",
    "en": "he wishes / he wants (also: she, it)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb željeti (to wish / would like) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb željeti (to wish / would like) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -16352,7 +19506,7 @@
    "id": "ho-w00u0-zelimo",
    "hr": "želimo",
    "en": "we wish / we want",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb željeti (to wish / would like) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb željeti (to wish / would like) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -16372,7 +19526,7 @@
    "id": "ho-w00u0-zelite",
    "hr": "želite",
    "en": "you wish / you want (plural or polite)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb željeti (to wish / would like) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb željeti (to wish / would like) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -16392,7 +19546,7 @@
    "id": "ho-w00u0-zele",
    "hr": "žele",
    "en": "they wish / they want",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb željeti (to wish / would like) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb željeti (to wish / would like) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -16412,7 +19566,7 @@
    "id": "ho-w00u0-zivjeti",
    "hr": "živjeti",
    "en": "to live",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb, infinitive · -im verb",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb, infinitive · -im verb",
    "ho": [
     "w00u0"
    ],
@@ -16432,7 +19586,7 @@
    "id": "ho-w00u0-zivim",
    "hr": "živim",
    "en": "I live",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb živjeti (to live) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb živjeti (to live) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -16452,7 +19606,7 @@
    "id": "ho-w00u0-zivis",
    "hr": "živiš",
    "en": "you live (informal)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb živjeti (to live) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb živjeti (to live) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -16472,7 +19626,7 @@
    "id": "ho-w00u0-zivi",
    "hr": "živi",
    "en": "he lives (also: she, it)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb živjeti (to live) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb živjeti (to live) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -16492,7 +19646,7 @@
    "id": "ho-w00u0-zivimo",
    "hr": "živimo",
    "en": "we live",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb živjeti (to live) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb živjeti (to live) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -16512,7 +19666,7 @@
    "id": "ho-w00u0-zivite",
    "hr": "živite",
    "en": "you live (plural or polite)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb živjeti (to live) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb živjeti (to live) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -16532,7 +19686,7 @@
    "id": "ho-w00u0-zive",
    "hr": "žive",
    "en": "they live",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb živjeti (to live) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb živjeti (to live) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -16552,7 +19706,7 @@
    "id": "ho-w00u0-znati",
    "hr": "znati",
    "en": "to know",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb, infinitive · -am verb",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb, infinitive · -am verb",
    "ho": [
     "w00u0"
    ],
@@ -16572,7 +19726,7 @@
    "id": "ho-w00u0-znam",
    "hr": "znam",
    "en": "I know",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb znati (to know) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb znati (to know) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -16592,7 +19746,7 @@
    "id": "ho-w00u0-znas",
    "hr": "znaš",
    "en": "you know (informal)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb znati (to know) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb znati (to know) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -16612,7 +19766,7 @@
    "id": "ho-w00u0-zna",
    "hr": "zna",
    "en": "he knows (also: she, it)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb znati (to know) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb znati (to know) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -16632,7 +19786,7 @@
    "id": "ho-w00u0-znamo",
    "hr": "znamo",
    "en": "we know",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb znati (to know) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb znati (to know) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -16652,7 +19806,7 @@
    "id": "ho-w00u0-znate",
    "hr": "znate",
    "en": "you know (plural or polite)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb znati (to know) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb znati (to know) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -16672,7 +19826,7 @@
    "id": "ho-w00u0-znaju",
    "hr": "znaju",
    "en": "they know",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb znati (to know) · present tense",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb znati (to know) · present tense",
    "ho": [
     "w00u0"
    ],
@@ -16692,7 +19846,7 @@
    "id": "ho-w00u0-svidati-se",
    "hr": "sviđati se",
    "en": "to like (to be pleasing)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb, infinitive · -am verb, “backwards”: the person who likes is in the dative",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb, infinitive · -am verb, “backwards”: the person who likes is in the dative",
    "ho": [
     "w00u0"
    ],
@@ -16712,7 +19866,7 @@
    "id": "ho-w00u0-svida-ti-se",
    "hr": "sviđa ti se",
    "en": "you like it (informal)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb sviđati se (to like) · present tense, person in the dative",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb sviđati se (to like) · present tense, person in the dative",
    "ho": [
     "w00u0"
    ],
@@ -16732,7 +19886,7 @@
    "id": "ho-w00u0-svida-mu-se",
    "hr": "sviđa mu se",
    "en": "he likes it",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb sviđati se (to like) · present tense, person in the dative",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb sviđati se (to like) · present tense, person in the dative",
    "ho": [
     "w00u0"
    ],
@@ -16752,7 +19906,7 @@
    "id": "ho-w00u0-svida-joj-se",
    "hr": "sviđa joj se",
    "en": "she likes it",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb sviđati se (to like) · present tense, person in the dative",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb sviđati se (to like) · present tense, person in the dative",
    "ho": [
     "w00u0"
    ],
@@ -16772,7 +19926,7 @@
    "id": "ho-w00u0-svida-nam-se",
    "hr": "sviđa nam se",
    "en": "we like it",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb sviđati se (to like) · present tense, person in the dative",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb sviđati se (to like) · present tense, person in the dative",
    "ho": [
     "w00u0"
    ],
@@ -16792,7 +19946,7 @@
    "id": "ho-w00u0-svida-vam-se",
    "hr": "sviđa vam se",
    "en": "you like it (plural or polite)",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb sviđati se (to like) · present tense, person in the dative",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb sviđati se (to like) · present tense, person in the dative",
    "ho": [
     "w00u0"
    ],
@@ -16812,7 +19966,7 @@
    "id": "ho-w00u0-svida-im-se",
    "hr": "sviđa im se",
    "en": "they like it",
-   "note": "Handout: W00 · U0 Reference (short words, prepositions & verbs)\nverb sviđati se (to like) · present tense, person in the dative",
+   "note": "Handout: W00 · U0 Reference (short words, prepositions, verbs & time)\nverb sviđati se (to like) · present tense, person in the dative",
    "ho": [
     "w00u0"
    ],
