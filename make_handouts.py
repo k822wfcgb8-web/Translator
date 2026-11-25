@@ -1297,15 +1297,49 @@ for tag, lid, rows in BEGINNER:
                           "level": 1, "due": 0, "createdAt": TS_L7, "updatedAt": TS_L7,
                           "lastReviewed": 0, "deleted": False, "gram": gr})
 
+# v4: the whole Tako lako book list (tako-lako-all.json, the old iCloud export) is built in too,
+# so every device gets every word without loading a file. Ids are kept, so progress on a device carries on.
+import vocab_categories as VC
+book = []
+for c in json.load(open("tako-lako-all.json"))["cards"]:
+    if c.get("deleted") or not c.get("hr"):
+        continue
+    b = {"id": c["id"], "hr": c["hr"], "en": c["en"], "note": c.get("note", ""),
+         "level": 1, "due": 0, "createdAt": c.get("createdAt", TS), "updatedAt": c.get("updatedAt", TS),
+         "lastReviewed": 0, "deleted": False}
+    if c.get("gram"):
+        b["gram"] = c["gram"]
+    book.append(b)
+have = {c["id"] for c in book}
+out_cards = book + [c for c in out_cards if c["id"] not in have]   # book first: on a new device it wins a tie
+
+# One category per Croatian word, decided from everything known about it (all cards with that word).
+LT = re.compile(r"U(\d+)\s*·\s*M(\d+)\s*·\s*Lesson\s*(\d+)"); PBT = re.compile(r"U(\d+)\s*·\s*Phrases")
+TPT = re.compile(r"topic:\s*([^\n]+)")
+info = {}
+for c in out_cards:
+    i = info.setdefault(norm(c["hr"]), {"hr": c["hr"], "en": [], "pos": set(), "ho": set(), "les": set(), "top": set()})
+    i["en"] += [e for e in c["en"].split(" / ") if e not in i["en"]]
+    i["pos"].add((c.get("gram") or {}).get("pos")); i["ho"] |= set(c.get("ho", []))
+    i["les"] |= {f"{a}.{b}.{d}" for a, b, d in LT.findall(c["note"])} | {f"{a}.PB" for a in PBT.findall(c["note"])}
+    i["top"] |= {t.strip() for t in TPT.findall(c["note"])}
+cat_of = {k: VC.categorize(i["hr"], " / ".join(i["en"]), sorted(p for p in i["pos"] if p), sorted(i["ho"]), sorted(i["les"]), sorted(i["top"]))
+          for k, i in info.items()}
+for c in out_cards:
+    c["cat"] = cat_of[norm(c["hr"])]
+
 ids = [c["id"] for c in out_cards]
 assert len(ids) == len(set(ids)), "duplicate ids"
-data = {"app": "prevoditelj", "kind": "handouts", "version": 1, "savedAt": TS,
-        "source": "Claude-made reference handouts in Taka Lako Class/Claude outputs",
+data = {"app": "prevoditelj", "kind": "vocabulary", "version": 2, "savedAt": TS,
+        "source": "Tako lako book lists + CSOB weeks + Claude-made reference handouts (Taka Lako Class)",
         "handouts": [{"id": h[0], "title": h[1], "file": h[2]} for h in H],
+        "categories": [{"id": c, "title": t} for c, t in VC.CATS],
         "cards": out_cards}
-json.dump(data, open("handouts.json", "w"), ensure_ascii=False, indent=1)
+json.dump(data, open("handouts.json", "w"), ensure_ascii=False, separators=(",", ":"))
 for h in H:
     print(h[0], sum(h[0] in c.get("ho", []) for c in out_cards))
 print("lesson cards", sum("ho" not in c for c in out_cards))
 print("total cards", len(out_cards))
+import collections
+print("categories", collections.Counter(cat_of.values()).most_common())
 print([ (c["hr"], c["en"]) for c in out_cards if len(c.get("ho", [])) > 1])

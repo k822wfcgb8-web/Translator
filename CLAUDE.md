@@ -16,6 +16,6 @@ from this repo with GitHub Pages. **The repo is public.**
 
 ## Housekeeping
 - Every change: raise the version under the app name and add a line to the README version history.
-- `handouts.json` is generated: edit `make_handouts.py` and rerun it, never hand-edit the JSON.
+- `handouts.json` is generated: edit `make_handouts.py` (words) or `vocab_categories.py` (Categories section) and rerun `make_handouts.py`, never hand-edit the JSON. It holds every flash card (Tako lako from `tako-lako-all.json`, CSOB weeks, W00 sheets); since v4.0 there is no adding of outside vocabulary and no iCloud file.
 - Handout PDFs live in `~/Documents/Taka Lako Class/Claude outputs` (not in this repo).
 - Repo location moved on 13 Nov 2026 from `Documents/Taka Lako Class/Translator` to `~/Claude/Code/Translator`.

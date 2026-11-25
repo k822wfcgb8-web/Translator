@@ -274,9 +274,7 @@ h3 { font-size: 1rem; margin: 0; }
 .badge { display: inline-block; min-width: 20px; padding: 0 6px; border-radius: 999px; background: var(--accent); color: #fff; font-size: .75rem; line-height: 20px; margin-left: 4px; }
 
 /* Flash cards */
-.sync-row, .save-bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; }
-.sync.dirty { border-color: var(--warn); }
-.sync.dirty #syncText { color: var(--warn); font-weight: 600; }
+.save-bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; }
 .seg { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 12px; }
 .seg label { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; cursor: pointer; font-weight: 600; font-size: .9rem; min-height: 40px; }
 .seg label:has(input:checked) { border-color: var(--brand); color: var(--brand); background: var(--surface-2); }
@@ -425,7 +423,7 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
 <header class="top">
   <div class="brand">
     <span class="logo" aria-hidden="true"></span>
-    <div><h1>Prevoditelj</h1><p>Croatian ⇄ English · v3.15</p></div>
+    <div><h1>Prevoditelj</h1><p>Croatian ⇄ English · v4.0</p></div>
   </div>
   <div class="top-actions">
     <button id="themeBtn" class="icon-btn" aria-label="Style" title="Style">🎨</button>
@@ -513,17 +511,6 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
   </div>
 
   <div id="view-cards" role="tabpanel" aria-labelledby="tabCards" hidden>
-    <section class="card sync" id="syncCard">
-      <div class="sync-row">
-        <div><strong>iCloud</strong><br><span id="syncText" class="muted small"></span></div>
-        <div class="tools">
-          <button class="btn small" id="cardsLoad"><span aria-hidden="true">⬇︎</span> Load from iCloud</button>
-          <button class="btn small primary" id="cardsSave"><span aria-hidden="true">⬆︎</span> Save to iCloud</button>
-        </div>
-      </div>
-      <input type="file" id="cardsFile" hidden>
-    </section>
-
     <section class="card" id="studySetup">
       <div class="card-head"><h3>Study</h3><span class="muted small" id="studyCounts"></span></div>
       <div class="seg" role="radiogroup" aria-label="Study mode">
@@ -532,26 +519,34 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
         <label><input type="radio" name="fcmode" value="mix"> Mixed</label>
       </div>
       <div class="deck-row">
-        <div class="pick3">
+        <div class="pick3 pick1">
+          <label class="field">Section <select id="fcSrc">
+            <option value="tl">1 · Tako lako (Unit / Module / Lesson)</option>
+            <option value="csob">2 · Croatian School of Boston (by week)</option>
+            <option value="cat">3 · Categories (all words, by topic)</option>
+          </select></label>
+        </div>
+        <div class="pick3" id="fcTlWrap">
           <label class="field">Unit <select id="fcUnit"></select></label>
           <label class="field">Module <select id="fcModule"></select></label>
           <label class="field">Lesson <select id="fcLesson"></select></label>
         </div>
-        <div class="pick3 pick1">
-          <label class="field">Handout <select id="fcHandout"></select></label>
+        <div class="pick3 pick1" id="fcWeekWrap" hidden>
+          <label class="field">Week <select id="fcWeek"></select></label>
+        </div>
+        <div class="pick3 pick1" id="fcCatWrap" hidden>
+          <label class="field">Category <select id="fcCat"></select></label>
         </div>
         <label class="check" id="fcPrevWrap" hidden><input type="checkbox" id="fcPrev"> <span id="fcPrevText">Add all previous lessons</span></label>
-        <label class="check" id="fcOwnWrap" hidden><input type="checkbox" id="fcOwn"> <span id="fcOwnText">Add my saved cards</span></label>
       </div>
       <div class="tools">
         <button class="btn primary" id="studyAll">Study this set</button>
-        <button class="btn accent" id="studyOwn" hidden>Study my cards</button>
       </div>
       <div class="gender-row" id="genderRow" hidden>
         <span class="muted small" id="genderStatus"></span>
         <button class="btn small" id="genderBtn" hidden>Classify now</button>
       </div>
-      <p id="cardsEmpty" class="muted small" style="margin:10px 0 0">No cards yet. On the Translate tab, tap ☆ Save as flash card on a translation or example phrase. On a new device, tap Load from iCloud first.</p>
+      <p id="cardsEmpty" class="muted small" style="margin:10px 0 0">Loading the word lists… This needs an internet connection the first time.</p>
     </section>
 
     <section class="card" id="studyCard" hidden aria-live="polite">
@@ -1332,7 +1327,7 @@ async function classifyUnchecked() {
   if (!todo.length) { toast('Every card has been checked.'); return; }
   const n = await classifyCards(todo);
   const fixes = todo.filter(c => c.gram && c.gram.fix).length;
-  if (n) toast(`Checked ${n} card${n === 1 ? '' : 's'}` + (fixes ? `; ${fixes} may have a mistake (marked ⚠)` : '') + '. Remember to Save to iCloud.', 6000);
+  if (n) toast(`Checked ${n} card${n === 1 ? '' : 's'}` + (fixes ? `; ${fixes} may have a mistake (marked ⚠)` : '') + '.', 6000);
 }
 
 // One-time upgrade: sentences that v2.2 skipped as "not a noun" get checked again.
@@ -1464,7 +1459,7 @@ function setGenderFromUser(code) {
   }
   persistCards();
   fillGenderFor(c);
-  toast('Gender saved. Remember to Save to iCloud.');
+  toast('Gender saved.');
 }
 
 /* ---------- instant lookup in your flash cards (no Claude call) ----------
@@ -1615,9 +1610,6 @@ function renderResults(r) {
     tools.appendChild(playBtn(outText, outLang, 'Listen to the translation'));
     tools.appendChild(copyBtn(outText, 'Copy the translation'));
     if (outLang === 'hr') tools.appendChild(practiseBtn(outText));
-    const cardHr = (r.croatian_text || (inputWasHr ? r.corrected_input : outText) || '').trim();
-    const cardEn = (inputWasHr ? outText : r.input || '').trim();
-    if (cardHr && cardEn) tools.appendChild(saveCardBtn(cardHr, cardEn, grammarNote(r.grammar), true));
     hd.appendChild(tools); c.appendChild(hd);
     const p = el('p', 'out-text', outText); p.lang = outLang; c.appendChild(p);
     results.appendChild(c);
@@ -1686,7 +1678,7 @@ function renderResults(r) {
       const li = el('li', 'ex');
       const t = el('div', 't'); const h = el('div', 'hr', x.croatian); h.lang = 'hr';
       t.append(h, el('div', 'en', x.english));
-      li.append(t, playBtn(x.croatian, 'hr', 'Listen to this phrase'), practiseBtn(x.croatian), saveCardBtn(x.croatian, x.english, '', false));
+      li.append(t, playBtn(x.croatian, 'hr', 'Listen to this phrase'), practiseBtn(x.croatian));
       ul.appendChild(li);
     });
     c.appendChild(ul); results.appendChild(c);
@@ -1811,16 +1803,14 @@ function renderPractice() {
 
 /* ---------- flash cards ---------- */
 /*
- * Cards live in this browser (auto-saved) and are copied to/from one file in iCloud Drive by hand.
- * Every card has an id and updatedAt; deletions are kept as "deleted" markers so they carry across
- * devices. Loading a file MERGES (newest version of each card wins), so nothing is lost.
+ * v4: every card comes from handouts.json (Tako lako book lists, CSOB weeks, W00 reference sheets),
+ * loaded from the website at start-up and kept in this browser. There is no adding of outside words
+ * and no iCloud file any more. A deleted card stays deleted on this device (a "deleted" marker).
  */
 const DAY = 864e5;
 const INTERVAL_DAYS = [0, 0, 1, 3, 7, 14, 30];   // by level 1..6
 const MAX_LEVEL = 6;
-const FILE_NAME = 'prevoditelj-cards.json';
 let cards = store.get('cards', []); if (!Array.isArray(cards)) cards = [];
-let sync = Object.assign({ lastSaved: 0, lastLoaded: 0, dirty: false }, store.get('sync', {}));
 let session = null;
 
 const uid = () => (window.crypto && crypto.randomUUID) ? crypto.randomUUID() : Date.now().toString(36) + Math.random().toString(36).slice(2, 10);
@@ -1855,26 +1845,38 @@ function tagsOf(c) {
   tagCache.set(note, t);
   return t;
 }
-const HANDOUT_TAG = /(^|\n)Handout:/;
-const hasBookTag = c => { const t = tagsOf(c); return t.ranks.length > 0 || t.topics.length > 0 || HANDOUT_TAG.test(c.note || ''); };
 
-/* --- Handouts (Claude-made reference sheets) ---
- * handouts.json sits next to this page on GitHub and is loaded at start-up (the last copy is kept for offline use).
- * A card belongs to a handout when its Croatian matches a handout word, so book cards that are also on a
- * handout count too. Handout words the device doesn't have yet are added as new cards.
+/* --- Word lists (handouts.json) ---
+ * handouts.json sits next to this page on GitHub and is loaded at start-up. It holds every card: the Tako lako
+ * book lists, the CSOB weeks and the W00 reference sheets, each word with one broad category (made by
+ * make_handouts.py / vocab_categories.py). Only a small index is kept for offline use; the cards themselves
+ * live in `cards`. A card belongs to a CSOB week or a category when its Croatian matches, so a book card that
+ * is also on a CSOB page counts there too. Words this device doesn't have yet are added as new cards.
  */
 let HANDOUTS = [];                 // [{ id, title, file }]
+let CATS = [];                     // [{ id, title }]
 const hoIndex = new Map();         // normHr -> Set of handout ids
+const catIndex = new Map();        // normHr -> category id
 const handoutsOf = c => hoIndex.get(normHr(c.hr));
-function applyHandouts(data) {
-  if (!data || data.app !== 'prevoditelj' || !Array.isArray(data.handouts) || !Array.isArray(data.cards)) return false;
+function applyIndex(data) {
   HANDOUTS = data.handouts.filter(h => h && h.id && h.title).map(h => ({ id: String(h.id), title: String(h.title), file: String(h.file || '') }));
-  hoIndex.clear();
-  data.cards.forEach(c => {
-    if (!c || typeof c.hr !== 'string' || !Array.isArray(c.ho)) return;
-    const k = normHr(c.hr); if (!hoIndex.has(k)) hoIndex.set(k, new Set());
-    c.ho.forEach(h => hoIndex.get(k).add(String(h)));
+  CATS = (Array.isArray(data.categories) ? data.categories : []).filter(c => c && c.id && c.title).map(c => ({ id: String(c.id), title: String(c.title) }));
+  hoIndex.clear(); catIndex.clear();
+  const rows = Array.isArray(data.idx) ? data.idx
+    : data.cards.filter(c => c && typeof c.hr === 'string').map(c => [c.hr, Array.isArray(c.ho) ? c.ho : [], c.cat || '']);
+  rows.forEach(([hr, ho, cat]) => {
+    if (typeof hr !== 'string') return;
+    const k = normHr(hr);
+    if (Array.isArray(ho) && ho.length) { if (!hoIndex.has(k)) hoIndex.set(k, new Set()); ho.forEach(h => hoIndex.get(k).add(String(h))); }
+    if (cat && !catIndex.has(k)) catIndex.set(k, String(cat));
   });
+}
+const compactIndex = data => ({ app: data.app, handouts: data.handouts, categories: data.categories || [],
+  idx: data.cards.filter(c => c && typeof c.hr === 'string').map(c => [c.hr, Array.isArray(c.ho) ? c.ho : [], c.cat || '']) });
+function applyHandouts(data) {
+  if (!data || data.app !== 'prevoditelj' || !Array.isArray(data.handouts) || !(Array.isArray(data.cards) || Array.isArray(data.idx))) return false;
+  applyIndex(data);
+  if (!Array.isArray(data.cards)) { renderDeckPick(); updateDue(); return true; }   // offline copy: index only
   const ids = new Set(cards.map(c => c.id));
   const have = new Set(live().map(c => normHr(c.hr)));
   let added = 0;
@@ -1907,7 +1909,7 @@ async function loadHandouts() {
     const res = await fetch('handouts.json', { cache: 'no-cache' });
     if (!res.ok) return;
     const data = await res.json();
-    if (applyHandouts(data)) store.set('handouts', data);
+    if (applyHandouts(data)) store.set('handouts', compactIndex(data));   // small copy, so storage doesn't fill up
   } catch { /* offline or opened from a file: keep the stored copy */ }
 }
 function lessonOf(c) {   // first lesson tag (kept for older code paths)
@@ -1919,11 +1921,26 @@ function lessonOf(c) {   // first lesson tag (kept for older code paths)
 const lessonRank = L => L.u * 10000 + L.m * 100 + L.l;
 function shuffle(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
 
-const pick = { u: store.get('fcU', 'all'), m: store.get('fcM', 'all'), l: store.get('fcL', 'all'), h: store.get('fcH', 'none') };
-const hoOn = () => pick.h !== 'none' && HANDOUTS.length > 0;
-const hoMatcher = h => c => { const s = handoutsOf(c); return !!s && (h === 'all' || s.has(h)); };
+const pick = { s: store.get('fcS', 'tl'), u: store.get('fcU', 'all'), m: store.get('fcM', 'all'), l: store.get('fcL', 'all'),
+               w: store.get('fcW', 'all'), c: store.get('fcC', 'all') };
+(() => {   // v4 upgrade: a CSOB week picked in the old Handout menu opens in the CSOB section
+  const h = store.get('fcH', null);
+  if (h !== null) { if (/^csob\d+$/.test(h)) { pick.s = 'csob'; pick.w = h; } store.del('fcH'); }
+  if (!['tl', 'csob', 'cat'].includes(pick.s)) pick.s = 'tl';
+  if (!/^\d+$/.test(pick.u)) { pick.u = 'all'; pick.m = 'all'; pick.l = 'all'; }   // old "My saved cards" / "Book topic lists"
+  ['sync', 'fcOwn'].forEach(k => store.del(k));
+})();
+const isCsob = id => /^csob\d+$/.test(id);
+const csobWeeks = () => HANDOUTS.filter(h => isCsob(h.id));
+const weekMatcher = w => c => {
+  const s = handoutsOf(c); if (!s) return false;
+  if (w !== 'all') return s.has(w);
+  for (const h of s) if (isCsob(h)) return true;
+  return false;
+};
+const catMatcher = id => c => { const k = catIndex.get(normHr(c.hr)); return !!k && (id === 'all' || k === id); };
 
-// The rank range a selection covers. null = no range (all / own / topics).
+// The rank range a Tako lako selection covers. null = the whole book.
 function rangeOf(sel) {
   if (!/^\d+$/.test(sel.u)) return null;
   const base = +sel.u * 10000;
@@ -1933,23 +1950,20 @@ function rangeOf(sel) {
   if (sel.l === 'all') return [mb, mb + 99];
   return [mb + +sel.l, mb + +sel.l];
 }
-function matcher(sel, prev, own) {
-  const base = baseMatcher(sel, prev);
-  return own ? c => !hasBookTag(c) || base(c) : base;   // "Add my saved cards"
+function matcher(sel, prev) {   // Tako lako: cards tagged with a lesson (or Phrase Book) in the range
+  const r = rangeOf(sel);
+  if (!r) return c => tagsOf(c).ranks.length > 0;
+  const [lo, hi] = r;
+  if (prev) return c => tagsOf(c).ranks.some(x => x <= hi);   // this selection and everything before it
+  return c => tagsOf(c).ranks.some(x => x >= lo && x <= hi);
 }
-function baseMatcher(sel, prev) {
-  if (sel.u === 'all') return () => true;
-  if (sel.u === 'own') return c => !hasBookTag(c);
-  if (sel.u === 'topics') return c => { const t = tagsOf(c).topics; return sel.m === 'all' ? t.length > 0 : t.includes(sel.m); };
-  const [lo, hi] = rangeOf(sel);
-  if (prev) return c => tagsOf(c).ranks.some(r => r <= hi);   // this selection and everything before it
-  return c => tagsOf(c).ranks.some(r => r >= lo && r <= hi);
-}
-const countOf = (pool, sel) => { const f = matcher(sel, false); let n = 0; for (const c of pool) if (f(c)) n++; return n; };
-const ownOn = () => $('#fcOwn').checked && pick.u !== 'all' && pick.u !== 'own';
+// Same Croatian on two cards (an older device may have both a book and a handout copy): study it once.
+function uniq(list) { const seen = new Set(); return list.filter(c => { const k = normHr(c.hr); if (seen.has(k)) return false; seen.add(k); return true; }); }
+const countOf = (pool, f) => uniq(pool.filter(f)).length;
 function deckFilter(pool) {
-  if (hoOn()) return pool.filter(hoMatcher(pick.h));   // a handout is its own set
-  return pool.filter(matcher(pick, $('#fcPrev').checked && rangeOf(pick) !== null, ownOn()));
+  if (pick.s === 'csob') return uniq(pool.filter(weekMatcher(pick.w)));
+  if (pick.s === 'cat') return uniq(pool.filter(catMatcher(pick.c)));
+  return uniq(pool.filter(matcher(pick, $('#fcPrev').checked && rangeOf(pick) !== null)));
 }
 
 function fillSelect(sel, options, want) {
@@ -1962,34 +1976,30 @@ function fillSelect(sel, options, want) {
 function renderDeckPick() {
   const uSel = $('#fcUnit'); if (!uSel) return;
   const pool = live();
+  $('#fcSrc').value = pick.s;
+  $('#fcTlWrap').hidden = pick.s !== 'tl';
+  $('#fcWeekWrap').hidden = pick.s !== 'csob';
+  $('#fcCatWrap').hidden = pick.s !== 'cat';
 
-  const unitOpts = [['all', `All cards (${pool.length})`]];
+  // 1 · Tako lako: Unit / Module / Lesson
+  const unitOpts = [['all', `All units (${countOf(pool, matcher({ u: 'all' }))})`]];
   Object.keys(BOOK).map(Number).sort((a, b) => a - b).forEach(u => {
-    const n = countOf(pool, { u: String(u), m: 'all', l: 'all' });
-    unitOpts.push([String(u), `Unit ${u}${UNITS[u] ? ': ' + UNITS[u] : ''} (${n || 'not loaded'})`, !n]);
+    const n = countOf(pool, matcher({ u: String(u), m: 'all', l: 'all' }));
+    unitOpts.push([String(u), `Unit ${u}${UNITS[u] ? ': ' + UNITS[u] : ''} (${n || 'loading…'})`, !n]);
   });
-  const nTopics = countOf(pool, { u: 'topics', m: 'all' });
-  if (nTopics) unitOpts.push(['topics', `Book topic lists (${nTopics})`]);
-  const nOwn = countOf(pool, { u: 'own' });
-  if (nOwn) unitOpts.push(['own', `My saved cards (${nOwn})`]);
   pick.u = fillSelect(uSel, unitOpts, pick.u);
 
   const mSel = $('#fcModule');
   let modOpts = [['all', 'All modules']];
   if (/^\d+$/.test(pick.u)) {
     const u = pick.u;
-    modOpts = [['all', `All modules (${countOf(pool, { u, m: 'all', l: 'all' })})`]];
+    modOpts = [['all', `All modules (${countOf(pool, matcher({ u, m: 'all', l: 'all' }))})`]];
     Object.keys(BOOK[u] || {}).map(Number).sort((a, b) => a - b).forEach(m => {
-      const n = countOf(pool, { u, m: String(m), l: 'all' });
+      const n = countOf(pool, matcher({ u, m: String(m), l: 'all' }));
       modOpts.push([String(m), `Module ${m} (${n})`, !n]);
     });
-    const nPb = countOf(pool, { u, m: 'pb' });
+    const nPb = countOf(pool, matcher({ u, m: 'pb' }));
     if (nPb) modOpts.push(['pb', `Phrase Book (${nPb})`]);
-  } else if (pick.u === 'topics') {
-    const topics = new Map();
-    pool.forEach(c => tagsOf(c).topics.forEach(t => topics.set(t, (topics.get(t) || 0) + 1)));
-    modOpts = [['all', `All topics (${nTopics})`]];
-    [...topics.keys()].sort((a, b) => a.localeCompare(b)).forEach(t => modOpts.push([t, `${t} (${topics.get(t)})`]));
   }
   pick.m = fillSelect(mSel, modOpts, pick.m);
   mSel.disabled = modOpts.length < 2;
@@ -1998,29 +2008,30 @@ function renderDeckPick() {
   let lesOpts = [['all', 'All lessons']];
   if (/^\d+$/.test(pick.u) && /^\d+$/.test(pick.m)) {
     const u = pick.u, m = pick.m, lessons = (BOOK[u] || {})[m] || {};
-    lesOpts = [['all', `All lessons (${countOf(pool, { u, m, l: 'all' })})`]];
+    lesOpts = [['all', `All lessons (${countOf(pool, matcher({ u, m, l: 'all' }))})`]];
     Object.keys(lessons).map(Number).sort((a, b) => a - b).forEach(l => {
-      const n = countOf(pool, { u, m, l: String(l) });
+      const n = countOf(pool, matcher({ u, m, l: String(l) }));
       lesOpts.push([String(l), `Lesson ${l}${lessons[l] ? ': ' + lessons[l] : ''} (${n})`, !n]);
     });
   }
   pick.l = fillSelect(lSel, lesOpts, pick.l);
   lSel.disabled = lesOpts.length < 2;
 
-  // Handout picker: its own set. While one is chosen, Unit / Module / Lesson are greyed out.
-  const hSel = $('#fcHandout');
-  const hoOpts = [['none', HANDOUTS.length ? 'None: use Unit / Module / Lesson' : 'None (handouts not loaded yet)']];
-  if (HANDOUTS.length) {
-    hoOpts.push(['all', `All handouts (${pool.filter(hoMatcher('all')).length})`]);
-    HANDOUTS.forEach(h => { const n = pool.filter(hoMatcher(h.id)).length; hoOpts.push([h.id, `${h.title} (${n})`, !n]); });
-  }
-  const shownH = fillSelect(hSel, hoOpts, pick.h);
-  if (HANDOUTS.length) pick.h = shownH;   // before handouts load, keep the remembered choice
-  hSel.disabled = hoOpts.length < 2;
-  [uSel, mSel, lSel].forEach(s => { if (hoOn()) s.disabled = true; else if (s === uSel) s.disabled = false; });
+  // 2 · CSOB by week
+  const weeks = csobWeeks();
+  const wOpts = weeks.length ? [['all', `All weeks (${countOf(pool, weekMatcher('all'))})`]] : [['all', 'Loading the weeks…']];
+  weeks.forEach(h => { const n = countOf(pool, weekMatcher(h.id)); wOpts.push([h.id, `${h.title.replace(/^CSOB\s+/, '')} (${n})`, !n]); });
+  const shownW = fillSelect($('#fcWeek'), wOpts, pick.w);
+  if (weeks.length) pick.w = shownW;   // before the lists load, keep the remembered choice
 
-  store.set('fcU', pick.u); store.set('fcM', pick.m); store.set('fcL', pick.l); store.set('fcH', pick.h);
-  const level = hoOn() || !/^\d+$/.test(pick.u) ? null
+  // 3 · Categories
+  const cOpts = CATS.length ? [['all', `All categories (${countOf(pool, catMatcher('all'))})`]] : [['all', 'Loading the categories…']];
+  CATS.forEach(c => { const n = countOf(pool, catMatcher(c.id)); cOpts.push([c.id, `${c.title} (${n})`, !n]); });
+  const shownC = fillSelect($('#fcCat'), cOpts, pick.c);
+  if (CATS.length) pick.c = shownC;
+
+  ['S', 'U', 'M', 'L', 'W', 'C'].forEach(k => store.set('fc' + k, pick[k.toLowerCase()]));
+  const level = pick.s !== 'tl' || !/^\d+$/.test(pick.u) ? null
     : pick.m === 'pb' ? 'phrases'
     : (/^\d+$/.test(pick.m) && pick.l !== 'all') ? 'lesson'
     : /^\d+$/.test(pick.m) ? 'module' : 'unit';
@@ -2029,63 +2040,14 @@ function renderDeckPick() {
     : level === 'module' ? 'Add everything before this module too'
     : level === 'phrases' ? 'Add everything before these phrases too'
     : 'Add all previous units too';
-  const nMine = countOf(pool, { u: 'own' });
-  $('#fcOwnWrap').hidden = !nMine || pick.u === 'all' || pick.u === 'own' || hoOn();
-  $('#fcOwnText').textContent = `Add my saved cards (${nMine})`;
-  $('#studyOwn').hidden = !nMine;
-  $('#studyOwn').textContent = `Study my cards (${nMine})`;
 }
 
-function persistCards(markDirty = true) {
+function persistCards() {
   store.set('cards', cards);
-  if (markDirty) sync.dirty = true;
-  store.set('sync', sync);
-  renderSync(); renderCardList(); updateDue();
-}
-
-function grammarNote(grammar) {
-  return (grammar || []).slice(0, 8).map(g => {
-    const bits = [g.form];
-    if (g.gender && g.gender !== '—') bits.push(g.gender);
-    if (g.ending && g.ending !== '—') bits.push('ending ' + g.ending);
-    return `${g.word} ← ${g.root}: ${bits.filter(Boolean).join(', ')}`;
-  }).join('\n');
+  renderCardList(); updateDue();
 }
 
 function findCard(hr) { const n = normHr(hr); return live().find(c => normHr(c.hr) === n); }
-
-function addCard(hr, en, note) {
-  hr = (hr || '').trim(); en = (en || '').trim();
-  if (!hr || !en) { toast('Nothing to save yet.'); return false; }
-  if (findCard(hr)) { toast('That\'s already in your flash cards.'); return false; }
-  const now = Date.now();
-  const card = { id: uid(), hr, en, note: note || '', level: 1, due: now, createdAt: now, updatedAt: now, deleted: false };
-  cards.push(card);
-  persistCards();
-  toast('Saved as a flash card ★. Tap Save to iCloud (Flash cards tab) when you\'re done.', 4500);
-  // Classify the new card's gender in the background (needs the API key; otherwise "Classify now" does it later).
-  classifyCards([card], { quiet: true }).then(() => {
-    const g = card.gram;
-    if (!g) return;
-    if (g.fix) toast(`★ Saved · ⚠ Check this card: it may need to be "${g.fix}"`, 6000);
-    else if (g.pos === 'noun' && !g.head) toast(`★ Saved · ${card.hr}: ${G_LABEL[g.gender]}${g.animate ? ', animate' : ''}${g.plural ? ', plural' : ''} noun`, 4500);
-    else if (g.nouns && g.nouns.length) toast('★ Saved · ' + g.nouns.filter(e => !e.ref).map(e => `${e.lemma || e.w} (${e.g})`).join(', '), 4500);
-  });
-  return true;
-}
-
-function saveCardBtn(hr, en, note, labelled) {
-  const b = el('button', 'btn small'); b.type = 'button';
-  const set = (saved) => {
-    b.textContent = labelled ? (saved ? '★ Saved' : '☆ Save as flash card') : (saved ? '★' : '☆');
-    b.disabled = saved;
-    b.setAttribute('aria-label', saved ? 'Saved as flash card' : 'Save as flash card');
-    b.title = saved ? 'Saved as flash card' : 'Save as flash card';
-  };
-  set(!!findCard(hr));
-  b.addEventListener('click', () => { if (addCard(hr, en, note)) set(true); });
-  return b;
-}
 
 function deleteCard(id) {
   const c = cards.find(x => x.id === id); if (!c) return;
@@ -2093,37 +2055,6 @@ function deleteCard(id) {
   persistCards();
 }
 
-/* --- iCloud file: save --- */
-async function saveCardsFile() {
-  const payload = { app: 'prevoditelj', kind: 'flashcards', version: 1, savedAt: Date.now(), cards };
-  const json = JSON.stringify(payload);
-  const isTouchDevice = navigator.maxTouchPoints > 1;   // iPhone / iPad (iPad reports itself as a Mac)
-  if (isTouchDevice && navigator.canShare) {
-    let file;
-    try { file = new File([json], FILE_NAME, { type: 'application/json' }); } catch { file = null; }
-    if (file && navigator.canShare({ files: [file] })) {
-      try {
-        await navigator.share({ files: [file] });
-        markSaved('Saved. If you chose "Save to Files", it\'s now in your iCloud folder.');
-        return;
-      } catch (e) {
-        if (e && e.name === 'AbortError') { toast('Not saved.'); return; }
-        // fall through to a normal download
-      }
-    }
-  }
-  const url = URL.createObjectURL(new Blob([json], { type: 'application/json' }));
-  const a = el('a'); a.href = url; a.download = FILE_NAME; a.style.display = 'none';
-  document.body.appendChild(a); a.click(); a.remove();
-  setTimeout(() => URL.revokeObjectURL(url), 15000);
-  markSaved('Cards file downloaded. If Safari\'s download folder is your iCloud folder, you\'re done.');
-}
-function markSaved(msg) {
-  sync.lastSaved = Date.now(); sync.dirty = false; store.set('sync', sync);
-  renderSync(); toast(msg, 5500);
-}
-
-/* --- iCloud file: load + merge --- */
 function cleanCard(c) {
   const out = {
     id: String(c.id), hr: String(c.hr || ''), en: String(c.en || ''), note: String(c.note || ''),
@@ -2134,81 +2065,6 @@ function cleanCard(c) {
   const gram = cleanGram(c.gram);
   if (gram) out.gram = gram;
   return out;
-}
-function mergeCards(incoming) {
-  let added = 0, updated = 0;
-  const byId = new Map(cards.map(c => [c.id, c]));
-  incoming.forEach(raw => {
-    if (!raw || !raw.id || typeof raw.hr !== 'string') return;
-    const c = cleanCard(raw);
-    const mine = byId.get(c.id);
-    if (!mine) { cards.push(c); byId.set(c.id, c); if (!c.deleted) added++; return; }
-    const theirProgress = (c.lastReviewed || 0) > (mine.lastReviewed || 0);
-    // Gender is merged on its own timestamp, so a classification never resurrects or overwrites anything else.
-    const bestGram = newerGram(c.gram, mine.gram) ? c.gram : mine.gram;
-    const gramChanged = bestGram !== mine.gram;
-    let changed = false;
-    if (c.updatedAt > (mine.updatedAt || 0)) {
-      // Newer content (wording, lesson tags, deletion): take it, but keep whichever study progress is more recent.
-      const prog = theirProgress ? null : { level: mine.level, due: mine.due, lastReviewed: mine.lastReviewed };
-      Object.assign(mine, c); if (prog) Object.assign(mine, prog);
-      changed = true;
-    } else if (theirProgress) {
-      mine.level = c.level; mine.due = c.due; mine.lastReviewed = c.lastReviewed; changed = true;
-    }
-    if (bestGram) mine.gram = bestGram; else delete mine.gram;
-    if (changed || gramChanged) updated++;
-  });
-  // The same Croatian on several cards: keep one (most book tags, then oldest) and carry over the best progress.
-  const groups = new Map();
-  live().forEach(c => { const k = normHr(c.hr); if (!groups.has(k)) groups.set(k, []); groups.get(k).push(c); });
-  groups.forEach(list => {
-    if (list.length < 2) return;
-    const score = c => tagsOf(c).ranks.length + tagsOf(c).topics.length;
-    list.sort((a, b) => (score(b) - score(a)) || (a.createdAt - b.createdAt) || (a.id < b.id ? -1 : 1));
-    const keep = list[0];
-    list.slice(1).forEach(d => {
-      if ((d.lastReviewed || 0) > (keep.lastReviewed || 0)) { keep.level = d.level; keep.due = d.due; keep.lastReviewed = d.lastReviewed; }
-      if (newerGram(d.gram, keep.gram)) keep.gram = d.gram;
-      d.deleted = true; d.updatedAt = Date.now();
-    });
-  });
-  return { added, updated };
-}
-function loadCardsFile(file) {
-  const reader = new FileReader();
-  reader.onload = () => {
-    let data;
-    try { data = JSON.parse(reader.result); } catch { toast('That file isn\'t a Prevoditelj cards file.'); return; }
-    if (!data || data.app !== 'prevoditelj' || !Array.isArray(data.cards)) { toast('That file isn\'t a Prevoditelj cards file.'); return; }
-    const { added, updated } = mergeCards(data.cards);
-    // Still "unsaved" if this device has anything the file doesn't.
-    const fileVer = new Map(data.cards.filter(c => c && c.id).map(c => [String(c.id), Number(c.updatedAt) || 0]));
-    const differs = cards.some(c => fileVer.get(c.id) !== c.updatedAt);
-    sync.lastLoaded = Date.now(); sync.dirty = differs;
-    persistCards(false);
-    const msg = `Loaded from iCloud: ${added} new, ${updated} updated.`;
-    toast(differs ? msg + ' This device has extra changes, so tap Save to iCloud.' : msg, 6000);
-  };
-  reader.onerror = () => toast('Couldn\'t read that file.');
-  reader.readAsText(file);
-}
-
-function ago(t) {
-  if (!t) return 'never';
-  const m = Math.round((Date.now() - t) / 60000);
-  if (m < 1) return 'just now';
-  if (m < 60) return `${m} min ago`;
-  const h = Math.round(m / 60); if (h < 24) return `${h} h ago`;
-  return new Date(t).toLocaleDateString();
-}
-function renderSync() {
-  const n = live().length;
-  const txt = `${n} card${n === 1 ? '' : 's'} on this device · ` +
-    (sync.dirty ? 'changes not yet saved to iCloud' : `last saved to iCloud ${ago(sync.lastSaved)}`) +
-    (sync.lastLoaded ? ` · last loaded ${ago(sync.lastLoaded)}` : '');
-  $('#syncText').textContent = txt;
-  $('#syncCard').classList.toggle('dirty', !!sync.dirty);
 }
 function updateDue() {   // now only shows the size of the chosen set (no due dates any more)
   const n = deckFilter(live()).length;
@@ -2244,7 +2100,7 @@ function deleteCurrentCard() {
   disarmDelete();
   deleteCard(c.id);
   session.queue.shift();
-  toast('Card deleted. Remember to Save to iCloud.');
+  toast('Card deleted on this device.');
   renderStudy();
 }
 
@@ -2264,12 +2120,10 @@ function flipDir(id) {
   if (session && session.mode === 'mix' && session.dirOf[id]) session.dirOf[id] = session.dirOf[id] === 'en-hr' ? 'hr-en' : 'en-hr';
 }
 function currentMode() { const r = document.querySelector('input[name=fcmode]:checked'); return r && r.value !== 'say' ? r.value : 'hr-en'; }
-function startSession(all, ownOnly) {
-  const now = Date.now();
-  const set = ownOnly ? live().filter(c => !hasBookTag(c)) : deckFilter(live());
-  const pool = set.slice();   // the whole chosen set, every time
+function startSession() {
+  const pool = deckFilter(live());   // the whole chosen set, every time
   if (!pool.length) {
-    toast(!live().length ? 'No cards yet. Save some from the Translate tab.' : 'No cards in that unit or lesson yet.');
+    toast(!live().length ? 'The word lists haven\'t loaded yet. Check the internet connection and reopen the app.' : 'No cards in that set.');
     return;
   }
   shuffle(pool);   // always random order
@@ -2721,7 +2575,7 @@ function showTab(which) {
   $('#view-translate').hidden = cardsTab; $('#view-cards').hidden = !cardsTab;
   $('#tabTranslate').setAttribute('aria-selected', String(!cardsTab));
   $('#tabCards').setAttribute('aria-selected', String(cardsTab));
-  if (cardsTab) { renderSync(); renderCardList(); updateDue(); }
+  if (cardsTab) { renderCardList(); updateDue(); }
   store.set('tab', which);
 }
 
@@ -2915,14 +2769,10 @@ setSource(store.get('dir', 'hr') === 'en' ? 'en' : 'hr');
 /* flash card wiring */
 $('#tabTranslate').addEventListener('click', () => showTab('translate'));
 $('#tabCards').addEventListener('click', () => showTab('cards'));
-$('#cardsSave').addEventListener('click', saveCardsFile);
-$('#cardsLoad').addEventListener('click', () => { const f = $('#cardsFile'); f.value = ''; f.click(); });
-$('#cardsFile').addEventListener('change', e => { const f = e.target.files && e.target.files[0]; if (f) loadCardsFile(f); });
 $('#fcDelete').addEventListener('click', deleteCurrentCard);
 $('#genderBtn').addEventListener('click', classifyUnchecked);
 $('#fcGenderSel').addEventListener('change', e => setGenderFromUser(e.target.value));
-$('#studyAll').addEventListener('click', () => startSession(true));
-$('#studyOwn').addEventListener('click', () => startSession(true, true));   // all my saved cards, whatever the picker says
+$('#studyAll').addEventListener('click', () => startSession());
 $('#studyEnd').addEventListener('click', () => endSession(false));
 $('#fcAgain').addEventListener('click', () => grade(false));
 $('#fcKnew').addEventListener('click', () => grade(true));
@@ -2958,22 +2808,21 @@ if (savedMode === 'say') { savedMode = 'hr-en'; store.set('fcmode', savedMode); 
 $('#fcUnit').addEventListener('change', e => { pick.u = e.target.value; pick.m = 'all'; pick.l = 'all'; renderDeckPick(); updateDue(); });
 $('#fcModule').addEventListener('change', e => { pick.m = e.target.value; pick.l = 'all'; renderDeckPick(); updateDue(); });
 $('#fcLesson').addEventListener('change', e => { pick.l = e.target.value; renderDeckPick(); updateDue(); });
-$('#fcHandout').addEventListener('change', e => { pick.h = e.target.value; renderDeckPick(); updateDue(); });
+$('#fcSrc').addEventListener('change', e => { pick.s = e.target.value; renderDeckPick(); updateDue(); });
+$('#fcWeek').addEventListener('change', e => { pick.w = e.target.value; renderDeckPick(); updateDue(); });
+$('#fcCat').addEventListener('change', e => { pick.c = e.target.value; renderDeckPick(); updateDue(); });
 $('#fcPrev').checked = !!store.get('fcPrev', false);
 $('#fcPrev').addEventListener('change', e => { store.set('fcPrev', e.target.checked); updateDue(); });
-$('#fcOwn').checked = !!store.get('fcOwn', false);
-$('#fcOwn').addEventListener('change', e => { store.set('fcOwn', e.target.checked); updateDue(); });
 $$('input[name=fcmode]').forEach(r => { r.checked = r.value === savedMode; r.addEventListener('change', () => {
   store.set('fcmode', r.value);
 }); });
-window.addEventListener('beforeunload', e => { if (sync.dirty && live().length) { e.preventDefault(); e.returnValue = ''; } });
 migrateGram();
-renderSync(); renderCardList(); updateDue();
+renderCardList(); updateDue();
 loadHandouts();
 if (store.get('tab', 'translate') === 'cards') showTab('cards');
 
 // Test hook (used only by automated checks).
-window.__prev = { compare, localCheck, ansVariants, state, getCards: () => cards, mergeCards, loadCardsFile, classifyCards, cleanGram, fillGender };
+window.__prev = { compare, localCheck, ansVariants, state, getCards: () => cards, applyHandouts, deckFilter, pick, classifyCards, cleanGram, fillGender };
 })();
 </script>
 </body>
