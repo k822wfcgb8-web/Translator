@@ -423,7 +423,7 @@ dialog::backdrop { background: rgba(10,12,20,.45); }
 <header class="top">
   <div class="brand">
     <span class="logo" aria-hidden="true"></span>
-    <div><h1>Prevoditelj</h1><p>Croatian ⇄ English · v4.0</p></div>
+    <div><h1>Prevoditelj</h1><p>Croatian ⇄ English · v4.1</p></div>
   </div>
   <div class="top-actions">
     <button id="themeBtn" class="icon-btn" aria-label="Style" title="Style">🎨</button>
@@ -2107,7 +2107,7 @@ function deleteCurrentCard() {
 /* --- study session (simple spaced repetition) --- */
 /* Direction of the card on screen: 'hr-en' (Croatian shown, answer in English) or 'en-hr'.
    In Mixed mode each card gets a random direction; a card that comes back for another try
-   (after a miss, or still short of 3 right) comes back the other way round. */
+   (after a miss, or still short of the right answers it needs) comes back the other way round. */
 function cardDir(c) {
   if (!session) return 'hr-en';
   if (session.mode !== 'mix') return session.mode;
@@ -2129,7 +2129,8 @@ function startSession() {
   shuffle(pool);   // always random order
   session = { queue: pool.map(c => c.id), mode: currentMode(), done: 0, knew: 0, tries: [], sayDone: false, sayOn: false,
               answer: true, ans: null,
-              pool: pool.map(c => c.id), need: {}, filler: [], missed: new Set(), dirOf: {} };
+              pool: pool.map(c => c.id), need: {}, filler: [], missed: new Set(), dirOf: {},
+              goal: pool.length > BIG_SET ? 1 : REPEAT_GOAL };
   $('#studySetup').hidden = true; $('#studyCard').hidden = false;
   renderStudy();
   $('#studyCard').scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -2153,10 +2154,10 @@ function renderStudy() {
   const need = session.need[c.id];
   const prog = $('#studyProgress');
   prog.textContent = `${session.done} done · ${session.queue.length} to go` +
-    (need ? ` · this one: ${REPEAT_GOAL - need} of ${REPEAT_GOAL} right` : '');
-  if (need) {   // a missed card being repeated: one filled dot per right answer so far
+    (need ? (session.goal > 1 ? ` · this one: ${session.goal - need} of ${session.goal} right` : ' · missed earlier') : '');
+  if (need && session.goal > 1) {   // a missed card being repeated: one filled dot per right answer so far
     const dots = el('span', 'dots'); dots.setAttribute('aria-hidden', 'true');
-    for (let k = 0; k < REPEAT_GOAL; k++) { const d = el('span'); if (k < REPEAT_GOAL - need) d.className = 'used ok'; dots.appendChild(d); }
+    for (let k = 0; k < session.goal; k++) { const d = el('span'); if (k < session.goal - need) d.className = 'used ok'; dots.appendChild(d); }
     prog.appendChild(dots);
   }
   const frontIsHr = m !== 'en-hr';
@@ -2190,11 +2191,12 @@ function reveal(suggest) {
   $('#fcActs').hidden = true; $('#fcAgain').hidden = false; $('#fcKnew').hidden = false;
   setSuggest(typeof suggest === 'boolean' ? suggest : null);
 }
-/* A missed card stays in the session until it has been answered right REPEAT_GOAL times
-   in total. Each repeat goes to a random later spot, with at least REPEAT_GAP other cards
+/* A missed card stays in the session until it has been answered right session.goal times
+   in total: REPEAT_GOAL (3) for a set of up to BIG_SET cards, but just 1 for a bigger set,
+   where one right answer drops it off the list. Each repeat goes to a random later spot, with at least REPEAT_GAP other cards
    before it; when the queue is too short, random other cards from this session are added
    as fillers. Nothing about right or wrong answers is saved: it lasts only for this session. */
-const REPEAT_GOAL = 3, REPEAT_GAP = 3;
+const REPEAT_GOAL = 3, REPEAT_GAP = 3, BIG_SET = 10;
 function requeue(id) {
   const q = session.queue;
   const others = session.pool.filter(x => x !== id && cards.some(c => c.id === x && !c.deleted));
@@ -2218,7 +2220,7 @@ function grade(knew) {
   if (knew) {
     if (session.need[id]) {
       session.need[id]--;
-      if (session.need[id] > 0) { flipDir(id); requeue(id); renderStudy(); return; }   // not yet 3 right
+      if (session.need[id] > 0) { flipDir(id); requeue(id); renderStudy(); return; }   // not yet enough right
       delete session.need[id];
     }
     delete session.dirOf[id];   // finished: if it turns up again as a filler, pick a fresh direction
@@ -2227,7 +2229,7 @@ function grade(knew) {
     if (!session.missed.has(id)) session.knew++;
   } else {
     session.missed.add(id);
-    if (!session.need[id]) session.need[id] = REPEAT_GOAL;   // needs 3 right in total; a repeat miss keeps the count
+    if (!session.need[id]) session.need[id] = session.goal;   // needs 3 right (1 in a big set) in total; a repeat miss keeps the count
     flipDir(id);   // Mixed mode: next time, the other way round
     requeue(id);
   }
