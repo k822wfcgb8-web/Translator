@@ -6,6 +6,7 @@ Files:
 - `index.html`: the whole app
 - `icon-180.png`: home-screen icon
 - `README.md`: this guide
+- `SPECIFICATION.md`: what the app does and the rules it follows (kept up to date with each change)
 - `handouts.json`: flash cards for the word lists in the *Claude outputs* handouts (loaded by the app automatically)
 - `make_handouts.py`: the script that builds `handouts.json` from those word lists
 
